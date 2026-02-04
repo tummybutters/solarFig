@@ -222,9 +222,17 @@ const CardStack = () => {
       </div>
 
       {/* Mobile Controls Overlay - Right side larger */}
-      <div className="absolute inset-0 z-50 md:hidden flex">
-        <div className="w-1/3 h-full" onClick={handlePrev} />
-        <div className="w-2/3 h-full" onClick={handleNext} />
+      <div className="absolute inset-0 z-50 md:hidden flex pointer-events-auto">
+        <button 
+          className="w-1/3 h-full bg-transparent cursor-pointer"
+          onClick={handlePrev}
+          aria-label="Previous card"
+        />
+        <button 
+          className="w-2/3 h-full bg-transparent cursor-pointer"
+          onClick={handleNext}
+          aria-label="Next card"
+        />
       </div>
 
       {/* Card indicators - Refined */}
