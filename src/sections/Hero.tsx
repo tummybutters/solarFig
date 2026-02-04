@@ -57,15 +57,6 @@ const Hero = () => {
             {/* Right Column - Card Stack (Carousel) */}
             <div className="flex justify-center lg:justify-end items-center">
               <div className="relative">
-                {/* Text floating near carousel like reference "We are distinction" could go here or be omitted based on "carousel to the right" */}
-                <div className="absolute -right-4 -bottom-12 lg:-right-12 lg:bottom-12 pointer-events-none z-0 opacity-50 hidden lg:block">
-                  <h2 className="text-6xl lg:text-7xl font-bold text-white tracking-tighter text-right">
-                    We are
-                    <br />
-                    community
-                  </h2>
-                </div>
-
                 <CardStack />
               </div>
             </div>
