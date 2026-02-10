@@ -3,9 +3,9 @@ import MagneticFlightButton from "@/components/MagneticFlightButton";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen lg:h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
           loop
@@ -20,15 +20,15 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 min-h-screen lg:h-screen">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 min-h-screen">
         {/* Navbar-like spacer if needed, or just padding */}
-        <div className="pt-24 lg:pt-32 min-h-full flex flex-col justify-center pb-32 lg:pb-0">
+        <div className="pt-24 lg:pt-32 min-h-full flex flex-col justify-center pb-32">
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:h-full pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center pb-20">
             {/* Left Column - Branding Text */}
             <div className="flex flex-col justify-center space-y-12">
               <div className="space-y-2">
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9]">
+                <h1 className="text-5xl sm:text-6xl lg:text-[clamp(3.5rem,6vw,5.5rem)] font-bold text-white tracking-tighter leading-[0.9]">
                   Sweat
                   <br />
                   together
