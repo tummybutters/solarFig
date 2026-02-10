@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 w-full z-50 px-6 sm:px-8 py-8">
       <div className="max-w-[1400px] mx-auto flex justify-between items-start">
         {/* Left Side - Navigation Links */}
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.label}

@@ -38,7 +38,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
 
   return (
     <div
-      className="group relative h-[320px] sm:h-[400px] lg:h-[460px] rounded-[2rem] overflow-hidden cursor-pointer"
+      className="group relative h-[380px] sm:h-[420px] md:h-[360px] lg:h-[460px] rounded-[2rem] overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -155,7 +155,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
 
 const Experiences = () => {
   return (
-    <section id="experience" className="bg-white h-screen flex flex-col justify-center py-8 pt-20 overflow-hidden">
+    <section id="experience" className="bg-white min-h-screen py-16 sm:py-20">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8 lg:mb-10">
@@ -176,7 +176,7 @@ const Experiences = () => {
         </div>
 
         {/* Pills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {experiences.map((experience, index) => (
             <ExperiencePill
               key={experience.id}
@@ -187,7 +187,7 @@ const Experiences = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-8 lg:mt-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
           <span className="text-gray-400 text-xs">Not sure which fits you?</span>
           <a
             href="#contact"
