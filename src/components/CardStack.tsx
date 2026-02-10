@@ -165,7 +165,7 @@ const CardStack = () => {
 
   return (
     <div
-      className="relative w-[280px] h-[420px] sm:w-[320px] sm:h-[480px] md:w-[360px] md:h-[540px] group cursor-grab active:cursor-grabbing"
+      className="relative w-[220px] h-[330px] sm:w-[260px] sm:h-[390px] md:w-[280px] md:h-[420px] lg:w-[300px] lg:h-[450px] group cursor-grab active:cursor-grabbing"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
