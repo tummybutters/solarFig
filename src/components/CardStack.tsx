@@ -210,7 +210,7 @@ const CardStack = () => {
         </button>
       </div>
 
-      <div className="absolute top-1/2 -translate-y-1/2 -right-20 hidden md:flex">
+      <div className="absolute top-1/2 -translate-y-1/2 -right-12 lg:-right-16 hidden md:flex">
         <button
           onClick={handleNext}
           disabled={animationPhase !== "idle"}

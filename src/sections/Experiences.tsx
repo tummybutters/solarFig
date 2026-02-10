@@ -155,7 +155,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
 
 const Experiences = () => {
   return (
-    <section id="experience" className="bg-white h-screen flex flex-col justify-center py-8 pt-16 overflow-hidden">
+    <section id="experience" className="bg-white h-screen flex flex-col justify-center py-8 pt-20 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8 lg:mb-10">
