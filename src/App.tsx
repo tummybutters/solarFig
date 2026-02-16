@@ -1,6 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/sections/Hero";
-import Experiences from "@/sections/Experiences";
+import WhyChooseUs from "@/sections/WhyChooseUs";
+import HowItWorks from "@/sections/HowItWorks";
+import Savings from "@/sections/Savings";
+import ServiceArea from "@/sections/ServiceArea";
+import Warranty from "@/sections/Warranty";
+import StrongClose from "@/sections/StrongClose";
+import Footer from "@/sections/Footer";
 import "./App.css";
 
 function App() {
@@ -8,7 +14,13 @@ function App() {
     <main className="min-h-screen bg-[#f5f5f5]">
       <Navbar />
       <Hero />
-      <Experiences />
+      <WhyChooseUs />
+      <HowItWorks />
+      <Savings />
+      <ServiceArea />
+      <Warranty />
+      <StrongClose />
+      <Footer />
     </main>
   );
 }
