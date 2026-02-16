@@ -52,6 +52,7 @@ const navItems: NavItem[] = [
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -83,6 +84,15 @@ const Navbar = () => {
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setMobileActiveDropdown(null);
+  };
+
+  const toggleMobileDropdown = (label: string) => {
+    setMobileActiveDropdown((prev) => (prev === label ? null : label));
   };
 
   return (
@@ -249,7 +259,7 @@ const Navbar = () => {
         {/* Backdrop */}
         <div 
           className="absolute inset-0 bg-black/80 backdrop-blur-xl"
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={closeMobileMenu}
         />
         
         {/* Menu Content */}
@@ -272,20 +282,21 @@ const Navbar = () => {
                     {item.children ? (
                       <div>
                         <button
-                          onClick={() => toggleDropdown(item.label)}
+                          type="button"
+                          onClick={() => toggleMobileDropdown(item.label)}
                           className="w-full py-4 flex items-center justify-between group"
                         >
                           <span className="text-white text-2xl font-semibold tracking-tight group-hover:text-purple-300 transition-colors duration-300">
                             {item.label}
                           </span>
-                          <div className={`w-8 h-8 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 ${activeDropdown === item.label ? 'bg-purple-600 border-purple-500 rotate-180' : 'group-hover:border-white/40'}`}>
+                          <div className={`w-8 h-8 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 ${mobileActiveDropdown === item.label ? 'bg-purple-600 border-purple-500 rotate-180' : 'group-hover:border-white/40'}`}>
                             <ChevronDown className="w-4 h-4 text-white" />
                           </div>
                         </button>
                         
                         <div 
                           className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-                            activeDropdown === item.label ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                            mobileActiveDropdown === item.label ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
                           }`}
                         >
                           <div className="pb-4 pl-4 space-y-3">
@@ -293,9 +304,9 @@ const Navbar = () => {
                               <a
                                 key={child.label}
                                 href={child.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={closeMobileMenu}
                                 className={`block text-white/70 text-lg hover:text-purple-300 transition-all duration-300 transform ${
-                                  activeDropdown === item.label ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0'
+                                  mobileActiveDropdown === item.label ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0'
                                 }`}
                                 style={{ transitionDelay: `${childIndex * 50}ms` }}
                               >
@@ -308,7 +319,7 @@ const Navbar = () => {
                     ) : (
                       <a
                         href={item.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={closeMobileMenu}
                         className="block py-4 text-white text-2xl font-semibold tracking-tight hover:text-purple-300 transition-colors duration-300"
                       >
                         {item.label}
@@ -335,7 +346,7 @@ const Navbar = () => {
             
             <a
               href="#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
               className="group relative block w-full text-center py-4 rounded-2xl bg-purple-600 text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:bg-purple-500 active:scale-[0.98]"
             >
               <span className="relative z-10">Get a Free Quote</span>
