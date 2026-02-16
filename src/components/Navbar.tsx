@@ -201,36 +201,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-3">
-          <a 
-            href="tel:+12133064154" 
-            className="text-white text-sm font-medium tracking-wide"
-          >
-            (213) 306-4154
-          </a>
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-300 active:scale-95"
-            aria-label="Toggle menu"
-            aria-expanded={isMobileMenuOpen}
-          >
-            <div className="w-5 h-3.5 relative">
-              <span 
-                className={`absolute left-0 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isMobileMenuOpen ? 'top-1.5 rotate-45' : 'top-0'}`} 
-              />
-              <span 
-                className={`absolute left-0 top-1.5 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 translate-x-2' : 'opacity-100'}`} 
-              />
-              <span 
-                className={`absolute left-0 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isMobileMenuOpen ? 'top-1.5 -rotate-45' : 'top-3'}`} 
-              />
-            </div>
-          </button>
-        </div>
-
-        {/* Mobile Logo */}
-        <div className="md:hidden absolute left-1/2 -translate-x-1/2 top-6">
+        {/* Mobile Header */}
+        <div className="md:hidden flex w-full items-center justify-between">
           <a href="/" className="block">
             <img 
               src="/assets/solarfig logo.svg" 
@@ -238,6 +210,33 @@ const Navbar = () => {
               className="h-7 w-auto brightness-0 invert"
             />
           </a>
+
+          <div className="flex items-center gap-3">
+            <a 
+              href="tel:+12133064154" 
+              className="hidden text-white text-sm font-medium tracking-wide min-[430px]:block"
+            >
+              (213) 306-4154
+            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-300 active:scale-95"
+              aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              <div className="w-5 h-3.5 relative">
+                <span 
+                  className={`absolute left-0 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isMobileMenuOpen ? 'top-1.5 rotate-45' : 'top-0'}`} 
+                />
+                <span 
+                  className={`absolute left-0 top-1.5 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 translate-x-2' : 'opacity-100'}`} 
+                />
+                <span 
+                  className={`absolute left-0 w-5 h-0.5 bg-white rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${isMobileMenuOpen ? 'top-1.5 -rotate-45' : 'top-3'}`} 
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 

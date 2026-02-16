@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, MessageSquare, FileCheck, Wrench, Zap } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Step {
   id: number;
@@ -42,9 +43,32 @@ const steps: Step[] = [
 
 const ProcessCard = ({ step, index }: { step: Step; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!isMobile || !cardRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.45, rootMargin: "0px 0px -12% 0px" }
+    );
+
+    observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, [isMobile]);
+
+  const isActive = isHovered || (isMobile && isInView);
 
   return (
     <div
+      ref={cardRef}
       className="group relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -55,7 +79,7 @@ const ProcessCard = ({ step, index }: { step: Step; index: number }) => {
           <div 
             className="h-full bg-gradient-to-r from-purple-200 to-purple-100 transition-all duration-700"
             style={{
-              opacity: isHovered ? 1 : 0.5,
+              opacity: isActive ? 1 : 0.5,
             }}
           />
         </div>
@@ -64,19 +88,19 @@ const ProcessCard = ({ step, index }: { step: Step; index: number }) => {
       <div 
         className="relative p-6 sm:p-8 rounded-[2rem] bg-white border-2 transition-all duration-500 h-full"
         style={{
-          borderColor: isHovered ? "rgba(168, 85, 247, 0.3)" : "rgba(0,0,0,0.05)",
-          transform: isHovered ? "translateY(-4px)" : "translateY(0)",
-          boxShadow: isHovered ? "0 20px 40px rgba(168, 85, 247, 0.08)" : "0 4px 20px rgba(0,0,0,0.03)",
+          borderColor: isActive ? "rgba(168, 85, 247, 0.3)" : "rgba(0,0,0,0.05)",
+          transform: isActive ? "translateY(-4px)" : "translateY(0)",
+          boxShadow: isActive ? "0 20px 40px rgba(168, 85, 247, 0.08)" : "0 4px 20px rgba(0,0,0,0.03)",
         }}
       >
         {/* Timeline Badge */}
         <div 
           className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium mb-4 transition-all duration-500"
           style={{
-            background: isHovered 
+            background: isActive 
               ? "linear-gradient(135deg, #9333ea 0%, #a855f7 100%)" 
               : "linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%)",
-            color: isHovered ? "white" : "#9333ea",
+            color: isActive ? "white" : "#9333ea",
           }}
         >
           {step.timeline}
@@ -86,14 +110,14 @@ const ProcessCard = ({ step, index }: { step: Step; index: number }) => {
         <div 
           className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500"
           style={{
-            background: isHovered 
+            background: isActive 
               ? "linear-gradient(135deg, #9333ea 0%, #a855f7 100%)" 
               : "linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%)",
           }}
         >
           <span 
             className="transition-colors duration-500"
-            style={{ color: isHovered ? "white" : "#9333ea" }}
+            style={{ color: isActive ? "white" : "#9333ea" }}
           >
             {step.icon}
           </span>
@@ -102,7 +126,7 @@ const ProcessCard = ({ step, index }: { step: Step; index: number }) => {
         {/* Step Number */}
         <span 
           className="absolute top-6 right-6 text-5xl font-bold transition-colors duration-500"
-          style={{ color: isHovered ? "rgba(168, 85, 247, 0.15)" : "rgba(0,0,0,0.03)" }}
+          style={{ color: isActive ? "rgba(168, 85, 247, 0.15)" : "rgba(0,0,0,0.03)" }}
         >
           0{step.id}
         </span>

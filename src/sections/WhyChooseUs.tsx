@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Zap, Shield, Clock, Wallet } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Pillar {
   id: number;
@@ -42,10 +43,33 @@ const pillars: Pillar[] = [
 
 const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!isMobile || !cardRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.45, rootMargin: "0px 0px -12% 0px" }
+    );
+
+    observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, [isMobile]);
+
+  const isActive = isHovered || (isMobile && isInView);
 
   return (
     <div
-      className="group relative h-[380px] sm:h-[420px] rounded-[2rem] overflow-hidden cursor-pointer bg-gray-50"
+      ref={cardRef}
+      className="group relative h-[380px] sm:h-[420px] rounded-[2rem] overflow-hidden bg-gray-50 cursor-default md:cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -56,10 +80,10 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
       <div
         className="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
         style={{
-          background: isHovered 
+          background: isActive 
             ? "linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%)" 
             : "linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)",
-          transform: isHovered ? "scale(1.02)" : "scale(1)",
+          transform: isActive ? "scale(1.02)" : "scale(1)",
         }}
       />
 
@@ -67,8 +91,8 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
       <div 
         className="absolute top-0 left-8 right-8 h-1 rounded-full bg-purple-500 transition-all duration-500"
         style={{
-          opacity: isHovered ? 1 : 0.3,
-          transform: isHovered ? "scaleX(1)" : "scaleX(0.3)",
+          opacity: isActive ? 1 : 0.3,
+          transform: isActive ? "scaleX(1)" : "scaleX(0.3)",
         }}
       />
 
@@ -82,8 +106,8 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
           <div
             className="w-10 h-10 rounded-full border border-purple-200 flex items-center justify-center transition-all duration-500 bg-white"
             style={{
-              borderColor: isHovered ? "rgba(168, 85, 247, 0.4)" : "rgba(168, 85, 247, 0.2)",
-              transform: isHovered ? "rotate(0deg) scale(1.1)" : "rotate(0deg) scale(1)",
+              borderColor: isActive ? "rgba(168, 85, 247, 0.4)" : "rgba(168, 85, 247, 0.2)",
+              transform: isActive ? "rotate(0deg) scale(1.1)" : "rotate(0deg) scale(1)",
             }}
           >
             <span className="text-purple-600 transition-colors duration-300">
@@ -105,7 +129,7 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
           <h3 
             className="text-gray-900 text-xl sm:text-2xl font-semibold tracking-tight transition-all duration-500 leading-tight"
             style={{
-              transform: isHovered ? "translateY(-4px)" : "translateY(0)",
+              transform: isActive ? "translateY(-4px)" : "translateY(0)",
             }}
           >
             {pillar.title}
@@ -115,9 +139,9 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
           <p
             className="text-gray-600 text-sm leading-relaxed transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
             style={{
-              opacity: isHovered ? 1 : 0,
-              transform: isHovered ? "translateY(0)" : "translateY(20px)",
-              maxHeight: isHovered ? "120px" : "0",
+              opacity: isActive ? 1 : 0,
+              transform: isActive ? "translateY(0)" : "translateY(20px)",
+              maxHeight: isActive ? "120px" : "0",
               overflow: "hidden",
             }}
           >
@@ -128,8 +152,8 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
           <div
             className="pt-3 transition-all duration-500"
             style={{
-              opacity: isHovered ? 1 : 0,
-              transform: isHovered ? "translateY(0)" : "translateY(10px)",
+              opacity: isActive ? 1 : 0,
+              transform: isActive ? "translateY(0)" : "translateY(10px)",
             }}
           >
             <span className="text-purple-700 text-sm font-medium flex items-center gap-2">
@@ -144,7 +168,7 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
       <div 
         className="absolute inset-0 rounded-[2rem] border-2 transition-all duration-500 pointer-events-none"
         style={{
-          borderColor: isHovered ? "rgba(168, 85, 247, 0.2)" : "rgba(0,0,0,0.05)",
+          borderColor: isActive ? "rgba(168, 85, 247, 0.2)" : "rgba(0,0,0,0.05)",
         }}
       />
     </div>

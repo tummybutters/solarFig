@@ -12,28 +12,28 @@ interface VideoCard {
 const videos: VideoCard[] = [
   {
     id: 1,
-    video: "/assets/video1.mp4",
+    video: "/assets/optimized/video1.mp4",
     author: "Sarah M.",
     location: "Phoenix, AZ",
     detail: "8.4 kW system installed",
   },
   {
     id: 2,
-    video: "/assets/video2.mp4",
+    video: "/assets/optimized/video2.mp4",
     author: "David Chen",
     location: "Austin, TX",
     detail: "12 kW system with battery",
   },
   {
     id: 3,
-    video: "/assets/video3.mp4",
+    video: "/assets/optimized/video3.mp4",
     author: "Maria Rodriguez",
     location: "Denver, CO",
     detail: "6.8 kW rooftop system",
   },
   {
     id: 4,
-    video: "/assets/video4.mp4",
+    video: "/assets/optimized/video4.mp4",
     author: "James & Lisa T.",
     location: "San Diego, CA",
     detail: "10.2 kW system installed",
