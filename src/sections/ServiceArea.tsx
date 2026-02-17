@@ -20,7 +20,7 @@ const ServiceArea = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-purple-500/10 border border-purple-500/20">
               <Zap className="w-4 h-4 text-purple-400" />
               <span className="text-purple-300 text-sm font-medium">NEM 3.0 Specialists</span>
             </div>
@@ -41,7 +41,7 @@ const ServiceArea = () => {
               {["SCE", "PG&E", "SDG&E"].map((utility) => (
                 <div 
                   key={utility}
-                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm font-medium"
+                  className="px-4 py-2 rounded-none bg-white/5 border border-white/10 text-white/80 text-sm font-medium"
                 >
                   {utility}
                 </div>
@@ -52,7 +52,7 @@ const ServiceArea = () => {
             <div className="pt-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-purple-600 text-white font-medium transition-all duration-300 hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-500/25"
+                className="group inline-flex items-center gap-3 px-6 py-3 rounded-none bg-purple-600 text-white font-medium transition-all duration-300 hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-500/25"
               >
                 Check your zip code
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -106,7 +106,7 @@ const USMap = () => {
             className="absolute transform -translate-x-1/2 -translate-y-1/2"
             style={{ left: `${state.x}%`, top: `${state.y}%` }}
           >
-            <div className="w-2 h-2 rounded-full bg-gray-700/50 border border-gray-600/30 opacity-30" />
+            <div className="w-2 h-2 rounded-none bg-gray-700/50 border border-gray-600/30 opacity-30" />
           </div>
         ))}
 
@@ -120,11 +120,11 @@ const USMap = () => {
             onMouseLeave={() => setHoveredState(null)}
           >
             {/* Pulse ring */}
-            <span className="absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-30 animate-ping" style={{ animationDuration: '2s' }} />
+            <span className="absolute inline-flex h-full w-full rounded-none bg-purple-400 opacity-30 animate-ping" style={{ animationDuration: '2s' }} />
             
             {/* Marker dot */}
             <div
-              className={`relative w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full border-2 transition-all duration-300 cursor-pointer ${
+              className={`relative w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-none border-2 transition-all duration-300 cursor-pointer ${
                 hoveredState === state.id 
                   ? "bg-purple-400 border-purple-200 scale-150 shadow-lg shadow-purple-500/50" 
                   : "bg-purple-600 border-purple-300 shadow-md shadow-purple-500/30"
@@ -139,7 +139,7 @@ const USMap = () => {
                   : "opacity-0 translate-y-1 pointer-events-none"
               }`}
             >
-              <span className="text-[9px] sm:text-[10px] font-medium text-white bg-purple-600/90 px-2 py-0.5 rounded-full">
+              <span className="text-[9px] sm:text-[10px] font-medium text-white bg-purple-600/90 px-2 py-0.5 rounded-none">
                 {state.name}
               </span>
             </div>
@@ -184,7 +184,7 @@ const USMap = () => {
         {Object.entries(regions).filter(([, states]) => states.length > 0).map(([region, states]) => (
           <div 
             key={region}
-            className="text-center p-3 rounded-xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-purple-500/10 hover:border-purple-500/30"
+            className="text-center p-3 rounded-none bg-white/5 border border-white/10 transition-all duration-300 hover:bg-purple-500/10 hover:border-purple-500/30"
             onMouseEnter={() => setHoveredRegion(region)}
             onMouseLeave={() => setHoveredRegion(null)}
           >

@@ -8,13 +8,13 @@ interface Card {
 }
 
 const cards: Card[] = [
-  { id: 1, image: "/assets/insta1.jpg", alt: "Reset Wellness Event 1" },
-  { id: 2, image: "/assets/insta2.jpg", alt: "Reset Wellness Event 2" },
-  { id: 3, image: "/assets/insta3.jpg", alt: "Reset Wellness Event 3" },
-  { id: 4, image: "/assets/insta4.jpg", alt: "Reset Wellness Event 4" },
-  { id: 5, image: "/assets/insta5.jpg", alt: "Reset Wellness Event 5" },
-  { id: 6, image: "/assets/insta6.jpg", alt: "Reset Wellness Event 6" },
-  { id: 7, image: "/assets/insta7.jpg", alt: "Reset Wellness Event 7" },
+  { id: 1, image: "/assets/Solar installers at sunset.png", alt: "Solar installation team at sunset" },
+  { id: 2, image: "/assets/Solar installers at sunset.png", alt: "Solar installation project overview" },
+  { id: 3, image: "/assets/Solar installers at sunset.png", alt: "Solar installation completion" },
+  { id: 4, image: "/assets/Solar installers at sunset.png", alt: "Residential solar installation" },
+  { id: 5, image: "/assets/Solar installers at sunset.png", alt: "SolarFig installation crew" },
+  { id: 6, image: "/assets/Solar installers at sunset.png", alt: "Solar panel installation process" },
+  { id: 7, image: "/assets/Solar installers at sunset.png", alt: "Completed solar array" },
 ];
 
 const AUTO_ROTATE_INTERVAL = 4000; // 4 seconds
@@ -177,7 +177,7 @@ const CardStack = () => {
           return (
             <div
               key={card.id}
-              className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10"
+              className="absolute inset-0 rounded-none overflow-hidden shadow-2xl border border-white/10"
               style={{
                 transform: style.transform,
                 zIndex: style.zIndex,
@@ -203,7 +203,7 @@ const CardStack = () => {
         <button
           onClick={handlePrev}
           disabled={animationPhase !== "idle"}
-          className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/30 hover:text-white/60 hover:border-white/20 hover:bg-white/5 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
+          className="w-10 h-10 rounded-none border border-white/10 flex items-center justify-center text-white/30 hover:text-white/60 hover:border-white/20 hover:bg-white/5 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
           aria-label="Previous card"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -214,7 +214,7 @@ const CardStack = () => {
         <button
           onClick={handleNext}
           disabled={animationPhase !== "idle"}
-          className="w-14 h-14 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-14 h-14 rounded-none border-2 border-white/30 flex items-center justify-center text-white hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Next card"
         >
           <ChevronRight className="w-6 h-6" />
@@ -246,7 +246,7 @@ const CardStack = () => {
                 setCurrentIndex(index);
               }
             }}
-            className={`h-1.5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${index === currentIndex
+            className={`h-1.5 rounded-none transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${index === currentIndex
               ? "bg-white w-8 opacity-100"
               : "bg-white/20 w-1.5 hover:bg-white/40"
               }`}

@@ -30,9 +30,9 @@ const PinkRibbon = () => {
           <path
             d="M 0 100 Q 200 180 400 150 Q 600 120 800 100"
             fill="none"
-            stroke="#f5a8e0"
+            stroke="#d8b4fe"
             strokeWidth="40"
-            strokeLinecap="round"
+            strokeLinecap="butt"
           />
         </svg>
         <div
@@ -43,10 +43,10 @@ const PinkRibbon = () => {
           }}
         >
           <div className="animate-ribbon-scroll whitespace-nowrap flex items-center h-full">
-            <span className="text-[#1a1a1a] text-xs font-semibold tracking-wider uppercase px-4">
+            <span className="text-[#24133c] text-xs font-semibold tracking-wider uppercase px-4">
               {repeatedText}
             </span>
-            <span className="text-[#1a1a1a] text-xs font-semibold tracking-wider uppercase px-4">
+            <span className="text-[#24133c] text-xs font-semibold tracking-wider uppercase px-4">
               {repeatedText}
             </span>
           </div>
@@ -71,9 +71,9 @@ const PinkRibbon = () => {
           <path
             d="M 0 150 Q 150 50 300 80 Q 450 110 600 50"
             fill="none"
-            stroke="#f5a8e0"
+            stroke="#d8b4fe"
             strokeWidth="40"
-            strokeLinecap="round"
+            strokeLinecap="butt"
           />
         </svg>
         <div
@@ -84,10 +84,10 @@ const PinkRibbon = () => {
           }}
         >
           <div className="animate-ribbon-scroll whitespace-nowrap flex items-center h-full">
-            <span className="text-[#1a1a1a] text-xs font-semibold tracking-wider uppercase px-4">
+            <span className="text-[#24133c] text-xs font-semibold tracking-wider uppercase px-4">
               {repeatedText}
             </span>
-            <span className="text-[#1a1a1a] text-xs font-semibold tracking-wider uppercase px-4">
+            <span className="text-[#24133c] text-xs font-semibold tracking-wider uppercase px-4">
               {repeatedText}
             </span>
           </div>

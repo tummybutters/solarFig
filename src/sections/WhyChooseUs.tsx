@@ -41,6 +41,29 @@ const pillars: Pillar[] = [
   },
 ];
 
+const installationPanels = [
+  {
+    src: "/assets/install-gallery/install-09.jpg",
+    alt: "Residential solar array installed across a large suburban roof",
+  },
+  {
+    src: "/assets/install-gallery/install-02.jpg",
+    alt: "Solar panel rows mounted on a tan shingle home",
+  },
+  {
+    src: "/assets/install-gallery/install-04.jpg",
+    alt: "Close-up home rooftop with black-frame solar modules",
+  },
+  {
+    src: "/assets/install-gallery/install-07.jpg",
+    alt: "Finished rooftop installation with clean panel alignment",
+  },
+  {
+    src: "/assets/install-gallery/install-10.jpg",
+    alt: "Wide neighborhood home with full solar panel coverage",
+  },
+];
+
 const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -69,7 +92,7 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative h-[380px] sm:h-[420px] rounded-[2rem] overflow-hidden bg-gray-50 cursor-default md:cursor-pointer"
+      className="group relative h-[380px] sm:h-[420px] rounded-none overflow-hidden bg-purple-950 cursor-default md:cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -80,16 +103,16 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
       <div
         className="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
         style={{
-          background: isActive 
-            ? "linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%)" 
-            : "linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)",
+          background: isActive
+            ? "linear-gradient(135deg, #381d5d 0%, #24133c 50%, #1a0b2e 100%)"
+            : "linear-gradient(135deg, #24133c 0%, #1a0b2e 100%)",
           transform: isActive ? "scale(1.02)" : "scale(1)",
         }}
       />
 
       {/* Purple accent line at top */}
-      <div 
-        className="absolute top-0 left-8 right-8 h-1 rounded-full bg-purple-500 transition-all duration-500"
+      <div
+        className="absolute top-0 left-8 right-8 h-1 rounded-none bg-purple-400 transition-all duration-500"
         style={{
           opacity: isActive ? 1 : 0.3,
           transform: isActive ? "scaleX(1)" : "scaleX(0.3)",
@@ -100,34 +123,34 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
       <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
         {/* Top Label & Icon */}
         <div className="flex justify-between items-start">
-          <span className="text-gray-400 text-[10px] tracking-widest uppercase font-medium">
+          <span className="text-purple-300/50 text-[10px] tracking-[0.3em] uppercase font-medium">
             0{pillar.id}
           </span>
           <div
-            className="w-10 h-10 rounded-full border border-purple-200 flex items-center justify-center transition-all duration-500 bg-white"
+            className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center transition-all duration-500 bg-white/5"
             style={{
-              borderColor: isActive ? "rgba(168, 85, 247, 0.4)" : "rgba(168, 85, 247, 0.2)",
+              borderColor: isActive ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.1)",
               transform: isActive ? "rotate(0deg) scale(1.1)" : "rotate(0deg) scale(1)",
             }}
           >
-            <span className="text-purple-600 transition-colors duration-300">
+            <span className="text-purple-300 transition-colors duration-300">
               {pillar.icon}
             </span>
           </div>
         </div>
 
         {/* Bottom Content */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           {/* Subtitle */}
-          <span 
-            className="block text-purple-600 text-xs tracking-wide font-medium transition-all duration-500"
+          <span
+            className="block text-purple-400 text-xs tracking-[0.2em] font-bold uppercase transition-all duration-500"
           >
             {pillar.subtitle}
           </span>
 
           {/* Title */}
-          <h3 
-            className="text-gray-900 text-xl sm:text-2xl font-semibold tracking-tight transition-all duration-500 leading-tight"
+          <h3
+            className="text-white text-2xl sm:text-3xl font-serif font-light tracking-tight transition-all duration-500 leading-tight"
             style={{
               transform: isActive ? "translateY(-4px)" : "translateY(0)",
             }}
@@ -137,11 +160,11 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
 
           {/* Description - Reveals on Hover */}
           <p
-            className="text-gray-600 text-sm leading-relaxed transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+            className="text-purple-100/70 text-sm leading-relaxed transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
             style={{
               opacity: isActive ? 1 : 0,
               transform: isActive ? "translateY(0)" : "translateY(20px)",
-              maxHeight: isActive ? "120px" : "0",
+              maxHeight: isActive ? "140px" : "0",
               overflow: "hidden",
             }}
           >
@@ -156,19 +179,19 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
               transform: isActive ? "translateY(0)" : "translateY(10px)",
             }}
           >
-            <span className="text-purple-700 text-sm font-medium flex items-center gap-2">
+            <span className="text-white text-sm font-medium flex items-center gap-2">
               Learn more
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 text-purple-400" />
             </span>
           </div>
         </div>
       </div>
 
       {/* Border Ring */}
-      <div 
-        className="absolute inset-0 rounded-[2rem] border-2 transition-all duration-500 pointer-events-none"
+      <div
+        className="absolute inset-0 rounded-none border-2 transition-all duration-500 pointer-events-none"
         style={{
-          borderColor: isActive ? "rgba(168, 85, 247, 0.2)" : "rgba(0,0,0,0.05)",
+          borderColor: isActive ? "rgba(255, 255, 255, 0.1)" : "rgba(255,255,255,0.05)",
         }}
       />
     </div>
@@ -180,21 +203,44 @@ const WhyChooseUs = () => {
     <section id="why-choose-us" className="bg-white min-h-screen py-20 sm:py-24 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-20">
           <div className="space-y-4">
-            <span className="text-purple-600 text-xs tracking-widest uppercase font-medium">
+            <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">
               Why SolarFig
             </span>
-            <h2 className="text-gray-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
-              California solar that
+            <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl font-serif font-light tracking-tight leading-[0.9]">
+              California solar
               <br />
-              <span className="text-gray-400">actually works under NEM 3.0</span>
+              <span className="text-gray-400">answers all of your questions</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-sm sm:text-base max-w-md leading-relaxed lg:text-right">
-            Most solar companies are still selling systems designed for 2022. 
+          <p className="border-l border-purple-100 pl-6 text-gray-500 text-sm sm:text-base max-w-md leading-relaxed">
+            Most solar companies are still selling systems designed for 2022.
             We designed ours for the new rules—and we guarantee the results.
           </p>
+        </div>
+
+        <div className="mb-12 lg:mb-16 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
+          <figure className="group relative overflow-hidden border border-purple-100 h-[320px] sm:h-[420px] lg:h-[520px] lg:col-span-7">
+            <img
+              src={installationPanels[0].src}
+              alt={installationPanels[0].alt}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/35 to-transparent" />
+          </figure>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:col-span-5">
+            {installationPanels.slice(1).map((panel) => (
+              <figure key={panel.src} className="group relative overflow-hidden border border-purple-100 h-[180px] sm:h-[220px] lg:h-[248px]">
+                <img
+                  src={panel.src}
+                  alt={panel.alt}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-950/35 to-transparent" />
+              </figure>
+            ))}
+          </div>
         </div>
 
         {/* Pills Grid - 2x2 on desktop */}

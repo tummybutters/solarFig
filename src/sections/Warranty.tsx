@@ -34,7 +34,7 @@ const Warranty = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-purple-100 mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-none bg-purple-100 mb-6">
               <Shield className="w-8 h-8 text-purple-600" />
             </div>
             <h2 className="text-gray-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-4">
@@ -53,14 +53,14 @@ const Warranty = () => {
             {warranties.slice(0, 2).map((item, index) => (
               <div
                 key={index}
-                className="group relative p-8 rounded-[2rem] bg-white border-2 border-purple-100 shadow-lg shadow-purple-500/5 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1"
+                className="group relative p-8 rounded-none bg-white border-2 border-purple-100 shadow-lg shadow-purple-500/5 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1"
               >
                 {/* Highlight badge */}
-                <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-600 text-white text-xs font-semibold">
+                <div className="absolute top-4 right-4 px-3 py-1 rounded-none bg-purple-600 text-white text-xs font-semibold">
                   {item.highlight}
                 </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-purple-600">
+                <div className="w-14 h-14 rounded-none bg-purple-100 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-purple-600">
                   <span className="text-purple-600 transition-colors duration-300 group-hover:text-white">
                     {item.icon}
                   </span>
@@ -81,17 +81,17 @@ const Warranty = () => {
             {warranties.slice(2).map((item, index) => (
               <div
                 key={index}
-                className="group flex gap-4 p-6 rounded-2xl bg-white border border-gray-100 transition-all duration-300 hover:bg-purple-50/30 hover:border-purple-100"
+                className="group flex gap-4 p-6 rounded-none bg-white border border-gray-100 transition-all duration-300 hover:bg-purple-50/30 hover:border-purple-100"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center transition-all duration-300 group-hover:bg-purple-600">
+                  <div className="w-12 h-12 rounded-none bg-purple-100 flex items-center justify-center transition-all duration-300 group-hover:bg-purple-600">
                     <span className="text-purple-600 transition-colors duration-300 group-hover:text-white">
                       {item.icon}
                     </span>
                   </div>
                 </div>
                 <div>
-                  <div className="inline-block px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 text-[10px] font-semibold uppercase tracking-wide mb-2">
+                  <div className="inline-block px-2 py-0.5 rounded-none bg-gray-100 text-gray-600 text-[10px] font-semibold uppercase tracking-wide mb-2">
                     {item.highlight}
                   </div>
                   <h3 className="text-gray-900 font-semibold text-base mb-1">

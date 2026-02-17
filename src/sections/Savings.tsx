@@ -67,8 +67,8 @@ const Savings = () => {
             </p>
             
             {/* Stat highlight */}
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-purple-50 border border-purple-100">
-              <div className="w-16 h-16 rounded-2xl bg-purple-600 flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-4 p-4 rounded-none bg-purple-50 border border-purple-100">
+              <div className="w-16 h-16 rounded-none bg-purple-600 flex items-center justify-center flex-shrink-0">
                 <TrendingDown className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -94,9 +94,9 @@ const Savings = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group p-6 rounded-[1.5rem] bg-gray-50 border border-gray-100 transition-all duration-500 hover:bg-purple-50/50 hover:border-purple-100"
+                className="group p-6 rounded-none bg-gray-50 border border-gray-100 transition-all duration-500 hover:bg-purple-50/50 hover:border-purple-100"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-purple-600 group-hover:scale-110">
+                <div className="w-12 h-12 rounded-none bg-purple-100 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-purple-600 group-hover:scale-110">
                   <span className="text-purple-600 transition-colors duration-300 group-hover:text-white">
                     {benefit.icon}
                   </span>
@@ -131,14 +131,14 @@ const Savings = () => {
             {bonuses.map((bonus, index) => (
               <div
                 key={index}
-                className="group relative p-6 rounded-[1.5rem] bg-gradient-to-br from-gray-50 to-white border border-gray-100 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/5 hover:border-purple-100"
+                className="group relative p-6 rounded-none bg-gradient-to-br from-gray-50 to-white border border-gray-100 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/5 hover:border-purple-100"
               >
                 {/* Value badge */}
-                <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">
+                <div className="absolute top-4 right-4 px-3 py-1 rounded-none bg-purple-100 text-purple-700 text-xs font-semibold">
                   {bonus.value} value
                 </div>
 
-                <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-none bg-purple-600 flex items-center justify-center mb-4">
                   <span className="text-white">{bonus.icon}</span>
                 </div>
 

@@ -208,7 +208,7 @@ const TestimonialCardStack = () => {
           return (
             <div
               key={videoCard.id}
-              className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 bg-black"
+              className="absolute inset-0 rounded-none overflow-hidden shadow-2xl border border-white/10 bg-black"
               style={{
                 transform: style.transform,
                 zIndex: style.zIndex,
@@ -234,7 +234,7 @@ const TestimonialCardStack = () => {
               {/* Play indicator (shows when paused) */}
               {!isCurrent && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-none bg-white/20 backdrop-blur-sm flex items-center justify-center">
                     <Play className="w-6 h-6 text-white ml-1" />
                   </div>
                 </div>
@@ -276,7 +276,7 @@ const TestimonialCardStack = () => {
         <button
           onClick={handlePrev}
           disabled={animationPhase !== "idle"}
-          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white/80 hover:border-white/40 hover:bg-white/10 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
+          className="w-10 h-10 rounded-none border border-white/20 flex items-center justify-center text-white/50 hover:text-white/80 hover:border-white/40 hover:bg-white/10 transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
           aria-label="Previous video"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -287,7 +287,7 @@ const TestimonialCardStack = () => {
         <button
           onClick={handleNext}
           disabled={animationPhase !== "idle"}
-          className="w-14 h-14 rounded-full border-2 border-purple-400/50 flex items-center justify-center text-purple-300 hover:text-white hover:border-purple-400 hover:bg-purple-500/20 transition-all duration-300 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-14 h-14 rounded-none border-2 border-purple-400/50 flex items-center justify-center text-purple-300 hover:text-white hover:border-purple-400 hover:bg-purple-500/20 transition-all duration-300 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Next video"
         >
           <ChevronRight className="w-6 h-6" />
@@ -318,7 +318,7 @@ const TestimonialCardStack = () => {
                 setCurrentIndex(index);
               }
             }}
-            className={`h-1.5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${index === currentIndex
+            className={`h-1.5 rounded-none transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${index === currentIndex
               ? "bg-purple-400 w-8 opacity-100"
               : "bg-white/30 w-1.5 hover:bg-white/50"
               }`}

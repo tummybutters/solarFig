@@ -38,7 +38,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
 
   return (
     <div
-      className="group relative h-[380px] sm:h-[420px] md:h-[360px] lg:h-[460px] rounded-[2rem] overflow-hidden cursor-pointer"
+      className="group relative h-[380px] sm:h-[420px] md:h-[360px] lg:h-[460px] rounded-none overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -75,7 +75,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
             0{experience.id}
           </span>
           <div
-            className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center transition-all duration-500"
+            className="w-8 h-8 rounded-none border border-white/30 flex items-center justify-center transition-all duration-500"
             style={{
               backgroundColor: isHovered ? "white" : "transparent",
               transform: isHovered ? "rotate(45deg)" : "rotate(0deg)",
@@ -144,7 +144,7 @@ const ExperiencePill = ({ experience, index }: { experience: Experience; index: 
 
       {/* Border Ring */}
       <div 
-        className="absolute inset-0 rounded-[2.5rem] border transition-all duration-500 pointer-events-none"
+        className="absolute inset-0 rounded-none border transition-all duration-500 pointer-events-none"
         style={{
           borderColor: isHovered ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.1)",
         }}

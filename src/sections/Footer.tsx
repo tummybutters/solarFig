@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const footerLinks = {
   process: [
     { label: "Consultation", href: "#consultation" },
-    { label: "Design & Proposal", href: "#design" },
+    { label: "Design & Proposal", href: "#design-review" },
     { label: "Site Inspection", href: "#inspection" },
     { label: "Permitting", href: "#permitting" },
     { label: "Installation", href: "#installation" },
@@ -16,26 +16,25 @@ const footerLinks = {
     { label: "EV Chargers", href: "#ev-chargers" },
   ],
   plans: [
-    { label: "0$ Down / EZ Plan", href: "#ez-plan" },
-    { label: "Finance to Own", href: "#finance" },
-    { label: "Outright Purchase", href: "#purchase" },
-    { label: "Prepaid Solar", href: "#prepaid" },
+    { label: "0$ Down / EZ Plan", href: "/pricing-costs#ez-plan" },
+    { label: "Finance to Own", href: "/pricing-costs#finance-to-own" },
+    { label: "Outright Purchase", href: "/pricing-costs#direct-purchase" },
+    { label: "Prepaid Solar", href: "/pricing-costs#prepaid-solar" },
   ],
-  locations: [
-    { label: "Los Angeles", href: "#los-angeles" },
-    { label: "Orange County", href: "#orange-county" },
-    { label: "San Diego", href: "#san-diego" },
-    { label: "San Francisco Bay Area", href: "#bay-area" },
+  serviceArea: [
+    { label: "California Service Map", href: "#service-area" },
+    { label: "SCE Territory", href: "#service-area" },
+    { label: "PG&E Territory", href: "#service-area" },
+    { label: "SDG&E Territory", href: "#service-area" },
   ],
   explore: [
-    { label: "About Us", href: "#about" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Articles", href: "#articles" },
-    { label: "Referrals", href: "#referrals" },
+    { label: "About Us", href: "/about" },
+    { label: "Articles", href: "/articles" },
+    { label: "Referrals", href: "/referrals" },
   ],
   legal: [
-    { label: "Terms of Use", href: "#terms" },
-    { label: "Privacy Policy", href: "#privacy" },
+    { label: "Terms of Use", href: "/terms-of-use" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
   ],
 };
 
@@ -73,7 +72,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span>4930 Campus Drive<br />Newport Beach, CA 92660</span>
+                <span>2810 Jackson Ave PH3B<br />Long Island City, NY 11101</span>
               </div>
             </div>
           </div>
@@ -122,9 +121,9 @@ const Footer = () => {
 
           {/* Locations */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Locations</h4>
+            <h4 className="font-semibold text-sm mb-4 text-white">Service Area</h4>
             <ul className="space-y-2.5">
-              {footerLinks.locations.map((link) => (
+              {footerLinks.serviceArea.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-gray-400 text-sm hover:text-purple-400 transition-colors">
                     {link.label}
@@ -152,8 +151,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6">
-            <a href="/" className="text-gray-400 text-sm hover:text-white transition-colors">Home</a>
-            <a href="/contact" className="text-gray-400 text-sm hover:text-white transition-colors">Contact Us</a>
+            <a href="#home" className="text-gray-400 text-sm hover:text-white transition-colors">Home</a>
+            <a href="#contact" className="text-gray-400 text-sm hover:text-white transition-colors">Contact Us</a>
           </div>
           
           <div className="flex items-center gap-4 text-xs text-gray-500">
