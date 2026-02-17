@@ -188,9 +188,10 @@ const HomeEditorial = () => {
               <Star className="h-5 w-5 fill-current" />
             </p>
             <h2 className="max-w-3xl font-['Fraunces'] text-5xl leading-none tracking-tight text-[#241d2f] sm:text-7xl">
-              500+ Installations · 1500+ 5-Star Reviews
+              500+ Installations
             </h2>
-            <p className="mt-4 text-lg text-[#423751]">Google · SolarReviews · Facebook · Birdeye</p>
+            <p className="mt-4 text-lg text-[#423751]">Hundreds of 5-star reviews</p>
+            <p className="mt-2 text-lg text-[#423751]">Google · SolarReviews · Facebook · Birdeye</p>
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
