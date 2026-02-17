@@ -8,12 +8,7 @@ const HeroHorizon = () => {
             <div className="relative flex-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent z-10" />
 
-                {/* Placeholder for video */}
-                <img
-                    src="/assets/Solar installers at sunset.png"
-                    alt="Horizon view"
-                    className="h-full w-full object-cover"
-                />
+                <div className="absolute inset-0 bg-purple-900" />
                 {/* 
           TODO: Replace with actual video:
           <video className="h-full w-full object-cover" autoPlay loop muted playsInline>...</video>

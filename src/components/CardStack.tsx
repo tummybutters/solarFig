@@ -8,13 +8,13 @@ interface Card {
 }
 
 const cards: Card[] = [
-  { id: 1, image: "/assets/Solar installers at sunset.png", alt: "Solar installation team at sunset" },
-  { id: 2, image: "/assets/Solar installers at sunset.png", alt: "Solar installation project overview" },
-  { id: 3, image: "/assets/Solar installers at sunset.png", alt: "Solar installation completion" },
-  { id: 4, image: "/assets/Solar installers at sunset.png", alt: "Residential solar installation" },
-  { id: 5, image: "/assets/Solar installers at sunset.png", alt: "SolarFig installation crew" },
-  { id: 6, image: "/assets/Solar installers at sunset.png", alt: "Solar panel installation process" },
-  { id: 7, image: "/assets/Solar installers at sunset.png", alt: "Completed solar array" },
+  { id: 1, image: "/assets/install-gallery/install-01.png", alt: "Solar installation project overview" },
+  { id: 2, image: "/assets/install-gallery/install-02.jpg", alt: "Solar panel array close-up" },
+  { id: 3, image: "/assets/install-gallery/install-03.jpg", alt: "Residential solar energy system" },
+  { id: 4, image: "/assets/install-gallery/install-04.jpg", alt: "Premium solar panel mounting" },
+  { id: 5, image: "/assets/install-gallery/install-06.png", alt: "Solar energy installation team" },
+  { id: 6, image: "/assets/install-gallery/install-07.jpg", alt: "Eco-friendly home energy setup" },
+  { id: 7, image: "/assets/install-gallery/install-08.jpg", alt: "Completed solar panel installation" },
 ];
 
 const AUTO_ROTATE_INTERVAL = 4000; // 4 seconds
@@ -223,12 +223,12 @@ const CardStack = () => {
 
       {/* Mobile Controls Overlay - Right side larger */}
       <div className="absolute inset-0 z-50 md:hidden flex pointer-events-auto">
-        <button 
+        <button
           className="w-1/3 h-full bg-transparent cursor-pointer"
           onClick={handlePrev}
           aria-label="Previous card"
         />
-        <button 
+        <button
           className="w-2/3 h-full bg-transparent cursor-pointer"
           onClick={handleNext}
           aria-label="Next card"

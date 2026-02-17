@@ -275,7 +275,7 @@ const Battery = () => {
 
           <figure className="overflow-hidden rounded-2xl border border-stone-200">
             <img
-              src="/assets/Solar installers at sunset.png"
+              src="/assets/whole-home-solar/whole-home-house.jpg"
               alt="The exterior of a home with bright lights shining, creating a welcoming atmosphere."
               className="h-full min-h-[320px] w-full object-cover"
               loading="lazy"

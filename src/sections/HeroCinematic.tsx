@@ -8,12 +8,7 @@ const HeroCinematic = () => {
                 <div className="absolute inset-0 bg-black/40 z-10" /> {/* Dark overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/90 via-transparent to-transparent z-10" />
 
-                {/* Placeholder for video - using image for now */}
-                <img
-                    src="/assets/Solar installers at sunset.png"
-                    alt="Background"
-                    className="h-full w-full object-cover opacity-80"
-                />
+                <div className="absolute inset-0 bg-slate-900" />
                 {/* 
           TODO: Replace with actual video when ready:
           <video 

@@ -44,12 +44,7 @@ const HeroSplit = () => {
             <div className="relative h-[50vh] w-full lg:h-screen lg:w-full">
                 <div className="absolute inset-0 bg-purple-900/20 mix-blend-multiply z-10" /> {/* Tints video slightly purple */}
 
-                {/* Placeholder for video - using image for now */}
-                <img
-                    src="/assets/Solar installers at sunset.png"
-                    alt="Visual"
-                    className="h-full w-full object-cover object-center"
-                />
+                <div className="absolute inset-0 bg-purple-900" />
                 {/* 
           TODO: Replace with actual video:
           <video className="h-full w-full object-cover" autoPlay loop muted playsInline>...</video>

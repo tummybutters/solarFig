@@ -206,7 +206,7 @@ const HomeEditorial = () => {
 
       <section className="bg-[#f4eefb] pb-24">
         <div className="h-[220px] w-full overflow-hidden sm:h-[300px]">
-          <img src="/assets/Solar installers at sunset.png" alt="Solarfig team on-site" className="h-full w-full object-cover" />
+          <img src="/assets/install-gallery/install-05.jpg" alt="Solarfig team on-site" className="h-full w-full object-cover" />
         </div>
 
         <div className="mx-auto mt-12 grid max-w-[1080px] gap-6 px-4 sm:px-6 lg:grid-cols-2">

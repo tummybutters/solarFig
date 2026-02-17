@@ -26,9 +26,7 @@ const HeroGlacial = () => {
                     autoPlay
                     muted
                     playsInline
-                    preload="metadata"
-                    poster="/assets/Solar installers at sunset.png"
-                    aria-label="Solar installers at sunset"
+                    preload="auto"
                     onEnded={freezeOnLastFrame}
                 >
                     <source src="/assets/hero-main/hero-background-optimized-v2.mp4" type="video/mp4" />

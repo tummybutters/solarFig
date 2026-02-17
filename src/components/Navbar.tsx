@@ -79,7 +79,7 @@ const navItems: NavItem[] = [
         label: "Process",
         title: "How Solar Installation Works",
         href: "/installation",
-        image: "/assets/Solar installers at sunset.png",
+        image: "/assets/install-gallery/install-05.jpg",
       },
     ],
   },
@@ -97,7 +97,7 @@ const navItems: NavItem[] = [
         label: "Coverage",
         title: "California Service Coverage",
         href: "/locations",
-        image: "/assets/Solar installers at sunset.png",
+        image: "/assets/install-gallery/install-01.png",
       },
       {
         label: "Territories",

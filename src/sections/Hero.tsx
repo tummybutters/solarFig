@@ -18,12 +18,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen w-full overflow-hidden bg-purple-950 text-white selection:bg-purple-200/80 selection:text-purple-950"
     >
-      <div className="absolute inset-0">
-        <img
-          src="/assets/Solar installers at sunset.png"
-          alt="Solar installers mounting panels at sunset"
-          className="h-full w-full object-cover object-[72%_center] sm:object-center"
-        />
+      <div className="absolute inset-0 bg-purple-950">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-950 via-purple-900/85 to-purple-900/45" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(159,114,208,0.24),transparent_35%),radial-gradient(circle_at_18%_12%,rgba(187,154,223,0.16),transparent_34%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(36,19,60,0.92)_0%,rgba(36,19,60,0.38)_38%,rgba(36,19,60,0.86)_100%)]" />

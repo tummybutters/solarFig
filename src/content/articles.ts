@@ -210,7 +210,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "6 min read",
     excerpt:
       "Understand each phase of the timeline from site visit to final utility approval so you can plan with confidence.",
-    image: "/assets/Solar installers at sunset.png",
+    image: "/assets/install-gallery/install-03.jpg",
     updatedAt: "February 2026",
     sections: [
       {

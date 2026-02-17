@@ -140,7 +140,7 @@ const PricingCosts = () => {
 
           <figure>
             <img
-              src="/assets/Solar installers at sunset.png"
+              src="/assets/pricing-costs/hero-solar-roof-sunset.png"
               alt="Solar installation professionals standing beside a residential project at sunset."
               className="h-[440px] w-full rounded-3xl object-cover"
               loading="lazy"
