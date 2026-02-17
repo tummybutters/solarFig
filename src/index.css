@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,28 +6,38 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 0 0% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 0 0% 10%;
+    --color-purple-50: #f4eefb;
+    --color-purple-100: #e8ddf6;
+    --color-purple-200: #d2bceb;
+    --color-purple-300: #bb9adf;
+    --color-purple-400: #9f72d0;
+    --color-purple-500: #8553c2;
+    --color-purple-600: #6d39b5;
+    --color-purple-700: #5c2f98;
+    --color-purple-800: #4a267a;
+    --color-purple-900: #381d5d;
+    --color-purple-950: #24133c;
+
+    --background: 268 55% 96%;
+    --foreground: 270 24% 14%;
+    --card: 268 65% 98%;
+    --card-foreground: 270 24% 14%;
+    --popover: 268 65% 98%;
+    --popover-foreground: 270 24% 14%;
+    --primary: 270 52% 47%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 320 100% 85%;
-    --accent-foreground: 0 0% 10%;
+    --secondary: 268 48% 93%;
+    --secondary-foreground: 270 24% 18%;
+    --muted: 268 38% 90%;
+    --muted-foreground: 270 14% 38%;
+    --accent: 270 52% 47%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 320 100% 85%;
-    --radius: 0.625rem;
-    --pink: 320 100% 85%;
-    --pink-dark: 320 80% 75%;
+    --border: 268 28% 82%;
+    --input: 268 28% 82%;
+    --ring: 270 52% 47%;
+    --radius: 0;
   }
 }
 
@@ -48,6 +58,63 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Purple-first remap for existing neutral utilities */
+  .bg-white { background-color: #fcf9ff; }
+  .bg-gray-50, .bg-stone-50, .bg-slate-50 { background-color: #f4eefb; }
+  .bg-gray-100, .bg-stone-100, .bg-slate-100 { background-color: #ece3f8; }
+  .bg-gray-200, .bg-stone-200, .bg-slate-200 { background-color: #dfd1f1; }
+  .bg-gray-900, .bg-stone-900, .bg-slate-900 { background-color: #24133c; }
+  .bg-gray-950 { background-color: #1e102f; }
+  .bg-gray-50\/30 { background-color: rgb(244 238 251 / 0.3); }
+  .bg-gray-50\/50 { background-color: rgb(244 238 251 / 0.5); }
+  .bg-white\/95 { background-color: rgb(252 249 255 / 0.95); }
+  .hover\:bg-gray-100:hover, .hover\:bg-stone-100:hover, .hover\:bg-slate-100:hover { background-color: #e8ddf6; }
+  .hover\:bg-gray-50:hover, .hover\:bg-stone-50:hover, .hover\:bg-slate-50:hover { background-color: #f0e8fa; }
+
+  .text-gray-400, .text-stone-400, .text-slate-400 { color: #8f7ba9; }
+  .text-gray-500, .text-stone-500, .text-slate-500 { color: #7a6791; }
+  .text-gray-600, .text-stone-600, .text-slate-600 { color: #644f7d; }
+  .text-gray-700, .text-stone-700, .text-slate-700 { color: #523c6d; }
+  .text-gray-800, .text-stone-800, .text-slate-800 { color: #3f2d59; }
+  .text-gray-900, .text-stone-900, .text-slate-900 { color: #2d1f3f; }
+  .text-gray-300 { color: #b7a5cf; }
+  .hover\:text-gray-300:hover { color: #c6b4dd; }
+  .hover\:text-gray-600:hover, .hover\:text-stone-600:hover { color: #5c2f98; }
+  .hover\:text-gray-900:hover, .hover\:text-stone-900:hover { color: #381d5d; }
+
+  .border-gray-100, .border-stone-100, .border-slate-100 { border-color: #e8ddf6; }
+  .border-gray-200, .border-stone-200, .border-slate-200 { border-color: #d8c7ee; }
+  .border-gray-300, .border-stone-300, .border-slate-300 { border-color: #c2aee2; }
+  .border-gray-700 { border-color: #4a267a; }
+  .border-gray-600\/30 { border-color: rgb(92 47 152 / 0.3); }
+  .border-stone-200\/70 { border-color: rgb(216 199 238 / 0.7); }
+
+  .from-gray-50 { --tw-gradient-from: #f4eefb var(--tw-gradient-from-position); --tw-gradient-to: rgb(244 238 251 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-white { --tw-gradient-to: #fcf9ff var(--tw-gradient-to-position); }
+  .via-gray-100 { --tw-gradient-via: #ece3f8 var(--tw-gradient-via-position); --tw-gradient-to: rgb(236 227 248 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to); }
+  .from-gray-200 { --tw-gradient-from: #dfd1f1 var(--tw-gradient-from-position); --tw-gradient-to: rgb(223 209 241 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+
+  .bg-blue-50, .bg-blue-100 { background-color: #efe7fb; }
+  .text-blue-100, .text-blue-200 { color: #d8c5f0; }
+  .text-blue-100\/70, .text-blue-200\/80 { color: rgb(216 197 240 / 0.8); }
+  .text-blue-200\/60 { color: rgb(216 197 240 / 0.6); }
+  .text-blue-200\/40 { color: rgb(216 197 240 / 0.4); }
+  .text-blue-200\/30 { color: rgb(216 197 240 / 0.3); }
+  .hover\:bg-blue-50:hover { background-color: #e8ddf6; }
+
+  .bg-lime-100, .bg-lime-200 { background-color: #c7ace8; }
+  .text-lime-200 { color: #eddfff; }
+  .hover\:bg-lime-100:hover { background-color: #d5bdee; }
 }
 
 /* Custom scrollbar */
@@ -61,7 +128,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -110,4 +177,381 @@
 
 .animate-ribbon-scroll {
   animation: ribbonScroll 20s linear infinite;
+}
+
+/* 3D Carousel Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Duration utilities */
+.duration-600 {
+  transition-duration: 600ms;
+}
+
+/* Custom animations for process carousel */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(133, 83, 194, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(133, 83, 194, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Backdrop blur utilities */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+@keyframes fade-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.tx-grid {
+  position: relative;
+}
+
+.tx-item {
+  will-change: transform;
+}
+
+.tx-enter {
+  animation: fade-scale-in 0.3s ease forwards;
+}
+
+.tx-exit {
+  animation: fade-scale-out 0.3s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tx-enter,
+  .tx-exit {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Global quote consent checkbox */
+.solar-neon-checkbox {
+  --checkbox-primary: var(--color-purple-600);
+  --checkbox-primary-dark: var(--color-purple-700);
+  --checkbox-primary-light: var(--color-purple-300);
+  --checkbox-bg: #f8f7fb;
+  --checkbox-size: 30px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.solar-neon-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.solar-neon-checkbox__frame {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  flex-shrink: 0;
+}
+
+.solar-neon-checkbox__box {
+  position: absolute;
+  inset: 0;
+  background: var(--checkbox-bg);
+  border-radius: 6px;
+  border: 2px solid var(--checkbox-primary-dark);
+  transition: all 0.4s ease;
+}
+
+.solar-neon-checkbox__check-container {
+  position: absolute;
+  inset: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solar-neon-checkbox__check {
+  width: 80%;
+  height: 80%;
+  fill: none;
+  stroke: var(--checkbox-primary-light);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solar-neon-checkbox__glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 8px;
+  background: var(--checkbox-primary);
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(1.2);
+  transition: all 0.4s ease;
+}
+
+.solar-neon-checkbox__borders {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.solar-neon-checkbox__borders span {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background: var(--checkbox-primary-light);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.solar-neon-checkbox__borders span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  animation: solarBorderFlow1 2s linear infinite;
+}
+
+.solar-neon-checkbox__borders span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 1px;
+  height: 40px;
+  animation: solarBorderFlow2 2s linear infinite;
+}
+
+.solar-neon-checkbox__borders span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  animation: solarBorderFlow3 2s linear infinite;
+}
+
+.solar-neon-checkbox__borders span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 1px;
+  height: 40px;
+  animation: solarBorderFlow4 2s linear infinite;
+}
+
+.solar-neon-checkbox__particles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--checkbox-primary-light);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 6px var(--checkbox-primary-light);
+}
+
+.solar-neon-checkbox__rings {
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
+}
+
+.solar-neon-checkbox__rings .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--checkbox-primary-light);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.solar-neon-checkbox__sparks span {
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--checkbox-primary-light), transparent);
+  opacity: 0;
+}
+
+.solar-neon-checkbox:hover .solar-neon-checkbox__box {
+  border-color: var(--checkbox-primary);
+  transform: scale(1.05);
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__box {
+  border-color: var(--checkbox-primary);
+  background: rgba(109, 57, 181, 0.16);
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__check {
+  stroke-dashoffset: 0;
+  transform: scale(1.1);
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__glow {
+  opacity: 0.22;
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__borders span {
+  opacity: 1;
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__particles span {
+  animation: solarParticleExplosion 0.6s ease-out forwards;
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__rings .ring {
+  animation: solarRingPulse 0.6s ease-out forwards;
+}
+
+.solar-neon-checkbox input:checked ~ .solar-neon-checkbox__frame .solar-neon-checkbox__sparks span {
+  animation: solarSparkFlash 0.6s ease-out forwards;
+}
+
+.solar-neon-checkbox input:focus-visible ~ .solar-neon-checkbox__frame .solar-neon-checkbox__box {
+  box-shadow: 0 0 0 2px #eadff7, 0 0 0 4px rgba(109, 57, 181, 0.45);
+}
+
+@keyframes solarBorderFlow1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes solarBorderFlow2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes solarBorderFlow3 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+@keyframes solarBorderFlow4 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200%); }
+}
+
+@keyframes solarParticleExplosion {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  20% { opacity: 1; }
+  100% {
+    transform: translate(calc(-50% + var(--x, 20px)), calc(-50% + var(--y, 20px))) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes solarRingPulse {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes solarSparkFlash {
+  0% {
+    transform: rotate(var(--r, 0deg)) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--r, 0deg)) translateX(30px) scale(0);
+    opacity: 0;
+  }
+}
+
+.solar-neon-checkbox__particles span:nth-child(1) { --x: 25px; --y: -25px; }
+.solar-neon-checkbox__particles span:nth-child(2) { --x: -25px; --y: -25px; }
+.solar-neon-checkbox__particles span:nth-child(3) { --x: 25px; --y: 25px; }
+.solar-neon-checkbox__particles span:nth-child(4) { --x: -25px; --y: 25px; }
+.solar-neon-checkbox__particles span:nth-child(5) { --x: 35px; --y: 0px; }
+.solar-neon-checkbox__particles span:nth-child(6) { --x: -35px; --y: 0px; }
+.solar-neon-checkbox__particles span:nth-child(7) { --x: 0px; --y: 35px; }
+.solar-neon-checkbox__particles span:nth-child(8) { --x: 0px; --y: -35px; }
+.solar-neon-checkbox__particles span:nth-child(9) { --x: 20px; --y: -30px; }
+.solar-neon-checkbox__particles span:nth-child(10) { --x: -20px; --y: 30px; }
+.solar-neon-checkbox__particles span:nth-child(11) { --x: 30px; --y: 20px; }
+.solar-neon-checkbox__particles span:nth-child(12) { --x: -30px; --y: -20px; }
+
+.solar-neon-checkbox__sparks span:nth-child(1),
+.solar-neon-checkbox__sparks span:nth-child(2),
+.solar-neon-checkbox__sparks span:nth-child(3),
+.solar-neon-checkbox__sparks span:nth-child(4) {
+  top: 50%;
+  left: 50%;
+}
+
+.solar-neon-checkbox__sparks span:nth-child(1) { --r: 0deg; }
+.solar-neon-checkbox__sparks span:nth-child(2) { --r: 90deg; }
+.solar-neon-checkbox__sparks span:nth-child(3) { --r: 180deg; }
+.solar-neon-checkbox__sparks span:nth-child(4) { --r: 270deg; }
+
+.solar-neon-checkbox__rings .ring:nth-child(1) { animation-delay: 0s; }
+.solar-neon-checkbox__rings .ring:nth-child(2) { animation-delay: 0.1s; }
+.solar-neon-checkbox__rings .ring:nth-child(3) { animation-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-neon-checkbox * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
