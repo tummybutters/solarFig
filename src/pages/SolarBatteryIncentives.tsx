@@ -114,7 +114,7 @@ const SolarBatteryIncentives = () => {
 
             {/* Floating checklist */}
             <div className="relative mx-4 -mt-24 space-y-3 sm:mx-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:w-80">
-              {checklist.map((item, i) => (
+              {checklist.map((item) => (
                 <div key={item.title} className="flex items-center gap-4 rounded-xl bg-white/95 p-4 backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-100">
                     <BadgeCheck className="h-5 w-5 text-purple-600" />

@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CarFront, Clock, Home, Leaf, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, CarFront, Clock, Home, Leaf, ShieldCheck } from "lucide-react";
 
 const chargerFeatures = [
   {

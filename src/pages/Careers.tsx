@@ -42,7 +42,7 @@ const Careers = () => {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {perks.map((perk, i) => {
+            {perks.map((perk) => {
               const Icon = perk.icon;
               return (
                 <div key={perk.title} className="group rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]">
