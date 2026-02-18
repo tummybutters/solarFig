@@ -17,7 +17,7 @@ const ArticleDetail = () => {
   const nextArticle = articleIndex < solarArticles.length - 1 ? solarArticles[articleIndex + 1] : null;
 
   return (
-    <main className="min-h-screen bg-[#f2eee8]">
+    <main className="mobile-premium min-h-screen bg-[#f2eee8]">
       <Navbar />
 
       <section className="relative overflow-hidden bg-[#17141b] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">

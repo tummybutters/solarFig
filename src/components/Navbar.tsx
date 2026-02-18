@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, Phone } from "lucide-react";
+import { ArrowUpRight, Menu, Phone, Sparkles } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -47,7 +47,7 @@ const navItems: NavItem[] = [
         label: "Featured Guide",
         title: "Battery Backup: Stay Powered Up!",
         href: "/battery",
-        image: "/assets/whole-home-solar/battery-backup.webp",
+        image: "/assets/battery/battery-span-tesla-pw3.jpg",
       },
       {
         label: "Popular Option",
@@ -87,10 +87,10 @@ const navItems: NavItem[] = [
     label: "Locations",
     href: "/locations",
     children: [
-      { label: "California Service Area", href: "/locations" },
-      { label: "SCE Territory", href: "/locations/sce" },
-      { label: "PG&E Territory", href: "/locations/pge" },
-      { label: "SDG&E Territory", href: "/locations/sdge" },
+      { label: "California Service Areas", href: "/locations" },
+      { label: "SCE Territory", href: "/locations#sce" },
+      { label: "PG&E Territory", href: "/locations#pge" },
+      { label: "SDG&E Territory", href: "/locations#sdge" },
     ],
     featured: [
       {
@@ -145,21 +145,25 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed inset-x-0 top-6 z-50 flex justify-center px-6">
+    <div className="fixed inset-x-0 top-3 z-50 flex justify-center px-3 sm:top-6 sm:px-6">
       <div
         className={cn(
-          "relative flex w-full max-w-[1400px] items-center justify-between rounded-[10px] border border-white/10 bg-[#161319]/90 px-8 py-3 backdrop-blur-2xl transition-all duration-300",
+          "relative flex w-full max-w-[1400px] items-center justify-between rounded-2xl border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:rounded-xl sm:px-8 sm:py-3",
           isScrolled ? "shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)]" : "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.4)]"
         )}
       >
+        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04] sm:rounded-xl" />
         {/* Logo */}
-        <a href="/" className="relative z-[60] flex shrink-0 transition-opacity hover:opacity-80">
+        <a href="/" className="relative z-[60] flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80">
           <img
             src="/assets/solarfig logo.svg"
             alt="SolarFig"
-            className="h-6 w-auto sm:h-7"
+            className="h-5 w-auto sm:h-7"
             style={{ filter: 'brightness(0) saturate(100%) invert(24%) sepia(58%) saturate(2084%) hue-rotate(251deg) brightness(91%) contrast(90%)' }}
           />
+          <span className="inline-flex h-5 items-center rounded-full border border-white/20 bg-white/10 px-2 text-[10px] font-semibold tracking-[0.12em] text-white/85 sm:hidden">
+            CA
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -255,33 +259,61 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden">
+        <div className="relative z-[60] lg:hidden">
+          <div className="mr-2 inline-flex">
+            <a
+              href="tel:+12133064154"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/15"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="sr-only">Call Solarfig</span>
+            </a>
+          </div>
           <Sheet>
             <SheetTrigger asChild>
-              <button className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white transition-colors hover:bg-white/10">
+              <button className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/15 sm:h-10 sm:w-10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full border-l border-white/10 bg-[#120f16] p-0 text-white sm:w-[400px]">
-              <SheetHeader className="border-b border-white/10 p-6 text-left">
-                <SheetTitle className="text-lg font-semibold text-white">Menu</SheetTitle>
+            <SheetContent side="right" className="w-[92vw] border-l border-white/10 bg-[#120f16] p-0 text-white sm:w-[400px]">
+              <SheetHeader className="border-b border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent p-5 text-left sm:p-6">
+                <SheetTitle className="text-lg font-semibold text-white">Solarfig Menu</SheetTitle>
+                <p className="mt-1 text-sm text-white/65">Premium solar guidance, built for California homes.</p>
               </SheetHeader>
-              <div className="flex h-full flex-col overflow-y-auto pb-20 pt-2">
-                <div className="flex-1 px-4">
+              <div className="flex h-full flex-col overflow-y-auto pb-10 pt-2">
+                <div className="px-3 pb-2 sm:px-4">
+                  <div className="grid grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2">
+                    <a
+                      href="/#contact"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#6D39B5] px-3 py-2 text-xs font-semibold text-white"
+                    >
+                      <Sparkles className="h-3.5 w-3.5" />
+                      Get a quote
+                    </a>
+                    <a
+                      href="/projects"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white/90"
+                    >
+                      Projects
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex-1 px-3 sm:px-4">
                   <Accordion type="single" collapsible className="w-full space-y-2">
                     {navItems.map((item) => (
-                      <AccordionItem key={item.label} value={item.label} className="border-b border-white/5 px-2">
-                        <AccordionTrigger className="text-base font-medium text-white transition-colors hover:text-purple-300 hover:no-underline py-4">
+                      <AccordionItem key={item.label} value={item.label} className="rounded-xl border border-white/10 bg-white/[0.03] px-3">
+                        <AccordionTrigger className="py-3.5 text-base font-medium text-white transition-colors hover:text-purple-300 hover:no-underline">
                           {item.label}
                         </AccordionTrigger>
                         <AccordionContent>
-                          <div className="flex flex-col space-y-1 pb-4 pl-2">
+                          <div className="flex flex-col space-y-1 pb-4">
                             {item.children.map((child) => (
                               <a
                                 key={child.label}
                                 href={child.href}
-                                className="block rounded-md py-2 text-sm text-white/70 transition-colors hover:text-white"
+                                className="block rounded-lg border border-transparent bg-white/[0.02] px-3 py-2.5 text-sm text-white/75 transition-colors hover:border-white/10 hover:text-white"
                               >
                                 {child.label}
                               </a>
@@ -293,16 +325,16 @@ const Navbar = () => {
                   </Accordion>
                 </div>
 
-                <div className="mt-auto space-y-4 border-t border-white/10 p-6">
+                <div className="mt-auto space-y-3 border-t border-white/10 p-5 sm:p-6">
                   <a
                     href="/#contact"
-                    className="flex w-full items-center justify-center rounded-[8px] bg-[#6D39B5] py-4 text-base font-bold text-white transition-colors hover:bg-[#8553c2]"
+                    className="inline-flex min-w-[12rem] items-center justify-center self-start rounded-[10px] bg-[#6D39B5] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#8553c2]"
                   >
                     Get a quote
                   </a>
                   <a
                     href="tel:+12133064154"
-                    className="flex w-full items-center justify-center gap-2 rounded-[8px] border border-white/10 bg-white/5 py-4 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                    className="inline-flex min-w-[12rem] items-center justify-center gap-2 self-start rounded-[8px] border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
                   >
                     <Phone className="h-4 w-4" />
                     (213) 306-4154
@@ -318,4 +350,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

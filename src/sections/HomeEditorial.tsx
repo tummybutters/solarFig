@@ -10,7 +10,7 @@ const solutionCards = [
   {
     title: "Battery Backup",
     href: "/battery",
-    image: "/assets/whole-home-solar/battery-backup.webp",
+    image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
   },
   {
     title: "EV Chargers",
@@ -71,7 +71,7 @@ const HomeEditorial = () => {
 
   return (
     <>
-      <section className="bg-[#eee5f9] py-20 sm:py-24">
+      <section className="bg-[#eee5f9] py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
@@ -104,7 +104,7 @@ const HomeEditorial = () => {
               <a
                 key={card.title}
                 href={card.href}
-                className="group relative block h-[480px] min-w-[300px] snap-start overflow-hidden rounded-3xl border border-black/5 sm:min-w-[360px]"
+                className="group relative block h-[390px] min-w-[270px] snap-start overflow-hidden rounded-2xl border border-black/5 sm:h-[480px] sm:min-w-[360px] sm:rounded-3xl"
               >
                 <img
                   src={card.image}
@@ -112,8 +112,8 @@ const HomeEditorial = () => {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
-                <div className="absolute bottom-7 left-6 right-6 flex items-end justify-between">
-                  <h3 className="max-w-[80%] font-['Fraunces'] text-4xl leading-none tracking-tight text-white sm:text-5xl">
+                <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between sm:bottom-7 sm:left-6 sm:right-6">
+                  <h3 className="max-w-[80%] font-['Fraunces'] text-3xl leading-none tracking-tight text-white sm:text-5xl">
                     {card.title}
                   </h3>
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white">
@@ -126,7 +126,7 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f3ecfa] py-24">
+      <section className="bg-[#f3ecfa] py-16 sm:py-24">
         <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
             <h2 className="max-w-3xl font-['Fraunces'] text-5xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-7xl">
@@ -159,9 +159,9 @@ const HomeEditorial = () => {
             <div>
               <h3 className="font-['Fraunces'] text-4xl leading-tight text-[#2a2238]">Find Your Utility Territory</h3>
               <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-4 text-lg text-[#3a314d]">
-                <a href="/locations/sce" className="transition-colors hover:text-[#6d39b5]">SCE</a>
-                <a href="/locations/pge" className="transition-colors hover:text-[#6d39b5]">PG&E</a>
-                <a href="/locations/sdge" className="transition-colors hover:text-[#6d39b5]">SDG&E</a>
+                <a href="/locations#sce" className="transition-colors hover:text-[#6d39b5]">SCE</a>
+                <a href="/locations#pge" className="transition-colors hover:text-[#6d39b5]">PG&E</a>
+                <a href="/locations#sdge" className="transition-colors hover:text-[#6d39b5]">SDG&E</a>
                 <a href="/locations" className="transition-colors hover:text-[#6d39b5]">Full Coverage Map</a>
               </div>
               <a
@@ -176,8 +176,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#e6dbf4] py-24">
-        <div className="mx-auto max-w-[1280px] rounded-[32px] border border-black/5 bg-[#e9dff7] px-6 py-10 sm:px-10 sm:py-14">
+      <section className="bg-[#e6dbf4] py-16 sm:py-24">
+        <div className="mx-auto max-w-[1280px] rounded-3xl border border-black/5 bg-[#e9dff7] px-5 py-8 sm:rounded-[32px] sm:px-10 sm:py-14">
           <div className="relative">
             <div className="pointer-events-none absolute -right-4 -top-12 h-56 w-56 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
             <p className="mb-4 flex gap-2 text-[#241d2f]">
@@ -205,13 +205,13 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f4eefb] pb-24">
-        <div className="h-[220px] w-full overflow-hidden sm:h-[300px]">
+      <section className="bg-[#f4eefb] pb-16 sm:pb-24">
+        <div className="h-[200px] w-full overflow-hidden sm:h-[300px]">
           <img src="/assets/install-gallery/install-05.jpg" alt="Solarfig team on-site" className="h-full w-full object-cover" />
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-[1080px] gap-6 px-4 sm:px-6 lg:grid-cols-2">
-          <a href="/pricing-costs" className="rounded-3xl bg-white p-8 transition-transform duration-300 hover:-translate-y-1">
+        <div className="mx-auto mt-10 grid max-w-[1080px] gap-5 px-4 sm:mt-12 sm:gap-6 sm:px-6 lg:grid-cols-2">
+          <a href="/pricing-costs" className="rounded-2xl bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Plans & Services</p>
             <h3 className="mt-4 font-['Fraunces'] text-4xl leading-tight text-[#241d2f]">A plan for every home.</h3>
             <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Built around your home and goals.</p>
@@ -221,7 +221,7 @@ const HomeEditorial = () => {
             </p>
           </a>
 
-          <a href="/whole-home-solar" className="rounded-3xl bg-[#6d39b5] p-8 transition-transform duration-300 hover:-translate-y-1">
+          <a href="/whole-home-solar" className="rounded-2xl bg-[#6d39b5] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-purple-200">Whole Home Solar</p>
             <h3 className="mt-4 font-['Fraunces'] text-4xl leading-tight text-white">One smart system. Total control.</h3>
             <p className="mt-4 text-purple-100/80">Solar, storage, and smart load support designed as one connected stack.</p>

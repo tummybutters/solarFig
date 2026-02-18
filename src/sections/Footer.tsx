@@ -40,12 +40,12 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-white py-16 sm:py-20">
+    <footer className="bg-gray-950 py-16 text-white sm:py-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 mb-12">
+        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-1 space-y-4">
+          <div className="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-1">
             <a href="/" className="text-2xl font-bold tracking-tight inline-block">
               Solar<span className="text-purple-400">Fig</span>
             </a>
@@ -149,24 +149,24 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-6">
             <a href="#home" className="text-gray-400 text-sm hover:text-white transition-colors">Home</a>
             <a href="#contact" className="text-gray-400 text-sm hover:text-white transition-colors">Contact Us</a>
           </div>
           
-          <div className="flex items-center gap-4 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 sm:gap-4">
             {footerLinks.legal.map((link, index) => (
               <span key={link.label} className="flex items-center gap-4">
                 <a href={link.href} className="hover:text-gray-300 transition-colors">
                   {link.label}
                 </a>
-                {index === 0 && <span className="text-gray-700">|</span>}
+                {index === 0 && <span className="hidden text-gray-700 sm:inline">|</span>}
               </span>
             ))}
           </div>
           
-          <p className="text-gray-600 text-xs">
+          <p className="text-xs text-gray-600">
             © {new Date().getFullYear()} SolarFig
           </p>
         </div>

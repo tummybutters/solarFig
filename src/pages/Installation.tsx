@@ -15,10 +15,10 @@ const steps = [
 
 const Installation = () => {
   return (
-    <main className="min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
       <section className="relative overflow-hidden pt-24 sm:pt-28">
-        <div className="relative h-[52vh] min-h-[340px] w-full">
+        <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img src="/assets/hero-main/gary-cole.jpg" alt="Solar installation team working on a residential roof." className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">

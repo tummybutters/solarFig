@@ -1,8 +1,14 @@
 // import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const HeroGlacial = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+    const heroVideos = [
+        "/assets/hero-main/hero-background-optimized-v2.mp4",
+        "/assets/hero-main/hero-background-sequence-02.mp4",
+    ];
 
     const freezeOnLastFrame = () => {
         const video = videoRef.current;
@@ -13,28 +19,44 @@ const HeroGlacial = () => {
         video.pause();
     };
 
+    const handleVideoEnd = () => {
+        if (currentVideoIndex < heroVideos.length - 1) {
+            setCurrentVideoIndex((prev) => prev + 1);
+            return;
+        }
+
+        freezeOnLastFrame();
+    };
+
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-slate-900 text-white">
+        <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-900 text-white sm:min-h-screen">
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0">
                 {/* Neutral overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10" />
+                <div
+                    className={`absolute inset-0 z-10 ${
+                        currentVideoIndex === 1
+                            ? "bg-gradient-to-t from-black/74 via-black/44 to-black/14"
+                            : "bg-gradient-to-t from-black/56 via-black/24 to-transparent"
+                    }`}
+                />
 
                 <video
+                    key={heroVideos[currentVideoIndex]}
                     ref={videoRef}
                     className="h-full w-full object-cover object-center scale-105"
                     autoPlay
                     muted
                     playsInline
                     preload="auto"
-                    onEnded={freezeOnLastFrame}
+                    onEnded={handleVideoEnd}
                 >
-                    <source src="/assets/hero-main/hero-background-optimized-v2.mp4" type="video/mp4" />
+                    <source src={heroVideos[currentVideoIndex]} type="video/mp4" />
                 </video>
             </div>
 
             {/* Content Container */}
-            <div className="relative z-20 mx-auto grid min-h-screen max-w-[1400px] grid-cols-1 items-end gap-10 px-6 pb-20 pt-24 sm:px-8 sm:pt-28 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center lg:gap-16 lg:pb-24 lg:pt-28">
+            <div className="relative z-20 mx-auto grid min-h-[92vh] max-w-[1400px] grid-cols-1 items-end gap-8 px-5 pb-14 pt-24 sm:min-h-screen sm:gap-10 sm:px-8 sm:pb-20 sm:pt-28 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center lg:gap-16 lg:pb-24 lg:pt-28">
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
@@ -42,24 +64,24 @@ const HeroGlacial = () => {
                         A New Lens on Home Energy
                     </p>
 
-                    <h1 className="mb-6 text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl leading-[1.05]">
+                    <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white sm:mb-6 sm:text-6xl lg:text-7xl">
                         California's Premium solar panels, battery storage, and EV charging installer
                     </h1>
 
-                    <p className="mb-10 max-w-md text-base leading-relaxed text-blue-100/70 sm:text-lg">
+                    <p className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/75 sm:mb-10 sm:text-lg">
                         Solarfig synthesizes utility data, NEM 3.0 incentives, and premium battery storage to surface the savings hidden in your property.
                     </p>
 
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                    <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a
                             href="#contact"
-                            className="inline-flex h-12 items-center justify-center rounded bg-white px-8 text-sm font-semibold text-slate-900 transition-colors hover:bg-blue-50"
+                            className="inline-flex h-11 items-center justify-center rounded bg-white px-6 text-sm font-semibold text-slate-900 transition-colors hover:bg-blue-50 sm:h-12 sm:px-8"
                         >
                             Start monitoring free
                         </a>
                         <a
                             href="#plans"
-                            className="inline-flex h-12 items-center justify-center rounded border border-white/20 px-8 text-sm font-medium text-white transition-colors hover:bg-white/10 backdrop-blur-sm"
+                            className="inline-flex h-11 items-center justify-center rounded border border-white/20 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10 backdrop-blur-sm sm:h-12 sm:px-8"
                         >
                             View research cases
                         </a>
@@ -73,47 +95,47 @@ const HeroGlacial = () => {
                 {/* Right Side: Glass Data Card */}
                 {/* "Middle space some room" is achieved by justify-between pushing this to the right */}
                 <div className="w-full max-w-sm lg:justify-self-end">
-                    <div className="overflow-hidden rounded-2xl border border-white/10 bg-purple-900/40 p-8 backdrop-blur-xl transition-all duration-500 hover:bg-purple-900/60">
-                        <div className="mb-8 border-b border-white/10 pb-4">
-                            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-blue-200/60">
+                    <div className="overflow-hidden rounded-2xl border border-white/10 bg-purple-900/40 p-3 backdrop-blur-xl transition-all duration-500 hover:bg-purple-900/60 sm:p-8">
+                        <div className="mb-2 border-b border-white/10 pb-2 sm:mb-8 sm:pb-4">
+                            <p className="text-[9px] font-bold uppercase tracking-[0.13em] text-blue-200/60 sm:text-[10px] sm:tracking-[0.15em]">
                                 Homeowner Impact:
                             </p>
-                            <p className="text-sm font-medium text-white/90">
+                            <p className="text-xs font-medium text-white/90 sm:text-sm">
                                 Utility Cost Pressure
                             </p>
                         </div>
 
-                        <div className="space-y-8">
+                        <div className="grid grid-cols-3 gap-2 sm:block sm:space-y-8">
                             <div>
-                                <p className="text-4xl font-light tracking-tight text-white sm:text-5xl">
+                                <p className="text-[1.7rem] font-light leading-none tracking-tight text-white sm:text-5xl">
                                     $180/mo
                                 </p>
-                                <p className="mt-1 text-xs font-medium text-blue-200/60">
-                                    potential bill reduction with solar + battery¹
+                                <p className="mt-1 text-[10px] leading-tight text-blue-200/65 sm:text-xs sm:font-medium">
+                                    bill reduction¹
                                 </p>
                             </div>
 
                             <div>
-                                <p className="text-4xl font-light tracking-tight text-white sm:text-5xl">
+                                <p className="text-[1.7rem] font-light leading-none tracking-tight text-white sm:text-5xl">
                                     7.2%
                                 </p>
-                                <p className="mt-1 text-xs font-medium text-blue-200/60">
-                                    average year-over-year utility rate hikes²
+                                <p className="mt-1 text-[10px] leading-tight text-blue-200/65 sm:text-xs sm:font-medium">
+                                    utility hikes²
                                 </p>
                             </div>
 
                             <div>
-                                <p className="text-4xl font-light tracking-tight text-white sm:text-5xl">
+                                <p className="text-[1.7rem] font-light leading-none tracking-tight text-white sm:text-5xl">
                                     2.3x
                                 </p>
-                                <p className="mt-1 text-xs font-medium text-blue-200/60">
-                                    peak-hour pricing vs off-peak in CA TOU plans³
+                                <p className="mt-1 text-[10px] leading-tight text-blue-200/65 sm:text-xs sm:font-medium">
+                                    peak pricing³
                                 </p>
                             </div>
                         </div>
 
-                        <div className="mt-8 pt-4 border-t border-white/5">
-                            <p className="text-[9px] leading-relaxed text-blue-200/30">
+                        <div className="mt-2 border-t border-white/5 pt-2 sm:mt-8 sm:pt-4">
+                            <p className="text-[8px] leading-relaxed text-blue-200/30 sm:text-[9px]">
                                 ¹Estimated homeowner scenario; ²Recent CA utility trend ranges; ³Time-of-use plan dependent.
                             </p>
                         </div>
@@ -123,7 +145,7 @@ const HeroGlacial = () => {
             </div>
 
             {/* Bottom Scroll Indicator */}
-            <div className="absolute bottom-8 left-0 right-0 z-20 text-center">
+            <div className="absolute bottom-5 left-0 right-0 z-20 text-center sm:bottom-8">
                 <p className="text-[9px] uppercase tracking-widest text-blue-200/30">
                     Scroll to see how Solarfig thinks
                 </p>

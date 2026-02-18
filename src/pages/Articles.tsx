@@ -9,7 +9,7 @@ const Articles = () => {
   const articleList = solarArticles.slice(1);
 
   return (
-    <main className="min-h-screen bg-[#f1e8fb]">
+    <main className="mobile-premium min-h-screen bg-[#f1e8fb]">
       <Navbar />
 
       <section className="relative overflow-hidden bg-[#17141b] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">

@@ -328,10 +328,10 @@ const ProjectsShowcase = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f4eefb] text-gray-900 selection:bg-purple-200/60">
+    <div className="mobile-premium min-h-screen bg-[#f4eefb] text-gray-900 selection:bg-purple-200/60">
       <Navbar />
 
-      <section className="border-b border-purple-100 bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 px-6 pb-12 pt-32 md:px-12 md:pt-36 lg:px-20">
+      <section className="border-b border-purple-100 bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 px-5 pb-10 pt-28 sm:px-6 md:px-12 md:pt-36 lg:px-20">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-purple-200/80">
@@ -359,15 +359,15 @@ const ProjectsShowcase = () => {
         </div>
       </section>
 
-      <div className="sticky top-0 z-40 border-b border-purple-100 bg-white/95 px-6 py-4 backdrop-blur-md md:px-12 lg:px-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex w-full border border-purple-200 bg-purple-50/50 p-1 sm:w-auto">
+      <div className="sticky top-0 z-40 border-b border-purple-100 bg-white/95 px-5 py-3 backdrop-blur-md sm:px-6 md:px-12 lg:px-20">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+          <div className="flex flex-wrap gap-2 border border-purple-200 bg-purple-50/50 p-1">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
                 className={cn(
-                  "flex-1 px-4 py-2 text-center text-xs font-medium uppercase tracking-wider transition-all duration-300 sm:flex-none",
+                  "px-3 py-2 text-center text-[11px] font-medium uppercase tracking-wider transition-all duration-300 sm:px-4 sm:text-xs",
                   activeFilter === filter
                     ? "bg-purple-600 text-white"
                     : "text-gray-600 hover:bg-purple-100 hover:text-gray-900",
@@ -382,7 +382,7 @@ const ProjectsShowcase = () => {
         </div>
       </div>
 
-      <section className="min-h-[60vh] px-6 py-12 md:px-12 lg:px-20">
+      <section className="min-h-[60vh] px-5 py-10 sm:px-6 md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div ref={containerRef} className="tx-grid">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -441,7 +441,7 @@ const ProjectsShowcase = () => {
         </div>
       </section>
 
-      <section className="border-t border-purple-100 bg-white px-6 py-24 md:px-12 lg:px-20">
+      <section className="border-t border-purple-100 bg-white px-5 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-20">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-serif text-3xl text-gray-900">Start your own solar project.</h2>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">

@@ -30,11 +30,11 @@ import "./App.css";
 
 const HomePage = () => {
   return (
-    <main className="min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
       <Hero />
-      <LogoScroll />
       <HomeEditorial />
+      <LogoScroll />
       <GlobalQuoteSection />
       <Footer />
     </main>
@@ -64,9 +64,9 @@ function App() {
       <Route path="/smart-electrical-panels" element={<SmartElectricalPanels />} />
       <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
       <Route path="/locations" element={<Locations />} />
-      <Route path="/locations/sce" element={<Locations territory="sce" />} />
-      <Route path="/locations/pge" element={<Locations territory="pge" />} />
-      <Route path="/locations/sdge" element={<Locations territory="sdge" />} />
+      <Route path="/locations/sce" element={<Navigate to="/locations#sce" replace />} />
+      <Route path="/locations/pge" element={<Navigate to="/locations#pge" replace />} />
+      <Route path="/locations/sdge" element={<Navigate to="/locations#sdge" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

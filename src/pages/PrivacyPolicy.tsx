@@ -4,7 +4,7 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       <section className="bg-[#17141b] pb-14 pt-32 text-white sm:pb-16 sm:pt-36">

@@ -4,34 +4,23 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const tiers = [
-  {
-    title: "Bronze",
-    reward: "$500",
-    copy: "Your first completed install referral.",
-  },
-  {
-    title: "Silver",
-    reward: "$750",
-    copy: "Your 2nd and 3rd completed install referrals.",
-  },
-  {
-    title: "Gold",
-    reward: "$1,000",
-    copy: "Your 4th completed install and beyond.",
-  },
+  { title: "Bronze", reward: "$500", count: "1st referral" },
+  { title: "Silver", reward: "$750", count: "2nd & 3rd" },
+  { title: "Gold", reward: "$1,000", count: "4th+" },
 ];
 
 const steps = [
-  "Submit your referral.",
-  "We consult, design, and install.",
-  "You get rewarded after install completion.",
+  { step: "01", title: "Submit", description: "Send us your referral's info" },
+  { step: "02", title: "Install", description: "We handle design & build" },
+  { step: "03", title: "Earn", description: "Get paid after completion" },
 ];
 
 const Referrals = () => {
   return (
-    <main className="min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
+      {/* Hero — unchanged */}
       <section className="pt-24 sm:pt-28">
         <div className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)]">
           <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-8 sm:py-20">
@@ -47,91 +36,126 @@ const Referrals = () => {
                 Submit a referral
               </a>
               <a
-                href="#referral-guidelines"
+                href="#how-it-works"
                 className="inline-flex items-center justify-center rounded-full border border-white/35 px-9 py-3.5 text-base font-medium text-white transition-colors hover:bg-white/10"
               >
-                Referral processing guidelines
+                How it works
               </a>
             </div>
           </div>
         </div>
 
-        <div className="h-[320px] w-full sm:h-[420px] lg:h-[500px]">
+        <div className="relative h-[300px] w-full sm:h-[450px] lg:h-[550px]">
           <img
             src="/assets/hero-main/referrals.png"
             alt="Solar panel array at sunset over tree line."
             className="h-full w-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f4eefb] via-transparent to-transparent" />
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#eee3fb] py-16 sm:py-20">
-        <div className="pointer-events-none absolute right-[-120px] top-[-110px] h-72 w-72 rounded-full border border-[#d8c9ef] opacity-80" />
-        <div className="pointer-events-none absolute right-[-145px] top-[-135px] h-84 w-84 rounded-full border border-[#d8c9ef] opacity-55" />
+      {/* Reward Tiers — Large number cards */}
+      <section className="relative -mt-20 pb-16 sm:-mt-32 sm:pb-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <h2 className="max-w-4xl text-4xl leading-tight tracking-tight text-[#201b25] sm:text-6xl">
-            Refer your friends and earn up to $1,000 after we install their system.
-          </h2>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/#contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#1f1a22] px-9 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#131017]"
-            >
-              Submit a referral
-            </a>
-            <a
-              href="#referral-guidelines"
-              className="inline-flex items-center justify-center rounded-full border border-[#2b2630]/55 px-9 py-3.5 text-base font-medium text-[#201b25] transition-colors hover:bg-[#e7def4]"
-            >
-              Referral processing guidelines
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="referral-guidelines" className="py-16 sm:py-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="grid gap-5 md:grid-cols-3">
-            {tiers.map((tier) => (
-              <article key={tier.title} className="rounded-2xl border border-gray-200 bg-white p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{tier.title} Tier</p>
-                <p className="mt-2 text-5xl leading-none tracking-tight text-[#201b25]">{tier.reward}</p>
-                <p className="mt-4 text-base text-gray-600">{tier.copy}</p>
-              </article>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {tiers.map((tier, i) => (
+              <div key={tier.title} className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.3)] transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.45)] sm:p-8">
+                <span className="absolute right-4 top-4 text-xs font-mono text-stone-200">0{i + 1}</span>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title} Tier</p>
+                <p className="text-5xl font-light text-stone-900 sm:text-6xl">{tier.reward}</p>
+                <p className="mt-2 text-stone-500">{tier.count}</p>
+              </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <article className="rounded-2xl border border-gray-200 bg-white p-7">
-              <h3 className="text-2xl tracking-tight text-[#201b25]">How it works</h3>
-              <ul className="mt-5 space-y-3">
+      {/* How It Works — Steps with image */}
+      <section id="how-it-works" className="py-16 sm:py-24">
+        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <div className="mb-10 max-w-md">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">The Process</p>
+                <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">How it works</h2>
+              </div>
+
+              <div className="space-y-6">
                 {steps.map((step) => (
-                  <li key={step} className="flex items-start gap-2 text-gray-700">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#6d39b5]" />
-                    <span>{step}</span>
-                  </li>
+                  <div key={step.step} className="flex gap-5">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-sm font-bold text-purple-600">
+                      {step.step}
+                    </span>
+                    <div>
+                      <p className="font-medium text-stone-900">{step.title}</p>
+                      <p className="text-stone-500">{step.description}</p>
+                    </div>
+                  </div>
                 ))}
-              </ul>
-            </article>
+              </div>
 
-            <article className="rounded-2xl border border-gray-200 bg-white p-7">
-              <h3 className="text-2xl tracking-tight text-[#201b25]">Program notes</h3>
-              <ul className="mt-5 space-y-3 text-gray-700">
-                <li>Rewards are issued after completed installation.</li>
-                <li>Tier progression is based on completed installs under your name.</li>
-                <li>Reward timing is confirmed by the Solarfig team after install closeout.</li>
-              </ul>
-              <a href="/#contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
-                Start a referral
+              <div className="mt-10 rounded-xl bg-white p-6 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)]">
+                <h3 className="mb-3 font-medium text-stone-900">Program notes</h3>
+                <ul className="space-y-2 text-sm text-stone-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-purple-600" />
+                    <span>Rewards issued after completed installation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-purple-600" />
+                    <span>Tier progression based on completed installs</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-purple-600" />
+                    <span>Timing confirmed after closeout</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-purple-600/15 blur-3xl" />
+              <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)]">
+                <img
+                  src="/assets/hero-main/referrals.png"
+                  alt="Solar at sunset"
+                  className="aspect-[3/4] w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA — Simple */}
+      <section className="pb-20">
+        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-center text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+            <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
+            <div className="relative">
+              <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl">
+                Start earning today
+              </h2>
+              <p className="mx-auto mt-4 max-w-lg text-white/70">
+                Refer your friends and earn up to $1,000 after we install their system.
+              </p>
+              <a
+                href="/#contact"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+              >
+                Submit a referral
                 <ArrowRight className="h-4 w-4" />
               </a>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
       <GlobalQuoteSection />
-
       <Footer />
     </main>
   );

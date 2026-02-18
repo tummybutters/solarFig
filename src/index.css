@@ -555,3 +555,47 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+@media (max-width: 640px) {
+  .mobile-premium {
+    overflow-x: clip;
+  }
+
+  .mobile-premium h1 {
+    font-size: clamp(2rem, 8.2vw, 2.75rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.02em;
+  }
+
+  .mobile-premium h2 {
+    font-size: clamp(1.65rem, 6.9vw, 2.25rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.018em;
+  }
+
+  .mobile-premium h3 {
+    font-size: clamp(1.3rem, 5.4vw, 1.75rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  .mobile-premium p {
+    line-height: 1.62;
+  }
+
+  .mobile-premium .mobile-hero-media {
+    height: clamp(22rem, 56vh, 29rem) !important;
+    min-height: 0 !important;
+  }
+
+  .mobile-premium .mobile-inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .mobile-premium .mobile-inline-actions > * {
+    width: auto;
+    min-width: 0;
+  }
+}
