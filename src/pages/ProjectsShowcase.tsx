@@ -337,7 +337,7 @@ const ProjectsShowcase = () => {
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-purple-200/80">
               SolarFig Install Portfolio
             </p>
-            <h1 className="font-serif text-4xl font-light leading-[0.9] tracking-tight text-white md:text-5xl lg:text-7xl">
+            <h1 className=" text-4xl font-light leading-[0.9] tracking-tight text-white md:text-5xl lg:text-7xl">
               Completed Solar Projects
             </h1>
             <p className="mt-5 max-w-xl text-sm text-purple-100/80 md:text-base">
@@ -349,11 +349,11 @@ const ProjectsShowcase = () => {
           <div className="flex gap-8 text-purple-100/80">
             <div>
               <p className="text-[10px] uppercase tracking-wider text-purple-200/80">Annual Savings</p>
-              <p className="font-serif text-xl text-white">$14.7M+</p>
+              <p className=" text-xl text-white">$14.7M+</p>
             </div>
             <div>
               <p className="text-[10px] uppercase tracking-wider text-purple-200/80">Systems Live</p>
-              <p className="font-serif text-xl text-white">2,500+</p>
+              <p className=" text-xl text-white">2,500+</p>
             </div>
           </div>
         </div>
@@ -443,13 +443,13 @@ const ProjectsShowcase = () => {
 
       <section className="border-t border-purple-100 bg-white px-5 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 font-serif text-3xl text-gray-900">Start your own solar project.</h2>
+          <h2 className="mb-6  text-3xl text-gray-900">Start your own solar project.</h2>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="/#contact"
+              href="#contact"
               className="inline-flex items-center justify-center border border-purple-500 bg-purple-600 px-6 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-purple-500"
             >
-              Get Free Solar Report
+              Get a quote
             </a>
             <a
               href="/"

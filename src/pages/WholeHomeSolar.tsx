@@ -68,7 +68,7 @@ const WholeHomeSolar = () => {
                 Full-home solar design with backup-ready architecture and long-term savings in mind.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -93,7 +93,7 @@ const WholeHomeSolar = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Complete System</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Four components, one system</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Four components, one system</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -149,15 +149,15 @@ const WholeHomeSolar = () => {
                 <p className="text-xs text-stone-500">Typical install</p>
               </div>
               <div className="rounded-xl bg-white/95 p-5 text-center backdrop-blur-sm sm:min-w-[140px]">
-                <p className="text-2xl font-light text-purple-600">25yr</p>
-                <p className="text-xs text-stone-500">Warranty</p>
+                <p className="text-2xl font-light text-purple-600">Varies</p>
+                <p className="text-xs text-stone-500">By equipment warranty</p>
               </div>
             </div>
           </div>
 
           <div className="mt-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Installation</p>
-            <h2 className="mb-4 font-serif text-3xl leading-tight sm:text-4xl">Professional teams, single-day completion</h2>
+            <h2 className="mb-4  text-3xl leading-tight sm:text-4xl">Professional teams, single-day completion</h2>
             <p className="text-white/60 leading-relaxed">
               Our local, certified teams make going solar easy, with most installations completed in a single day.
             </p>
@@ -171,11 +171,11 @@ const WholeHomeSolar = () => {
           <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative max-w-2xl">
-              <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 Meet up to 100% of your yearly energy needs.
               </h2>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -189,7 +189,7 @@ const WholeHomeSolar = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`faq-${index}`}>

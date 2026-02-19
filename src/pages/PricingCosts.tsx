@@ -14,12 +14,12 @@ const planCards = [
 const included = [
   "Care & maintenance",
   "Energy monitoring",
-  "25-year system warranty",
+  "Manufacturer-backed equipment warranties",
   "Performance guarantee",
 ];
 
 const faqs = [
-  "What is covered under your 25 year system warranty?",
+  "What warranties apply to my specific equipment?",
   "What is the No Credit Check option?",
   "Can anyone get a Solarfig system for $0 down?",
   "What happens if I move?",
@@ -49,7 +49,7 @@ const PricingCosts = () => {
                 Ready to break up with your electric bill? Enjoy custom solar and instant savings for as little as $0 down.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -65,15 +65,19 @@ const PricingCosts = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Payment Options</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Four ways to go solar</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Four ways to go solar</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {planCards.map((plan, i) => (
-              <div key={plan.id} className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]">
+              <div
+                id={plan.id}
+                key={plan.id}
+                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]"
+              >
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
                 <p className="mb-1 text-sm text-stone-500">{plan.subtitle}</p>
-                <h3 className="font-serif text-xl text-stone-900">{plan.title}</h3>
+                <h3 className=" text-xl text-stone-900">{plan.title}</h3>
                 <div className="my-4">
                   <span className="text-4xl font-light text-purple-600">{plan.price}</span>
                   <span className="text-sm text-stone-500"> {plan.unit}</span>
@@ -120,7 +124,7 @@ const PricingCosts = () => {
 
           <div className="mt-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Transparency</p>
-            <h2 className="font-serif text-3xl leading-tight sm:text-4xl">Everything included</h2>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">Everything included</h2>
             <p className="mt-4 text-white/60">
               No surprises. We take the time to understand your home and give you a transparent, upfront quote with no pressure.
             </p>
@@ -134,7 +138,7 @@ const PricingCosts = () => {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Fair pricing, long-term thinking</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Fair pricing, long-term thinking</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 We're not here for the quickest sale. We're here to do it right, and stand behind it for decades. That means pricing designed for 5-10% profit and long-term service.
               </p>
@@ -165,7 +169,7 @@ const PricingCosts = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq} value={`faq-${index}`}>

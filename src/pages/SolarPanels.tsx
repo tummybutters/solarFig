@@ -76,7 +76,7 @@ const SolarPanels = () => {
             <div className="max-w-2xl">
               <p className="text-lg text-white/90">See how premium panel design can maximize long-term performance.</p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -92,7 +92,7 @@ const SolarPanels = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Panel Options</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Built for California roofs</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Built for California roofs</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,7 +142,7 @@ const SolarPanels = () => {
             {/* Compact content with horizontal icons */}
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Custom Design</p>
-              <h2 className="mb-8 font-serif text-3xl leading-tight sm:text-4xl">Designed around your home</h2>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Designed around your home</h2>
 
               <div className="space-y-6">
                 {designFactors.map((factor) => {
@@ -162,7 +162,7 @@ const SolarPanels = () => {
               </div>
 
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 Start your design
@@ -188,12 +188,12 @@ const SolarPanels = () => {
             <div className="absolute inset-0 flex items-end p-8 sm:p-12 lg:max-w-xl">
               <div>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Future Ready</p>
-                <h2 className="mb-4 font-serif text-3xl text-white sm:text-4xl">Build now, expand later</h2>
+                <h2 className="mb-4  text-3xl text-white sm:text-4xl">Build now, expand later</h2>
                 <p className="mb-6 text-white/80 leading-relaxed">
                   If batteries or EV charging are in your near future, we design with expansion in mind so upgrades stay straightforward.
                 </p>
                 <a
-                  href="/#contact"
+                  href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   Plan my system
@@ -208,7 +208,7 @@ const SolarPanels = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`faq-${index}`}>

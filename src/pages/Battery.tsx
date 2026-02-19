@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Battery as BatteryIcon, CloudLightning, DollarSign, Gauge, HousePlug, ShieldCheck } from "lucide-react";
+import { ArrowRight, CloudLightning, DollarSign, Gauge, HousePlug, ShieldCheck } from "lucide-react";
 
 const controlModes = [
   {
@@ -65,29 +65,12 @@ const Battery = () => {
       {/* Hero — unchanged */}
       <section className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-14 pt-32 text-white sm:pt-36">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
-            <BatteryIcon className="h-4 w-4 text-purple-300" />
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Solutions</p>
+          <h1 className="max-w-5xl  text-4xl leading-[0.95] text-white sm:text-6xl">
             Battery Backup
-          </div>
-          <h1 className="max-w-5xl font-serif text-4xl leading-[0.95] text-white sm:text-6xl">
-            Store excess solar power with battery backup
           </h1>
-          <p className="mt-5 max-w-4xl text-lg leading-relaxed text-white/82">
-            Home batteries store excess solar energy, protect you from outages, and make a whole-home system that much
-            smarter. Take control of your home&apos;s electric usage by reducing reliance on the grid with battery storage.
-          </p>
-          <p className="mt-6 text-2xl font-semibold text-white">
-            Add a Powerwall to your existing solar panel system for as little as $5,275*
-          </p>
-          <a
-            href="/#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#201b29] transition-colors hover:bg-gray-200"
-          >
-            Get a quote
-            <ArrowRight className="h-4 w-4" />
-          </a>
-          <p className="mt-4 text-xs text-white/60">
-            *After discount and upfront local incentives applied, subject to incentive availability in your area.
+          <p className="mt-5 max-w-3xl text-white/80">
+            Store solar energy for nighttime use and keep essential circuits running during outages.
           </p>
         </div>
       </section>
@@ -119,7 +102,7 @@ const Battery = () => {
             Battery backup puts you in charge of when and how you use power in your own home.
           </p>
           <a
-            href="/#contact"
+            href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
           >
             Get a quote
@@ -133,7 +116,7 @@ const Battery = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Solar Energy Storage</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Three ways your battery adapts</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Three ways your battery adapts</h2>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-3">
@@ -182,7 +165,7 @@ const Battery = () => {
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why add storage</p>
-              <h2 className="mb-8 font-serif text-3xl leading-tight sm:text-4xl">A smart addition to solar</h2>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">A smart addition to solar</h2>
 
               <div className="space-y-5">
                 {batteryBenefits.map((benefit) => {
@@ -202,7 +185,7 @@ const Battery = () => {
               </div>
 
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 Get a quote
@@ -248,15 +231,15 @@ const Battery = () => {
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Why Solarfig</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Built for the long term</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Built for the long term</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 From design through installation and beyond, we prioritize quality work and clear communication.
               </p>
               <a
-                href="/#explore"
+                href="/about"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                Learn more
+                About Solarfig
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -299,12 +282,12 @@ const Battery = () => {
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Existing Solar</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Add storage anytime</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Add storage anytime</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Already have solar? Adding a battery is straightforward. We handle compatibility checks and seamless integration.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Get a quote
@@ -318,7 +301,7 @@ const Battery = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1000px] px-6 sm:px-8">
-          <h2 className="mb-8 font-serif text-4xl text-stone-900">Frequently Asked Questions</h2>
+          <h2 className="mb-8  text-4xl text-stone-900">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="rounded-2xl border border-stone-200 bg-white px-6">
             {faqs.map((item, index) => (
               <AccordionItem key={item.question} value={`faq-${index}`} className="border-stone-200">

@@ -34,18 +34,14 @@ const Hero = () => {
 
             <h1
               className="max-w-3xl text-5xl leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-8xl"
-              style={{ fontFamily: "'Fraunces', serif", fontVariationSettings: '"opsz" 120' }}
+             
             >
-              Cut your electric bill.
-              <br />
-              <span className="text-purple-200/85">Keep every bit of comfort.</span>
+              Power Your Home. Cut Your Bill. Future-Proof Everything.
             </h1>
 
-            <p className="max-w-2xl text-base leading-relaxed text-purple-100/80 sm:text-lg">
-              California solar designed for NEM 3.0. Permitted, installed, and activated in{" "}
-              <span className="font-semibold text-white">30 days</span> or we pay you $500.
-              Clear scope. No pressure tactics. No pricing games.
-            </p>
+            <h2 className="max-w-2xl text-base leading-relaxed text-purple-100/80 sm:text-lg">
+              From high-efficiency solar panels to advanced battery storage and EV charging, Solarfig builds systems engineered for California homeowners who expect more.
+            </h2>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
@@ -89,7 +85,7 @@ const Hero = () => {
                     <p className="text-[10px] uppercase tracking-[0.26em] text-purple-100/70">{stat.label}</p>
                     <p
                       className="mt-1 text-4xl tracking-tight text-white sm:text-[2.8rem]"
-                      style={{ fontFamily: "'Fraunces', serif", fontVariationSettings: '"opsz" 120' }}
+                     
                     >
                       {stat.value}
                     </p>

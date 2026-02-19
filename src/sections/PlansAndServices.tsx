@@ -80,7 +80,7 @@ const PlansAndServices = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mb-12 lg:mb-20">
           <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">Plans & Services</span>
-          <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl font-serif font-light tracking-tight leading-[0.9] mt-6 mb-8">
+          <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl  font-light tracking-tight leading-[0.9] mt-6 mb-8">
             Flexible economics.
             <br />
             <span className="text-gray-400">California optimized.</span>
@@ -129,7 +129,7 @@ const PlansAndServices = () => {
                 <div className="w-12 h-12 rounded-none bg-purple-600 text-white flex items-center justify-center border border-white/10">{plan.icon}</div>
                 <span className="text-[10px] uppercase tracking-[0.2em] text-purple-300 font-bold">{plan.subtitle}</span>
               </div>
-              <h3 className="text-white text-2xl font-serif font-light mb-4 tracking-tight">{plan.title}</h3>
+              <h3 className="text-white text-2xl  font-light mb-4 tracking-tight">{plan.title}</h3>
               <ul className="space-y-3">
                 {plan.points.map((point) => (
                   <li key={point} className="text-sm text-purple-100/70 flex items-start gap-3">

@@ -2,7 +2,7 @@ import { FloatingInput } from "@/components/ui/floating-input";
 
 const GlobalQuoteSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#eadff7] py-16 sm:py-20">
+    <section id="contact" className="relative overflow-hidden bg-[#eadff7] py-16 sm:py-20">
       <div className="pointer-events-none absolute -bottom-36 -left-20 h-80 w-80 rounded-full bg-purple-200/50" />
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
         <div>

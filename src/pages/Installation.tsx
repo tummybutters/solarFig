@@ -62,7 +62,7 @@ const Installation = () => {
                 </li>
               ))}
             </ul>
-            <a href="/#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
+            <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
               Get a quote
               <ArrowRight className="h-4 w-4" />
             </a>

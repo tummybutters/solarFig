@@ -5,9 +5,9 @@ import CaliforniaMap from "@/components/CaliforniaMap";
 import { ArrowRight, BadgeAlert, PlugZap, ShieldCheck } from "lucide-react";
 
 const utilities = [
-  { code: "SCE", name: "Southern California Edison", focus: "Peak window optimization" },
-  { code: "PG&E", name: "Pacific Gas & Electric", focus: "Production-first design" },
-  { code: "SDG&E", name: "San Diego Gas & Electric", focus: "Aggressive offset strategy" },
+  { id: "sce", code: "SCE", name: "Southern California Edison", focus: "Peak window optimization" },
+  { id: "pge", code: "PG&E", name: "Pacific Gas & Electric", focus: "Production-first design" },
+  { id: "sdge", code: "SDG&E", name: "San Diego Gas & Electric", focus: "Aggressive offset strategy" },
 ];
 
 const challenges = [
@@ -49,7 +49,7 @@ const Locations = () => {
             <div>
               <div className="mb-10 max-w-xl">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Utilities</p>
-                <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Territory matters</h2>
+                <h2 className=" text-4xl text-stone-900 sm:text-5xl">Territory matters</h2>
                 <p className="mt-4 text-stone-600">
                   We scope projects around your utility territory first, then your roof, usage profile, and expansion plans.
                 </p>
@@ -57,7 +57,11 @@ const Locations = () => {
 
               <div className="space-y-4">
                 {utilities.map((utility, i) => (
-                  <div key={utility.code} className="group flex items-center gap-5 rounded-2xl bg-white p-5 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_8px_30px_-10px_rgba(109,57,181,0.35)]">
+                  <div
+                    id={utility.id}
+                    key={utility.code}
+                    className="group flex items-center gap-5 rounded-2xl bg-white p-5 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_8px_30px_-10px_rgba(109,57,181,0.35)]"
+                  >
                     <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-sm font-bold text-purple-600">
                       {utility.code}
                     </span>
@@ -113,7 +117,7 @@ const Locations = () => {
 
           <div className="mt-10 max-w-2xl lg:mt-16">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">California Focus</p>
-            <h2 className="font-serif text-3xl leading-tight sm:text-4xl">Designed for California's energy reality</h2>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">Designed for California's energy reality</h2>
           </div>
         </div>
       </section>
@@ -125,7 +129,7 @@ const Locations = () => {
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
-                <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                   Get a location-aware estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
@@ -134,7 +138,7 @@ const Locations = () => {
               </div>
               <div className="lg:text-right">
                 <a
-                  href="/#contact"
+                  href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   Get a quote

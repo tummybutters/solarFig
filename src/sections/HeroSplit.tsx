@@ -12,7 +12,7 @@ const HeroSplit = () => {
 
                     <h1
                         className="text-6xl leading-[0.9] text-white sm:text-7xl lg:text-8xl"
-                        style={{ fontFamily: "'Fraunces', serif" }}
+                       
                     >
                         Own <br />
                         your <br />

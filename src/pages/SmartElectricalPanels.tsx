@@ -51,7 +51,7 @@ const SmartElectricalPanels = () => {
                 Whole-home load visibility and control to optimize self-consumption, backup strategy, and EV charging behavior.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -78,7 +78,7 @@ const SmartElectricalPanels = () => {
             <div className="absolute inset-x-6 bottom-6 sm:inset-y-0 sm:right-0 sm:left-auto sm:flex sm:w-2/5 sm:items-center sm:p-12">
               <div className="rounded-xl bg-white/95 p-6 backdrop-blur-sm sm:rounded-2xl sm:p-8">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Command Center</p>
-                <h2 className="mb-4 font-serif text-2xl text-stone-900 sm:text-3xl">Your home's energy brain</h2>
+                <h2 className="mb-4  text-2xl text-stone-900 sm:text-3xl">Your home's energy brain</h2>
                 <p className="text-stone-600 leading-relaxed">
                   Smart electrical panels help you see and shape household load behavior, especially when paired with solar and storage.
                 </p>
@@ -93,7 +93,7 @@ const SmartElectricalPanels = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Capabilities</p>
-            <h2 className="font-serif text-4xl leading-tight sm:text-5xl">What smart panels do</h2>
+            <h2 className=" text-4xl leading-tight sm:text-5xl">What smart panels do</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
@@ -105,7 +105,7 @@ const SmartElectricalPanels = () => {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/5">
                     <Icon className="h-5 w-5 text-lime-200" />
                   </div>
-                  <h3 className="mb-2 font-serif text-xl text-white">{useCase.title}</h3>
+                  <h3 className="mb-2  text-xl text-white">{useCase.title}</h3>
                   <p className="text-sm text-white/60">{useCase.description}</p>
                 </div>
               );
@@ -135,7 +135,7 @@ const SmartElectricalPanels = () => {
             {/* Content with stats */}
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">System Integration</p>
-              <h2 className="mb-6 font-serif text-3xl text-stone-900 sm:text-4xl">Better together</h2>
+              <h2 className="mb-6  text-3xl text-stone-900 sm:text-4xl">Better together</h2>
               <p className="mb-8 text-stone-600 leading-relaxed">
                 We design integrated control strategies around your circuits, daily load patterns, and backup priorities so the system behaves predictably.
               </p>
@@ -152,7 +152,7 @@ const SmartElectricalPanels = () => {
               </div>
 
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Build my stack
@@ -166,7 +166,7 @@ const SmartElectricalPanels = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`faq-${index}`}>

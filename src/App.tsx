@@ -26,6 +26,7 @@ import SmartElectricalPanels from "@/pages/SmartElectricalPanels";
 import SolarBatteryIncentives from "@/pages/SolarBatteryIncentives";
 import Locations from "@/pages/Locations";
 import { Navigate, Route, Routes } from "react-router-dom";
+import SeoHead from "@/components/SeoHead";
 import "./App.css";
 
 const HomePage = () => {
@@ -43,32 +44,35 @@ const HomePage = () => {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/battery" element={<Battery />} />
-      <Route path="/ev-chargers" element={<EVChargers />} />
-      <Route path="/projects" element={<ProjectsShowcase />} />
-      <Route path="/transactions" element={<ProjectsShowcase />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/articles" element={<Articles />} />
-      <Route path="/articles/:slug" element={<ArticleDetail />} />
-      <Route path="/careers" element={<Careers />} />
-      <Route path="/referrals" element={<Referrals />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-of-use" element={<TermsOfUse />} />
-      <Route path="/whole-home-solar" element={<WholeHomeSolar />} />
-      <Route path="/pricing-costs" element={<PricingCosts />} />
-      <Route path="/installation" element={<ProjectsShowcase />} />
-      <Route path="/solar-panels" element={<SolarPanels />} />
-      <Route path="/microinverters" element={<Microinverters />} />
-      <Route path="/smart-electrical-panels" element={<SmartElectricalPanels />} />
-      <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
-      <Route path="/locations" element={<Locations />} />
-      <Route path="/locations/sce" element={<Navigate to="/locations#sce" replace />} />
-      <Route path="/locations/pge" element={<Navigate to="/locations#pge" replace />} />
-      <Route path="/locations/sdge" element={<Navigate to="/locations#sdge" replace />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <SeoHead />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/battery" element={<Battery />} />
+        <Route path="/ev-chargers" element={<EVChargers />} />
+        <Route path="/projects" element={<ProjectsShowcase />} />
+        <Route path="/transactions" element={<Navigate to="/projects" replace />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:slug" element={<ArticleDetail />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/referrals" element={<Referrals />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/whole-home-solar" element={<WholeHomeSolar />} />
+        <Route path="/pricing-costs" element={<PricingCosts />} />
+        <Route path="/installation" element={<Navigate to="/projects" replace />} />
+        <Route path="/solar-panels" element={<SolarPanels />} />
+        <Route path="/microinverters" element={<Microinverters />} />
+        <Route path="/smart-electrical-panels" element={<SmartElectricalPanels />} />
+        <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/locations/sce" element={<Navigate to="/locations#sce" replace />} />
+        <Route path="/locations/pge" element={<Navigate to="/locations#pge" replace />} />
+        <Route path="/locations/sdge" element={<Navigate to="/locations#sdge" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 }
 

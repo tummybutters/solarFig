@@ -54,7 +54,7 @@ const About = () => {
             {/* Floating card */}
             <div className="relative mx-4 -mt-24 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Who We Are</p>
-              <h2 className="mb-4 font-serif text-2xl text-stone-900 sm:text-3xl">Local team, right way</h2>
+              <h2 className="mb-4  text-2xl text-stone-900 sm:text-3xl">Local team, right way</h2>
               <p className="text-stone-600 leading-relaxed">
                 Solarfig helps homeowners transition to clean energy with clear recommendations, transparent pricing, and dependable project execution.
               </p>
@@ -68,14 +68,14 @@ const About = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">How we work</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">How we work</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, i) => (
               <div key={pillar.title} className="group relative overflow-hidden rounded-2xl bg-[#f4eefb] p-6 transition-colors hover:bg-purple-50">
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
-                <h3 className="mb-2 font-serif text-xl text-stone-900">{pillar.title}</h3>
+                <h3 className="mb-2  text-xl text-stone-900">{pillar.title}</h3>
                 <p className="text-sm text-stone-600">{pillar.description}</p>
               </div>
             ))}
@@ -121,14 +121,14 @@ const About = () => {
           <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative max-w-2xl">
-              <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 Built for homeowners who want clarity, craftsmanship, and long-term savings.
               </h2>
               <p className="mt-5 text-white/70">
                 We're not here for the quickest sale. We're here to design the right system, execute it cleanly, and support your goals for years to come.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote

@@ -34,12 +34,12 @@ const HowItWorks = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-serif font-light text-gray-900 tracking-tight leading-[0.9] mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl  font-light text-gray-900 tracking-tight leading-[0.9] mb-6">
             How It Works
           </h2>
           <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto leading-relaxed border-t border-purple-100 pt-6">
             From consultation to activation in 30 days.
-            <span className="text-gray-900 font-medium font-serif italic ml-1"> We handle everything.</span>
+            <span className="text-gray-900 font-medium  italic ml-1"> We handle everything.</span>
           </p>
         </div>
 

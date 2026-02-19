@@ -204,7 +204,7 @@ const ProcessCarousel = () => {
 
               <div className="mb-3 flex items-center gap-2">
                 <step.icon className="h-5 w-5" style={{ color: step.color }} />
-                <h3 className="font-serif text-2xl leading-tight text-stone-900 sm:text-3xl">{step.title}</h3>
+                <h3 className=" text-2xl leading-tight text-stone-900 sm:text-3xl">{step.title}</h3>
               </div>
 
               <p className="text-sm leading-relaxed text-stone-600 sm:text-[15px]">{step.description}</p>

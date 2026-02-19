@@ -159,7 +159,7 @@ const Navbar = () => {
             src="/assets/solarfig logo.svg"
             alt="SolarFig"
             className="h-5 w-auto sm:h-7"
-            style={{ filter: 'brightness(0) saturate(100%) invert(24%) sepia(58%) saturate(2084%) hue-rotate(251deg) brightness(91%) contrast(90%)' }}
+            style={{ filter: "brightness(0) invert(1)" }}
           />
           <span className="inline-flex h-5 items-center rounded-full border border-white/20 bg-white/10 px-2 text-[10px] font-semibold tracking-[0.12em] text-white/85 sm:hidden">
             CA
@@ -251,7 +251,7 @@ const Navbar = () => {
             (213) 306-4154
           </a>
           <a
-            href="/#contact"
+            href="#contact"
             className="inline-flex h-11 items-center justify-center rounded-[8px] bg-[#6D39B5] px-7 text-sm font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95"
           >
             Get a quote
@@ -285,7 +285,7 @@ const Navbar = () => {
                 <div className="px-3 pb-2 sm:px-4">
                   <div className="grid grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2">
                     <a
-                      href="/#contact"
+                      href="#contact"
                       className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#6D39B5] px-3 py-2 text-xs font-semibold text-white"
                     >
                       <Sparkles className="h-3.5 w-3.5" />
@@ -327,7 +327,7 @@ const Navbar = () => {
 
                 <div className="mt-auto space-y-3 border-t border-white/10 p-5 sm:p-6">
                   <a
-                    href="/#contact"
+                    href="#contact"
                     className="inline-flex min-w-[12rem] items-center justify-center self-start rounded-[10px] bg-[#6D39B5] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#8553c2]"
                   >
                     Get a quote

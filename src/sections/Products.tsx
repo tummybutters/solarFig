@@ -7,7 +7,7 @@ const productGroups = [
     description:
       "Tier-1 panel options selected for California heat performance, long-term reliability, and warranty strength.",
     icon: <Sun className="w-5 h-5" />,
-    items: ["Qcells", "Hyundai Solar", "JA Solar", "Sirius Solar"],
+    items: ["Qcells", "Hyundai Solar", "JA Solar", "Other approved Tier-1 modules"],
   },
   {
     id: "inverters",
@@ -18,7 +18,7 @@ const productGroups = [
     items: [
       "Tesla Integrated Inverter (Powerwall 3)",
       "SolarEdge Home Hub String Inverters",
-      "Enphase IQ8HC Microinverters",
+      "Enphase IQ8+ Microinverters",
     ],
   },
   {
@@ -30,7 +30,7 @@ const productGroups = [
     items: [
       "Tesla Powerwall 3",
       "SolarEdge Home Battery",
-      "Enphase 10C",
+      "Custom battery sizing",
       "Enphase 5P",
     ],
   },
@@ -77,7 +77,7 @@ const Products = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mb-12 lg:mb-20">
           <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">Products</span>
-          <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl font-serif font-light tracking-tight leading-[0.9] mt-6 mb-8">
+          <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl  font-light tracking-tight leading-[0.9] mt-6 mb-8">
             Tailored equipment.
             <br />
             <span className="text-gray-400">Not a sales script.</span>
@@ -117,7 +117,7 @@ const Products = () => {
               <div className="w-12 h-12 rounded-none bg-purple-600 text-white flex items-center justify-center mb-6 border border-white/10">
                 {group.icon}
               </div>
-              <h3 className="text-white text-2xl font-serif font-light mb-3 tracking-tight">{group.title}</h3>
+              <h3 className="text-white text-2xl  font-light mb-3 tracking-tight">{group.title}</h3>
               <p className="text-purple-100/70 text-sm leading-relaxed mb-6">{group.description}</p>
               <ul className="space-y-3">
                 {group.items.map((item) => (

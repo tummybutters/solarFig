@@ -150,7 +150,7 @@ const PillarCard = ({ pillar, index }: { pillar: Pillar; index: number }) => {
 
           {/* Title */}
           <h3
-            className="text-white text-2xl sm:text-3xl font-serif font-light tracking-tight transition-all duration-500 leading-tight"
+            className="text-white text-2xl sm:text-3xl  font-light tracking-tight transition-all duration-500 leading-tight"
             style={{
               transform: isActive ? "translateY(-4px)" : "translateY(0)",
             }}
@@ -208,7 +208,7 @@ const WhyChooseUs = () => {
             <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">
               Why SolarFig
             </span>
-            <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl font-serif font-light tracking-tight leading-[0.9]">
+            <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl  font-light tracking-tight leading-[0.9]">
               California solar
               <br />
               <span className="text-gray-400">answers all of your questions</span>

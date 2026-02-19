@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
+import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { solarArticles, solarArticlesBySlug } from "@/content/articles";
 
 const ArticleDetail = () => {
@@ -35,7 +36,7 @@ const ArticleDetail = () => {
           <div className="mb-4 inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white/85">
             {article.category}
           </div>
-          <h1 className="max-w-4xl font-['Fraunces'] text-4xl leading-tight tracking-tight sm:text-6xl">
+          <h1 className="max-w-4xl text-4xl leading-tight tracking-tight sm:text-6xl">
             {article.title}
           </h1>
           <p className="mt-6 max-w-2xl text-white/75">{article.excerpt}</p>
@@ -63,7 +64,7 @@ const ArticleDetail = () => {
             <div className="px-6 py-8 sm:px-10 sm:py-12">
               {article.sections.map((section, index) => (
                 <section key={section.heading} className={index === 0 ? "" : "mt-12 border-t border-[#deceef] pt-10"}>
-                  <h2 className="font-['Fraunces'] text-3xl leading-tight tracking-tight text-[#1f1a23] sm:text-4xl">
+                  <h2 className="text-3xl leading-tight tracking-tight text-[#1f1a23] sm:text-4xl">
                     {section.heading}
                   </h2>
 
@@ -121,7 +122,7 @@ const ArticleDetail = () => {
               className="group rounded-2xl border border-[#d7c6ea] bg-[#faf7f3] p-6 transition-colors hover:border-[#cba7ef]"
             >
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#7051a4]">Previous</p>
-              <p className="font-['Fraunces'] text-2xl leading-tight text-[#1f1a23]">{previousArticle.title}</p>
+              <p className="text-2xl leading-tight text-[#1f1a23]">{previousArticle.title}</p>
               <p className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
                 Read
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
@@ -137,7 +138,7 @@ const ArticleDetail = () => {
               className="group rounded-2xl border border-[#d7c6ea] bg-[#faf7f3] p-6 transition-colors hover:border-[#cba7ef]"
             >
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#7051a4]">Next</p>
-              <p className="font-['Fraunces'] text-2xl leading-tight text-[#1f1a23]">{nextArticle.title}</p>
+              <p className="text-2xl leading-tight text-[#1f1a23]">{nextArticle.title}</p>
               <p className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
                 Read
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -149,6 +150,7 @@ const ArticleDetail = () => {
         </div>
       </section>
 
+      <GlobalQuoteSection />
       <Footer />
     </main>
   );

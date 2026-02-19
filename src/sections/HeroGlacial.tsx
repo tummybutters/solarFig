@@ -8,24 +8,12 @@ const HeroGlacial = () => {
     const heroVideos = [
         "/assets/hero-main/hero-background-optimized-v2.mp4",
         "/assets/hero-main/hero-background-sequence-02.mp4",
+        "/assets/hero-main/hero-background-sequence-03.mp4",
+        "/assets/hero-main/hero-background-sequence-04.mp4",
     ];
 
-    const freezeOnLastFrame = () => {
-        const video = videoRef.current;
-        if (!video || !Number.isFinite(video.duration) || video.duration <= 0) return;
-
-        // Seek just before duration to force the browser to paint the true final frame.
-        video.currentTime = Math.max(video.duration - 0.05, 0);
-        video.pause();
-    };
-
     const handleVideoEnd = () => {
-        if (currentVideoIndex < heroVideos.length - 1) {
-            setCurrentVideoIndex((prev) => prev + 1);
-            return;
-        }
-
-        freezeOnLastFrame();
+        setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length);
     };
 
     return (
@@ -60,17 +48,13 @@ const HeroGlacial = () => {
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
-                    <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-200/80">
-                        A New Lens on Home Energy
-                    </p>
-
                     <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white sm:mb-6 sm:text-6xl lg:text-7xl">
-                        California's Premium solar panels, battery storage, and EV charging installer
+                        Power Your Home. Cut Your Bill. Future-Proof Everything.
                     </h1>
 
-                    <p className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/75 sm:mb-10 sm:text-lg">
-                        Solarfig synthesizes utility data, NEM 3.0 incentives, and premium battery storage to surface the savings hidden in your property.
-                    </p>
+                    <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/75 sm:mb-10 sm:text-lg">
+                        From high-efficiency solar panels to advanced battery storage and EV charging, Solarfig builds systems engineered for California homeowners who expect more.
+                    </h2>
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a

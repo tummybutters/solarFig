@@ -17,7 +17,7 @@ const HeroHorizon = () => {
                 {/* Floating Headline - Very Large, Very Transparent */}
                 <h1
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center text-[12vw] leading-none font-bold text-white/10 mix-blend-overlay pointer-events-none select-none"
-                    style={{ fontFamily: "'Fraunces', serif" }}
+                   
                 >
                     SOLARFIG
                 </h1>
@@ -28,7 +28,7 @@ const HeroHorizon = () => {
 
                 {/* Left: Branding */}
                 <div className="hidden sm:block">
-                    <h2 className="text-xl font-light tracking-wide" style={{ fontFamily: "'Fraunces', serif" }}>
+                    <h2 className="text-xl font-light tracking-wide">
                         Solarfig™
                     </h2>
                     <p className="text-[10px] uppercase tracking-widest text-purple-200/50">California Edition</p>

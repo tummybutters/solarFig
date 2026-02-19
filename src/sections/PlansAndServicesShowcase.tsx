@@ -66,7 +66,7 @@ const PlansAndServicesShowcase = () => {
                     </span>
                     <h2
                         className="text-5xl text-purple-950 sm:text-6xl lg:text-7xl"
-                        style={{ fontFamily: "'Fraunces', serif" }}
+                       
                     >
                         Flexible <span className="italic text-purple-400">financing</span> for every homeowner.
                     </h2>
@@ -92,7 +92,7 @@ const PlansAndServicesShowcase = () => {
                                         </span>
                                         <h3
                                             className="text-2xl text-purple-950 sm:text-3xl"
-                                            style={{ fontFamily: "'Fraunces', serif" }}
+                                           
                                         >
                                             {plan.title}
                                         </h3>

@@ -68,14 +68,14 @@ const EVChargers = () => {
             <CarFront className="h-4 w-4 text-purple-300" />
             EV Chargers
           </div>
-          <h1 className="max-w-5xl font-serif text-4xl leading-[0.95] text-white sm:text-6xl">
+          <h1 className="max-w-5xl  text-4xl leading-[0.95] text-white sm:text-6xl">
             Smarter energy begins with home EV chargers
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/82">
             Solarfig installs seamless, effective home EV chargers for homeowners across California.
           </p>
           <a
-            href="/#contact"
+            href="#contact"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#201b29] transition-colors hover:bg-gray-200"
           >
             Get a quote
@@ -108,7 +108,7 @@ const EVChargers = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Home Charging</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Charge faster, smarter, cleaner</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Charge faster, smarter, cleaner</h2>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-3">
@@ -157,7 +157,7 @@ const EVChargers = () => {
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why home charging</p>
-              <h2 className="mb-8 font-serif text-3xl leading-tight sm:text-4xl">Power your drive</h2>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Power your drive</h2>
 
               <div className="space-y-5">
                 {benefits.map((benefit) => {
@@ -177,7 +177,7 @@ const EVChargers = () => {
               </div>
 
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 Get a quote
@@ -223,15 +223,15 @@ const EVChargers = () => {
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Solar + EV</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Charge from the sun</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Charge from the sun</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Pair your EV charger with solar panels and drive on 100% clean energy. We design integrated systems that maximize your solar production.
               </p>
               <a
-                href="/#explore"
+                href="/whole-home-solar"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                See solar integration
+                Explore whole-home solar
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -274,7 +274,7 @@ const EVChargers = () => {
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Installation</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Clean install, done right</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Clean install, done right</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Hardwired Level 2 chargers installed by licensed electricians. We handle permits, inspections, and utility coordination.
               </p>
@@ -289,7 +289,7 @@ const EVChargers = () => {
                 </div>
               </div>
               <a
-                href="/#contact"
+                href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Get a quote
@@ -303,7 +303,7 @@ const EVChargers = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1000px] px-6 sm:px-8">
-          <h2 className="mb-8 font-serif text-4xl text-stone-900">Frequently Asked Questions</h2>
+          <h2 className="mb-8  text-4xl text-stone-900">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="rounded-2xl border border-stone-200 bg-white px-6">
             {faqs.map((item, index) => (
               <AccordionItem key={item.question} value={`faq-${index}`} className="border-stone-200">

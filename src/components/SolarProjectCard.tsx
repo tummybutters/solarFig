@@ -58,7 +58,7 @@ const SolarProjectCard = ({
         </div>
 
         <div>
-          <h3 className="font-serif text-2xl leading-none text-slate-900">{highlight}</h3>
+          <h3 className=" text-2xl leading-none text-slate-900">{highlight}</h3>
           <p className="mt-2 min-h-[44px] text-sm leading-relaxed text-slate-600">{title}</p>
         </div>
 

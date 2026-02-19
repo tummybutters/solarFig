@@ -36,7 +36,7 @@ const HeroCinematic = () => {
                 {/* Elegant Headline */}
                 <h1
                     className="max-w-4xl text-5xl font-light tracking-tight text-white sm:text-7xl lg:text-8xl"
-                    style={{ fontFamily: "'Fraunces', serif" }}
+                   
                 >
                     Power, <span className="italic text-purple-200">Perfected.</span>
                 </h1>

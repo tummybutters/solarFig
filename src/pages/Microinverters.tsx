@@ -67,7 +67,7 @@ const Microinverters = () => {
             <div className="max-w-2xl">
               <p className="text-lg text-white/90">Build smarter panel-level control into your system from day one.</p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -83,7 +83,7 @@ const Microinverters = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Panel-Level Control</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">See every panel</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">See every panel</h2>
           </div>
 
           {/* Icon strip */}
@@ -125,7 +125,7 @@ const Microinverters = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">When to Choose</p>
-            <h2 className="font-serif text-4xl leading-tight sm:text-5xl">Right fit scenarios</h2>
+            <h2 className=" text-4xl leading-tight sm:text-5xl">Right fit scenarios</h2>
           </div>
 
           <div className="space-y-16">
@@ -144,7 +144,7 @@ const Microinverters = () => {
                 </div>
                 <div className={i % 2 === 1 ? 'lg:order-1 lg:pr-12' : 'lg:pl-12'}>
                   <span className="text-xs font-mono text-purple-400">0{i + 1}</span>
-                  <h3 className="mt-2 font-serif text-3xl text-white sm:text-4xl">{scenario.title}</h3>
+                  <h3 className="mt-2  text-3xl text-white sm:text-4xl">{scenario.title}</h3>
                   <p className="mt-3 text-lg text-white/60">{scenario.description}</p>
                 </div>
               </div>
@@ -171,11 +171,11 @@ const Microinverters = () => {
             {/* Floating card */}
             <div className="relative mx-4 -mt-24 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:left-10 lg:mt-0 lg:max-w-sm lg:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Engineering First</p>
-              <h3 className="mb-3 font-serif text-2xl text-stone-900">No one-size-fits-all</h3>
+              <h3 className="mb-3  text-2xl text-stone-900">No one-size-fits-all</h3>
               <p className="text-stone-600 leading-relaxed">
                 We compare microinverter and string-based designs against your roof conditions, then walk you through tradeoffs.
               </p>
-              <a href="/#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700">
+              <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700">
                 Compare options
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -187,7 +187,7 @@ const Microinverters = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`faq-${index}`}>

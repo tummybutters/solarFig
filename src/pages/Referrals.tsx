@@ -30,7 +30,7 @@ const Referrals = () => {
             </h1>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="/#contact"
+                href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#6d39b5] px-9 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#5c2f9b]"
               >
                 Submit a referral
@@ -78,7 +78,7 @@ const Referrals = () => {
             <div>
               <div className="mb-10 max-w-md">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">The Process</p>
-                <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">How it works</h2>
+                <h2 className=" text-4xl text-stone-900 sm:text-5xl">How it works</h2>
               </div>
 
               <div className="space-y-6">
@@ -137,14 +137,14 @@ const Referrals = () => {
             <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative">
-              <h2 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl">
+              <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl">
                 Start earning today
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-white/70">
                 Refer your friends and earn up to $1,000 after we install their system.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Submit a referral

@@ -58,7 +58,7 @@ const SolarBatteryIncentives = () => {
                 Incentives can materially improve project economics, but eligibility and timelines vary by utility territory and current program rules.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -74,7 +74,7 @@ const SolarBatteryIncentives = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Available Programs</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Incentive snapshot</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Incentive snapshot</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
@@ -130,7 +130,7 @@ const SolarBatteryIncentives = () => {
 
           <div className="mt-10 max-w-2xl lg:mt-16">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Our Process</p>
-            <h2 className="font-serif text-3xl leading-tight sm:text-4xl">How we handle incentive planning</h2>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">How we handle incentive planning</h2>
           </div>
         </div>
       </section>
@@ -141,12 +141,12 @@ const SolarBatteryIncentives = () => {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Important</p>
-              <h2 className="mb-4 font-serif text-3xl text-stone-900 sm:text-4xl">Programs change. We stay current.</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Programs change. We stay current.</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Incentives are policy-driven and can shift with legislation, utility filings, and funding exhaustion. We provide guidance using currently published rules, but final tax treatment should always be confirmed with your tax advisor.
               </p>
               <a
-                href="/#contact"
+                href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Check my eligibility
@@ -173,7 +173,7 @@ const SolarBatteryIncentives = () => {
       {/* FAQ — unchanged */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[980px] px-6 sm:px-8">
-          <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
+          <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`faq-${index}`}>

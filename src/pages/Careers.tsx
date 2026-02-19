@@ -38,7 +38,7 @@ const Careers = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Why Join</p>
-            <h2 className="font-serif text-4xl text-stone-900 sm:text-5xl">Perks & Benefits</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Perks & Benefits</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -65,7 +65,7 @@ const Careers = () => {
             <div>
               <div className="mb-10">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Openings</p>
-                <h2 className="font-serif text-4xl leading-tight sm:text-5xl">Current roles</h2>
+                <h2 className=" text-4xl leading-tight sm:text-5xl">Current roles</h2>
                 <p className="mt-4 text-white/60">
                   Join us in building the future of home energy in California.
                 </p>
@@ -117,7 +117,7 @@ const Careers = () => {
           <div className="relative overflow-hidden rounded-2xl bg-white px-8 py-12 shadow-[0_20px_60px_-20px_rgba(109,57,181,0.25)] sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-100 blur-3xl" />
             <div className="relative max-w-2xl">
-              <h2 className="font-serif text-3xl leading-tight tracking-tight text-stone-900 sm:text-4xl">
+              <h2 className=" text-3xl leading-tight tracking-tight text-stone-900 sm:text-4xl">
                 Don't see the right role?
               </h2>
               <p className="mt-4 text-stone-600">

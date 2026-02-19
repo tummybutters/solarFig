@@ -2,30 +2,30 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   process: [
-    { label: "Consultation", href: "#consultation" },
-    { label: "Design & Proposal", href: "#design-review" },
-    { label: "Site Inspection", href: "#inspection" },
-    { label: "Permitting", href: "#permitting" },
-    { label: "Installation", href: "#installation" },
-    { label: "PTO Activation", href: "#pto" },
+    { label: "Consultation", href: "/installation" },
+    { label: "Design & Proposal", href: "/installation" },
+    { label: "Site Inspection", href: "/installation" },
+    { label: "Permitting", href: "/installation" },
+    { label: "Installation", href: "/installation" },
+    { label: "PTO Activation", href: "/installation" },
   ],
   products: [
-    { label: "Solar Panels", href: "#solar-panels" },
-    { label: "Battery Storage", href: "#batteries" },
-    { label: "Inverters", href: "#inverters" },
-    { label: "EV Chargers", href: "#ev-chargers" },
+    { label: "Solar Panels", href: "/solar-panels" },
+    { label: "Battery Storage", href: "/battery" },
+    { label: "Inverters", href: "/microinverters" },
+    { label: "EV Chargers", href: "/ev-chargers" },
   ],
   plans: [
     { label: "0$ Down / EZ Plan", href: "/pricing-costs#ez-plan" },
-    { label: "Finance to Own", href: "/pricing-costs#finance-to-own" },
-    { label: "Outright Purchase", href: "/pricing-costs#direct-purchase" },
-    { label: "Prepaid Solar", href: "/pricing-costs#prepaid-solar" },
+    { label: "Finance to Own", href: "/pricing-costs#finance" },
+    { label: "Outright Purchase", href: "/pricing-costs#purchase" },
+    { label: "Prepaid Solar", href: "/pricing-costs#prepaid" },
   ],
   serviceArea: [
-    { label: "California Service Map", href: "#service-area" },
-    { label: "SCE Territory", href: "#service-area" },
-    { label: "PG&E Territory", href: "#service-area" },
-    { label: "SDG&E Territory", href: "#service-area" },
+    { label: "California Service Map", href: "/locations" },
+    { label: "SCE Territory", href: "/locations#sce" },
+    { label: "PG&E Territory", href: "/locations#pge" },
+    { label: "SDG&E Territory", href: "/locations#sdge" },
   ],
   explore: [
     { label: "About Us", href: "/about" },
@@ -151,7 +151,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-6">
-            <a href="#home" className="text-gray-400 text-sm hover:text-white transition-colors">Home</a>
+            <a href="/" className="text-gray-400 text-sm hover:text-white transition-colors">Home</a>
             <a href="#contact" className="text-gray-400 text-sm hover:text-white transition-colors">Contact Us</a>
           </div>
           

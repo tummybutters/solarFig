@@ -17,7 +17,7 @@ const Articles = () => {
 
         <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">Explore</p>
-          <h1 className="max-w-5xl font-['Fraunces'] text-4xl tracking-tight sm:text-6xl">
+          <h1 className="max-w-5xl text-4xl tracking-tight sm:text-6xl">
             California Solar Buying Guides
           </h1>
           <p className="mt-5 max-w-2xl text-white/75">
@@ -41,7 +41,7 @@ const Articles = () => {
                 Featured
               </div>
               <a href={`/articles/${featuredArticle.slug}`} className="group">
-                <h2 className="font-['Fraunces'] text-3xl leading-tight text-white transition-colors group-hover:text-[#e2c5ff] sm:text-4xl">
+                <h2 className="text-3xl leading-tight text-white transition-colors group-hover:text-[#e2c5ff] sm:text-4xl">
                   {featuredArticle.title}
                 </h2>
               </a>
@@ -70,10 +70,10 @@ const Articles = () => {
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">All Articles</p>
-              <h2 className="mt-2 font-['Fraunces'] text-3xl tracking-tight text-[#261f33] sm:text-4xl">Answer-First Library</h2>
+              <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Answer-First Library</h2>
             </div>
             <a
-              href="/#contact"
+              href="#contact"
               className="hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.11em] text-[#6d39b5] transition-colors hover:text-[#4c2880] sm:inline-flex"
             >
               Talk to Solarfig
@@ -104,7 +104,7 @@ const Articles = () => {
                       </span>
                     </div>
 
-                    <h3 className="mt-4 font-['Fraunces'] text-2xl leading-tight tracking-tight text-[#1e1a23] transition-colors group-hover:text-[#6d39b5]">
+                    <h3 className="mt-4 text-2xl leading-tight tracking-tight text-[#1e1a23] transition-colors group-hover:text-[#6d39b5]">
                       {article.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#4a4365]">{article.excerpt}</p>
