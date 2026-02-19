@@ -5,10 +5,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Battery, Car, Home, Zap } from "lucide-react";
 
 const systemComponents = [
-  { title: "Solar Panels", description: "Premium modules", icon: Zap, image: "/assets/whole-home-solar/whole-home-house.jpg" },
-  { title: "Battery Backup", description: "Store excess energy", icon: Battery, image: "/assets/whole-home-solar/battery-backup.webp" },
-  { title: "EV Charging", description: "Charge at home", icon: Car, image: "/assets/ev-chargers/ev-equipment-02.png" },
-  { title: "Smart Panels", description: "Control & monitor", icon: Home, image: "/assets/whole-home-solar/smart-panel-system.png" },
+  { title: "Solar Panels", description: "Premium modules", icon: Zap, image: "/assets/install-gallery/install-03.jpg" },
+  { title: "Battery Backup", description: "Store excess energy", icon: Battery, image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg" },
+  { title: "EV Charging", description: "Charge at home", icon: Car, image: "/assets/whole-home-solar/smart-panel-system.png" },
+  { title: "Smart Panels", description: "Control & monitor", icon: Home, image: "/assets/ev-chargers/ev-home-01.png" },
 ];
 
 const faqs = [

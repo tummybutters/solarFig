@@ -325,9 +325,17 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f4eefb] pb-16 sm:pb-24">
-        <div className="h-[200px] w-full overflow-hidden sm:h-[300px]">
-          <img src="/assets/install-gallery/install-05.jpg" alt="Solarfig team on-site" className="h-full w-full object-cover" />
+      <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-16 pt-10 sm:pb-24 sm:pt-14">
+        <div className="pointer-events-none absolute -top-20 left-1/3 h-72 w-72 rounded-full bg-purple-500/25 blur-3xl" />
+        <div className="pointer-events-none absolute -top-10 right-1/4 h-64 w-64 rounded-full bg-violet-400/20 blur-3xl" />
+
+        <div className="relative h-[200px] w-full overflow-hidden shadow-[0_26px_80px_-28px_rgba(130,72,216,0.75)] sm:h-[300px]">
+          <img
+            src="/assets/home-editorial/home-banner-solar-family-2026-02-19.png"
+            alt="Family gathering outside a home with rooftop solar at sunset"
+            className="h-full w-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1f1231]/45 via-transparent to-[#402067]/20" />
         </div>
 
         <div className="mx-auto mt-10 grid max-w-[1080px] gap-5 px-4 sm:mt-12 sm:gap-6 sm:px-6 lg:grid-cols-2">

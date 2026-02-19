@@ -58,13 +58,13 @@ const HeroGlacial = () => {
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a
-                            href="#contact"
+                            href="/projects"
                             className="inline-flex h-11 items-center justify-center rounded bg-white px-6 text-sm font-semibold text-slate-900 transition-colors hover:bg-blue-50 sm:h-12 sm:px-8"
                         >
                             Start monitoring free
                         </a>
                         <a
-                            href="#plans"
+                            href="/projects"
                             className="inline-flex h-11 items-center justify-center rounded border border-white/20 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10 backdrop-blur-sm sm:h-12 sm:px-8"
                         >
                             View research cases
