@@ -18,9 +18,9 @@ const solutionCards = [
     image: "/assets/ev-chargers/ev-home-01.png",
   },
   {
-    title: "Smart Electrical Panels",
-    href: "/smart-electrical-panels",
-    image: "/assets/whole-home-solar/smart-panel-system.png",
+    title: "Installation Process",
+    href: "/installation",
+    image: "/assets/install-gallery/install-07.jpg",
   },
 ];
 
@@ -349,12 +349,12 @@ const HomeEditorial = () => {
             </p>
           </a>
 
-          <a href="/whole-home-solar" className="rounded-2xl bg-[#6d39b5] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-purple-200">Whole Home Solar</p>
-            <h3 className="mt-4 text-4xl leading-tight text-white">One smart system. Total control.</h3>
-            <p className="mt-4 text-purple-100/80">Solar, storage, and smart load support designed as one connected stack.</p>
+          <a href="/installation" className="rounded-2xl bg-[#6d39b5] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-purple-200">Process</p>
+            <h3 className="mt-4 text-4xl leading-tight text-white">Know every step before you sign.</h3>
+            <p className="mt-4 text-purple-100/80">From consultation through PTO, we keep your timeline clear and accountable.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-white">
-              Explore System
+              View Process
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>

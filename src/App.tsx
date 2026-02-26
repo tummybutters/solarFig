@@ -14,15 +14,12 @@ import EVChargers from "@/pages/EVChargers";
 import About from "@/pages/About";
 import Articles from "@/pages/Articles";
 import ArticleDetail from "@/pages/ArticleDetail";
-import Careers from "@/pages/Careers";
 import Referrals from "@/pages/Referrals";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfUse from "@/pages/TermsOfUse";
-import WholeHomeSolar from "@/pages/WholeHomeSolar";
+import Installation from "@/pages/Installation";
 import PricingCosts from "@/pages/PricingCosts";
 import SolarPanels from "@/pages/SolarPanels";
-import Microinverters from "@/pages/Microinverters";
-import SmartElectricalPanels from "@/pages/SmartElectricalPanels";
 import SolarBatteryIncentives from "@/pages/SolarBatteryIncentives";
 import Locations from "@/pages/Locations";
 import { Navigate, Route, Routes } from "react-router-dom";
@@ -55,16 +52,16 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:slug" element={<ArticleDetail />} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/careers" element={<Navigate to="/about" replace />} />
         <Route path="/referrals" element={<Referrals />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/whole-home-solar" element={<WholeHomeSolar />} />
+        <Route path="/whole-home-solar" element={<Navigate to="/pricing-costs" replace />} />
         <Route path="/pricing-costs" element={<PricingCosts />} />
-        <Route path="/installation" element={<Navigate to="/projects" replace />} />
+        <Route path="/installation" element={<Installation />} />
         <Route path="/solar-panels" element={<SolarPanels />} />
-        <Route path="/microinverters" element={<Microinverters />} />
-        <Route path="/smart-electrical-panels" element={<SmartElectricalPanels />} />
+        <Route path="/microinverters" element={<Navigate to="/pricing-costs" replace />} />
+        <Route path="/smart-electrical-panels" element={<Navigate to="/pricing-costs" replace />} />
         <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
         <Route path="/locations" element={<Locations />} />
         <Route path="/locations/sce" element={<Navigate to="/locations#sce" replace />} />

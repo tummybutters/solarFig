@@ -17,14 +17,14 @@ const Installation = () => {
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
-      <section className="relative overflow-hidden pt-24 sm:pt-28">
+      <section id="process" className="relative overflow-hidden pt-24 sm:pt-28">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img src="/assets/hero-main/gary-cole.jpg" alt="Solar installation team working on a residential roof." className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Plans & Services</p>
-              <h1 className="text-4xl tracking-tight sm:text-6xl">Installation</h1>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Process</p>
+              <h1 className="text-4xl tracking-tight sm:text-6xl">How Installation Works</h1>
               <p className="mt-5 max-w-3xl text-white/80">Professional, streamlined project delivery from consultation through PTO, with vetted installation partners across California.</p>
             </div>
           </div>

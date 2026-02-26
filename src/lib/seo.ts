@@ -13,9 +13,9 @@ type SeoMeta = {
 };
 
 const HOME_META: SeoMeta = {
-  title: "California Home Solar, Battery Backup & EV Charging | Solarfig",
+  title: "California Solar Panels & Battery Backup | Solarfig",
   description:
-    "California solar installation for solar panels, home solar battery backup, and EV charging. Custom design, clean installs, and end-to-end project delivery.",
+    "California solar installation for solar panels and backup-ready batteries. Custom design, clean installs, and end-to-end project delivery.",
   canonicalPath: "/",
   ogType: "website",
   image: DEFAULT_OG_IMAGE,
@@ -63,14 +63,6 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
-  "/careers": {
-    title: "Careers at Solarfig",
-    description:
-      "Explore careers at Solarfig in sales, operations, and customer experience supporting premium California solar projects.",
-    canonicalPath: "/careers",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
   "/referrals": {
     title: "Solarfig Home Solar Referral Program",
     description:
@@ -93,14 +85,6 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
-  "/whole-home-solar": {
-    title: "Whole Home Solar Systems in California | Solarfig",
-    description:
-      "Design a full home solar system with solar panels, battery backup, EV charging, and smart controls built for California homes.",
-    canonicalPath: "/whole-home-solar",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
   "/pricing-costs": {
     title: "California Home Solar Pricing, Battery & EV Options | Solarfig",
     description:
@@ -109,27 +93,19 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
+  "/installation": {
+    title: "Solar Installation Process in California | Solarfig",
+    description:
+      "See Solarfig's installation process from consultation and permitting to installation and PTO activation.",
+    canonicalPath: "/installation",
+    ogType: "website",
+    image: DEFAULT_OG_IMAGE,
+  },
   "/solar-panels": {
     title: "Solar Panel Installation for California Homes | Solarfig",
     description:
       "Premium solar panel installation with system design focused on roof fit, efficiency, long-term performance, and California utility rates.",
     canonicalPath: "/solar-panels",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
-  "/microinverters": {
-    title: "Microinverter Solar Panel Systems | Solarfig",
-    description:
-      "Learn when microinverter solar panel systems are best for complex roofs, partial shade, and premium panel-level monitoring.",
-    canonicalPath: "/microinverters",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
-  "/smart-electrical-panels": {
-    title: "Smart Electrical Panels for Home Solar | Solarfig",
-    description:
-      "Upgrade to smart electrical panels that coordinate solar panels, battery backup, and EV charging while prioritizing critical home loads.",
-    canonicalPath: "/smart-electrical-panels",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },

@@ -1,20 +1,92 @@
-// import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const HERO_FADE_MS = 520;
+
+const heroVideos = [
+    "/assets/hero-main/hero-background-optimized-v2.mp4",
+    "/assets/hero-main/hero-background-sequence-02.mp4",
+    "/assets/hero-main/hero-background-sequence-03.mp4",
+    "/assets/hero-main/hero-background-sequence-04.mp4",
+];
 
 const HeroGlacial = () => {
-    const videoRef = useRef<HTMLVideoElement | null>(null);
-    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const layerARef = useRef<HTMLVideoElement | null>(null);
+    const layerBRef = useRef<HTMLVideoElement | null>(null);
+    const transitionTimerRef = useRef<number | null>(null);
 
-    const heroVideos = [
-        "/assets/hero-main/hero-background-optimized-v2.mp4",
-        "/assets/hero-main/hero-background-sequence-02.mp4",
-        "/assets/hero-main/hero-background-sequence-03.mp4",
-        "/assets/hero-main/hero-background-sequence-04.mp4",
-    ];
+    const [layerAIndex, setLayerAIndex] = useState(0);
+    const [layerBIndex, setLayerBIndex] = useState(1);
+    const [activeLayer, setActiveLayer] = useState<"a" | "b">("a");
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
-    const handleVideoEnd = () => {
-        setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length);
+    const layerAIndexRef = useRef(layerAIndex);
+    const layerBIndexRef = useRef(layerBIndex);
+    const activeLayerRef = useRef(activeLayer);
+
+    useEffect(() => {
+        layerAIndexRef.current = layerAIndex;
+    }, [layerAIndex]);
+
+    useEffect(() => {
+        layerBIndexRef.current = layerBIndex;
+    }, [layerBIndex]);
+
+    useEffect(() => {
+        activeLayerRef.current = activeLayer;
+    }, [activeLayer]);
+
+    useEffect(() => {
+        const preloadRef = activeLayer === "a" ? layerBRef : layerARef;
+        if (!preloadRef.current) return;
+        preloadRef.current.load();
+    }, [layerAIndex, layerBIndex, activeLayer]);
+
+    useEffect(() => {
+        return () => {
+            if (transitionTimerRef.current) {
+                window.clearTimeout(transitionTimerRef.current);
+            }
+        };
+    }, []);
+
+    const handleActiveVideoEnd = async () => {
+        if (isTransitioning) return;
+
+        const incomingLayer = activeLayerRef.current === "a" ? "b" : "a";
+        const incomingVideo = incomingLayer === "a" ? layerARef.current : layerBRef.current;
+        if (!incomingVideo) return;
+
+        incomingVideo.currentTime = 0;
+        try {
+            await incomingVideo.play();
+        } catch {
+            // Ignore autoplay promise failures on restrictive browsers.
+        }
+
+        setIsTransitioning(true);
+        setActiveLayer(incomingLayer);
+
+        transitionTimerRef.current = window.setTimeout(() => {
+            const incomingIndex =
+                incomingLayer === "a" ? layerAIndexRef.current : layerBIndexRef.current;
+            const preloadIndex = (incomingIndex + 1) % heroVideos.length;
+            const outgoingVideo = incomingLayer === "a" ? layerBRef.current : layerARef.current;
+            if (outgoingVideo) {
+                outgoingVideo.pause();
+                outgoingVideo.currentTime = 0;
+            }
+
+            if (incomingLayer === "a") {
+                setLayerBIndex(preloadIndex);
+            } else {
+                setLayerAIndex(preloadIndex);
+            }
+
+            setIsTransitioning(false);
+        }, HERO_FADE_MS);
     };
+
+    const activeVideoIndex = activeLayer === "a" ? layerAIndex : layerBIndex;
 
     return (
         <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-900 text-white sm:min-h-screen">
@@ -22,24 +94,38 @@ const HeroGlacial = () => {
             <div className="absolute inset-0 z-0">
                 {/* Neutral overlay for text readability */}
                 <div
-                    className={`absolute inset-0 z-10 ${
-                        currentVideoIndex === 1
-                            ? "bg-gradient-to-t from-black/74 via-black/44 to-black/14"
-                            : "bg-gradient-to-t from-black/56 via-black/24 to-transparent"
+                    className={`absolute inset-0 z-20 ${
+                        activeVideoIndex === 1
+                            ? "bg-gradient-to-t from-black/80 via-black/52 to-black/20"
+                            : "bg-gradient-to-t from-black/68 via-black/40 to-black/12"
                     }`}
                 />
 
                 <video
-                    key={heroVideos[currentVideoIndex]}
-                    ref={videoRef}
-                    className="h-full w-full object-cover object-center scale-105"
+                    ref={layerARef}
+                    className={`absolute inset-0 h-full w-full object-cover object-center scale-105 transition-opacity duration-[520ms] ${
+                        activeLayer === "a" ? "opacity-100" : "opacity-0"
+                    }`}
                     autoPlay
                     muted
                     playsInline
                     preload="auto"
-                    onEnded={handleVideoEnd}
+                    onEnded={activeLayer === "a" ? handleActiveVideoEnd : undefined}
                 >
-                    <source src={heroVideos[currentVideoIndex]} type="video/mp4" />
+                    <source src={heroVideos[layerAIndex]} type="video/mp4" />
+                </video>
+
+                <video
+                    ref={layerBRef}
+                    className={`absolute inset-0 h-full w-full object-cover object-center scale-105 transition-opacity duration-[520ms] ${
+                        activeLayer === "b" ? "opacity-100" : "opacity-0"
+                    }`}
+                    muted
+                    playsInline
+                    preload="auto"
+                    onEnded={activeLayer === "b" ? handleActiveVideoEnd : undefined}
+                >
+                    <source src={heroVideos[layerBIndex]} type="video/mp4" />
                 </video>
             </div>
 
@@ -48,31 +134,31 @@ const HeroGlacial = () => {
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
-                    <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white sm:mb-6 sm:text-6xl lg:text-7xl">
+                    <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)] sm:mb-6 sm:text-6xl lg:text-7xl">
                         Power Your Home. Cut Your Bill. Future-Proof Everything.
                     </h1>
 
-                    <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/75 sm:mb-10 sm:text-lg">
-                        From high-efficiency solar panels to advanced battery storage and EV charging, Solarfig builds systems engineered for California homeowners who expect more.
+                    <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/90 drop-shadow-[0_3px_20px_rgba(0,0,0,0.45)] sm:mb-10 sm:text-lg">
+                        From high-efficiency solar panels to backup-ready battery systems, Solarfig builds solar designed for California homeowners who expect clear results.
                     </h2>
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a
-                            href="/projects"
+                            href="#contact"
                             className="inline-flex h-11 items-center justify-center rounded bg-white px-6 text-sm font-semibold text-slate-900 transition-colors hover:bg-blue-50 sm:h-12 sm:px-8"
                         >
-                            Start monitoring free
+                            Get your free solar quote
                         </a>
                         <a
                             href="/projects"
                             className="inline-flex h-11 items-center justify-center rounded border border-white/20 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10 backdrop-blur-sm sm:h-12 sm:px-8"
                         >
-                            View research cases
+                            View real projects
                         </a>
                     </div>
 
-                    <p className="mt-6 text-[10px] text-blue-200/40">
-                        No credit card • Browser-based analysis
+                    <p className="mt-6 text-[10px] text-blue-200/55">
+                        Clear pricing • Local permitting support
                     </p>
                 </div>
 

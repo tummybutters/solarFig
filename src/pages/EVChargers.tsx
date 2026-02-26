@@ -228,10 +228,10 @@ const EVChargers = () => {
                 Pair your EV charger with solar panels and drive on 100% clean energy. We design integrated systems that maximize your solar production.
               </p>
               <a
-                href="/whole-home-solar"
+                href="/pricing-costs"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                Explore whole-home solar
+                Explore plans and pricing
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

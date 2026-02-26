@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      <section className="bg-[#17141b] pb-14 pt-32 text-white sm:pb-16 sm:pt-36">
+      <section className="bg-[linear-gradient(130deg,#1d132e_0%,#2b1744_55%,#3d2360_100%)] pb-14 pt-32 text-white sm:pb-16 sm:pt-36">
         <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Legal</p>
           <h1 className="text-4xl tracking-tight sm:text-5xl">Privacy Policy</h1>
@@ -246,9 +246,9 @@ const PrivacyPolicy = () => {
               <br />
               Solarfig
               <br />
-              2810 Jackson Ave PH3B
+              4930 Campus Drive
               <br />
-              Long Island City, NY 11101
+              Newport Beach, CA 92660
               <br />
               Email: info@solarfig.com
             </p>

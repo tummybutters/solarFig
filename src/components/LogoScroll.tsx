@@ -6,9 +6,9 @@ const lenderLogos = [
   { name: "Participate Energy", src: "/assets/lender-logos/participate-energy.png", monochrome: true },
   { name: "Propel", src: "/assets/lender-logos/propel.svg", monochrome: true },
   { name: "Concert Finance", src: "/assets/lender-logos/concert-finance.svg", monochrome: true },
-  { name: "Sunrun", src: "/assets/lender-logos/raw/sunrun.png", monochrome: false },
+  { name: "Sunrun", src: "/assets/lender-logos/sunrun.png", monochrome: true },
   { name: "Wheelhouse", src: "/assets/lender-logos/wheelhouse.png", monochrome: true },
-  { name: "Credit Human", src: "/assets/lender-logos/credit-human.svg", monochrome: false },
+  { name: "Credit Human", src: "/assets/lender-logos/credit-human.svg", monochrome: true },
 ];
 
 const LogoScroll = () => {

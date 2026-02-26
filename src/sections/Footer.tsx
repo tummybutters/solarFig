@@ -12,7 +12,7 @@ const footerLinks = {
   products: [
     { label: "Solar Panels", href: "/solar-panels" },
     { label: "Battery Storage", href: "/battery" },
-    { label: "Inverters", href: "/microinverters" },
+    { label: "Inverters", href: "/pricing-costs" },
     { label: "EV Chargers", href: "/ev-chargers" },
   ],
   plans: [
@@ -72,7 +72,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span>2810 Jackson Ave PH3B<br />Long Island City, NY 11101</span>
+                <span>4930 Campus Drive<br />Newport Beach, CA 92660</span>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@ const Footer = () => {
         {/* Compliance Address */}
         <div className="mt-6 pt-6 border-t border-white/5 text-center">
           <p className="text-gray-600 text-[10px]">
-            Mailing address for compliance: 2810 Jackson Ave PH3B, Long Island City, NY 11101
+            Mailing address for compliance: 4930 Campus Drive, Newport Beach, CA 92660
           </p>
         </div>
       </div>

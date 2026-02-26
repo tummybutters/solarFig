@@ -38,9 +38,8 @@ const navItems: NavItem[] = [
       { label: "Solar Panels", href: "/solar-panels" },
       { label: "Battery Backup", href: "/battery" },
       { label: "EV Chargers", href: "/ev-chargers" },
-      { label: "Microinverters", href: "/microinverters" },
-      { label: "Smart Electrical Panels", href: "/smart-electrical-panels" },
-      { label: "Whole Home Solar", href: "/whole-home-solar" },
+      { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
+      { label: "Projects Showcase", href: "/projects" },
     ],
     featured: [
       {
@@ -51,14 +50,14 @@ const navItems: NavItem[] = [
       },
       {
         label: "Popular Option",
-        title: "Whole Home Solar Systems",
-        href: "/whole-home-solar",
-        image: "/assets/whole-home-solar/whole-home-house.jpg",
+        title: "Solar Panels for California Homes",
+        href: "/solar-panels",
+        image: "/assets/hero-main/solar-panels-h1-2026-02-17.jpg",
       },
     ],
   },
   {
-    label: "Plans & Services",
+    label: "Pricing & Plans",
     href: "/pricing-costs",
     children: [
       { label: "0$ Down (EZ Plan)", href: "/pricing-costs#ez-plan" },
@@ -66,7 +65,7 @@ const navItems: NavItem[] = [
       { label: "Outright Purchase", href: "/pricing-costs#purchase" },
       { label: "Prepaid Solar", href: "/pricing-costs#prepaid" },
       { label: "Installation Process", href: "/installation" },
-      { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
+      { label: "Compare all options", href: "/pricing-costs" },
     ],
     featured: [
       {
@@ -80,6 +79,32 @@ const navItems: NavItem[] = [
         title: "How Solar Installation Works",
         href: "/installation",
         image: "/assets/install-gallery/install-05.jpg",
+      },
+    ],
+  },
+  {
+    label: "Process",
+    href: "/installation",
+    children: [
+      { label: "Step 1: Consultation", href: "/installation" },
+      { label: "Step 2: System Design", href: "/installation" },
+      { label: "Step 3: Site Inspection", href: "/installation" },
+      { label: "Step 4: Permitting", href: "/installation" },
+      { label: "Step 5: Installation", href: "/installation" },
+      { label: "Step 6: PTO Activation", href: "/installation" },
+    ],
+    featured: [
+      {
+        label: "Timeline",
+        title: "From Quote to PTO",
+        href: "/installation",
+        image: "/assets/install-gallery/install-07.jpg",
+      },
+      {
+        label: "What to Expect",
+        title: "Your Solar Project Roadmap",
+        href: "/installation",
+        image: "/assets/install-gallery/install-09.jpg",
       },
     ],
   },
@@ -108,12 +133,11 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Explore",
+    label: "About Us",
     href: "/about",
     children: [
-      { label: "About SolarFig", href: "/about" },
+      { label: "About Us", href: "/about" },
       { label: "Educational Articles", href: "/articles" },
-      { label: "Careers", href: "/careers" },
       { label: "Referral Program", href: "/referrals" },
     ],
     featured: [
@@ -155,12 +179,9 @@ const Navbar = () => {
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04] sm:rounded-xl" />
         {/* Logo */}
         <a href="/" className="relative z-[60] flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80">
-          <img
-            src="/assets/solarfig logo.svg"
-            alt="SolarFig"
-            className="h-5 w-auto sm:h-7"
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
+          <span className="text-lg font-semibold tracking-tight text-white sm:text-2xl">
+            Solar<span className="text-purple-300">fig</span>
+          </span>
           <span className="inline-flex h-5 items-center rounded-full border border-white/20 bg-white/10 px-2 text-[10px] font-semibold tracking-[0.12em] text-white/85 sm:hidden">
             CA
           </span>
