@@ -172,25 +172,25 @@ const Navbar = () => {
     <div className="fixed inset-x-0 top-3 z-50 flex justify-center px-3 sm:top-6 sm:px-6">
       <div
         className={cn(
-          "relative flex w-full max-w-[1400px] items-center justify-between rounded-2xl border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:rounded-xl sm:px-8 sm:py-3",
+          "relative flex min-h-[60px] w-full max-w-[1400px] items-center justify-between rounded-[10px] border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:min-h-[78px] sm:px-8 sm:py-3",
           isScrolled ? "shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)]" : "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.4)]"
         )}
       >
-        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04] sm:rounded-xl" />
+        <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
         {/* Logo */}
         <a href="/" className="relative z-[60] flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80">
-          <span className="text-lg font-semibold tracking-tight text-white sm:text-2xl">
-            Solar<span className="text-purple-300">fig</span>
-          </span>
-          <span className="inline-flex h-5 items-center rounded-full border border-white/20 bg-white/10 px-2 text-[10px] font-semibold tracking-[0.12em] text-white/85 sm:hidden">
-            CA
-          </span>
+          <img
+            src="/assets/logo/white-logo-no-panel.png"
+            alt="Solarfig"
+            className="h-8 w-auto object-contain sm:h-9"
+          />
+          <span className="sr-only">Solarfig</span>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden flex-1 lg:block">
           <NavigationMenu viewport={true}>
-            <NavigationMenuList className="justify-center gap-2">
+            <NavigationMenuList className="justify-center gap-2 lg:translate-x-4">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuTrigger
