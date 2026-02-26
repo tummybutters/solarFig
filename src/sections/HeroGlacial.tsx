@@ -151,9 +151,6 @@ const HeroGlacial = () => {
                         </a>
                     </div>
 
-                    <p className="mt-6 text-[10px] text-blue-200/55">
-                        Clear pricing • Local permitting support
-                    </p>
                 </div>
 
             </div>

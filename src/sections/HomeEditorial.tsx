@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const solutionCards = [
@@ -8,19 +8,14 @@ const solutionCards = [
     image: "/assets/install-gallery/install-01.png",
   },
   {
+    title: "Microinverters",
+    href: "/microinverters",
+    image: "/assets/install-gallery/install-04.jpg",
+  },
+  {
     title: "Battery Backup",
     href: "/battery",
     image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
-  },
-  {
-    title: "EV Chargers",
-    href: "/ev-chargers",
-    image: "/assets/ev-chargers/ev-home-01.png",
-  },
-  {
-    title: "Installation Process",
-    href: "/installation",
-    image: "/assets/install-gallery/install-07.jpg",
   },
 ];
 
@@ -64,7 +59,6 @@ const utilityMarkerStyles: Record<Dot["utility"], { fill: string; border: string
 };
 
 const HomeEditorial = () => {
-  const railRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
   const [isMapInView, setIsMapInView] = useState(false);
@@ -87,13 +81,6 @@ const HomeEditorial = () => {
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
-
-  const scrollRail = (direction: "left" | "right") => {
-    const node = railRef.current;
-    if (!node) return;
-    const amount = direction === "right" ? 420 : -420;
-    node.scrollBy({ left: amount, behavior: "smooth" });
-  };
 
   const dots = useMemo<Dot[]>(() => {
     const seeded: Dot[] = [];
@@ -131,40 +118,24 @@ const HomeEditorial = () => {
 
   return (
     <>
-      <section className="bg-[#eee5f9] py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Solutions</p>
               <h2 className="mt-4 text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
-                A smarter home energy stack, without the noise.
+                Energy Solutions without the noise.
               </h2>
             </div>
 
-            <div className="hidden items-center gap-3 sm:flex">
-              <button
-                onClick={() => scrollRail("left")}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cebce3] bg-white text-[#62577d] transition-colors hover:border-[#6d39b5] hover:text-[#6d39b5]"
-                aria-label="Scroll solutions left"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={() => scrollRail("right")}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cebce3] bg-white text-[#62577d] transition-colors hover:border-[#6d39b5] hover:text-[#6d39b5]"
-                aria-label="Scroll solutions right"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
           </div>
 
-          <div ref={railRef} className="no-scrollbar flex snap-x gap-4 overflow-x-auto pb-2 sm:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {solutionCards.map((card) => (
               <a
                 key={card.title}
                 href={card.href}
-                className="group relative block h-[390px] min-w-[270px] snap-start overflow-hidden rounded-2xl border border-black/5 sm:h-[480px] sm:min-w-[360px] sm:rounded-3xl"
+                className="group relative block h-[390px] overflow-hidden rounded-2xl border border-black/5 sm:h-[480px] sm:rounded-3xl"
               >
                 <img
                   src={card.image}
@@ -194,7 +165,7 @@ const HomeEditorial = () => {
             </h2>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr]">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.15fr]">
             <div ref={mapRef} className="relative mx-auto w-full max-w-[430px]">
               <svg
                 viewBox="0 0 100 120"
@@ -279,17 +250,13 @@ const HomeEditorial = () => {
               </svg>
             </div>
 
-            <div>
-              <h3 className="text-4xl leading-tight text-[#2a2238]">Power Your Home With Solarfig</h3>
-              <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-4 text-lg text-[#3a314d]">
-                <a href="/locations#sce" className="transition-colors hover:text-[#6d39b5]">SCE</a>
-                <a href="/locations#pge" className="transition-colors hover:text-[#6d39b5]">PG&E</a>
-                <a href="/locations#sdge" className="transition-colors hover:text-[#6d39b5]">SDG&E</a>
-                <a href="/locations" className="transition-colors hover:text-[#6d39b5]">Full Coverage Map</a>
-              </div>
+            <div className="lg:pl-2">
+              <h3 className="max-w-md text-5xl leading-[1.06] tracking-tight text-[#2a2238] sm:text-6xl">
+                Power Your Home With Solar
+              </h3>
               <a
                 href="/locations"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5] transition-colors hover:text-[#4d2880]"
+                className="mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5] transition-colors hover:text-[#4d2880]"
               >
                 Explore Locations
                 <ArrowRight className="h-4 w-4" />
@@ -299,8 +266,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#e6dbf4] py-20 sm:py-28 lg:py-32">
-        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-black/5 bg-[#e9dff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
+      <section className="bg-[#e9dff7] py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#e9dff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
           <div className="relative">
             <div className="pointer-events-none absolute -right-8 -top-16 h-72 w-72 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
             <p className="mb-5 flex gap-3 text-[#241d2f]">
@@ -321,7 +288,7 @@ const HomeEditorial = () => {
             {reviews.map((review) => (
               <article
                 key={review.author}
-                className="flex min-h-[260px] flex-col justify-between rounded-[26px] bg-white/95 px-8 py-9 shadow-[0_20px_40px_-26px_rgba(36,29,47,0.4)] sm:min-h-[320px] sm:px-10 sm:py-12 lg:min-h-[360px]"
+                className="flex min-h-[260px] flex-col justify-between rounded-[26px] border border-[#e7dfef] bg-white px-8 py-9 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[320px] sm:px-10 sm:py-12 lg:min-h-[360px]"
               >
                 <p className="text-xl leading-[1.6] text-[#332b47] sm:text-[1.75rem]">"{review.quote}"</p>
                 <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-[#63557f]">{review.author}</p>
@@ -331,21 +298,25 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-16 pt-10 sm:pb-24 sm:pt-14">
-        <div className="pointer-events-none absolute -top-20 left-1/3 h-72 w-72 rounded-full bg-purple-500/25 blur-3xl" />
-        <div className="pointer-events-none absolute -top-10 right-1/4 h-64 w-64 rounded-full bg-violet-400/20 blur-3xl" />
-
-        <div className="relative h-[200px] w-full overflow-hidden shadow-[0_26px_80px_-28px_rgba(130,72,216,0.75)] sm:h-[300px]">
-          <img
-            src="/assets/home-editorial/home-banner-solar-family-2026-02-19.png"
-            alt="Family gathering outside a home with rooftop solar at sunset"
-            className="h-full w-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1f1231]/45 via-transparent to-[#402067]/20" />
+      <section className="bg-[#f4eefb] pb-8 pt-10 sm:pb-10 sm:pt-14">
+        <div className="mx-auto max-w-[1680px] px-4 sm:px-6 lg:px-8">
+          <div className="relative h-[300px] w-full overflow-hidden rounded-[26px] shadow-[0_24px_70px_-34px_rgba(36,29,47,0.4)] sm:h-[420px] lg:h-[520px]">
+            <img
+              src="/assets/home-editorial/home-banner-solar-family-2026-02-19.png"
+              alt="Family gathering outside a home with rooftop solar at sunset"
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1f1231]/25 via-transparent to-[#402067]/10" />
+          </div>
         </div>
+      </section>
 
-        <div className="mx-auto mt-10 grid max-w-[1080px] gap-5 px-4 sm:mt-12 sm:gap-6 sm:px-6 lg:grid-cols-2">
-          <a href="/pricing-costs" className="rounded-2xl bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
+      <section className="bg-[#f4eefb] pb-16 pt-8 sm:pb-24 sm:pt-10">
+        <div className="mx-auto grid max-w-[1320px] gap-5 px-4 sm:gap-6 sm:px-6 lg:grid-cols-3">
+          <a
+            href="/pricing-costs"
+            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Plans & Services</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">A plan for every home.</h3>
             <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Built around your home and goals.</p>
@@ -355,12 +326,28 @@ const HomeEditorial = () => {
             </p>
           </a>
 
-          <a href="/installation" className="rounded-2xl bg-[#6d39b5] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-purple-200">Process</p>
-            <h3 className="mt-4 text-4xl leading-tight text-white">Know every step before you sign.</h3>
-            <p className="mt-4 text-purple-100/80">From consultation through PTO, we keep your timeline clear and accountable.</p>
-            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-white">
+          <a
+            href="/installation"
+            className="flex h-full flex-col rounded-2xl border border-[#d7c6ef] bg-[#ece1fb] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Process</p>
+            <h3 className="mt-4 text-4xl leading-tight text-[#2f2440]">Know every step before you sign.</h3>
+            <p className="mt-4 text-[#5b4a79]">From consultation through PTO, we keep your timeline clear and accountable.</p>
+            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               View Process
+              <ArrowRight className="h-4 w-4" />
+            </p>
+          </a>
+
+          <a
+            href="/solar-panels"
+            className="flex h-full flex-col rounded-2xl border border-[#d6c8e8] bg-[#f7f1ff] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Products</p>
+            <h3 className="mt-4 text-4xl leading-tight text-[#2f2440]">Find your ideal setup.</h3>
+            <p className="mt-4 text-[#5a4b74]">Compare panel, microinverter, and battery backup options built for your home.</p>
+            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
+              View Products
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>
