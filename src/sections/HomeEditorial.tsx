@@ -26,15 +26,18 @@ const solutionCards = [
 
 const reviews = [
   {
-    quote: "Super clear process. Fast install. No surprises on pricing.",
+    quote:
+      "Super clear process from day one. They walked us through production assumptions, financing options, and exactly how our utility bill would change month by month. Installation was fast, clean, and organized, and every permit or inspection update came before we had to ask. The final numbers matched the proposal, with no surprise add-ons.",
     author: "Anita P., California",
   },
   {
-    quote: "They helped us size correctly and the system has been excellent.",
+    quote:
+      "They did not try to oversell us. The design team sized the system around how we actually use power, including EV charging and summer AC load, then explained why a battery made sense for evening rates. Everything has performed exactly like they said it would, and the monitoring visibility has been excellent since PTO.",
     author: "Elizabeth S., California",
   },
   {
-    quote: "Professional from consultation through PTO and follow-up.",
+    quote:
+      "Professional from consultation through PTO and follow-up. The crew treated our home carefully, communication was consistent, and every milestone had clear next steps. Even after activation, they stayed responsive for questions and optimization tips. It felt like a real long-term partner, not a company that disappears after install day.",
     author: "Warren F., California",
   },
 ];
@@ -187,7 +190,7 @@ const HomeEditorial = () => {
         <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
             <h2 className="max-w-3xl text-5xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-7xl">
-              California utilities are tough. We design for reality.
+              The grid is unpredictable. Your power shouldn&apos;t be.
             </h2>
           </div>
 
@@ -277,7 +280,7 @@ const HomeEditorial = () => {
             </div>
 
             <div>
-              <h3 className="text-4xl leading-tight text-[#2a2238]">Find Your Utility Territory</h3>
+              <h3 className="text-4xl leading-tight text-[#2a2238]">Power Your Home With Solarfig</h3>
               <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-4 text-lg text-[#3a314d]">
                 <a href="/locations#sce" className="transition-colors hover:text-[#6d39b5]">SCE</a>
                 <a href="/locations#pge" className="transition-colors hover:text-[#6d39b5]">PG&E</a>
@@ -296,29 +299,32 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#e6dbf4] py-16 sm:py-24">
-        <div className="mx-auto max-w-[1280px] rounded-3xl border border-black/5 bg-[#e9dff7] px-5 py-8 sm:rounded-[32px] sm:px-10 sm:py-14">
+      <section className="bg-[#e6dbf4] py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-black/5 bg-[#e9dff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
           <div className="relative">
-            <div className="pointer-events-none absolute -right-4 -top-12 h-56 w-56 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
-            <p className="mb-4 flex gap-2 text-[#241d2f]">
-              <Star className="h-5 w-5 fill-current" />
-              <Star className="h-5 w-5 fill-current" />
-              <Star className="h-5 w-5 fill-current" />
-              <Star className="h-5 w-5 fill-current" />
-              <Star className="h-5 w-5 fill-current" />
+            <div className="pointer-events-none absolute -right-8 -top-16 h-72 w-72 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
+            <p className="mb-5 flex gap-3 text-[#241d2f]">
+              <Star className="h-6 w-6 fill-current" />
+              <Star className="h-6 w-6 fill-current" />
+              <Star className="h-6 w-6 fill-current" />
+              <Star className="h-6 w-6 fill-current" />
+              <Star className="h-6 w-6 fill-current" />
             </p>
-            <h2 className="max-w-3xl text-5xl leading-none tracking-tight text-[#241d2f] sm:text-7xl">
+            <h2 className="max-w-4xl text-6xl leading-none tracking-tight text-[#241d2f] sm:text-8xl">
               500+ Installations
             </h2>
-            <p className="mt-4 text-lg text-[#423751]">Hundreds of 5-star reviews</p>
-            <p className="mt-2 text-lg text-[#423751]">Google · SolarReviews · Facebook · Birdeye</p>
+            <p className="mt-5 text-xl text-[#423751] sm:text-2xl">Hundreds of 5-star reviews</p>
+            <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google · SolarReviews · Facebook · Birdeye</p>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {reviews.map((review) => (
-              <article key={review.author} className="rounded-3xl bg-white px-6 py-7">
-                <p className="text-base leading-8 text-[#332b47]">“{review.quote}”</p>
-                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-[#63557f]">{review.author}</p>
+              <article
+                key={review.author}
+                className="flex min-h-[260px] flex-col justify-between rounded-[26px] bg-white/95 px-8 py-9 shadow-[0_20px_40px_-26px_rgba(36,29,47,0.4)] sm:min-h-[320px] sm:px-10 sm:py-12 lg:min-h-[360px]"
+              >
+                <p className="text-xl leading-[1.6] text-[#332b47] sm:text-[1.75rem]">"{review.quote}"</p>
+                <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-[#63557f]">{review.author}</p>
               </article>
             ))}
           </div>

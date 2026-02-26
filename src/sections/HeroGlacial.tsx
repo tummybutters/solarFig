@@ -135,11 +135,11 @@ const HeroGlacial = () => {
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
                     <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)] sm:mb-6 sm:text-6xl lg:text-7xl">
-                        Power Your Home. Cut Your Bill. Future-Proof Everything.
+                        Smarter Solar Starts With Solarfig.
                     </h1>
 
                     <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/90 drop-shadow-[0_3px_20px_rgba(0,0,0,0.45)] sm:mb-10 sm:text-lg">
-                        From high-efficiency solar panels to backup-ready battery systems, Solarfig builds solar designed for California homeowners who expect clear results.
+                        Transparent pricing. Expert installation. Energy independence made simple. Figure out if solar makes sense for your home.
                     </h2>
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">

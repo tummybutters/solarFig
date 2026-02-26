@@ -32,7 +32,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Solutions",
+    label: "Products",
     href: "/solar-panels",
     children: [
       { label: "Solar Panels", href: "/solar-panels" },
@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Pricing & Plans",
+    label: "Plans and Services",
     href: "/pricing-costs",
     children: [
       { label: "0$ Down (EZ Plan)", href: "/pricing-costs#ez-plan" },
