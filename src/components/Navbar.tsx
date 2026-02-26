@@ -182,7 +182,7 @@ const Navbar = () => {
           <img
             src="/assets/logo/white-logo-no-panel.png"
             alt="Solarfig"
-            className="h-8 w-auto object-contain sm:h-9"
+            className="h-[2.3rem] w-auto object-contain sm:h-[2.6rem]"
           />
           <span className="sr-only">Solarfig</span>
         </a>
