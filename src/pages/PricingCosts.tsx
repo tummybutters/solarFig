@@ -33,7 +33,7 @@ const PricingCosts = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="relative pt-24 sm:pt-28">
+      <section className="relative">
         <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full">
           <img
             src="/assets/hero-main/giorgio-trovato.jpg"
@@ -97,10 +97,10 @@ const PricingCosts = () => {
       </section>
 
       {/* What's Included — Image with floating tags */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[radial-gradient(120%_120%_at_15%_10%,#fbf9ff_0%,#f4eefb_52%,#eee6f9_100%)] py-16 text-[#241d2f] sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
+            <div className="relative overflow-hidden rounded-2xl shadow-[0_28px_70px_-26px_rgba(65,44,95,0.28)] lg:rounded-3xl">
               <img
                 src="/assets/pricing-costs/hero-solar-roof-sunset.png"
                 alt="Solar installation at sunset"
@@ -108,24 +108,27 @@ const PricingCosts = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#130c22]/38 via-[#130c22]/8 to-transparent" />
             </div>
 
             {/* Floating included tags */}
-            <div className="relative mx-4 -mt-20 grid grid-cols-2 gap-3 sm:mx-8 sm:mt-0 sm:flex sm:gap-4 lg:absolute lg:bottom-8 lg:right-8">
+            <div className="relative z-10 mx-4 -mt-20 grid grid-cols-2 gap-3 sm:mx-8 sm:mt-0 sm:flex sm:gap-4 lg:absolute lg:bottom-8 lg:right-8">
               {included.map((item) => (
-                <div key={item} className="flex items-center gap-2 rounded-lg bg-white/95 px-4 py-3 backdrop-blur-sm">
+                <div
+                  key={item}
+                  className="flex items-center gap-2 rounded-lg border border-white bg-white px-4 py-3 shadow-[0_18px_30px_-22px_rgba(43,29,67,0.36)]"
+                >
                   <Check className="h-4 w-4 text-emerald-600" />
-                  <span className="text-sm font-medium text-stone-800">{item}</span>
+                  <span className="whitespace-nowrap text-sm font-semibold text-[#2f2440]">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="mt-10 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Transparency</p>
-            <h2 className=" text-3xl leading-tight sm:text-4xl">Everything included</h2>
-            <p className="mt-4 text-white/60">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#695783]">Transparency</p>
+            <h2 className=" text-3xl leading-tight text-[#241d2f] sm:text-4xl">Everything included</h2>
+            <p className="mt-4 text-[#514469]">
               No surprises. We take the time to understand your home and give you a transparent, upfront quote with no pressure.
             </p>
           </div>

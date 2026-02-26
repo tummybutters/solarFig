@@ -60,12 +60,8 @@ const navItems: NavItem[] = [
     label: "Plans and Services",
     href: "/pricing-costs",
     children: [
-      { label: "0$ Down (EZ Plan)", href: "/pricing-costs#ez-plan" },
-      { label: "Finance to Own", href: "/pricing-costs#finance" },
-      { label: "Outright Purchase", href: "/pricing-costs#purchase" },
-      { label: "Prepaid Solar", href: "/pricing-costs#prepaid" },
+      { label: "Pricing & Costs", href: "/pricing-costs" },
       { label: "Installation Process", href: "/installation" },
-      { label: "Compare all options", href: "/pricing-costs" },
     ],
     featured: [
       {
@@ -79,32 +75,6 @@ const navItems: NavItem[] = [
         title: "How Solar Installation Works",
         href: "/installation",
         image: "/assets/install-gallery/install-05.jpg",
-      },
-    ],
-  },
-  {
-    label: "Process",
-    href: "/installation",
-    children: [
-      { label: "Step 1: Consultation", href: "/installation" },
-      { label: "Step 2: System Design", href: "/installation" },
-      { label: "Step 3: Site Inspection", href: "/installation" },
-      { label: "Step 4: Permitting", href: "/installation" },
-      { label: "Step 5: Installation", href: "/installation" },
-      { label: "Step 6: PTO Activation", href: "/installation" },
-    ],
-    featured: [
-      {
-        label: "Timeline",
-        title: "From Quote to PTO",
-        href: "/installation",
-        image: "/assets/install-gallery/install-07.jpg",
-      },
-      {
-        label: "What to Expect",
-        title: "Your Solar Project Roadmap",
-        href: "/installation",
-        image: "/assets/install-gallery/install-09.jpg",
       },
     ],
   },
@@ -133,7 +103,7 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "About Us",
+    label: "Explore",
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
