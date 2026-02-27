@@ -86,7 +86,7 @@ const Locations = () => {
       </section>
 
       {/* Challenges — Full-bleed image with floating cards */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
@@ -125,7 +125,7 @@ const Locations = () => {
       {/* CTA — Dark card */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>

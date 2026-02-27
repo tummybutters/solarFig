@@ -118,7 +118,7 @@ const About = () => {
       {/* CTA — Dark card */}
       <section className="pb-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative max-w-2xl">
               <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">

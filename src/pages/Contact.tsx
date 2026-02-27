@@ -42,9 +42,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[#f4eefb]">
       {/* Hero */}
-      <section className="relative bg-[#24133c] text-white py-24 lg:py-32">
+      <section className="relative bg-[#6a4fa1] text-white py-24 lg:py-32">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black/50 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-[#5f448f]/22 to-[#4e3680]/28" />
         </div>
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8">
           <div className="max-w-3xl">

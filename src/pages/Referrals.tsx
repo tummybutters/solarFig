@@ -22,7 +22,7 @@ const Referrals = () => {
 
       {/* Hero — unchanged */}
       <section className="pt-24 sm:pt-28">
-        <div className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)]">
+        <div className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)]">
           <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-8 sm:py-20">
             <p className="text-xs font-semibold text-white/70">Home / Referrals</p>
             <h1 className="mt-4 max-w-3xl text-5xl leading-[0.92] tracking-tight text-white sm:text-7xl">
@@ -133,7 +133,7 @@ const Referrals = () => {
       {/* CTA — Simple */}
       <section className="pb-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-center text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-center text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative">

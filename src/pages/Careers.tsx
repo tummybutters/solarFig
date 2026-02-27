@@ -23,7 +23,7 @@ const Careers = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="bg-[#17141b] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
+      <section className="bg-[#6f5b99] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Explore</p>
           <h1 className="max-w-4xl text-4xl tracking-tight sm:text-6xl">Careers at Solarfig</h1>
@@ -59,7 +59,7 @@ const Careers = () => {
       </section>
 
       {/* Open Roles — List with image */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>

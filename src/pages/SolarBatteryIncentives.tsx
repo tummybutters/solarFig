@@ -97,7 +97,7 @@ const SolarBatteryIncentives = () => {
       </section>
 
       {/* Planning — Image with floating checklist */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             {/* Large image */}

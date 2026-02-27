@@ -53,7 +53,7 @@ const SolarPanels = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
+      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Solutions</p>
           <h1 className="text-4xl tracking-tight sm:text-6xl">Solar Panels</h1>
@@ -122,7 +122,7 @@ const SolarPanels = () => {
       </section>
 
       {/* Design Factors — Large image left, horizontal icon row right */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             {/* Large image with purple glow */}

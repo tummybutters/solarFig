@@ -44,7 +44,7 @@ const WholeHomeSolar = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
+      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Whole Home Solar</p>
           <h1 className="max-w-4xl text-4xl leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -128,7 +128,7 @@ const WholeHomeSolar = () => {
       </section>
 
       {/* Installation — Large image with floating stats */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
@@ -168,7 +168,7 @@ const WholeHomeSolar = () => {
       {/* CTA — Dark card */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#16131a] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative max-w-2xl">
               <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">

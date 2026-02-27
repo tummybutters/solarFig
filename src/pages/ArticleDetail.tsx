@@ -21,7 +21,7 @@ const ArticleDetail = () => {
     <main className="mobile-premium min-h-screen bg-[#f2eee8]">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[#17141b] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
+      <section className="relative overflow-hidden bg-[#6f5b99] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(133,83,194,0.3),transparent_48%),radial-gradient(circle_at_85%_25%,rgba(159,114,208,0.2),transparent_45%)]" />
 
         <div className="relative mx-auto max-w-[1200px] px-6 sm:px-8">

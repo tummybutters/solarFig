@@ -63,7 +63,7 @@ const Battery = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#17131d_0%,#241a33_55%,#321f4b_100%)] pb-14 pt-32 text-white sm:pt-36">
+      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-14 pt-32 text-white sm:pt-36">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Solutions</p>
           <h1 className="max-w-5xl  text-4xl leading-[0.95] text-white sm:text-6xl">
@@ -145,7 +145,7 @@ const Battery = () => {
       </section>
 
       {/* Benefits — Large image left, compact text right */}
-      <section className="bg-[#111015] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
             {/* Large image with purple glow */}
