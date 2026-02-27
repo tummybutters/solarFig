@@ -21,7 +21,7 @@ const projects = [
     location: "Long Beach, CA",
     date: "01/22/2026",
     highlight: "$3,240/yr Savings",
-    imageUrl: "/assets/install-gallery/install-01.png",
+    imageUrl: "/assets/install-gallery/install-01.webp",
     metrics: [
       { label: "System", value: "12.4 kW", icon: <Sun /> },
       { label: "Utility", value: "SCE", icon: <House /> },
@@ -91,7 +91,7 @@ const projects = [
     location: "Irvine, CA",
     date: "01/14/2026",
     highlight: "$295/mo Offset",
-    imageUrl: "/assets/install-gallery/install-06.png",
+    imageUrl: "/assets/install-gallery/install-06.webp",
     metrics: [
       { label: "System", value: "11.1 kW", icon: <Sun /> },
       { label: "Battery", value: "27 kWh", icon: <BatteryCharging /> },

@@ -67,7 +67,7 @@ const SmartElectricalPanels = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)] lg:rounded-3xl">
             <img
-              src="/assets/whole-home-solar/smart-panel-system.png"
+              src="/assets/whole-home-solar/smart-panel-system.webp"
               alt="Smart panel installation"
               className="h-[450px] w-full object-cover sm:h-[600px]"
               loading="lazy"

@@ -24,7 +24,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "8 min read",
     excerpt:
       "A practical look at utility rates, home usage patterns, and when solar still delivers strong value under NEM 3.0.",
-    image: "/assets/install-gallery/install-01.png",
+    image: "/assets/install-gallery/install-01.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -72,7 +72,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "10 min read",
     excerpt:
       "What real quotes include, how tax credits change the math, and what to check before comparing financing options.",
-    image: "/assets/pricing-costs/hero-solar-roof-sunset.png",
+    image: "/assets/pricing-costs/hero-solar-roof-sunset.webp",
     updatedAt: "February 2026",
     sections: [
       {

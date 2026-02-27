@@ -45,7 +45,7 @@ const SolarBatteryIncentives = () => {
       <section className="relative overflow-hidden pt-24 sm:pt-28">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img
-            src="/assets/hero-main/seedream-preserve.png"
+            src="/assets/hero-main/seedream-preserve.webp"
             alt="Solar installer carrying equipment near rooftop array."
             className="h-full w-full object-cover object-[center_70%] sm:object-center"
           />
@@ -103,7 +103,7 @@ const SolarBatteryIncentives = () => {
             {/* Large image */}
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
               <img
-                src="/assets/install-gallery/install-06.png"
+                src="/assets/install-gallery/install-06.webp"
                 alt="Solar and battery installation"
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[600px]"
                 loading="lazy"

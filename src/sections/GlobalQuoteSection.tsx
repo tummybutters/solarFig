@@ -153,7 +153,7 @@ const GlobalQuoteSection = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex h-13 items-center justify-center rounded-full bg-[#1f1a22] px-10 text-lg font-medium text-white transition-colors hover:bg-[#6d39b5] disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[#1f1a22] px-10 text-lg font-medium text-white transition-colors hover:bg-[#6d39b5] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? "Submitting..." : "Get a quote"}
           </button>

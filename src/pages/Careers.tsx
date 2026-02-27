@@ -99,7 +99,7 @@ const Careers = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)]">
                 <img
-                  src="/assets/about-us/crew-roof-team-01.png"
+                  src="/assets/about-us/crew-roof-team-01.webp"
                   alt="Solarfig team at work"
                   className="aspect-[3/4] w-full object-cover"
                   loading="lazy"

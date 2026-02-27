@@ -102,7 +102,7 @@ const PricingCosts = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_28px_70px_-26px_rgba(65,44,95,0.28)] lg:rounded-3xl">
               <img
-                src="/assets/pricing-costs/hero-solar-roof-sunset.png"
+                src="/assets/pricing-costs/hero-solar-roof-sunset.webp"
                 alt="Solar installation at sunset"
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[550px]"
                 loading="lazy"
@@ -116,10 +116,10 @@ const PricingCosts = () => {
               {included.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2 rounded-lg border border-white bg-white px-4 py-3 shadow-[0_18px_30px_-22px_rgba(43,29,67,0.36)]"
+                  className="flex items-start gap-2 rounded-lg border border-white bg-white px-4 py-3 shadow-[0_18px_30px_-22px_rgba(43,29,67,0.36)]"
                 >
-                  <Check className="h-4 w-4 text-emerald-600" />
-                  <span className="whitespace-nowrap text-sm font-semibold text-[#2f2440]">{item}</span>
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  <span className="text-[13px] font-semibold leading-4 text-[#2f2440]">{item}</span>
                 </div>
               ))}
             </div>

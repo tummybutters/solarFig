@@ -7,7 +7,7 @@ import { ArrowRight, Battery, Car, Home, Zap } from "lucide-react";
 const systemComponents = [
   { title: "Solar Panels", description: "Premium modules", icon: Zap, image: "/assets/install-gallery/install-03.jpg" },
   { title: "Battery Backup", description: "Store excess energy", icon: Battery, image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg" },
-  { title: "EV Charging", description: "Charge at home", icon: Car, image: "/assets/whole-home-solar/smart-panel-system.png" },
+  { title: "EV Charging", description: "Charge at home", icon: Car, image: "/assets/whole-home-solar/smart-panel-system.webp" },
   { title: "Smart Panels", description: "Control & monitor", icon: Home, image: "/assets/ev-chargers/ev-home-01.png" },
 ];
 
@@ -133,7 +133,7 @@ const WholeHomeSolar = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
               <img
-                src="/assets/whole-home-solar/installation-team.png"
+                src="/assets/whole-home-solar/installation-team.webp"
                 alt="Installation team at work"
                 className="h-[400px] w-full object-cover sm:h-[500px]"
                 loading="lazy"

@@ -19,7 +19,7 @@ const About = () => {
       <section className="relative overflow-hidden pt-24 sm:pt-28">
         <div className="mobile-hero-media relative h-[60vh] min-h-[420px] w-full">
           <img
-            src="/assets/hero-main/seedream-preserve.png"
+            src="/assets/hero-main/seedream-preserve.webp"
             alt="Solar installer carrying panel equipment on a rooftop during installation."
             className="h-full w-full object-cover"
           />
@@ -42,7 +42,7 @@ const About = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)] lg:rounded-3xl">
               <img
-                src="/assets/about-us/crew-roof-team-01.png"
+                src="/assets/about-us/crew-roof-team-01.webp"
                 alt="Solarfig installation team"
                 className="h-[450px] w-full object-cover sm:h-[550px] lg:h-[650px]"
                 loading="lazy"
@@ -91,7 +91,7 @@ const About = () => {
               <div className="absolute -inset-3 rounded-3xl bg-purple-600/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_70px_-20px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/about-us/crew-roof-team-02.png"
+                  src="/assets/about-us/crew-roof-team-02.webp"
                   alt="Team installing panels"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
@@ -103,7 +103,7 @@ const About = () => {
               <div className="absolute -inset-3 rounded-3xl bg-purple-600/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_70px_-20px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/about-us/crew-panel-bw.png"
+                  src="/assets/about-us/crew-panel-bw.webp"
                   alt="Panel installation detail"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"

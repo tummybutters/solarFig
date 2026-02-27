@@ -54,7 +54,7 @@ const productGroups = [
 
 const productPanels = [
   {
-    src: "/assets/install-gallery/install-01.png",
+    src: "/assets/install-gallery/install-01.webp",
     alt: "Solar crews completing a rooftop panel install on a single-family home",
   },
   {

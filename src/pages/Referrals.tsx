@@ -47,7 +47,7 @@ const Referrals = () => {
 
         <div className="relative h-[300px] w-full sm:h-[450px] lg:h-[550px]">
           <img
-            src="/assets/hero-main/referrals.png"
+            src="/assets/hero-main/referrals.webp"
             alt="Solar panel array at sunset over tree line."
             className="h-full w-full object-cover"
           />
@@ -118,7 +118,7 @@ const Referrals = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/15 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/hero-main/referrals.png"
+                  src="/assets/hero-main/referrals.webp"
                   alt="Solar at sunset"
                   className="aspect-[3/4] w-full object-cover"
                   loading="lazy"

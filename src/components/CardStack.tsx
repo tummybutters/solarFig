@@ -8,11 +8,11 @@ interface Card {
 }
 
 const cards: Card[] = [
-  { id: 1, image: "/assets/install-gallery/install-01.png", alt: "Solar installation project overview" },
+  { id: 1, image: "/assets/install-gallery/install-01.webp", alt: "Solar installation project overview" },
   { id: 2, image: "/assets/install-gallery/install-02.jpg", alt: "Solar panel array close-up" },
   { id: 3, image: "/assets/install-gallery/install-03.jpg", alt: "Residential solar energy system" },
   { id: 4, image: "/assets/install-gallery/install-04.jpg", alt: "Premium solar panel mounting" },
-  { id: 5, image: "/assets/install-gallery/install-06.png", alt: "Solar energy installation team" },
+  { id: 5, image: "/assets/install-gallery/install-06.webp", alt: "Solar energy installation team" },
   { id: 6, image: "/assets/install-gallery/install-07.jpg", alt: "Eco-friendly home energy setup" },
   { id: 7, image: "/assets/install-gallery/install-08.jpg", alt: "Completed solar panel installation" },
 ];

@@ -5,7 +5,7 @@ const solutionCards = [
   {
     title: "Solar Panels",
     href: "/solar-panels",
-    image: "/assets/install-gallery/install-01.png",
+    image: "/assets/install-gallery/install-01.webp",
   },
   {
     title: "Microinverters",
@@ -302,7 +302,7 @@ const HomeEditorial = () => {
         <div className="mx-auto max-w-[1680px] px-4 sm:px-6 lg:px-8">
           <div className="relative h-[300px] w-full overflow-hidden rounded-[26px] shadow-[0_24px_70px_-34px_rgba(36,29,47,0.4)] sm:h-[420px] lg:h-[520px]">
             <img
-              src="/assets/home-editorial/home-banner-solar-family-2026-02-19.png"
+              src="/assets/home-editorial/home-banner-solar-family-2026-02-19.webp"
               alt="Family gathering outside a home with rooftop solar at sunset"
               className="h-full w-full object-cover object-top"
             />

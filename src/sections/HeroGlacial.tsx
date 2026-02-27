@@ -49,6 +49,21 @@ const HeroGlacial = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const activeVideo = layerARef.current;
+        if (!activeVideo) return;
+
+        const tryPlay = async () => {
+            try {
+                await activeVideo.play();
+            } catch {
+                // Ignore autoplay promise failures on restrictive browsers.
+            }
+        };
+
+        void tryPlay();
+    }, []);
+
     const handleActiveVideoEnd = async () => {
         if (isTransitioning) return;
 
@@ -130,7 +145,7 @@ const HeroGlacial = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-20 mx-auto grid min-h-[92vh] max-w-[1400px] grid-cols-1 items-end gap-8 px-5 pb-14 pt-24 sm:min-h-screen sm:gap-10 sm:px-8 sm:pb-20 sm:pt-28 lg:items-end lg:gap-10 lg:pb-24 lg:pt-28">
+            <div className="relative z-20 mx-auto grid min-h-[92vh] max-w-[1400px] grid-cols-1 items-start gap-8 px-5 pb-12 pt-28 sm:min-h-screen sm:items-end sm:gap-10 sm:px-8 sm:pb-20 sm:pt-28 lg:items-end lg:gap-10 lg:pb-24 lg:pt-28">
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">

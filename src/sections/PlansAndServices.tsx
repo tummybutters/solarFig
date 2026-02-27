@@ -53,7 +53,7 @@ const planCards = [
 
 const projectPanels = [
   {
-    src: "/assets/install-gallery/install-06.png",
+    src: "/assets/install-gallery/install-06.webp",
     alt: "Rooftop solar panels installed on a bright suburban home",
   },
   {
