@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { ArrowUpRight, Menu, Phone, Sparkles } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ArrowUpRight, Menu, Phone, Sparkles, X } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,19 +8,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -129,6 +116,11 @@ const navItems: NavItem[] = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMobileItem, setActiveMobileItem] = useState(navItems[0].label);
+  const navShellRef = useRef<HTMLDivElement | null>(null);
+
+  const activeMobileNavItem = navItems.find((item) => item.label === activeMobileItem) ?? navItems[0];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,9 +130,48 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handlePointerOutside = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null;
+      if (target && navShellRef.current && !navShellRef.current.contains(target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerOutside);
+    document.addEventListener("touchstart", handlePointerOutside);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerOutside);
+      document.removeEventListener("touchstart", handlePointerOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="fixed inset-x-0 top-3 z-50 flex justify-center px-3 sm:top-6 sm:px-6">
       <div
+        ref={navShellRef}
         className={cn(
           "relative flex min-h-[60px] w-full max-w-[1400px] items-center justify-between rounded-[10px] border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:min-h-[78px] sm:px-8 sm:py-3",
           isScrolled ? "shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)]" : "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.4)]"
@@ -258,74 +289,113 @@ const Navbar = () => {
             <Phone className="h-4 w-4" />
             <span className="sr-only">Call Solarfig</span>
           </a>
-          <Sheet>
-            <SheetTrigger asChild>
-              <button className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/15">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[88vw] border-l border-white/10 bg-[linear-gradient(180deg,#17131d_0%,#120f16_100%)] p-0 text-white sm:w-[360px]"
-            >
-              <SheetHeader className="border-b border-white/10 bg-white/[0.03] p-5 text-left sm:p-6">
-                <SheetTitle className="text-lg font-semibold text-white">Menu</SheetTitle>
-                <p className="mt-1 text-sm text-white/65">Solar solutions for California homes.</p>
-              </SheetHeader>
-              <div className="flex h-full flex-col overflow-y-auto pb-8 pt-1">
-                <div className="flex-1 px-4 sm:px-5">
-                  <Accordion type="single" collapsible className="w-full">
-                    {navItems.map((item) => (
-                      <AccordionItem key={item.label} value={item.label} className="border-b border-white/10 px-1">
-                        <AccordionTrigger className="py-4 text-[15px] font-semibold text-white transition-colors hover:text-purple-300 hover:no-underline">
-                          {item.label}
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <div className="flex flex-col space-y-1 pb-4">
-                            {item.children.map((child) => (
-                              <a
-                                key={child.label}
-                                href={child.href}
-                                className="block rounded-lg px-3 py-2.5 text-sm text-white/75 transition-colors hover:bg-white/[0.05] hover:text-white"
-                              >
-                                {child.label}
-                              </a>
-                            ))}
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
+          <button
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Toggle menu"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/15"
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <span className="sr-only">Toggle menu</span>
+          </button>
+        </div>
 
-                <div className="mt-auto space-y-2 border-t border-white/10 p-4 sm:p-5">
-                  <a
-                    href="#contact"
-                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-[10px] bg-[#6D39B5] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#8553c2]"
-                  >
-                    <Sparkles className="h-4 w-4" />
-                    Get a quote
-                  </a>
-                  <a
-                    href="/projects"
-                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-[10px] border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
-                  >
-                    Projects
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="tel:+12133064154"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
-                  >
-                    <Phone className="h-4 w-4" />
-                    (213) 306-4154
-                  </a>
+        {isMobileMenuOpen ? (
+          <div className="absolute left-0 right-0 top-[calc(100%+0.55rem)] z-[70] lg:hidden">
+            <div className="overflow-hidden rounded-[10px] border border-white/10 bg-[#161319]/95 shadow-[0_32px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl">
+              <div className="border-b border-white/10 bg-white/[0.03] p-3">
+                <div className="no-scrollbar flex gap-2 overflow-x-auto">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.label}
+                      onClick={() => setActiveMobileItem(item.label)}
+                      className={cn(
+                        "shrink-0 rounded-md px-3 py-2 text-[12px] font-semibold tracking-wide transition-colors",
+                        activeMobileNavItem.label === item.label
+                          ? "bg-white/10 text-white"
+                          : "text-white/65 hover:bg-white/[0.05] hover:text-white"
+                      )}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
                 </div>
               </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+
+              <div className="grid gap-4 p-4">
+                <div>
+                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/35">
+                    Explore {activeMobileNavItem.label}
+                  </p>
+                  <div className="grid gap-1">
+                    {activeMobileNavItem.children.map((child) => (
+                      <a
+                        key={child.label}
+                        href={child.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block rounded-md px-3 py-2.5 text-sm font-medium text-white/80 transition-colors hover:bg-white/[0.05] hover:text-white"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {activeMobileNavItem.featured.slice(0, 2).map((feature) => (
+                    <a
+                      key={feature.title}
+                      href={feature.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]"
+                    >
+                      <div className="relative aspect-[16/10] w-full">
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      </div>
+                      <div className="p-2.5">
+                        <p className="line-clamp-2 text-xs font-semibold leading-snug text-white/80 transition-colors group-hover:text-white">
+                          {feature.title}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2 border-t border-white/10 p-3">
+                <a
+                  href="#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-[#6D39B5] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#8553c2]"
+                >
+                  <Sparkles className="h-4 w-4" />
+                  Get a quote
+                </a>
+                <a
+                  href="/projects"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                >
+                  Projects
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="tel:+12133064154"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="col-span-2 inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                >
+                  <Phone className="h-4 w-4" />
+                  (213) 306-4154
+                </a>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
