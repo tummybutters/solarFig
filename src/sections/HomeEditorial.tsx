@@ -266,8 +266,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#e9dff7] py-20 sm:py-28 lg:py-32">
-        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#e9dff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
+      <section className="bg-white py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#eadff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
           <div className="relative">
             <div className="pointer-events-none absolute -right-8 -top-16 h-72 w-72 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
             <p className="mb-5 flex gap-3 text-[#241d2f]">
@@ -277,20 +277,22 @@ const HomeEditorial = () => {
               <Star className="h-6 w-6 fill-current" />
               <Star className="h-6 w-6 fill-current" />
             </p>
-            <h2 className="max-w-4xl text-6xl leading-none tracking-tight text-[#241d2f] sm:text-8xl">
+            <h2 className="max-w-4xl text-5xl leading-none tracking-tight text-[#241d2f] sm:text-7xl">
               500+ Installations
             </h2>
             <p className="mt-5 text-xl text-[#423751] sm:text-2xl">Hundreds of 5-star reviews</p>
             <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google · SolarReviews · Facebook · Birdeye</p>
           </div>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {reviews.map((review) => (
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {reviews.map((review, index) => (
               <article
                 key={review.author}
-                className="flex min-h-[260px] flex-col justify-between rounded-[26px] border border-[#e7dfef] bg-white px-8 py-9 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[320px] sm:px-10 sm:py-12 lg:min-h-[360px]"
+                className={`flex min-h-[220px] flex-col justify-between rounded-[24px] border px-7 py-8 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[260px] sm:px-8 sm:py-9 lg:min-h-[290px] ${
+                  index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
+                }`}
               >
-                <p className="text-xl leading-[1.6] text-[#332b47] sm:text-[1.75rem]">"{review.quote}"</p>
+                <p className="text-lg leading-[1.65] text-[#332b47] sm:text-[1.45rem]">"{review.quote}"</p>
                 <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-[#63557f]">{review.author}</p>
               </article>
             ))}

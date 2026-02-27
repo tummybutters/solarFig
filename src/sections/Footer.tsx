@@ -1,36 +1,27 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
-  process: [
-    { label: "Consultation", href: "/installation" },
-    { label: "Design & Proposal", href: "/installation" },
-    { label: "Site Inspection", href: "/installation" },
-    { label: "Permitting", href: "/installation" },
-    { label: "Installation", href: "/installation" },
-    { label: "PTO Activation", href: "/installation" },
-  ],
   products: [
     { label: "Solar Panels", href: "/solar-panels" },
-    { label: "Battery Storage", href: "/battery" },
-    { label: "Inverters", href: "/pricing-costs" },
+    { label: "Battery Backup", href: "/battery" },
     { label: "EV Chargers", href: "/ev-chargers" },
+    { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
+    { label: "Projects Showcase", href: "/projects" },
   ],
-  plans: [
-    { label: "0$ Down / EZ Plan", href: "/pricing-costs#ez-plan" },
-    { label: "Finance to Own", href: "/pricing-costs#finance" },
-    { label: "Outright Purchase", href: "/pricing-costs#purchase" },
-    { label: "Prepaid Solar", href: "/pricing-costs#prepaid" },
+  plansAndServices: [
+    { label: "Pricing & Costs", href: "/pricing-costs" },
+    { label: "Installation Process", href: "/installation" },
   ],
-  serviceArea: [
-    { label: "California Service Map", href: "/locations" },
+  locations: [
+    { label: "California Service Areas", href: "/locations" },
     { label: "SCE Territory", href: "/locations#sce" },
     { label: "PG&E Territory", href: "/locations#pge" },
     { label: "SDG&E Territory", href: "/locations#sdge" },
   ],
   explore: [
     { label: "About Us", href: "/about" },
-    { label: "Articles", href: "/articles" },
-    { label: "Referrals", href: "/referrals" },
+    { label: "Educational Articles", href: "/articles" },
+    { label: "Referral Program", href: "/referrals" },
   ],
   legal: [
     { label: "Terms of Use", href: "/terms-of-use" },
@@ -73,20 +64,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Process */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Process</h4>
-            <ul className="space-y-2.5">
-              {footerLinks.process.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Products */}
           <div>
             <h4 className="font-semibold text-sm mb-4 text-white">Products</h4>
@@ -101,11 +78,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Plans */}
+          {/* Plans and Services */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Plans</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">Plans and Services</h4>
             <ul className="space-y-2.5">
-              {footerLinks.plans.map((link) => (
+              {footerLinks.plansAndServices.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
                     {link.label}
@@ -117,9 +94,9 @@ const Footer = () => {
 
           {/* Locations */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Service Area</h4>
+            <h4 className="font-semibold text-sm mb-4 text-white">Locations</h4>
             <ul className="space-y-2.5">
-              {footerLinks.serviceArea.map((link) => (
+              {footerLinks.locations.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
                     {link.label}
