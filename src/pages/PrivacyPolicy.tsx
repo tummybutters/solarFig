@@ -246,9 +246,9 @@ const PrivacyPolicy = () => {
               <br />
               Solarfig
               <br />
-              4930 Campus Drive
+              2810 Jackson Ave PH3B
               <br />
-              Newport Beach, CA 92660
+              Long Island City, NY 11101
               <br />
               Email: info@solarfig.com
             </p>

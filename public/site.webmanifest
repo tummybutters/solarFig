@@ -3,8 +3,8 @@
   "short_name": "Solarfig",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#24133c",
+  "background_color": "#4e2281",
+  "theme_color": "#4e2281",
   "icons": [
     {
       "src": "/favicon-16x16.png",

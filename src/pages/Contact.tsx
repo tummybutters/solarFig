@@ -28,7 +28,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "Office",
-      details: ["4930 Campus Drive", "Newport Beach, CA 92660"],
+      details: ["2810 Jackson Ave PH3B", "Long Island City, NY 11101"],
       description: "By appointment only"
     },
     {

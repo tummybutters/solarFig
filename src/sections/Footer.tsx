@@ -68,7 +68,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm text-white">
                 <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span>4930 Campus Drive<br />Newport Beach, CA 92660</span>
+                <span>2810 Jackson Ave PH3B<br />Long Island City, NY 11101</span>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ const Footer = () => {
         {/* Compliance Address */}
         <div className="mt-6 border-t border-white/10 pt-6 text-center">
           <p className="text-[10px] text-white">
-            Mailing address for compliance: 4930 Campus Drive, Newport Beach, CA 92660
+            Mailing address for compliance: 2810 Jackson Ave PH3B, Long Island City, NY 11101
           </p>
         </div>
       </div>
