@@ -68,7 +68,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm text-white">
                 <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span>2810 Jackson Ave PH3B<br />Long Island City, NY 11101</span>
+                <span>4930 Campus Drive, 92660, Newport Beach, CA</span>
               </div>
             </div>
           </div>
