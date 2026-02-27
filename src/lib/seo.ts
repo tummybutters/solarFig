@@ -109,6 +109,14 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
+  "/microinverters": {
+    title: "Microinverter Solar Design for Homes | Solarfig",
+    description:
+      "Learn when microinverters are a strong fit for home solar, including panel-level monitoring, shade resilience, and system design tradeoffs.",
+    canonicalPath: "/microinverters",
+    ogType: "website",
+    image: DEFAULT_OG_IMAGE,
+  },
   "/solar-battery-incentives": {
     title: "California Solar Panel & Battery Incentives | Solarfig",
     description:
@@ -120,8 +128,16 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/locations": {
     title: "California Service Areas for Home Solar | Solarfig",
     description:
-      "Check Solarfig service coverage for home solar, battery backup, and EV charging across SCE, PG&E, and SDG&E territories.",
+      "Check Solarfig service coverage for home solar, battery backup, and EV charging projects across California.",
     canonicalPath: "/locations",
+    ogType: "website",
+    image: DEFAULT_OG_IMAGE,
+  },
+  "/locations/oregon": {
+    title: "Oregon Service Areas for Home Solar | Solarfig",
+    description:
+      "Check Solarfig service coverage for home solar, battery backup, and EV charging projects across Oregon.",
+    canonicalPath: "/locations/oregon",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },

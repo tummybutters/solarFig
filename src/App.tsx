@@ -20,8 +20,10 @@ import TermsOfUse from "@/pages/TermsOfUse";
 import Installation from "@/pages/Installation";
 import PricingCosts from "@/pages/PricingCosts";
 import SolarPanels from "@/pages/SolarPanels";
+import Microinverters from "@/pages/Microinverters";
 import SolarBatteryIncentives from "@/pages/SolarBatteryIncentives";
 import Locations from "@/pages/Locations";
+import OregonLocations from "@/pages/OregonLocations";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
 import "./App.css";
@@ -60,13 +62,11 @@ function App() {
         <Route path="/pricing-costs" element={<PricingCosts />} />
         <Route path="/installation" element={<Installation />} />
         <Route path="/solar-panels" element={<SolarPanels />} />
-        <Route path="/microinverters" element={<Navigate to="/pricing-costs" replace />} />
+        <Route path="/microinverters" element={<Microinverters />} />
         <Route path="/smart-electrical-panels" element={<Navigate to="/pricing-costs" replace />} />
         <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
         <Route path="/locations" element={<Locations />} />
-        <Route path="/locations/sce" element={<Navigate to="/locations#sce" replace />} />
-        <Route path="/locations/pge" element={<Navigate to="/locations#pge" replace />} />
-        <Route path="/locations/sdge" element={<Navigate to="/locations#sdge" replace />} />
+        <Route path="/locations/oregon" element={<OregonLocations />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

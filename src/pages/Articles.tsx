@@ -12,8 +12,8 @@ const Articles = () => {
     <main className="mobile-premium min-h-screen bg-[#f1e8fb]">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[#6f5b99] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.24),transparent_40%)]" />
+      <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17141b_0%,#2a2340_48%,#6f5b99_100%)] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.28),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.26),transparent_40%)]" />
 
         <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">Explore</p>

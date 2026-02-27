@@ -52,32 +52,25 @@ const SolarPanels = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
-        <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Solutions</p>
-          <h1 className="text-4xl tracking-tight sm:text-6xl">Solar Panels</h1>
-          <p className="mt-5 max-w-3xl text-white/80">
-            High-performance panel options designed for California roofs, usage profiles, and long-term reliability.
-          </p>
-        </div>
-      </section>
-
-      {/* Hero Image — unchanged */}
+      {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[460px] w-full sm:h-[72vh]">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
           <img
             src="/assets/hero-main/solar-panels-h1-2026-02-17.jpg"
             alt="Residential home with rooftop solar panels on a clear day."
             className="h-full w-full object-cover object-[center_72%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#17141b]/70 via-[#17141b]/28 to-transparent" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1100px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
-            <div className="max-w-2xl">
-              <p className="text-lg text-white/90">See how premium panel design can maximize long-term performance.</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
+            <div className="max-w-3xl text-white">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solutions</p>
+              <h1 className="text-4xl leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">Solar Panels</h1>
+              <p className="mt-5 max-w-2xl text-lg text-white/82">
+                High-performance panel options designed for California roofs, usage profiles, and long-term reliability.
+              </p>
               <a
                 href="#contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
                 <ArrowRight className="h-4 w-4" />

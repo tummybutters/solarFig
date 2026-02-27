@@ -1,22 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
-import CaliforniaMap from "@/components/CaliforniaMap";
+import OregonMap from "@/components/OregonMap";
 import { ArrowRight, BadgeAlert, PlugZap, ShieldCheck } from "lucide-react";
 
 const regions = [
-  { code: "NOR", name: "Northern California", focus: "Seasonal production + resilience planning" },
-  { code: "CEN", name: "Central California", focus: "High-yield production strategies" },
-  { code: "SOC", name: "Southern California", focus: "Peak-time usage optimization" },
+  { code: "POR", name: "Portland Metro", focus: "Dense-load and backup planning" },
+  { code: "WIL", name: "Willamette Valley", focus: "Balanced production and storage design" },
+  { code: "SOU", name: "Southern Oregon", focus: "High-sun and seasonal resilience strategy" },
 ];
 
 const challenges = [
-  { title: "Rate Volatility", description: "Prices change, we model accordingly", icon: BadgeAlert },
-  { title: "Grid Reliability", description: "Backup planning for outages", icon: ShieldCheck },
-  { title: "Future Growth", description: "EV + appliance expansion ready", icon: PlugZap },
+  { title: "Weather Variability", description: "Designs account for seasonal production swings", icon: BadgeAlert },
+  { title: "Grid Reliability", description: "Backup planning for outage-prone periods", icon: ShieldCheck },
+  { title: "Future Growth", description: "EV + electrification expansion ready", icon: PlugZap },
 ];
 
-const Locations = () => {
+const OregonLocations = () => {
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
@@ -24,17 +24,17 @@ const Locations = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full sm:h-[62vh]">
           <img
-            src="/assets/hero-main/locations-h1-2026-02-18.jpg"
-            alt="California neighborhood with multiple rooftop solar installations."
-            className="h-full w-full object-cover object-[center_76%] sm:object-center"
+            src="/assets/install-gallery/install-10.jpg"
+            alt="Oregon home with rooftop solar installation."
+            className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1280px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Locations</p>
-              <h1 className="text-4xl tracking-tight sm:text-6xl">California Service Areas</h1>
+              <h1 className="text-4xl tracking-tight sm:text-6xl">Oregon Service Areas</h1>
               <p className="mt-5 max-w-3xl text-white/85">
-                Planning-grade guidance for California homeowners exploring solar, battery backup, and EV charging.
+                Planning-grade guidance for Oregon homeowners exploring solar, battery backup, and EV charging.
               </p>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Locations = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
             <div>
               <div className="mb-10 max-w-xl">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">California</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Oregon</p>
                 <h2 className=" text-4xl text-stone-900 sm:text-5xl">Built around where and how you live</h2>
                 <p className="mt-4 text-stone-600">
                   We size and shape projects around your roof layout, usage profile, and backup goals based on your local conditions.
@@ -76,9 +76,9 @@ const Locations = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_20px_60px_-20px_rgba(109,57,181,0.3)] sm:p-8">
                 <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
-                  California
+                  Oregon
                 </p>
-                <CaliforniaMap className="max-w-[280px]" />
+                <OregonMap className="max-w-[280px]" />
               </div>
             </div>
           </div>
@@ -90,8 +90,8 @@ const Locations = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
               <img
-                src="/assets/hero-main/locations-h1-2026-02-18.jpg"
-                alt="California homes with solar"
+                src="/assets/install-gallery/install-09.jpg"
+                alt="Oregon homes with solar"
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[550px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -114,8 +114,8 @@ const Locations = () => {
           </div>
 
           <div className="mt-10 max-w-2xl lg:mt-16">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">California Focus</p>
-            <h2 className=" text-3xl leading-tight sm:text-4xl">Designed for California's energy reality</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Oregon Focus</p>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">Designed for Oregon's energy reality</h2>
           </div>
         </div>
       </section>
@@ -127,7 +127,7 @@ const Locations = () => {
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
                 <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  Get a California estimate
+                  Get an Oregon estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
                   We break down likely production, estimated savings, and backup options for your specific home and goals.
@@ -153,4 +153,4 @@ const Locations = () => {
   );
 };
 
-export default Locations;
+export default OregonLocations;

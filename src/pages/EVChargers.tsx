@@ -58,46 +58,31 @@ const EVChargers = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-14 pt-32 text-white sm:pt-36">
-        <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
-            Home / Solar Energy Solutions / EV Chargers
-          </p>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
-            <CarFront className="h-4 w-4 text-purple-300" />
-            EV Chargers
-          </div>
-          <h1 className="max-w-5xl  text-4xl leading-[0.95] text-white sm:text-6xl">
-            Smarter energy begins with home EV chargers
-          </h1>
-          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/82">
-            Solarfig installs seamless, effective home EV chargers for homeowners across California.
-          </p>
-          <a
-            href="#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#201b29] transition-colors hover:bg-gray-200"
-          >
-            Get a quote
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      </section>
-
-      {/* Hero Image — unchanged */}
+      {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[62vh] min-h-[480px] w-full sm:h-[72vh]">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
           <img
-            src="/assets/ev-chargers/ev-home-01.png"
+            src="/assets/ev-chargers/ev-chargers-h1-gemini-afzq04.png"
             alt="Scenic residential home exterior at dusk with lighting and EV-ready driveway."
-            className="h-full w-full object-cover"
+            className="h-full w-full scale-[1.12] object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#17141b]/62 via-[#17141b]/24 to-transparent" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
-            <div className="max-w-2xl rounded-2xl border border-white/15 bg-black/30 p-6 backdrop-blur-[2px]">
-              <p className="text-lg leading-relaxed text-white/90">
-                Charge at home on your schedule with a clean installation that integrates smoothly with your solar system.
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
+            <div className="max-w-3xl text-white">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solutions</p>
+              <h1 className="text-4xl leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+                Smarter energy begins with home EV chargers
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg text-white/82">
+                Solarfig installs seamless, effective home EV chargers for homeowners across California.
               </p>
+              <a
+                href="#contact"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#201b29] transition-colors hover:bg-gray-200"
+              >
+                Get a quote
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>

@@ -6,21 +6,19 @@ const footerLinks = {
     { label: "Battery Backup", href: "/battery" },
     { label: "EV Chargers", href: "/ev-chargers" },
     { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
-    { label: "Projects Showcase", href: "/projects" },
   ],
   plansAndServices: [
     { label: "Pricing & Costs", href: "/pricing-costs" },
     { label: "Installation Process", href: "/installation" },
   ],
   locations: [
-    { label: "California Service Areas", href: "/locations" },
-    { label: "SCE Territory", href: "/locations#sce" },
-    { label: "PG&E Territory", href: "/locations#pge" },
-    { label: "SDG&E Territory", href: "/locations#sdge" },
+    { label: "California", href: "/locations" },
+    { label: "Oregon", href: "/locations/oregon" },
   ],
   explore: [
     { label: "About Us", href: "/about" },
     { label: "Educational Articles", href: "/articles" },
+    { label: "Projects Showcase", href: "/projects" },
     { label: "Referral Program", href: "/referrals" },
   ],
   legal: [

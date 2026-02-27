@@ -14,12 +14,12 @@ const fitScenarios = [
   {
     title: "Complex Roofs",
     description: "Multiple planes, dormers, or chimneys",
-    image: "/assets/install-gallery/install-04.jpg",
+    image: "/assets/microinverters/microinverters-gemini-3qn747.png",
   },
   {
     title: "Partial Shade",
     description: "Trees, vents, or neighboring structures",
-    image: "/assets/install-gallery/install-08.jpg",
+    image: "/assets/microinverters/microinverters-gemini-o1ws48.png",
   },
 ];
 
@@ -47,28 +47,21 @@ const Microinverters = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      {/* Hero — unchanged */}
-      <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
-        <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Solutions</p>
-          <h1 className="text-4xl tracking-tight sm:text-6xl">Microinverters</h1>
-          <p className="mt-5 max-w-3xl text-white/80">
-            Module-level power electronics for design flexibility, panel-level visibility, and resilient performance.
-          </p>
-        </div>
-      </section>
-
-      {/* Hero Image — unchanged */}
+      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[64vh] min-h-[460px] w-full sm:h-[72vh]">
-          <img src="/assets/hero-main/wiseman-mabasa.jpg" alt="Solar workers on rooftop with installed panels." className="h-full w-full object-cover object-[center_68%] sm:object-center" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#17141b]/68 via-[#17141b]/26 to-transparent" />
+          <img src="/assets/microinverters/microinverters-h1-2026-02-27.png" alt="Microinverter system hero visual." className="h-full w-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1100px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
-            <div className="max-w-2xl">
-              <p className="text-lg text-white/90">Build smarter panel-level control into your system from day one.</p>
+            <div className="max-w-3xl text-white">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solutions</p>
+              <h1 className="text-4xl tracking-tight sm:text-6xl">Microinverters</h1>
+              <p className="mt-5 max-w-3xl text-white/85">
+                Module-level power electronics for design flexibility, panel-level visibility, and resilient performance.
+              </p>
               <a
                 href="#contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
                 <ArrowRight className="h-4 w-4" />
@@ -109,7 +102,7 @@ const Microinverters = () => {
             <div className="absolute -inset-4 rounded-3xl bg-purple-600/15 blur-3xl" />
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)]">
               <img
-                src="/assets/install-gallery/install-04.jpg"
+                src="/assets/microinverters/microinverters-gemini-3qn747.png"
                 alt="Rooftop solar array with microinverters"
                 className="aspect-[21/9] w-full object-cover"
                 loading="lazy"
@@ -159,7 +152,7 @@ const Microinverters = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
               <img
-                src="/assets/install-gallery/install-08.jpg"
+                src="/assets/microinverters/microinverters-gemini-o1ws48.png"
                 alt="Solar installer at work"
                 className="h-[450px] w-full object-cover sm:h-[550px]"
                 loading="lazy"

@@ -1,14 +1,13 @@
 const lenderLogos = [
   { name: "GoodLeap", src: "/assets/lender-logos/goodleap.png", monochrome: true },
-  { name: "LightReach", src: "/assets/lender-logos/lightreach.png", monochrome: true },
-  { name: "EnFin", src: "/assets/lender-logos/enfin.png", monochrome: true },
+  { name: "LightReach", src: "/assets/lender-logos/partners/lightreach-bw.png", monochrome: false },
+  { name: "EnFin", src: "/assets/lender-logos/partners/enfin-bw.png", monochrome: false },
   { name: "Dividend", src: "/assets/lender-logos/dividend.png", monochrome: true },
   { name: "Participate Energy", src: "/assets/lender-logos/participate-energy.png", monochrome: true },
   { name: "Propel", src: "/assets/lender-logos/propel.svg", monochrome: true },
-  { name: "Concert Finance", src: "/assets/lender-logos/concert-finance.svg", monochrome: true },
-  { name: "Sunrun", src: "/assets/lender-logos/sunrun.png", monochrome: true },
+  { name: "Concert Finance", src: "/assets/lender-logos/partners/concert-finance-bw.png", monochrome: false },
+  { name: "Sunrun", src: "/assets/lender-logos/partners/sunrun-bw.png", monochrome: false },
   { name: "Wheelhouse", src: "/assets/lender-logos/wheelhouse.png", monochrome: true },
-  { name: "Credit Human", src: "/assets/lender-logos/credit-human.svg", monochrome: true },
 ];
 
 const LogoScroll = () => {
@@ -18,12 +17,12 @@ const LogoScroll = () => {
     <section className="w-full overflow-hidden bg-gray-50 py-7">
       <div className="mx-auto mb-4 max-w-[1400px] px-6 sm:px-8">
         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gray-500">
-          Trusted Lending Partners
+          Trusted Partners
         </p>
       </div>
       <div className="overflow-hidden">
         <div
-          className="animate-ribbon-scroll flex w-max items-center gap-6 pr-6"
+          className="animate-ribbon-scroll flex w-max items-center gap-6 px-6"
           style={{ animationDuration: "34s" }}
         >
           {looped.map((logo, i) => (

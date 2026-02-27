@@ -41,12 +41,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://solarfig.com/microinverters</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://solarfig.com/solar-battery-incentives</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solarfig.com/locations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/oregon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-interface CaliforniaMapProps {
+interface OregonMapProps {
   className?: string;
 }
 
@@ -10,26 +10,26 @@ interface Dot {
   x: number;
   y: number;
   delay: number;
-  utility: "SCE" | "PG&E" | "SDG&E";
+  region: "Portland" | "Salem" | "Eugene";
 }
 
 const MAP_REVEAL_MS = 3000;
 const DOT_POP_MS = 560;
 const GLOW_SQUARE_COUNT = 185;
-const SEED = 7331;
+const SEED = 1937;
 
 const nextSeed = (value: number) => (value * 1664525 + 1013904223) >>> 0;
 
-const utilityMarkerStyles: Record<Dot["utility"], { fill: string; border: string }> = {
-  SCE: { fill: "#a855f7", border: "#d8b4fe" },
-  "PG&E": { fill: "#d8b4fe", border: "#e9d5ff" },
-  "SDG&E": { fill: "#7e22ce", border: "#a855f7" },
+const regionMarkerStyles: Record<Dot["region"], { fill: string; border: string }> = {
+  Portland: { fill: "#a855f7", border: "#d8b4fe" },
+  Salem: { fill: "#d8b4fe", border: "#e9d5ff" },
+  Eugene: { fill: "#7e22ce", border: "#a855f7" },
 };
 
-const californiaPath =
-  "M 14.544 6.626 L 22.194 6.56 L 34.209 6.758 L 43.478 6.758 L 43.527 27.334 L 43.478 42.044 L 55.002 52.328 L 65.889 62.302 L 74.471 70.331 L 80.65 76.229 L 91.537 86.889 L 91.537 88.265 L 93.009 90.057 L 94.235 92.916 L 96 94.461 L 94.921 95.884 L 93.499 96.595 L 92.42 98.489 L 92.763 101.027 L 92.518 102.617 L 90.704 104.146 L 91.292 108.132 L 92.518 108.19 L 93.009 110.177 L 92.518 111.11 L 90.753 111.519 L 78.885 112.509 L 69.224 113.44 L 68.145 112.043 L 68.096 109.827 L 67.409 107.195 L 66.134 105.32 L 63.339 102.735 L 59.759 100.319 L 59.072 100.968 L 57.699 100.555 L 57.896 99.493 L 56.326 97.306 L 54.217 97.779 L 50.49 96.181 L 49.951 94.876 L 47.45 93.272 L 44.606 93.332 L 42.252 92.618 L 39.26 92.916 L 37.691 91.487 L 38.034 88.444 L 37.495 87.966 L 37.838 85.811 L 35.484 84.191 L 35.386 81.966 L 34.503 81.846 L 33.032 79.917 L 32.002 79.495 L 31.561 78.287 L 28.128 73.741 L 26.51 72.403 L 26.166 68.805 L 26.853 69.11 L 27.49 66.969 L 26.215 65.007 L 24.646 65.252 L 22.586 63.471 L 21.851 62.055 L 21.998 60.699 L 20.968 58.908 L 20.968 55.935 L 22.635 55.935 L 21.949 51.767 L 21.213 52.203 L 21.066 54.257 L 19.301 54.693 L 17.192 53.138 L 16.849 50.456 L 15.475 48.33 L 13.661 47.014 L 12.68 45.507 L 10.032 42.548 L 10.473 41.665 L 9.247 37.805 L 9.787 35.645 L 9.002 32.395 L 6.697 29.195 L 4.441 27.398 L 4 25.275 L 6.256 20.103 L 6.697 18.35 L 6.256 16.983 L 7.09 13.394 L 6.354 10.116 L 5.373 9.327 L 5.765 6.692 L 14.544 6.626 Z";
+const oregonPath =
+  "M 12.944 4.040 L 14.770 4.587 L 16.230 4.587 L 16.960 4.040 L 17.690 4.040 L 19.151 4.587 L 20.976 4.587 L 22.437 5.317 L 23.714 6.595 L 24.627 9.151 L 24.992 13.167 L 26.270 14.444 L 28.460 14.992 L 34.667 14.810 L 37.222 12.802 L 41.056 13.167 L 43.063 14.992 L 43.794 14.992 L 44.524 13.897 L 47.079 13.897 L 50.183 11.889 L 51.460 12.984 L 53.833 12.984 L 54.746 12.802 L 56.571 11.159 L 59.675 10.794 L 62.960 9.333 L 66.976 9.333 L 68.984 7.325 L 88.698 7.143 L 89.063 6.778 L 91.071 6.595 L 91.254 7.325 L 93.444 10.063 L 96.000 12.437 L 96.000 13.167 L 94.905 15.540 L 94.175 19.556 L 91.984 23.754 L 91.802 25.214 L 92.167 25.579 L 89.611 31.056 L 88.881 33.794 L 88.881 35.071 L 89.976 37.262 L 91.619 37.627 L 92.532 38.540 L 91.802 41.278 L 91.984 43.103 L 91.071 44.198 L 92.349 74.865 L 79.937 75.595 L 55.476 75.960 L 43.246 75.960 L 9.294 75.048 L 6.738 74.317 L 5.643 72.492 L 4.913 69.754 L 5.825 65.008 L 4.000 61.357 L 6.008 56.976 L 6.008 53.690 L 8.563 52.413 L 7.833 49.127 L 9.111 46.937 L 8.929 42.738 L 9.841 40.913 L 10.571 33.063 L 10.937 31.968 L 11.484 31.603 L 10.937 27.222 L 12.032 21.381 L 12.214 16.452 L 13.675 16.452 L 13.492 12.619 L 12.579 11.341 L 12.397 9.333 L 12.397 7.325 L 13.127 6.595 L 12.944 4.222 Z";
 
-const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
+const OregonMap = ({ className }: OregonMapProps) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
   const [isMapInView, setIsMapInView] = useState(false);
@@ -66,18 +66,18 @@ const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
       seedValue = nextSeed(seedValue);
       const xJitter = seedValue / 4294967295;
 
-      const x = 12 + xRandom * 76 + (xJitter - 0.5) * 0.7;
-      const y = 10 + yRandom * 102;
+      const x = 8 + xRandom * 84 + (xJitter - 0.5) * 0.65;
+      const y = 8 + yRandom * 64;
 
-      let utility: Dot["utility"] = "PG&E";
-      if (y > 80) utility = "SDG&E";
-      else if (y > 58) utility = "SCE";
+      let region: Dot["region"] = "Salem";
+      if (y < 26) region = "Portland";
+      else if (y > 50) region = "Eugene";
 
       seeded.push({
-        id: `dot-${i + 1}`,
+        id: `or-dot-${i + 1}`,
         x: Number(x.toFixed(2)),
         y: Number(y.toFixed(2)),
-        utility,
+        region,
         delay: 0,
       });
     }
@@ -89,9 +89,9 @@ const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
   return (
     <div className="w-full">
       <div ref={mapRef} className={cn("relative mx-auto w-full", className)}>
-        <svg viewBox="0 0 100 120" className="w-full" role="img" aria-label="California service map">
+        <svg viewBox="0 0 100 80" className="w-full" role="img" aria-label="Oregon service map">
           <path
-            d={californiaPath}
+            d={oregonPath}
             fill="transparent"
             stroke="rgba(0,0,0,0.15)"
             strokeWidth="1.3"
@@ -101,7 +101,7 @@ const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
 
           <path
             ref={pathRef}
-            d={californiaPath}
+            d={oregonPath}
             className="transition-all ease-in-out"
             style={{
               transitionDuration: `${MAP_REVEAL_MS}ms`,
@@ -116,17 +116,17 @@ const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
           />
         </svg>
 
-        <svg viewBox="0 0 100 120" className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
+        <svg viewBox="0 0 100 80" className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
           <defs>
-            <clipPath id="locations-california-mask">
-              <path d={californiaPath} />
+            <clipPath id="locations-oregon-mask">
+              <path d={oregonPath} />
             </clipPath>
           </defs>
-          <g clipPath="url(#locations-california-mask)">
+          <g clipPath="url(#locations-oregon-mask)">
             {dots.map((dot) => {
-              const colors = utilityMarkerStyles[dot.utility];
-              const markerSize = 1.73;
-              const pulseSize = 2.93;
+              const colors = regionMarkerStyles[dot.region];
+              const markerSize = 1.55;
+              const pulseSize = 2.65;
 
               return (
                 <g
@@ -168,4 +168,4 @@ const CaliforniaMap = ({ className }: CaliforniaMapProps) => {
   );
 };
 
-export default CaliforniaMap;
+export default OregonMap;

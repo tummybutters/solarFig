@@ -23,10 +23,9 @@ const navItems: NavItem[] = [
     href: "/solar-panels",
     children: [
       { label: "Solar Panels", href: "/solar-panels" },
+      { label: "Microinverters", href: "/microinverters" },
       { label: "Battery Backup", href: "/battery" },
       { label: "EV Chargers", href: "/ev-chargers" },
-      { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
-      { label: "Projects Showcase", href: "/projects" },
     ],
     featured: [
       {
@@ -69,10 +68,8 @@ const navItems: NavItem[] = [
     label: "Locations",
     href: "/locations",
     children: [
-      { label: "California Service Areas", href: "/locations" },
-      { label: "SCE Territory", href: "/locations#sce" },
-      { label: "PG&E Territory", href: "/locations#pge" },
-      { label: "SDG&E Territory", href: "/locations#sdge" },
+      { label: "California", href: "/locations" },
+      { label: "Oregon", href: "/locations/oregon" },
     ],
     featured: [
       {
@@ -82,9 +79,9 @@ const navItems: NavItem[] = [
         image: "/assets/install-gallery/install-01.webp",
       },
       {
-        label: "Territories",
-        title: "Find Your Utility Territory",
-        href: "/locations",
+        label: "Expansion",
+        title: "Oregon Service Coverage",
+        href: "/locations/oregon",
         image: "/assets/install-gallery/install-04.jpg",
       },
     ],
@@ -95,6 +92,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "About Us", href: "/about" },
       { label: "Educational Articles", href: "/articles" },
+      { label: "Projects Showcase", href: "/projects" },
       { label: "Referral Program", href: "/referrals" },
     ],
     featured: [
