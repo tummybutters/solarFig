@@ -25,37 +25,37 @@ const reviews = [
     quote:
       "Super clear process from day one. They walked us through production assumptions, financing options, and exactly how our utility bill would change month by month. Installation was fast, clean, and organized, and every permit or inspection update came before we had to ask. The final numbers matched the proposal, with no surprise add-ons.",
     author: "James E. — California",
-    initials: "JE",
+    image: "/assets/reviews/review-6.jpg",
   },
   {
     quote:
       "They did not try to oversell us. The design team sized the system around how we actually use power, including EV charging and summer AC load, then explained why a battery made sense for evening rates. Everything has performed exactly like they said it would, and the monitoring visibility has been excellent since PTO.",
     author: "Elizabeth M. — Oregon",
-    initials: "EM",
+    image: "/assets/reviews/review-2.jpg",
   },
   {
     quote:
       "Professional from consultation through PTO and follow-up. The crew treated our home carefully, communication was consistent, and every milestone had clear next steps. Even after activation, they stayed responsive for questions and optimization tips. It felt like a real long-term partner, not a company that disappears after install day.",
     author: "Morgan H. — California",
-    initials: "MH",
+    image: "/assets/reviews/review-3.jpg",
   },
   {
     quote:
       "From contract to installation, every step was explained clearly. No pressure, no confusion, and the timeline stayed exactly where they said it would be.",
     author: "Rachel T. — Oregon",
-    initials: "RT",
+    image: "/assets/reviews/review-4.jpg",
   },
   {
     quote:
       "The proposal was easy to compare and the savings model made sense. The install team was respectful, clean, and finished ahead of schedule.",
     author: "Daniel P. — California",
-    initials: "DP",
+    image: "/assets/reviews/review-5.jpg",
   },
   {
     quote:
       "We added battery backup with our system and the team walked us through every tradeoff. Communication stayed strong even after PTO.",
     author: "Sofia L. — Oregon",
-    initials: "SL",
+    image: "/assets/reviews/review-1.png",
   },
 ];
 
@@ -113,15 +113,9 @@ const HomeEditorial = () => {
           <div className="space-y-8">
             <div className="grid items-start gap-5 sm:grid-cols-2">
               <div>
-                <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#63557f]">
-                  California
-                </p>
                 <CaliforniaMap className="max-w-[300px] sm:max-w-[360px]" />
               </div>
               <div>
-                <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#63557f]">
-                  Oregon
-                </p>
                 <OregonMap className="max-w-[300px] sm:max-w-[360px]" />
               </div>
             </div>
@@ -164,13 +158,14 @@ const HomeEditorial = () => {
             {reviews.map((review, index) => (
               <article
                 key={review.author}
-                className={`flex min-h-[220px] flex-col justify-between rounded-[24px] border px-7 py-8 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[260px] sm:px-8 sm:py-9 lg:min-h-[290px] ${
-                  index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
-                }`}
+                className={`flex min-h-[220px] flex-col justify-between rounded-[24px] border px-7 py-8 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[260px] sm:px-8 sm:py-9 lg:min-h-[290px] ${index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
+                  }`}
               >
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#eee2fb] text-sm font-semibold uppercase tracking-[0.08em] text-[#5f3c90]">
-                  {review.initials}
-                </div>
+                <img
+                  src={review.image}
+                  alt={`${review.author} profile`}
+                  className="mb-5 h-12 w-12 rounded-full object-cover shadow-sm bg-[#eee2fb]"
+                />
                 <p className="text-lg leading-[1.65] text-[#332b47] sm:text-[1.45rem]">"{review.quote}"</p>
                 <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-[#63557f]">{review.author}</p>
               </article>

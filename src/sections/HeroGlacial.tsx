@@ -59,7 +59,9 @@ const HeroGlacial = () => {
                 {heroVideos.map((src, index) => (
                     <video
                         key={src}
-                        ref={(el) => (videoRefs.current[index] = el)}
+                        ref={(el) => {
+                            videoRefs.current[index] = el;
+                        }}
                         className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                             }`}
                         muted

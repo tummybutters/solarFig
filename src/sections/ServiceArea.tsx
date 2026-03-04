@@ -70,15 +70,9 @@ const ServiceArea = () => {
           <div className="lg:col-span-3">
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
-                <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">
-                  California
-                </p>
                 <CaliforniaMap className="max-w-[240px]" />
               </div>
               <div>
-                <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">
-                  Oregon
-                </p>
                 <OregonMap className="max-w-[240px]" />
               </div>
             </div>
