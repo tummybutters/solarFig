@@ -6,12 +6,12 @@ const solutionCards = [
   {
     title: "Solar Panels",
     href: "/solar-panels",
-    image: "/assets/install-gallery/install-01.webp",
+    image: "/assets/home-editorial/home-solar-panels-2026.webp",
   },
   {
-    title: "Microinverters",
+    title: "Advanced Inverters",
     href: "/microinverters",
-    image: "/assets/home-editorial/inverters-for-main-page.webp",
+    image: "/assets/home-editorial/home-inverters-2026.webp",
   },
   {
     title: "Battery Backup",
@@ -24,17 +24,38 @@ const reviews = [
   {
     quote:
       "Super clear process from day one. They walked us through production assumptions, financing options, and exactly how our utility bill would change month by month. Installation was fast, clean, and organized, and every permit or inspection update came before we had to ask. The final numbers matched the proposal, with no surprise add-ons.",
-    author: "Anita P., California",
+    author: "James E. — California",
+    initials: "JE",
   },
   {
     quote:
       "They did not try to oversell us. The design team sized the system around how we actually use power, including EV charging and summer AC load, then explained why a battery made sense for evening rates. Everything has performed exactly like they said it would, and the monitoring visibility has been excellent since PTO.",
-    author: "Elizabeth S., California",
+    author: "Elizabeth M. — Oregon",
+    initials: "EM",
   },
   {
     quote:
       "Professional from consultation through PTO and follow-up. The crew treated our home carefully, communication was consistent, and every milestone had clear next steps. Even after activation, they stayed responsive for questions and optimization tips. It felt like a real long-term partner, not a company that disappears after install day.",
-    author: "Warren F., California",
+    author: "Morgan H. — California",
+    initials: "MH",
+  },
+  {
+    quote:
+      "From contract to installation, every step was explained clearly. No pressure, no confusion, and the timeline stayed exactly where they said it would be.",
+    author: "Rachel T. — Oregon",
+    initials: "RT",
+  },
+  {
+    quote:
+      "The proposal was easy to compare and the savings model made sense. The install team was respectful, clean, and finished ahead of schedule.",
+    author: "Daniel P. — California",
+    initials: "DP",
+  },
+  {
+    quote:
+      "We added battery backup with our system and the team walked us through every tradeoff. Communication stayed strong even after PTO.",
+    author: "Sofia L. — Oregon",
+    initials: "SL",
   },
 ];
 
@@ -45,9 +66,9 @@ const HomeEditorial = () => {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Solutions</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Products</p>
               <h2 className="mt-4 text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
-                Energy Solutions without the noise.
+                Energy solutions without the noise.
               </h2>
             </div>
 
@@ -66,11 +87,12 @@ const HomeEditorial = () => {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between sm:bottom-7 sm:left-6 sm:right-6">
-                  <h3 className="max-w-[80%] text-3xl leading-none tracking-tight text-white sm:text-5xl">
+                <div className="absolute bottom-6 left-5 right-5 sm:bottom-7 sm:left-6 sm:right-6">
+                  <h3 className="text-3xl leading-none tracking-tight text-white sm:text-5xl">
                     {card.title}
                   </h3>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white">
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white">
+                    Learn more
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </div>
@@ -80,11 +102,11 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f3ecfa] py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
             <h2 className="max-w-3xl text-5xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-7xl">
-              The grid is unpredictable. Your power shouldn&apos;t be.
+              The grid is unpredictable, your power shouldn&apos;t be.
             </h2>
           </div>
 
@@ -94,19 +116,19 @@ const HomeEditorial = () => {
                 <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#63557f]">
                   California
                 </p>
-                <CaliforniaMap className="max-w-[250px] sm:max-w-[280px]" />
+                <CaliforniaMap className="max-w-[300px] sm:max-w-[360px]" />
               </div>
               <div>
                 <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#63557f]">
                   Oregon
                 </p>
-                <OregonMap className="max-w-[250px] sm:max-w-[280px]" />
+                <OregonMap className="max-w-[300px] sm:max-w-[360px]" />
               </div>
             </div>
 
             <div>
               <h3 className="max-w-xl text-4xl leading-[1.08] tracking-tight text-[#2a2238] sm:text-5xl">
-                Power Your Home With Solar
+                Power your home with Solarfig.
               </h3>
               <a
                 href="/locations"
@@ -134,8 +156,8 @@ const HomeEditorial = () => {
             <h2 className="max-w-4xl text-5xl leading-none tracking-tight text-[#241d2f] sm:text-7xl">
               500+ Installations
             </h2>
-            <p className="mt-5 text-xl text-[#423751] sm:text-2xl">Hundreds of 5-star reviews</p>
-            <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google · SolarReviews · Facebook · Birdeye</p>
+            <p className="mt-5 text-xl text-[#423751] sm:text-2xl">Hundreds of satisfied customers</p>
+            <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google · Trustpilot · Yelp</p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -146,6 +168,9 @@ const HomeEditorial = () => {
                   index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
                 }`}
               >
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#eee2fb] text-sm font-semibold uppercase tracking-[0.08em] text-[#5f3c90]">
+                  {review.initials}
+                </div>
                 <p className="text-lg leading-[1.65] text-[#332b47] sm:text-[1.45rem]">"{review.quote}"</p>
                 <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-[#63557f]">{review.author}</p>
               </article>
@@ -158,8 +183,8 @@ const HomeEditorial = () => {
         <div className="mx-auto max-w-[1680px] px-4 sm:px-6 lg:px-8">
           <div className="relative h-[300px] w-full overflow-hidden rounded-[26px] shadow-[0_24px_70px_-34px_rgba(36,29,47,0.4)] sm:h-[420px] lg:h-[520px]">
             <img
-              src="/assets/home-editorial/home-banner-solar-family-2026-02-19.webp"
-              alt="Family gathering outside a home with rooftop solar at sunset"
+              src="/assets/home-editorial/home-products-plans-services-process-2026.webp"
+              alt="Home energy planning and installation process overview visual"
               className="h-full w-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1f1231]/25 via-transparent to-[#402067]/10" />
@@ -170,12 +195,25 @@ const HomeEditorial = () => {
       <section className="bg-[#f4eefb] pb-16 pt-8 sm:pb-24 sm:pt-10">
         <div className="mx-auto grid max-w-[1320px] gap-5 px-4 sm:gap-6 sm:px-6 lg:grid-cols-3">
           <a
+            href="/solar-panels"
+            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Products</p>
+            <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Find your ideal setup.</h3>
+            <p className="mt-4 text-[#4b4261]">Compare panel, inverter, and energy storage options built for your home.</p>
+            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
+              View Products
+              <ArrowRight className="h-4 w-4" />
+            </p>
+          </a>
+
+          <a
             href="/pricing-costs"
             className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Plans & Services</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">A plan for every home.</h3>
-            <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Built around your home and goals.</p>
+            <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Tailored to your home and goals.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               View Plans
               <ArrowRight className="h-4 w-4" />
@@ -184,26 +222,13 @@ const HomeEditorial = () => {
 
           <a
             href="/installation"
-            className="flex h-full flex-col rounded-2xl border border-[#d7c6ef] bg-[#ece1fb] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Process</p>
-            <h3 className="mt-4 text-4xl leading-tight text-[#2f2440]">Know every step before you sign.</h3>
-            <p className="mt-4 text-[#5b4a79]">From consultation through PTO, we keep your timeline clear and accountable.</p>
+            <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Transparency from start to finish.</h3>
+            <p className="mt-4 text-[#4b4261]">From consultation to PTO, we make every step clear, structured, and predictable.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               View Process
-              <ArrowRight className="h-4 w-4" />
-            </p>
-          </a>
-
-          <a
-            href="/solar-panels"
-            className="flex h-full flex-col rounded-2xl border border-[#d6c8e8] bg-[#f7f1ff] p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Products</p>
-            <h3 className="mt-4 text-4xl leading-tight text-[#2f2440]">Find your ideal setup.</h3>
-            <p className="mt-4 text-[#5a4b74]">Compare panel, microinverter, and battery backup options built for your home.</p>
-            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-              View Products
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>

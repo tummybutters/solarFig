@@ -576,6 +576,93 @@
   }
 }
 
+/* Reduce non-home page h1/h2 sizing by ~25% while preserving page-specific utility classes. */
+main.mobile-premium:not(.home-page) h1.text-2xl,
+main.mobile-premium:not(.home-page) h2.text-2xl {
+  font-size: 1.125rem !important;
+}
+
+main.mobile-premium:not(.home-page) h1.text-3xl,
+main.mobile-premium:not(.home-page) h2.text-3xl {
+  font-size: 1.40625rem !important;
+}
+
+main.mobile-premium:not(.home-page) h1.text-4xl,
+main.mobile-premium:not(.home-page) h2.text-4xl {
+  font-size: 1.6875rem !important;
+}
+
+main.mobile-premium:not(.home-page) h1.text-5xl,
+main.mobile-premium:not(.home-page) h2.text-5xl {
+  font-size: 2.25rem !important;
+}
+
+main.mobile-premium:not(.home-page) h1.text-6xl,
+main.mobile-premium:not(.home-page) h2.text-6xl {
+  font-size: 2.8125rem !important;
+}
+
+main.mobile-premium:not(.home-page) h1.text-7xl,
+main.mobile-premium:not(.home-page) h2.text-7xl {
+  font-size: 3.375rem !important;
+}
+
+@media (min-width: 640px) {
+  main.mobile-premium:not(.home-page) h1.sm\:text-3xl,
+  main.mobile-premium:not(.home-page) h2.sm\:text-3xl {
+    font-size: 1.40625rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.sm\:text-4xl,
+  main.mobile-premium:not(.home-page) h2.sm\:text-4xl {
+    font-size: 1.6875rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.sm\:text-5xl,
+  main.mobile-premium:not(.home-page) h2.sm\:text-5xl {
+    font-size: 2.25rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.sm\:text-6xl,
+  main.mobile-premium:not(.home-page) h2.sm\:text-6xl {
+    font-size: 2.8125rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.sm\:text-7xl,
+  main.mobile-premium:not(.home-page) h2.sm\:text-7xl {
+    font-size: 3.375rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  main.mobile-premium:not(.home-page) h1.md\:text-5xl,
+  main.mobile-premium:not(.home-page) h2.md\:text-5xl {
+    font-size: 2.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.mobile-premium:not(.home-page) h1.lg\:text-5xl,
+  main.mobile-premium:not(.home-page) h2.lg\:text-5xl {
+    font-size: 2.25rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.lg\:text-6xl,
+  main.mobile-premium:not(.home-page) h2.lg\:text-6xl {
+    font-size: 2.8125rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.lg\:text-7xl,
+  main.mobile-premium:not(.home-page) h2.lg\:text-7xl {
+    font-size: 3.375rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) h1.lg\:text-\[82px\],
+  main.mobile-premium:not(.home-page) h2.lg\:text-\[82px\] {
+    font-size: 61.5px !important;
+  }
+}
+
 @media (max-width: 640px) {
   .mobile-premium {
     overflow-x: clip;
@@ -597,4 +684,67 @@
     width: auto;
     min-width: 0;
   }
+}
+
+/* Battery-inspired interior page section contrast + frame rhythm */
+main.mobile-premium:not(.home-page) {
+  background-color: #f4eefb !important;
+}
+
+main.mobile-premium:not(.home-page) > section {
+  position: relative;
+}
+
+main.mobile-premium:not(.home-page) > section:not(:first-of-type) {
+  box-shadow: inset 0 1px 0 rgba(109, 57, 181, 0.08), inset 0 -1px 0 rgba(109, 57, 181, 0.05);
+}
+
+main.mobile-premium:not(.home-page) > section:nth-of-type(even) {
+  background-color: rgba(252, 249, 255, 0.92);
+}
+
+main.mobile-premium:not(.home-page) > section:nth-of-type(odd):not(:first-of-type) {
+  background-color: rgba(244, 238, 251, 0.78);
+}
+
+/* Non-home hero text stack normalization (Pricing & Costs baseline) */
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto {
+  max-width: 1400px !important;
+  display: flex;
+  align-items: flex-end !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  padding-bottom: 3rem !important;
+}
+
+@media (min-width: 640px) {
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div {
+  max-width: 48rem !important;
+  padding-top: 0 !important;
+  text-align: left;
+}
+
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > p:first-of-type {
+  margin-bottom: 1.25rem !important;
+}
+
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+  line-height: 1.02 !important;
+  letter-spacing: -0.02em !important;
+}
+
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+  margin-top: 1.25rem !important;
+  max-width: 42rem !important;
+}
+
+main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p + a {
+  margin-top: 2rem !important;
 }

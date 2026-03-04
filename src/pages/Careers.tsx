@@ -26,7 +26,7 @@ const Careers = () => {
       <section className="bg-[#6f5b99] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Explore</p>
-          <h1 className="max-w-4xl text-4xl tracking-tight sm:text-6xl">Careers at Solarfig</h1>
+          <h1 className="max-w-4xl text-4xl font-medium leading-[1.02] tracking-tight sm:text-6xl">Careers at Solarfig</h1>
           <p className="mt-5 max-w-2xl text-white/75">
             We're building a high-trust, high-performance team focused on helping homeowners across California.
           </p>

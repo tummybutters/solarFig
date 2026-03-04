@@ -3,9 +3,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const footerLinks = {
   products: [
     { label: "Solar Panels", href: "/solar-panels" },
-    { label: "Battery Backup", href: "/battery" },
+    { label: "Inverters", href: "/microinverters" },
+    { label: "Energy Storage", href: "/battery" },
     { label: "EV Chargers", href: "/ev-chargers" },
-    { label: "Solar & Battery Incentives", href: "/solar-battery-incentives" },
   ],
   plansAndServices: [
     { label: "Pricing & Costs", href: "/pricing-costs" },
@@ -18,7 +18,6 @@ const footerLinks = {
   explore: [
     { label: "About Us", href: "/about" },
     { label: "Educational Articles", href: "/articles" },
-    { label: "Projects Showcase", href: "/projects" },
     { label: "Referral Program", href: "/referrals" },
   ],
   legal: [
@@ -35,8 +34,12 @@ const Footer = () => {
         <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
           {/* Brand Column */}
           <div className="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-1">
-            <a href="/" className="text-2xl font-bold tracking-tight inline-block">
-              SolarFig
+            <a href="/" className="inline-flex items-center">
+              <img
+                src="/assets/logo/white-logo-no-panel.png"
+                alt="Solarfig"
+                className="h-10 w-auto object-contain"
+              />
             </a>
             
             {/* Contact Info */}
@@ -78,7 +81,7 @@ const Footer = () => {
 
           {/* Plans and Services */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Plans and Services</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">Plans &amp; Services</h4>
             <ul className="space-y-2.5">
               {footerLinks.plansAndServices.map((link) => (
                 <li key={link.label}>
@@ -123,7 +126,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-6">
             <a href="/" className="text-sm text-white transition-colors hover:text-white/80">Home</a>
-            <a href="#contact" className="text-sm text-white transition-colors hover:text-white/80">Contact Us</a>
+            <a href="/contact" className="text-sm text-white transition-colors hover:text-white/80">Contact Us</a>
           </div>
           
           <div className="flex flex-wrap items-center gap-3 text-xs text-white sm:gap-4">
@@ -138,7 +141,7 @@ const Footer = () => {
           </div>
           
           <p className="text-xs text-white">
-            © {new Date().getFullYear()} SolarFig
+            © {new Date().getFullYear()} Solarfig
           </p>
         </div>
 

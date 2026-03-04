@@ -23,27 +23,27 @@ const navItems: NavItem[] = [
     href: "/solar-panels",
     children: [
       { label: "Solar Panels", href: "/solar-panels" },
-      { label: "Microinverters", href: "/microinverters" },
-      { label: "Battery Backup", href: "/battery" },
+      { label: "Inverters", href: "/microinverters" },
+      { label: "Energy Storage", href: "/battery" },
       { label: "EV Chargers", href: "/ev-chargers" },
     ],
     featured: [
       {
-        label: "Featured Guide",
-        title: "Battery Backup: Stay Powered Up!",
-        href: "/battery",
-        image: "/assets/battery/battery-span-tesla-pw3.jpg",
+        label: "Designed for Maximum Efficiency",
+        title: "Solar",
+        href: "/solar-panels",
+        image: "/assets/navbar/nav-products-designed-for-maximum-efficiency.webp",
       },
       {
-        label: "Popular Option",
-        title: "Solar Panels for California Homes",
-        href: "/solar-panels",
-        image: "/assets/hero-main/solar-panels-h1-2026-02-17.jpg",
+        label: "Batteries & Energy Storage: Stay Powered Up!",
+        title: "Energy Storage",
+        href: "/battery",
+        image: "/assets/navbar/nav-products-batteries-energy-storage-stay-powered-up.webp",
       },
     ],
   },
   {
-    label: "Plans and Services",
+    label: "Plans & Services",
     href: "/pricing-costs",
     children: [
       { label: "Pricing & Costs", href: "/pricing-costs" },
@@ -54,13 +54,13 @@ const navItems: NavItem[] = [
         label: "Planning",
         title: "Understand Solar Pricing & Costs",
         href: "/pricing-costs",
-        image: "/assets/pricing-costs/hero-solar-roof-sunset.webp",
+        image: "/assets/navbar/nav-plans-understand-solar-pricing-costs.webp",
       },
       {
         label: "Process",
         title: "How Solar Installation Works",
         href: "/installation",
-        image: "/assets/install-gallery/install-05.jpg",
+        image: "/assets/navbar/nav-plans-how-solar-installation-works.webp",
       },
     ],
   },
@@ -73,16 +73,16 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Coverage",
-        title: "California Service Coverage",
+        label: "Why California Remains the Best State for Solar",
+        title: "California",
         href: "/locations",
-        image: "/assets/install-gallery/install-01.webp",
+        image: "/assets/navbar/nav-locations-why-california-remains-best-state-for-solar.webp",
       },
       {
-        label: "Expansion",
-        title: "Oregon Service Coverage",
+        label: "Solar In Oregon: Net Metering and Local Incentives",
+        title: "Oregon",
         href: "/locations/oregon",
-        image: "/assets/install-gallery/install-04.jpg",
+        image: "/assets/navbar/nav-locations-solar-in-oregon-net-metering-local-incentives.webp",
       },
     ],
   },
@@ -92,21 +92,20 @@ const navItems: NavItem[] = [
     children: [
       { label: "About Us", href: "/about" },
       { label: "Educational Articles", href: "/articles" },
-      { label: "Projects Showcase", href: "/projects" },
       { label: "Referral Program", href: "/referrals" },
     ],
     featured: [
       {
-        label: "Inside Solarfig",
-        title: "Meet the Team Behind Solarfig",
+        label: "Why Choose Solarfig? Who We Are",
+        title: "About Us",
         href: "/about",
-        image: "/assets/install-gallery/install-08.jpg",
+        image: "/assets/navbar/nav-explore-why-choose-solarfig-who-we-are.webp",
       },
       {
-        label: "Latest Reads",
-        title: "Explore Solar Tips and Articles",
-        href: "/articles",
-        image: "/assets/install-gallery/install-10.jpg",
+        label: "Refer a Friend and Earn Rewards!",
+        title: "Referral Program",
+        href: "/referrals",
+        image: "/assets/navbar/nav-explore-refer-a-friend-and-earn-rewards.webp",
       },
     ],
   },
@@ -171,17 +170,17 @@ const Navbar = () => {
       <div
         ref={navShellRef}
         className={cn(
-          "relative flex min-h-[60px] w-full max-w-[1400px] items-center justify-between rounded-[10px] border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:min-h-[78px] sm:px-8 sm:py-3",
+          "relative flex min-h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[16px] border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:min-h-[84px] sm:px-8 sm:py-3",
           isScrolled ? "shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)]" : "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.4)]"
         )}
       >
-        <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
+        <div className="pointer-events-none absolute inset-0 rounded-[16px] bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
         {/* Logo */}
         <a href="/" className="relative z-[60] flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80">
           <img
             src="/assets/logo/white-logo-no-panel.png"
             alt="Solarfig"
-            className="h-[2.3rem] w-auto object-contain sm:h-[2.6rem]"
+            className="h-[2.5rem] w-auto object-contain sm:h-[3rem]"
           />
           <span className="sr-only">Solarfig</span>
         </a>
@@ -194,7 +193,7 @@ const Navbar = () => {
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuTrigger
                     className={cn(
-                      "group h-10 bg-transparent px-4 text-[13px] font-semibold tracking-wide text-white/80 transition-all hover:text-white focus:text-white data-[state=open]:text-white",
+                      "group h-11 bg-transparent px-5 text-[14px] font-semibold tracking-wide text-white/80 transition-all hover:text-white focus:text-white data-[state=open]:text-white",
                       "rounded-md"
                     )}
                   >
@@ -206,7 +205,7 @@ const Navbar = () => {
                       <div className="space-y-8 border-r border-white/5 pr-12">
                         <div>
                           <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.25em] text-white/30">
-                            Explore {item.label}
+                            {item.label}
                           </p>
                           <ul className="flex flex-col space-y-3">
                             {item.children.map((child) => (
@@ -245,8 +244,8 @@ const Navbar = () => {
                               <h4 className="text-sm font-semibold leading-tight text-white/80 transition-colors group-hover:text-white">
                                 {feature.title}
                               </h4>
-                              <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white">
-                                Learn More
+                              <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 group-hover:text-white">
+                                {feature.label}
                               </span>
                             </div>
                           </a>
@@ -323,7 +322,7 @@ const Navbar = () => {
               <div className="grid gap-4 p-4">
                 <div>
                   <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/35">
-                    Explore {activeMobileNavItem.label}
+                    {activeMobileNavItem.label}
                   </p>
                   <div className="grid gap-1">
                     {activeMobileNavItem.children.map((child) => (
@@ -375,11 +374,11 @@ const Navbar = () => {
                   Get a quote
                 </a>
                 <a
-                  href="/projects"
+                  href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
                 >
-                  Projects
+                  Contact
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
                 <a

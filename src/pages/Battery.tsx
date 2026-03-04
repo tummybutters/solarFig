@@ -6,54 +6,83 @@ import { ArrowRight, CloudLightning, DollarSign, Gauge, HousePlug, ShieldCheck }
 
 const controlModes = [
   {
-    title: "Storm Watch Mode",
-    description: "Auto-charges before outages",
-    image: "/assets/battery/battery-span-tesla-pw3.jpg",
+    title: "Proactive Backup Preparation",
+    description: "Automatically maintains reserve capacity during elevated outage risk",
+    image: "/assets/battery/battery-proactive-backup-protection.webp",
+    alt: "Home battery system prepared to provide backup during outages.",
   },
   {
-    title: "Self-Powered Mode",
-    description: "Store daytime excess for night",
-    image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
+    title: "Daily Energy Optimization",
+    description: "Stores surplus daytime production for use after sunset",
+    image: "/assets/battery/battery-daily-energy-optimization.jpg",
+    alt: "Home battery storing daytime solar production for evening use.",
   },
   {
-    title: "Time-Based Control",
-    description: "Charge low, discharge peak",
-    image: "/assets/whole-home-solar/battery-backup.webp",
+    title: "Time-Based Load Management",
+    description: "Adjusts charging and discharging around peak utility rates",
+    image: "/assets/battery/battery-time-based-load-management.jpg",
+    alt: "Home battery system balancing loads around time-of-use energy rates.",
   },
 ];
 
 const batteryBenefits = [
-  { title: "$0 Down", description: "Budget friendly add-on", icon: DollarSign },
-  { title: "Backup Ready", description: "Lights stay on", icon: CloudLightning },
-  { title: "Peak Savings", description: "Reduce time-of-use costs", icon: Gauge },
-  { title: "Grid Control", description: "Manage your usage", icon: HousePlug },
-  { title: "Tax Credits", description: "Federal & local incentives", icon: ShieldCheck },
+  {
+    title: "Flexible Financing Options",
+    description: "Energy storage can be structured as part of your overall system investment",
+    icon: DollarSign,
+  },
+  {
+    title: "Backup Capability",
+    description: "Maintain essential circuits during grid interruptions",
+    icon: CloudLightning,
+  },
+  {
+    title: "Time-of-Use Optimization",
+    description: "Store low-cost energy and discharge during peak rate periods",
+    icon: Gauge,
+  },
+  {
+    title: "Greater Energy Control",
+    description: "Manage how and when your home draws from solar, storage, or the grid",
+    icon: HousePlug,
+  },
+  {
+    title: "Incentive Eligibility",
+    description: "Federal and local programs may apply to qualifying installations",
+    icon: ShieldCheck,
+  },
 ];
 
 const faqs = [
   {
-    question: "Can a home battery replace a generator during power loss?",
-    answer: "For most homes, battery backup can cover essential loads and often much more. Your exact backup duration depends on battery size, home load profile, and solar production.",
+    question: "Can a home battery replace a generator during an outage?",
+    answer:
+      "In many cases, yes. A battery can power selected circuits during outages and recharge automatically when solar production resumes. Backup duration depends on system size and usage.",
   },
   {
-    question: "Do Solarfig's energy storage solutions contain lithium-ion batteries?",
-    answer: "Yes. We install modern lithium-ion battery systems from trusted manufacturers designed for residential safety, efficiency, and long-term performance.",
+    question: "What type of batteries are used?",
+    answer:
+      "Most residential systems use lithium-ion technology for its efficiency, reliability, and lifespan. We recommend platforms that meet modern safety and performance standards.",
   },
   {
-    question: "Can I get a home battery if I already have a Solarfig system?",
-    answer: "Yes. Existing Solarfig customers can typically add battery storage to their current system after a compatibility check.",
+    question: "Can I add storage to an existing Solarfig system?",
+    answer:
+      "Often, yes. Compatibility depends on your inverter and electrical setup. We evaluate your system and design a seamless expansion.",
   },
   {
     question: "Can I go completely off-grid with a home battery?",
-    answer: "Some homes can significantly reduce grid usage, but full off-grid operation depends on your annual consumption, battery capacity, and solar production across seasons.",
+    answer:
+      "Full off-grid capability requires sufficient solar production and storage capacity. Most homeowners use batteries to reduce grid reliance rather than eliminate it entirely.",
   },
   {
-    question: "How long does it take to install a new home battery?",
-    answer: "Most installs are completed in one day once design, permitting, and utility coordination are finished.",
+    question: "How long does installation take?",
+    answer:
+      "Installation typically takes one to two days, depending on system complexity. Permitting timelines vary by location.",
   },
   {
-    question: "How much battery storage does my home need?",
-    answer: "That depends on your outage priorities, panel size, time-of-use rates, and daily consumption. We size your system around your goals and load profile.",
+    question: "How much storage do I need?",
+    answer:
+      "Storage size depends on your energy usage, critical loads, and backup goals. We design systems around your consumption patterns and outage priorities.",
   },
 ];
 
@@ -66,17 +95,19 @@ const Battery = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
           <img
-            src="/assets/battery/battery-h1-gemini-ip17i0.png"
-            alt="Modern home with rooftop solar and integrated battery backup at dusk."
+            src="/assets/battery/battery-header-image.jpg"
+            alt="Wall-mounted home battery in a studio-style setting."
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solutions</p>
-              <h1 className="text-4xl leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">Battery Backup</h1>
-              <p className="mt-5 max-w-2xl text-lg text-white/82">
-                Store solar energy for nighttime use and keep essential circuits running during outages.
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Battery Backup</p>
+              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+                Intelligent Energy Storage. Built for Resilience.
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+                Energy storage that extends solar value beyond daylight. Maintain essential power during grid interruptions.
               </p>
               <a
                 href="#contact"
@@ -94,7 +125,7 @@ const Battery = () => {
       <section className="border-y border-stone-200 bg-white py-10">
         <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-5 px-6 text-center sm:px-8 lg:flex-row lg:text-left">
           <p className="max-w-4xl text-xl text-stone-700">
-            Battery backup puts you in charge of when and how you use power in your own home.
+            Energy storage that adapts.
           </p>
           <a
             href="#contact"
@@ -110,8 +141,8 @@ const Battery = () => {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Solar Energy Storage</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Three ways your battery adapts</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Energy Management</p>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Energy storage that adapts</h2>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-3">
@@ -120,7 +151,7 @@ const Battery = () => {
                 <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
                   <img
                     src={mode.image}
-                    alt={mode.title}
+                    alt={mode.alt}
                     className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -148,8 +179,8 @@ const Battery = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
                 <img
-                  src="/assets/battery/battery-dcbel-wall-unit.jpg"
-                  alt="Home battery installation"
+                  src="/assets/battery/battery-extending-the-value-of-solar.jpg"
+                  alt="Stacked home energy storage units installed in a garage."
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -159,8 +190,8 @@ const Battery = () => {
 
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why add storage</p>
-              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">A smart addition to solar</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why Energy Storage</p>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Extending the value of solar</h2>
 
               <div className="space-y-5">
                 {batteryBenefits.map((benefit) => {
@@ -183,7 +214,7 @@ const Battery = () => {
                 href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
-                Get a quote
+                Explore Storage Options
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -198,8 +229,8 @@ const Battery = () => {
             {/* Large image with purple shadow */}
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
               <img
-                src="/assets/battery/battery-span-tesla-pw3.jpg"
-                alt="Tesla Powerwall installation"
+                src="/assets/battery/battery-real-world-performance.jpg"
+                alt="Residential battery installation beside a modern home patio."
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[600px]"
                 loading="lazy"
                 decoding="async"
@@ -209,11 +240,11 @@ const Battery = () => {
 
             {/* Floating quote card — minimal, connected */}
             <div className="relative mx-4 -mt-20 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Customer Story</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Real-World Performance</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
-                "The battery runs the house all night, then recharges to full capacity usually by noon. Even on overcast days."
+                "We rely on stored solar energy through the night, and the system is typically recharged by midday - even during overcast days."
               </blockquote>
-              <p className="text-sm font-medium text-stone-900">— Ronda, Solarfig customer</p>
+              <p className="text-sm font-medium text-stone-900">- Shanta M., Solarfig customer</p>
             </div>
           </div>
         </div>
@@ -225,10 +256,10 @@ const Battery = () => {
           <div className="grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Why Solarfig</p>
-              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Built for the long term</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Designed for Long-Term Performance</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                From design through installation and beyond, we prioritize quality work and clear communication.
+                From system design through installation and ongoing support, we prioritize precision, durability, and clear communication.
               </p>
               <a
                 href="/about"
@@ -244,8 +275,8 @@ const Battery = () => {
               <div className="absolute -inset-6 rounded-full bg-purple-600/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_70px_-20px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/battery/battery-dcbel-wall-unit.jpg"
-                  alt="Battery installation"
+                  src="/assets/battery/battery-designed-for-long-term-performance.webp"
+                  alt="Outdoor home battery setup built for long-term reliability."
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -265,8 +296,8 @@ const Battery = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/15 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-25px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/battery/battery-tesla-powerwall-3-feature.jpg"
-                  alt="Tesla Powerwall for existing solar"
+                  src="/assets/battery/battery-add-storage-on-your-timeline.jpg"
+                  alt="Home battery added alongside an existing solar-equipped property."
                   className="aspect-[16/10] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -276,16 +307,16 @@ const Battery = () => {
 
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Existing Solar</p>
-              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Add storage anytime</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">System Expansion</p>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Add storage on your timeline</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                Already have solar? Adding a battery is straightforward. We handle compatibility checks and seamless integration.
+                If you already have solar, energy storage can often be integrated with minimal disruption. We evaluate compatibility and design a seamless expansion.
               </p>
               <a
                 href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
-                Get a quote
+                Explore Energy Storage
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

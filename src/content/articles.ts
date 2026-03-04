@@ -24,7 +24,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "8 min read",
     excerpt:
       "A practical look at utility rates, home usage patterns, and when solar still delivers strong value under NEM 3.0.",
-    image: "/assets/install-gallery/install-01.webp",
+    image: "/assets/articles/article-is-solar-worth-it-california-2026.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -72,7 +72,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "10 min read",
     excerpt:
       "What real quotes include, how tax credits change the math, and what to check before comparing financing options.",
-    image: "/assets/pricing-costs/hero-solar-roof-sunset.webp",
+    image: "/assets/articles/article-how-much-do-solar-panels-cost-california-after-incentives.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -119,7 +119,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "7 min read",
     excerpt:
       "See how bill components change with solar, where delivery charges still apply, and how to model your monthly outcomes.",
-    image: "/assets/install-gallery/install-04.jpg",
+    image: "/assets/articles/article-what-happens-to-my-electric-bill-california-after-going-solar.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -164,7 +164,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "9 min read",
     excerpt:
       "A clear framework for deciding when battery storage is optional, recommended, or essential for your home.",
-    image: "/assets/whole-home-solar/battery-backup.webp",
+    image: "/assets/articles/article-do-i-need-a-battery-with-solar-california.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -210,7 +210,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "6 min read",
     excerpt:
       "Understand each phase of the timeline from site visit to final utility approval so you can plan with confidence.",
-    image: "/assets/install-gallery/install-03.jpg",
+    image: "/assets/articles/article-how-long-does-solar-installation-take-california-quote-to-pto.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -255,7 +255,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "11 min read",
     excerpt:
       "A straightforward explanation of export rates, self-consumption, and how system design impacts long-term savings.",
-    image: "/assets/install-gallery/install-07.jpg",
+    image: "/assets/articles/article-what-is-nem-3-how-does-it-affect-california-solar-savings.webp",
     updatedAt: "February 2026",
     sections: [
       {
@@ -301,7 +301,7 @@ export const solarArticles: SolarArticle[] = [
     readTime: "8 min read",
     excerpt:
       "The exact checklist to evaluate proposals, warranties, workmanship standards, and financing before you sign.",
-    image: "/assets/install-gallery/install-10.jpg",
+    image: "/assets/articles/article-how-to-choose-best-solar-installer-california-without-getting-burned.webp",
     updatedAt: "February 2026",
     sections: [
       {

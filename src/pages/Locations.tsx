@@ -5,15 +5,15 @@ import CaliforniaMap from "@/components/CaliforniaMap";
 import { ArrowRight, BadgeAlert, PlugZap, ShieldCheck } from "lucide-react";
 
 const regions = [
-  { code: "NOR", name: "Northern California", focus: "Seasonal production + resilience planning" },
-  { code: "CEN", name: "Central California", focus: "High-yield production strategies" },
-  { code: "SOC", name: "Southern California", focus: "Peak-time usage optimization" },
+  { code: "01", name: "Sun & Heat Exposure", focus: "Optimized for extreme sun" },
+  { code: "02", name: "Roof Type & Layout", focus: "Precision fit for any roof" },
+  { code: "03", name: "Coastal & Inland Conditions", focus: "Materials matched to the environment" },
 ];
 
 const challenges = [
-  { title: "Rate Volatility", description: "Prices change, we model accordingly", icon: BadgeAlert },
+  { title: "Rate Volatility", description: "Designed for TOU and NEM shifts", icon: BadgeAlert },
   { title: "Grid Reliability", description: "Backup planning for outages", icon: ShieldCheck },
-  { title: "Future Growth", description: "EV + appliance expansion ready", icon: PlugZap },
+  { title: "Future Growth", description: "Expansion-ready from day one", icon: PlugZap },
 ];
 
 const Locations = () => {
@@ -24,17 +24,19 @@ const Locations = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full sm:h-[62vh]">
           <img
-            src="/assets/hero-main/locations-h1-2026-02-18.jpg"
+            src="/assets/locations/california-header-image.webp"
             alt="California neighborhood with multiple rooftop solar installations."
             className="h-full w-full object-cover object-[center_76%] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1280px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Locations</p>
-              <h1 className="text-4xl tracking-tight sm:text-6xl">California Service Areas</h1>
-              <p className="mt-5 max-w-3xl text-white/85">
-                Planning-grade guidance for California homeowners exploring solar, battery backup, and EV charging.
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">CALIFORNIA</p>
+              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+                Solar &amp; Storage Built for California&apos;s New Energy Landscape
+              </h1>
+              <p className="mt-5 max-w-3xl text-lg font-medium text-white/82">
+                Custom systems designed for NEM 3.0, time-of-use rates, and long-term savings.
               </p>
             </div>
           </div>
@@ -46,10 +48,10 @@ const Locations = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
             <div>
               <div className="mb-10 max-w-xl">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">California</p>
-                <h2 className=" text-4xl text-stone-900 sm:text-5xl">Built around where and how you live</h2>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Home &amp; Climate Factors</p>
+                <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for California conditions</h2>
                 <p className="mt-4 text-stone-600">
-                  We size and shape projects around your roof layout, usage profile, and backup goals based on your local conditions.
+                  From coastal fog to inland heat, system performance depends on location. We design around sun exposure, roof geometry, and long-term durability.
                 </p>
               </div>
 
@@ -90,7 +92,7 @@ const Locations = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
               <img
-                src="/assets/hero-main/locations-h1-2026-02-18.jpg"
+                src="/assets/locations/california-energy-structure.webp"
                 alt="California homes with solar"
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[550px]"
               />
@@ -114,8 +116,11 @@ const Locations = () => {
           </div>
 
           <div className="mt-10 max-w-2xl lg:mt-16">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">California Focus</p>
-            <h2 className=" text-3xl leading-tight sm:text-4xl">Designed for California's energy reality</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Grid &amp; Rate Strategy</p>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">Optimized for California&apos;s energy structure</h2>
+            <p className="mt-4 text-white/80">
+              California&apos;s net billing structure, time-of-use rates, and grid instability require smarter system strategy.
+            </p>
           </div>
         </div>
       </section>
@@ -127,10 +132,10 @@ const Locations = () => {
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
                 <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  Get a California estimate
+                  Get a California Estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
-                  We break down likely production, estimated savings, and backup options for your specific home and goals.
+                  Get a clear projection of production, savings, and battery impact - built for California&apos;s grid.
                 </p>
               </div>
               <div className="lg:text-right">
@@ -138,7 +143,7 @@ const Locations = () => {
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Get a quote
+                  Get Started
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>

@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
       <section className="bg-[linear-gradient(130deg,#5a487e_0%,#735fa0_55%,#8c79b8_100%)] pb-14 pt-32 text-white sm:pb-16 sm:pt-36">
         <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Legal</p>
-          <h1 className="text-4xl tracking-tight sm:text-5xl">Privacy Policy</h1>
+          <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white sm:text-5xl">Privacy policy</h1>
           <p className="mt-4 text-white/75">Effective Date: January 1, 2026</p>
         </div>
       </section>

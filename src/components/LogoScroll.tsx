@@ -14,7 +14,7 @@ const LogoScroll = () => {
   const looped = [...lenderLogos, ...lenderLogos];
 
   return (
-    <section className="w-full overflow-hidden bg-gray-50 py-7">
+    <section className="w-full overflow-hidden bg-gray-50 py-8">
       <div className="mx-auto mb-4 max-w-[1400px] px-6 sm:px-8">
         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gray-500">
           Trusted Partners
@@ -22,13 +22,13 @@ const LogoScroll = () => {
       </div>
       <div className="overflow-hidden">
         <div
-          className="animate-ribbon-scroll flex w-max items-center gap-6 px-6"
-          style={{ animationDuration: "34s" }}
+          className="animate-ribbon-scroll flex w-max items-center gap-10 px-8"
+          style={{ animationDuration: "40s" }}
         >
           {looped.map((logo, i) => (
             <div
               key={`${logo.name}-${i}`}
-              className="flex h-16 w-[190px] shrink-0 items-center justify-center px-2"
+              className="flex h-16 w-[210px] shrink-0 items-center justify-center px-3"
               title={logo.name}
             >
               <img

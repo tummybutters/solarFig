@@ -31,6 +31,8 @@ const GlobalQuoteSection = () => {
       phone: String(data.get("phone") ?? "").trim(),
       zipCode: String(data.get("zipCode") ?? "").trim(),
       consent: data.get("consent") === "on",
+      transactionalConsent: data.get("transactionalConsent") === "on",
+      marketingConsent: data.get("marketingConsent") === "on",
       source: "solarfig.com",
       pageUrl: window.location.href,
       submittedAt: new Date().toISOString(),
@@ -66,10 +68,10 @@ const GlobalQuoteSection = () => {
       <div className="pointer-events-none absolute -bottom-36 -left-20 h-80 w-80 rounded-full bg-purple-200/50" />
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
         <div>
-          <h2 className="text-4xl tracking-tight text-[#201b25] sm:text-6xl">Talk to a solar expert</h2>
+          <h2 className="text-4xl tracking-tight text-[#201b25] sm:text-6xl">Start your solar plan</h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#2d2740]/80">
-            Fill out the form, and our team will be in touch with a free quote based on your local incentives and
-            payment options.
+            Fill out the form, and we&apos;ll prepare a customized solar proposal built around your energy usage, local
+            incentives, and long-term savings goals.
           </p>
         </div>
 
@@ -148,12 +150,30 @@ const GlobalQuoteSection = () => {
               Consent is not a condition of purchase. Message and data rates may apply. You can opt out at any time.
               Review our <a href="/terms-of-use" className="underline hover:text-[#6d39b5]">Terms of Service</a> and <a href="/privacy-policy" className="underline hover:text-[#6d39b5]">Privacy Policy</a>.
             </p>
+
+            <label className="mt-5 flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[#302845]/85">
+              <input type="checkbox" name="transactionalConsent" className="mt-1 h-4 w-4 accent-[#6d39b5]" />
+              <span>
+                I consent to receive transactional messages, SMS notifications, Alerts &amp; Reminders from Solarfig at
+                the phone number provided. Message frequency varies. Message &amp; data rates may apply. Text HELP to
+                (213) 401-9723 for assistance. You can reply STOP to unsubscribe at any time.
+              </span>
+            </label>
+
+            <label className="mt-4 flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[#302845]/85">
+              <input type="checkbox" name="marketingConsent" className="mt-1 h-4 w-4 accent-[#6d39b5]" />
+              <span>
+                I consent to receive marketing and promotional messages from Solarfig at the phone number provided.
+                Message frequency varies. Message &amp; data rates may apply. Text HELP to (213) 401-9723 for
+                assistance. You can reply STOP to unsubscribe at any time.
+              </span>
+            </label>
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex h-12 items-center justify-center rounded-full bg-[#5c3d8f] px-10 text-lg font-medium text-white transition-colors hover:bg-[#6d39b5] disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[#6d39b5] px-10 text-lg font-medium text-white transition-colors hover:bg-[#8553c2] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? "Submitting..." : "Get a quote"}
           </button>

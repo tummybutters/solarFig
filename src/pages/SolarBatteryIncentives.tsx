@@ -42,7 +42,7 @@ const SolarBatteryIncentives = () => {
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="relative overflow-hidden pt-24 sm:pt-28">
+      <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img
             src="/assets/hero-main/seedream-preserve.webp"
@@ -52,9 +52,9 @@ const SolarBatteryIncentives = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Plans & Services</p>
-              <h1 className="text-4xl tracking-tight sm:text-6xl">Solar & Battery Incentives</h1>
-              <p className="mt-5 max-w-3xl text-white/80">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar & Battery Incentives</p>
+              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">Solar & battery incentives</h1>
+              <p className="mt-5 max-w-3xl text-lg font-medium text-white/82">
                 Incentives can materially improve project economics, but eligibility and timelines vary by utility territory and current program rules.
               </p>
               <a

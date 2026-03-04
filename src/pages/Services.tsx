@@ -44,7 +44,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       {/* Hero */}
       <section className="relative bg-[#6a4fa1] text-white py-24 lg:py-32">
         <div className="absolute inset-0 overflow-hidden">
@@ -52,7 +52,7 @@ const Services = () => {
         </div>
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
+            <h1 className="mb-6 text-4xl font-medium leading-[1.02] tracking-tight drop-shadow-[0_6px_24px_rgba(0,0,0,0.3)] sm:text-5xl lg:text-6xl">
               Solar services built for
               <span className="text-purple-400"> California homeowners</span>
             </h1>
@@ -178,7 +178,7 @@ const Services = () => {
           </a>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

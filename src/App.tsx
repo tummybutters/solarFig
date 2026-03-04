@@ -8,7 +8,6 @@ import Hero from "@/sections/HeroGlacial"; // Options: Hero, HeroCinematic, Hero
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import HomeEditorial from "@/sections/HomeEditorial";
-import ProjectsShowcase from "@/pages/ProjectsShowcase";
 import Battery from "@/pages/Battery";
 import EVChargers from "@/pages/EVChargers";
 import About from "@/pages/About";
@@ -24,13 +23,14 @@ import Microinverters from "@/pages/Microinverters";
 import SolarBatteryIncentives from "@/pages/SolarBatteryIncentives";
 import Locations from "@/pages/Locations";
 import OregonLocations from "@/pages/OregonLocations";
+import Contact from "@/pages/Contact";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
 import "./App.css";
 
 const HomePage = () => {
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="home-page mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
       <Hero />
       <HomeEditorial />
@@ -49,13 +49,13 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/battery" element={<Battery />} />
         <Route path="/ev-chargers" element={<EVChargers />} />
-        <Route path="/projects" element={<ProjectsShowcase />} />
-        <Route path="/transactions" element={<Navigate to="/projects" replace />} />
+        <Route path="/transactions" element={<Navigate to="/" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:slug" element={<ArticleDetail />} />
         <Route path="/careers" element={<Navigate to="/about" replace />} />
         <Route path="/referrals" element={<Referrals />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/whole-home-solar" element={<Navigate to="/pricing-costs" replace />} />

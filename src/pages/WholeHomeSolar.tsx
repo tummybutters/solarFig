@@ -47,7 +47,7 @@ const WholeHomeSolar = () => {
       <section className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Whole Home Solar</p>
-          <h1 className="max-w-4xl text-4xl leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-7xl">
             Energy independence begins with whole-home solar systems.
           </h1>
         </div>

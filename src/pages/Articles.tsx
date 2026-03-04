@@ -9,19 +9,19 @@ const Articles = () => {
   const articleList = solarArticles.slice(1);
 
   return (
-    <main className="mobile-premium min-h-screen bg-[#f1e8fb]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17141b_0%,#2a2340_48%,#6f5b99_100%)] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.28),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.26),transparent_40%)]" />
 
         <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">Explore</p>
-          <h1 className="max-w-5xl text-4xl tracking-tight sm:text-6xl">
-            California Solar Buying Guides
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">ARTICLES</p>
+          <h1 className="max-w-5xl text-4xl font-medium leading-[1.02] tracking-tight sm:text-6xl">
+            Solar Buying Guides for Homeowners
           </h1>
           <p className="mt-5 max-w-2xl text-white/75">
-            Question-first articles built for real homeowners comparing quotes, timelines, incentives, and battery decisions.
+            Clear, market-aware insights into pricing, incentives, net metering, batteries, and long-term performance — built for real homeowners comparing options.
           </p>
 
           <div className="mt-10 grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl lg:grid-cols-[1.1fr_1fr]">
@@ -69,14 +69,14 @@ const Articles = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">All Articles</p>
-              <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Answer-First Library</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">Article Library</p>
+              <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Clear Answers on Solar</h2>
             </div>
             <a
               href="#contact"
               className="hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.11em] text-[#6d39b5] transition-colors hover:text-[#4c2880] sm:inline-flex"
             >
-              Talk to Solarfig
+              Ask a Question
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

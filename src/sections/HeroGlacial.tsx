@@ -1,147 +1,75 @@
 import { useEffect, useRef, useState } from "react";
-
-const HERO_FADE_MS = 520;
+import { Check } from "lucide-react";
 
 const heroVideos = [
-    "/assets/hero-main/hero-background-optimized-v2.mp4",
+    "/assets/hero-main/elevenlabs-video-topaz-upscale-2026-03-04t18-49-47-h264.mp4",
     "/assets/hero-main/hero-background-sequence-02.mp4",
     "/assets/hero-main/hero-background-sequence-03.mp4",
     "/assets/hero-main/hero-background-sequence-04.mp4",
+    "/assets/hero-main/sustainable-hillside-community-drone-shot-1080p.mp4",
+];
+
+const trustBarItems = [
+    "30+ Years of Experience",
+    "High-Efficiency Products",
+    "Quality Workmanship",
+    "Robust Warranties",
+    "Dedicated Support",
 ];
 
 const HeroGlacial = () => {
-    const layerARef = useRef<HTMLVideoElement | null>(null);
-    const layerBRef = useRef<HTMLVideoElement | null>(null);
-    const transitionTimerRef = useRef<number | null>(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-    const [layerAIndex, setLayerAIndex] = useState(0);
-    const [layerBIndex, setLayerBIndex] = useState(1);
-    const [activeLayer, setActiveLayer] = useState<"a" | "b">("a");
-    const [isTransitioning, setIsTransitioning] = useState(false);
-
-    const layerAIndexRef = useRef(layerAIndex);
-    const layerBIndexRef = useRef(layerBIndex);
-    const activeLayerRef = useRef(activeLayer);
-
-    useEffect(() => {
-        layerAIndexRef.current = layerAIndex;
-    }, [layerAIndex]);
-
-    useEffect(() => {
-        layerBIndexRef.current = layerBIndex;
-    }, [layerBIndex]);
-
-    useEffect(() => {
-        activeLayerRef.current = activeLayer;
-    }, [activeLayer]);
-
-    useEffect(() => {
-        const preloadRef = activeLayer === "a" ? layerBRef : layerARef;
-        if (!preloadRef.current) return;
-        preloadRef.current.load();
-    }, [layerAIndex, layerBIndex, activeLayer]);
-
-    useEffect(() => {
-        return () => {
-            if (transitionTimerRef.current) {
-                window.clearTimeout(transitionTimerRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        const activeVideo = layerARef.current;
-        if (!activeVideo) return;
-
-        const tryPlay = async () => {
-            try {
-                await activeVideo.play();
-            } catch {
-                // Ignore autoplay promise failures on restrictive browsers.
-            }
-        };
-
-        void tryPlay();
-    }, []);
-
-    const handleActiveVideoEnd = async () => {
-        if (isTransitioning) return;
-
-        const incomingLayer = activeLayerRef.current === "a" ? "b" : "a";
-        const incomingVideo = incomingLayer === "a" ? layerARef.current : layerBRef.current;
-        if (!incomingVideo) return;
-
-        incomingVideo.currentTime = 0;
-        try {
-            await incomingVideo.play();
-        } catch {
-            // Ignore autoplay promise failures on restrictive browsers.
-        }
-
-        setIsTransitioning(true);
-        setActiveLayer(incomingLayer);
-
-        transitionTimerRef.current = window.setTimeout(() => {
-            const incomingIndex =
-                incomingLayer === "a" ? layerAIndexRef.current : layerBIndexRef.current;
-            const preloadIndex = (incomingIndex + 1) % heroVideos.length;
-            const outgoingVideo = incomingLayer === "a" ? layerBRef.current : layerARef.current;
-            if (outgoingVideo) {
-                outgoingVideo.pause();
-                outgoingVideo.currentTime = 0;
-            }
-
-            if (incomingLayer === "a") {
-                setLayerBIndex(preloadIndex);
-            } else {
-                setLayerAIndex(preloadIndex);
-            }
-
-            setIsTransitioning(false);
-        }, HERO_FADE_MS);
+    const handleVideoEnd = () => {
+        setCurrentIndex((prev) => (prev + 1) % heroVideos.length);
     };
 
-    const activeVideoIndex = activeLayer === "a" ? layerAIndex : layerBIndex;
+    useEffect(() => {
+        // Ensure only the active video is playing
+        videoRefs.current.forEach((video, index) => {
+            if (!video) return;
+            if (index === currentIndex) {
+                video.currentTime = 0;
+                video.play().catch(() => { });
+            }
+        });
+    }, [currentIndex]);
+
+    // Initial play effect
+    useEffect(() => {
+        const firstVideo = videoRefs.current[0];
+        if (firstVideo) {
+            firstVideo.play().catch(() => { });
+        }
+    }, []);
 
     return (
         <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-900 text-white sm:min-h-screen">
             {/* Background Image / Video Layer */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
                 <div
-                    className={`absolute inset-0 z-20 ${
-                        activeVideoIndex === 1
+                    className={`absolute inset-0 z-20 transition-colors duration-700 ${currentIndex === 1
                             ? "bg-gradient-to-t from-black/80 via-black/52 to-black/20"
                             : "bg-gradient-to-t from-black/68 via-black/40 to-black/12"
-                    }`}
+                        }`}
                 />
 
-                <video
-                    ref={layerARef}
-                    className={`absolute inset-0 h-full w-full object-cover object-center scale-105 transition-opacity duration-[520ms] ${
-                        activeLayer === "a" ? "opacity-100" : "opacity-0"
-                    }`}
-                    autoPlay
-                    muted
-                    playsInline
-                    preload="auto"
-                    onEnded={activeLayer === "a" ? handleActiveVideoEnd : undefined}
-                >
-                    <source src={heroVideos[layerAIndex]} type="video/mp4" />
-                </video>
-
-                <video
-                    ref={layerBRef}
-                    className={`absolute inset-0 h-full w-full object-cover object-center scale-105 transition-opacity duration-[520ms] ${
-                        activeLayer === "b" ? "opacity-100" : "opacity-0"
-                    }`}
-                    muted
-                    playsInline
-                    preload="auto"
-                    onEnded={activeLayer === "b" ? handleActiveVideoEnd : undefined}
-                >
-                    <source src={heroVideos[layerBIndex]} type="video/mp4" />
-                </video>
+                {heroVideos.map((src, index) => (
+                    <video
+                        key={src}
+                        ref={(el) => (videoRefs.current[index] = el)}
+                        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                            }`}
+                        muted
+                        playsInline
+                        preload={index === currentIndex || index === (currentIndex + 1) % heroVideos.length ? "auto" : "metadata"}
+                        onEnded={index === currentIndex ? handleVideoEnd : undefined}
+                    >
+                        <source src={src} type="video/mp4" />
+                    </video>
+                ))}
             </div>
 
             {/* Content Container */}
@@ -150,7 +78,7 @@ const HeroGlacial = () => {
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
                     <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)] sm:mb-6 sm:text-6xl lg:text-7xl">
-                        Smarter Solar Starts With Solarfig.
+                        Smarter Solar Starts with Solarfig.
                     </h1>
 
                     <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/90 drop-shadow-[0_3px_20px_rgba(0,0,0,0.45)] sm:mb-10 sm:text-lg">
@@ -168,6 +96,19 @@ const HeroGlacial = () => {
 
                 </div>
 
+            </div>
+
+            <div className="relative z-30 border-t border-white/20 bg-[#130e1f]/45 backdrop-blur-sm">
+                <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-3 px-5 py-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-5 lg:gap-4">
+                    {trustBarItems.map((item) => (
+                        <div key={item} className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/82">
+                            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
+                                <Check className="h-3.5 w-3.5" />
+                            </span>
+                            <span>{item}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

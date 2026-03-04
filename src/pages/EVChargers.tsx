@@ -6,50 +6,63 @@ import { ArrowRight, CarFront, Clock, Home, Leaf, ShieldCheck } from "lucide-rea
 
 const chargerFeatures = [
   {
-    title: "Level 2 Speed",
-    description: "25-35 miles per hour",
-    image: "/assets/ev-chargers/ev-charger-zaptec-2n7u.jpg",
+    title: "Level 2 Charging Performance",
+    description: "Delivers approximately 25-35 miles of range per hour",
+    image: "/assets/ev-chargers/ev-charger-level-2-speed.jpg",
+    alt: "Home Level 2 EV charger mounted beside a parked car.",
   },
   {
-    title: "Solar Integrated",
-    description: "Charge from your panels",
-    image: "/assets/ev-chargers/ev-charger-zaptec-hkd.jpg",
+    title: "Solar-Integrated Charging",
+    description: "Charge from excess solar production when available",
+    image: "/assets/ev-chargers/ev-charger-solar-integrated.webp",
+    alt: "Wall-mounted EV charger connected to a car in a residential garage.",
   },
   {
-    title: "Universal Fit",
-    description: "Works with all EV brands",
-    image: "/assets/ev-chargers/ev-charger-zaptec-2jrn.jpg",
+    title: "Broad Vehicle Compatibility",
+    description: "Works with most major EV brands and standard connectors",
+    image: "/assets/ev-chargers/ev-charger-universal-fit.webp",
+    alt: "Electric car charging at home with a wall-mounted connector.",
   },
 ];
 
 const benefits = [
-  { title: "Overnight Ready", description: "Full charge by morning", icon: Clock },
-  { title: "Solar Sync", description: "Charges from clean energy", icon: Leaf },
-  { title: "Any EV Works", description: "Tesla, BMW, Ford & more", icon: CarFront },
-  { title: "Weatherproof", description: "All-season outdoor rated", icon: Home },
-  { title: "25yr Warranty", description: "Long-term peace of mind", icon: ShieldCheck },
+  { title: "Overnight Charging Capability", description: "Designed to provide a full charge by morning for most daily use", icon: Clock },
+  { title: "Solar-Integrated Operation", description: "Prioritizes clean energy when solar production is available", icon: Leaf },
+  { title: "Broad Vehicle Compatibility", description: "Works with most major EV brands and standard connectors", icon: CarFront },
+  { title: "Outdoor-Rated Installation", description: "Weather-resistant for garage or exterior mounting", icon: Home },
+  { title: "Manufacturer Warranty Coverage", description: "Supported by long-term equipment warranties", icon: ShieldCheck },
 ];
 
 const faqs = [
   {
     question: "How long does it take to charge an EV at home?",
-    answer: "Charging time depends on your vehicle battery size and charger level. A standard Level 2 home charger typically adds around 20 to 35 miles of range per hour, which is enough for most overnight charging needs.",
+    answer:
+      "With a Level 2 home EV charger, most electric vehicles gain 25-35 miles of range per hour. For many drivers, that means a full charge overnight from the comfort of home.",
   },
   {
-    question: "What are the benefits of having a home EV charging station?",
-    answer: "Home charging gives you daily convenience, lower operating costs, and better control over when your car charges. It can also pair with solar production so more of your driving is powered by clean energy.",
+    question: "What are the benefits of installing a home EV charging station?",
+    answer:
+      "A home EV charging station offers faster charging, lower long-term costs, and everyday convenience. Instead of waiting at public chargers, you plug in at home and wake up fully charged.",
   },
   {
     question: "Do I need a special electrical outlet for a home EV charger?",
-    answer: "Many Level 2 chargers are hardwired for the best performance, while some can use a dedicated 240V outlet. We evaluate your panel and wiring to recommend the safest, most efficient setup for your home.",
+    answer:
+      "Most Level 2 EV chargers require a 240V circuit and professional installation. We evaluate your electrical panel, upgrade if needed, and ensure everything is safely installed.",
   },
   {
-    question: "What is the difference between Level 1 and Level 2 EV charging?",
-    answer: "Level 1 uses a standard 120V outlet and charges slowly. Level 2 uses 240V power and delivers much faster charging, making it the preferred option for everyday home use.",
+    question: "What’s the difference between Level 1 and Level 2 EV charging?",
+    answer:
+      "Level 1 charging uses a standard 120V outlet and charges slowly. Level 2 charging uses 240V power and delivers significantly faster charging speeds for daily driving needs.",
   },
   {
-    question: "Are there any incentives or rebates available for home EV chargers?",
-    answer: "Depending on your location and utility provider, rebates or tax incentives may be available for eligible charger installations. Our team helps identify programs you may qualify for during your quote process.",
+    question: "Are there incentives or rebates for installing a home EV charger?",
+    answer:
+      "Yes. Federal tax credits, state programs, and utility rebates may reduce the cost of installing a home EV charger. We help you identify available incentives in your area.",
+  },
+  {
+    question: "Can I charge my EV using solar panels at home?",
+    answer:
+      "Absolutely. Pairing your EV charger with a solar system allows you to charge your vehicle with clean energy and maximize the value of your home solar investment.",
   },
 ];
 
@@ -62,19 +75,19 @@ const EVChargers = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
           <img
-            src="/assets/ev-chargers/ev-chargers-h1-gemini-afzq04.png"
-            alt="Scenic residential home exterior at dusk with lighting and EV-ready driveway."
+            src="/assets/ev-chargers/ev-chargers-hero.jpg"
+            alt="Modern home with rooftop solar, battery storage, and an EV parked in the driveway."
             className="h-full w-full scale-[1.12] object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solutions</p>
-              <h1 className="text-4xl leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-                Smarter energy begins with home EV chargers
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV Chargers</p>
+              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+                Integrated Home Charging, Designed for Modern Energy.
               </h1>
-              <p className="mt-5 max-w-2xl text-lg text-white/82">
-                Solarfig installs seamless, effective home EV chargers for homeowners across California.
+              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+                Home EV charging solutions professionally installed for safety, performance, and long-term reliability.
               </p>
               <a
                 href="#contact"
@@ -93,7 +106,7 @@ const EVChargers = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Home Charging</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Charge faster, smarter, cleaner</h2>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for fast, reliable charging</h2>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-3">
@@ -102,7 +115,7 @@ const EVChargers = () => {
                 <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
                   <img
                     src={feature.image}
-                    alt={feature.title}
+                    alt={feature.alt}
                     className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -130,8 +143,8 @@ const EVChargers = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
                 <img
-                  src="/assets/ev-chargers/ev-charger-chuttersnap.jpg"
-                  alt="Home EV charging installation"
+                  src="/assets/ev-chargers/ev-charger-reliable-daily.webp"
+                  alt="Close-up of a home EV charging station connected to an electric vehicle."
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -141,8 +154,8 @@ const EVChargers = () => {
 
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why home charging</p>
-              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Power your drive</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Charging Advantages</p>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Reliable charging, every day</h2>
 
               <div className="space-y-5">
                 {benefits.map((benefit) => {
@@ -180,8 +193,8 @@ const EVChargers = () => {
             {/* Large image with purple shadow */}
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
               <img
-                src="/assets/ev-chargers/ev-charger-zaptec-2n7u.jpg"
-                alt="EV charger installed at residential home"
+                src="/assets/ev-chargers/ev-charger-customer-experience.webp"
+                alt="Family at a suburban home with rooftop solar and an EV in the driveway."
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[600px]"
                 loading="lazy"
                 decoding="async"
@@ -191,11 +204,11 @@ const EVChargers = () => {
 
             {/* Floating quote card */}
             <div className="relative mx-4 -mt-20 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Customer Story</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Customer Experience</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
-                "They made the whole process incredibly smooth. The install team was professional, and it's such a good feeling knowing I'm charging my car with power from my roof."
+                "The installation was seamless and professional. Now we’re charging our EV directly from our own roof."
               </blockquote>
-              <p className="text-sm font-medium text-stone-900">— Tesla Owner, Orange County</p>
+              <p className="text-sm font-medium text-stone-900">- Robert D., Tesla owner & Solarfig customer</p>
             </div>
           </div>
         </div>
@@ -208,15 +221,15 @@ const EVChargers = () => {
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Solar + EV</p>
-              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Charge from the sun</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Drive on sunlight</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                Pair your EV charger with solar panels and drive on 100% clean energy. We design integrated systems that maximize your solar production.
+                Power your vehicle with the energy your home produces. We design fully integrated solar + EV systems that maximize production and charging efficiency.
               </p>
               <a
-                href="/pricing-costs"
+                href="#contact"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                Explore plans and pricing
+                Power Your Drive
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -226,8 +239,8 @@ const EVChargers = () => {
               <div className="absolute -inset-6 rounded-full bg-purple-600/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_70px_-20px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/ev-chargers/ev-charger-zaptec-2jrn.jpg"
-                  alt="EV charger with solar integration"
+                  src="/assets/ev-chargers/ev-charger-drive-on-sunlight.jpg"
+                  alt="Electric sedan charging beside a wall-mounted home charger."
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -247,8 +260,8 @@ const EVChargers = () => {
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/15 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-25px_rgba(109,57,181,0.35)]">
                 <img
-                  src="/assets/ev-chargers/ev-charger-zaptec-hkd.jpg"
-                  alt="Professional EV charger installation"
+                  src="/assets/ev-chargers/ev-charger-professional-installation.webp"
+                  alt="Professionally installed wall-mounted EV charger connected to a parked vehicle."
                   className="aspect-[16/10] w-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -259,25 +272,25 @@ const EVChargers = () => {
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Installation</p>
-              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Clean install, done right</h2>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Professionally installed. Seamlessly integrated.</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                Hardwired Level 2 chargers installed by licensed electricians. We handle permits, inspections, and utility coordination.
+                Our licensed electricians install hardwired Level 2 chargers with clean routing and code-compliant execution. We manage permits, inspections, and utility coordination from start to finish.
               </p>
               <div className="mb-6 flex gap-6">
                 <div>
                   <p className="text-2xl font-light text-purple-600">240V</p>
-                  <p className="text-sm text-stone-500">Level 2 power</p>
+                  <p className="text-sm text-stone-500">Level 2 Performance</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-light text-purple-600">1 day</p>
-                  <p className="text-sm text-stone-500">Typical install</p>
+                  <p className="text-2xl font-light text-purple-600">1-Day Installation</p>
+                  <p className="text-sm text-stone-500">Most installs completed in a single visit</p>
                 </div>
               </div>
               <a
                 href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
-                Get a quote
+                Start Your Home Charging
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

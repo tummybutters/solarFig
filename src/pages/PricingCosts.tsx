@@ -5,26 +5,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Check } from "lucide-react";
 
 const planCards = [
-  { id: "ez-plan", title: "EZ Plan", subtitle: "25-year lease", price: "$0", unit: "down", bullets: ["Lowest monthly cost", "Immediate savings", "Predictable payments"] },
-  { id: "finance", title: "Finance", subtitle: "Own your system", price: "$0", unit: "down", bullets: ["Build equity", "Fixed payments", "5-25 year terms"] },
-  { id: "purchase", title: "Purchase", subtitle: "Full ownership", price: "Custom", unit: "quote", bullets: ["Maximum savings", "No monthly payments", "All incentives"] },
-  { id: "prepaid", title: "Prepaid", subtitle: "One-time payment", price: "25%", unit: "off", bullets: ["Zero monthly payments", "Upfront tax credit", "Full warranty"] },
+  { id: "ppa", title: "Power Purchase Agreement", subtitle: "25-Year Lease", price: "$0", unit: "down", bullets: ["Lowest monthly payment", "Immediate utility savings", "Predictable, worry-free terms"] },
+  { id: "finance", title: "Finance", subtitle: "Own your system", price: "$0", unit: "down", bullets: ["Build long-term equity", "Fixed monthly payments", "5-25 year loan terms"] },
+  { id: "purchase", title: "Outright Purchase", subtitle: "One-time payment", price: "Custom", unit: "quote", bullets: ["Maximum lifetime savings", "No monthly payments", "Eligible for all available incentives"] },
+  { id: "prepaid", title: "Prepaid Plan", subtitle: "Hybrid Ownership - NEW", price: "30%", unit: "off", bullets: ["Financing + Cash Options", "Immediate upfront tax credit", "Option to transfer full ownership", "Comprehensive warranty coverage"] },
 ];
 
 const included = [
-  "Care & maintenance",
-  "Energy monitoring",
-  "Manufacturer-backed equipment warranties",
+  "Ongoing service and support",
+  "Real-time system monitoring",
+  "Manufacturer-backed warranties",
   "Performance guarantee",
 ];
 
 const faqs = [
-  "What warranties apply to my specific equipment?",
-  "What is the No Credit Check option?",
-  "Can anyone get a Solarfig system for $0 down?",
-  "What happens if I move?",
-  "Are there any discounts available?",
-  "How much can I save with solar?",
+  {
+    q: "What warranties apply to my solar equipment?",
+    a: "Warranty coverage depends on the panels, inverters, and batteries selected. Most systems include manufacturer-backed equipment warranties and performance guarantees. We review all coverage details during your consultation and before installation.",
+  },
+  {
+    q: "What is the Prepaid solar plan?",
+    a: "The prepaid plan places the system under company ownership for the first five years to capture available tax credits. Those savings are passed directly to you. After five years, ownership can transfer to your name - combining upfront savings with long-term control.",
+  },
+  {
+    q: "Can anyone qualify for $0 down solar?",
+    a: "Many homeowners qualify for $0 down solar through leases or financing. Approval depends on credit profile, homeownership status, and utility history.",
+  },
+  {
+    q: "What happens if I move?",
+    a: "Most solar agreements can be transferred to the new homeowner or paid off before selling. We explain your options clearly before you commit.",
+  },
+  {
+    q: "Are there solar discounts or incentives available?",
+    a: "Yes. Federal tax credits, local incentives, and utility rebates may reduce your total system cost. We identify all available programs during your proposal.",
+  },
+  {
+    q: "How much can I save with solar?",
+    a: "Savings depend on your energy usage, utility rates, and system size. We provide detailed production modeling and realistic long-term savings projections.",
+  },
 ];
 
 const PricingCosts = () => {
@@ -36,17 +54,17 @@ const PricingCosts = () => {
       <section className="relative">
         <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full">
           <img
-            src="/assets/hero-main/giorgio-trovato.jpg"
-            alt="Coastal home with rooftop solar panels at sunset."
+            src="/assets/pricing-costs/pricing-costs-header-image.webp"
+            alt="Modern solar-equipped home at sunset with integrated wall batteries."
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/70 via-[#17141b]/45 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
             <div className="max-w-3xl text-white">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Plans & Services</p>
-              <h1 className="text-4xl leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">Solar Pricing & Costs</h1>
-              <p className="mt-5 max-w-2xl text-lg text-white/80">
-                Ready to break up with your electric bill? Enjoy custom solar and instant savings for as little as $0 down.
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Pricing &amp; Costs</p>
+              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">A Solar Plan That Fits Your Goals</h1>
+              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+                Compare ownership options, understand your savings, and choose what makes sense for your home.
               </p>
               <a
                 href="#contact"
@@ -64,8 +82,11 @@ const PricingCosts = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Payment Options</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Four ways to go solar</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Solar Plans</p>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Flexible Ways to Power Your Home</h2>
+            <p className="mt-4 text-stone-600">
+              Solar costs depend on your home, energy usage, and goals. Most homeowners qualify for $0 down options. We design around savings first - not sales quotas.
+            </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -93,6 +114,13 @@ const PricingCosts = () => {
               </div>
             ))}
           </div>
+
+          <p className="mt-8 text-sm text-stone-600">
+            Not sure which option makes sense? We&apos;ll walk you through side-by-side comparisons so you can see the numbers clearly before deciding.
+          </p>
+          <p className="mt-3 text-sm text-stone-600">
+            Transparent terms. No hidden fees. No surprise escalators. Every Solarfig proposal includes detailed production modeling and real savings projections.
+          </p>
         </div>
       </section>
 
@@ -102,8 +130,8 @@ const PricingCosts = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_28px_70px_-26px_rgba(65,44,95,0.28)] lg:rounded-3xl">
               <img
-                src="/assets/pricing-costs/hero-solar-roof-sunset.webp"
-                alt="Solar installation at sunset"
+                src="/assets/pricing-costs/pricing-costs-designed-to-be-complete.webp"
+                alt="Completed residential solar installation representing all-in pricing."
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[550px]"
                 loading="lazy"
                 decoding="async"
@@ -126,10 +154,10 @@ const PricingCosts = () => {
           </div>
 
           <div className="mt-10 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#695783]">Transparency</p>
-            <h2 className=" text-3xl leading-tight text-[#241d2f] sm:text-4xl">Everything included</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#695783]">Everything Included</p>
+            <h2 className=" text-3xl leading-tight text-[#241d2f] sm:text-4xl">Designed to be complete</h2>
             <p className="mt-4 text-[#514469]">
-              No surprises. We take the time to understand your home and give you a transparent, upfront quote with no pressure.
+              Premium equipment, licensed installation, real monitoring, and manufacturer-backed warranties — structured clearly from day one.
             </p>
           </div>
         </div>
@@ -143,10 +171,10 @@ const PricingCosts = () => {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
               <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Fair pricing, long-term thinking</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                We're not here for the quickest sale. We're here to do it right, and stand behind it for decades. That means pricing designed for 5-10% profit and long-term service.
+                We&apos;re not here for the quickest sale. We&apos;re here to do it right, and stand behind it for decades. Every project is structured for lasting savings and real accountability.
               </p>
               <div className="space-y-3">
-                {["No pushy sales tactics", "Clear, straightforward quotes", "Decade of experience"].map((point) => (
+                {["No pressure consultations", "Clear, straightforward quotes", "Decades of experience"].map((point) => (
                   <div key={point} className="flex items-center gap-3">
                     <Check className="h-5 w-5 text-purple-600" />
                     <span className="text-stone-700">{point}</span>
@@ -158,11 +186,11 @@ const PricingCosts = () => {
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-[0_25px_70px_-20px_rgba(109,57,181,0.3)]">
-                <p className="mb-4 text-sm text-stone-500">Customer Review</p>
+                <p className="mb-4 text-sm text-stone-500">Verified Customer</p>
                 <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                   "[Solarfig] was extremely informative and helpful. They reviewed leasing and financing options with me, and helped me choose the best fit for my situation."
                 </blockquote>
-                <p className="font-medium text-stone-900">— Charles</p>
+                <p className="font-medium text-stone-900">— Alex L.</p>
               </div>
             </div>
           </div>
@@ -175,11 +203,9 @@ const PricingCosts = () => {
           <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (
-              <AccordionItem key={faq} value={`faq-${index}`}>
-                <AccordionTrigger className="text-left text-lg text-[#231f2a]">{faq}</AccordionTrigger>
-                <AccordionContent className="text-base text-gray-600">
-                  Our team will review this in your custom proposal based on your utility, roof, and equipment design.
-                </AccordionContent>
+              <AccordionItem key={faq.q} value={`faq-${index}`}>
+                <AccordionTrigger className="text-left text-lg text-[#231f2a]">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-base text-gray-600">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

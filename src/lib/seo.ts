@@ -39,14 +39,6 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
-  "/projects": {
-    title: "California Solar Panel & Battery Projects | Solarfig",
-    description:
-      "See real California home solar, solar panel, and battery backup projects across SCE, PG&E, and SDG&E territories.",
-    canonicalPath: "/projects",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
   "/about": {
     title: "About Solarfig | California Solar Team",
     description:

@@ -18,7 +18,7 @@ const ArticleDetail = () => {
   const nextArticle = articleIndex < solarArticles.length - 1 ? solarArticles[articleIndex + 1] : null;
 
   return (
-    <main className="mobile-premium min-h-screen bg-[#f2eee8]">
+    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       <section className="relative overflow-hidden bg-[#6f5b99] pb-16 pt-32 text-white sm:pb-20 sm:pt-36">
@@ -36,7 +36,7 @@ const ArticleDetail = () => {
           <div className="mb-4 inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white/85">
             {article.category}
           </div>
-          <h1 className="max-w-4xl text-4xl leading-tight tracking-tight sm:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_20px_rgba(0,0,0,0.45)] sm:text-6xl">
             {article.title}
           </h1>
           <p className="mt-6 max-w-2xl text-white/75">{article.excerpt}</p>
