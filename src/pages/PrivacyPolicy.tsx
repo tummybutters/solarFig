@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
             <h2 className="mb-3 text-2xl tracking-tight">How and When We Collect Information</h2>
             <p>
               <strong>Personal Information.</strong> We collect Personal Information when you provide it, including via
-              sign-up forms, account registrations, product or service registrations, promotions, and contests.
+              sign-up forms, account registrations, solution or service registrations, promotions, and contests.
               Personal Information may also be collected through communications (including text messages, faxes,
               telephone calls, and regular mail), and from third-party sources including database vendors.
             </p>
@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
             <h2 className="mb-3 text-2xl tracking-tight">How We Use Your Information</h2>
             <p>
               We may use your Personal Information to perform services or transactions for which it was provided, in
-              connection with products, services, promotions, or contests we offer, for internal reporting, and for
+              connection with solutions, services, promotions, or contests we offer, for internal reporting, and for
               security assessments.
             </p>
             <p className="mt-3">
@@ -120,7 +120,7 @@ const PrivacyPolicy = () => {
             </p>
             <p className="mt-3">
               <strong>Joint Venture Marketing Partners.</strong> We may disclose Personal Information to joint venture
-              partners for compensation, transaction processing, fulfillment, support, and offering related products,
+              partners for compensation, transaction processing, fulfillment, support, and offering related solutions,
               services, promotions, and contests.
             </p>
             <p className="mt-3">

@@ -76,7 +76,7 @@ const Products = () => {
     <section id="products" className="bg-white py-20 sm:py-24 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mb-12 lg:mb-20">
-          <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">Products</span>
+          <span className="text-purple-600 text-xs tracking-[0.3em] uppercase font-medium">Solutions</span>
           <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-7xl  font-light tracking-tight leading-[0.9] mt-6 mb-8">
             Tailored equipment.
             <br />

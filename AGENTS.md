@@ -8,7 +8,7 @@
 ## Quick Asset Map
 - `Logo Files/All Files/`: logo variants (`.svg/.png/.jpg/.ai`) + favicon files. Prefer `.svg` for UI logos.
 - `Install Gallery/`: real installation photos for gallery/project sections.
-- Root diagrams and section graphics: net metering, battery backup, equipment, service/reviews/referrals visuals.
+- Root diagrams and section graphics: net metering, Enegery storage, equipment, service/reviews/referrals visuals.
 - Root lifestyle/product images: roof, Powerwall, installer visuals for hero/supporting sections.
 - `PS Source/`: editable Photoshop sources (`.psd`) to export new web-ready assets.
 - `Office Mockups/` + `Solarfig Sales Presentation (2026).pdf`: collateral/reference assets, not default website content.

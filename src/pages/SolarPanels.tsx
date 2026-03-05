@@ -17,7 +17,7 @@ const panelTypes = [
   },
   {
     title: "25-Year Warranty Protection",
-    description: "Long-term performance and product coverage for lasting peace of mind.",
+    description: "Long-term performance and equipment coverage for lasting peace of mind.",
     image: "/assets/solar-panels/solar-panels-25-year-warranty-protection-2026.webp",
   },
 ];

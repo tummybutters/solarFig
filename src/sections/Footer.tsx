@@ -65,9 +65,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Products */}
+          {/* Solutions */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Products</h4>
+            <h4 className="font-semibold text-sm mb-4 text-white">Solutions</h4>
             <ul className="space-y-2.5">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>

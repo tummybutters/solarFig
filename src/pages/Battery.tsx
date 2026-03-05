@@ -100,18 +100,18 @@ const Battery = () => {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
-            <div className="max-w-3xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Battery Backup</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
+            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Enegery storage</p>
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Intelligent Energy Storage. Built for Resilience.
               </h1>
-              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Energy storage that extends solar value beyond daylight. Maintain essential power during grid interruptions.
               </p>
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
                 <ArrowRight className="h-4 w-4" />

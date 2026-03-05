@@ -19,7 +19,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Products",
+    label: "Solutions",
     href: "/solar-panels",
     children: [
       { label: "Solar Panels", href: "/solar-panels" },

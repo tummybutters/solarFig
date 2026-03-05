@@ -11,38 +11,69 @@ const heroVideos = [
 
 const trustBarItems = [
     "30+ Years of Experience",
-    "High-Efficiency Products",
+    "High-Efficiency Solutions",
     "Quality Workmanship",
     "Robust Warranties",
     "Dedicated Support",
 ];
 
+const TRANSITION_LEAD_SECONDS = 1.1;
+
 const HeroGlacial = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [incomingIndex, setIncomingIndex] = useState<number | null>(null);
+    const [incomingVisible, setIncomingVisible] = useState(false);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-    const handleVideoEnd = () => {
-        setCurrentIndex((prev) => (prev + 1) % heroVideos.length);
+    const handleCurrentTimeUpdate = () => {
+        if (incomingIndex !== null) return;
+
+        const currentVideo = videoRefs.current[currentIndex];
+        if (!currentVideo || !Number.isFinite(currentVideo.duration) || currentVideo.duration <= 0) return;
+
+        const timeRemaining = currentVideo.duration - currentVideo.currentTime;
+        if (timeRemaining > TRANSITION_LEAD_SECONDS) return;
+
+        const nextIndex = (currentIndex + 1) % heroVideos.length;
+        const nextVideo = videoRefs.current[nextIndex];
+        if (!nextVideo) return;
+
+        nextVideo.pause();
+        try {
+            nextVideo.currentTime = 0;
+        } catch {
+            // Ignore seek failures while metadata is not ready.
+        }
+
+        nextVideo.play().catch(() => { });
+        setIncomingIndex(nextIndex);
+        requestAnimationFrame(() => {
+            setIncomingVisible(true);
+        });
+    };
+
+    const handleCurrentVideoEnd = () => {
+        if (incomingIndex === null) {
+            setCurrentIndex((prev) => (prev + 1) % heroVideos.length);
+            return;
+        }
+
+        const endedVideo = videoRefs.current[currentIndex];
+        if (endedVideo) {
+            endedVideo.pause();
+            endedVideo.currentTime = 0;
+        }
+
+        setCurrentIndex(incomingIndex);
+        setIncomingIndex(null);
+        setIncomingVisible(false);
     };
 
     useEffect(() => {
-        // Ensure only the active video is playing
-        videoRefs.current.forEach((video, index) => {
-            if (!video) return;
-            if (index === currentIndex) {
-                video.currentTime = 0;
-                video.play().catch(() => { });
-            }
-        });
+        const activeVideo = videoRefs.current[currentIndex];
+        if (!activeVideo) return;
+        activeVideo.play().catch(() => { });
     }, [currentIndex]);
-
-    // Initial play effect
-    useEffect(() => {
-        const firstVideo = videoRefs.current[0];
-        if (firstVideo) {
-            firstVideo.play().catch(() => { });
-        }
-    }, []);
 
     return (
         <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-900 text-white sm:min-h-screen">
@@ -62,12 +93,17 @@ const HeroGlacial = () => {
                         ref={(el) => {
                             videoRefs.current[index] = el;
                         }}
-                        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${index === incomingIndex
+                            ? `${incomingVisible ? "opacity-100" : "opacity-0"} z-20`
+                            : index === currentIndex
+                                ? "opacity-100 z-10"
+                                : "opacity-0 z-0"
                             }`}
                         muted
                         playsInline
                         preload={index === currentIndex || index === (currentIndex + 1) % heroVideos.length ? "auto" : "metadata"}
-                        onEnded={index === currentIndex ? handleVideoEnd : undefined}
+                        onTimeUpdate={index === currentIndex ? handleCurrentTimeUpdate : undefined}
+                        onEnded={index === currentIndex ? handleCurrentVideoEnd : undefined}
                     >
                         <source src={src} type="video/mp4" />
                     </video>
@@ -100,8 +136,9 @@ const HeroGlacial = () => {
 
             </div>
 
-            <div className="relative z-30 border-t border-white/20 bg-[#130e1f]/45 backdrop-blur-sm">
-                <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-3 px-5 py-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-5 lg:gap-4">
+            <div className="relative z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
+                <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 gap-3 px-5 py-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-5 lg:gap-4">
                     {trustBarItems.map((item) => (
                         <div key={item} className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/82">
                             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">

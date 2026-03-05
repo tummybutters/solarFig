@@ -51,12 +51,12 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-[#5f448f]/22 to-[#4e3680]/28" />
         </div>
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8">
-          <div className="max-w-3xl">
-            <h1 className="mb-6 text-4xl font-medium leading-[1.02] tracking-tight drop-shadow-[0_6px_24px_rgba(0,0,0,0.3)] sm:text-5xl lg:text-6xl">
+          <div className="max-w-4xl">
+            <h1 className="mb-6 max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.3)] sm:text-6xl lg:text-[82px]">
               Solar services built for
               <span className="text-purple-400"> California homeowners</span>
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
+            <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
               From initial assessment to flipping the switch, we handle every step of your 
               solar journey with transparency and speed.
             </p>
@@ -102,7 +102,7 @@ const Services = () => {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
               How it works
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">

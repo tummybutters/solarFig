@@ -55,6 +55,7 @@ Scope: Client ideation PDF implementation + typography/readability consistency a
 - H1 casing standard: sentence case (capitalize first word and proper nouns only).
 - H1 readability standard: explicit font weight (`font-medium` minimum on hero/image pages).
 - H1 legibility standard on image heroes: shadow or stronger overlay for white text.
+- Hero typography baseline for Products/Plans/Locations: match `src/pages/SolarPanels.tsx` top stack (`h1: text-5xl sm:text-6xl lg:text-[82px]`, first top `h2: text-4xl sm:text-5xl`).
 - Heading punctuation/casing should be consistent across primary pages.
 
 ### Findings (Pre-fix Baseline)
@@ -62,7 +63,7 @@ Scope: Client ideation PDF implementation + typography/readability consistency a
 1) H1 casing is inconsistent across routed pages.
 - Title case examples:
   - `Smarter Solar Starts With Solarfig.` (`src/sections/HeroGlacial.tsx:177`)
-  - `Battery Backup` (`src/pages/Battery.tsx:77`)
+  - `Enegery storage` (`src/pages/Battery.tsx:77`)
   - `Solar Pricing & Costs` (`src/pages/PricingCosts.tsx:47`)
   - `California Service Areas` (`src/pages/Locations.tsx:35`)
 - Sentence case examples:

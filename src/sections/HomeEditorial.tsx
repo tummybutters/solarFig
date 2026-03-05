@@ -14,7 +14,7 @@ const solutionCards = [
     image: "/assets/home-editorial/home-inverters-2026.webp",
   },
   {
-    title: "Battery Backup",
+    title: "Enegery storage",
     href: "/battery",
     image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
   },
@@ -53,7 +53,7 @@ const reviews = [
   },
   {
     quote:
-      "We added battery backup with our system and the team walked us through every tradeoff. Communication stayed strong even after PTO.",
+      "We added Enegery storage with our system and the team walked us through every tradeoff. Communication stayed strong even after PTO.",
     author: "Sofia L. — Oregon",
     image: "/assets/reviews/review-1.png",
   },
@@ -66,7 +66,7 @@ const HomeEditorial = () => {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Products</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Solutions</p>
               <h2 className="mt-4 text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
                 Energy solutions without the noise.
               </h2>
@@ -87,12 +87,11 @@ const HomeEditorial = () => {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-5 right-5 sm:bottom-7 sm:left-6 sm:right-6">
-                  <h3 className="text-3xl leading-none tracking-tight text-white sm:text-5xl">
+                <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between sm:bottom-7 sm:left-6 sm:right-6">
+                  <h3 className="max-w-[80%] text-3xl leading-none tracking-tight text-white sm:text-5xl">
                     {card.title}
                   </h3>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white">
-                    Learn more
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white">
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </div>
@@ -193,11 +192,11 @@ const HomeEditorial = () => {
             href="/solar-panels"
             className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Products</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Solutions</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Find your ideal setup.</h3>
             <p className="mt-4 text-[#4b4261]">Compare panel, inverter, and energy storage options built for your home.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-              View Products
+              View Solutions
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>

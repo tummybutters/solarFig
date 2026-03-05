@@ -42,11 +42,11 @@ const Installation = () => {
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img src="/assets/installation/installation-header-2026.webp" alt="Solar installation team working on a residential roof." className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
-            <div className="max-w-3xl text-white">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
+            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Our Process</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">Your Solar Journey, Simplified</h1>
-              <p className="mt-5 max-w-3xl text-lg font-medium text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">Your Solar Journey, Simplified</h1>
+              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Installation = () => {
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-[1200px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_380px]">
           <div>
-            <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">A clear, step-by-step process</h2>
+            <h2 className="text-4xl tracking-tight text-[#231f2a] sm:text-5xl">A clear, step-by-step process</h2>
             <p className="mt-4 max-w-3xl text-gray-600">
               Most projects move from consultation to activation in 6-10 weeks, depending on permitting and utility timelines.
             </p>

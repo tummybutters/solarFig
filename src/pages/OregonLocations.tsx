@@ -23,13 +23,13 @@ const OregonLocations = () => {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/55 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
-            <div className="max-w-3xl text-white">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
+            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OREGON LOCATIONS</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Solar that performs in Oregon's climate.
               </h1>
-              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Built around utility structure, seasonal production, and practical long-term electrification.
               </p>
             </div>
@@ -53,7 +53,7 @@ const OregonLocations = () => {
 
             <div className="relative mx-4 -mt-24 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">OREGON FIT</p>
-              <h2 className="mb-4 text-2xl text-stone-900 sm:text-3xl">Designed for real Oregon energy conditions</h2>
+              <h2 className="mb-4 text-4xl text-stone-900 sm:text-5xl">Designed for real Oregon energy conditions</h2>
               <p className="leading-relaxed text-stone-600">
                 Solarfig systems are structured for net metering value, seasonal weather shifts, and future-load flexibility without overbuilding.
               </p>

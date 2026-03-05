@@ -151,23 +151,6 @@ const GlobalQuoteSection = () => {
               Review our <a href="/terms-of-use" className="underline hover:text-[#6d39b5]">Terms of Service</a> and <a href="/privacy-policy" className="underline hover:text-[#6d39b5]">Privacy Policy</a>.
             </p>
 
-            <label className="mt-5 flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[#302845]/85">
-              <input type="checkbox" name="transactionalConsent" className="mt-1 h-4 w-4 accent-[#6d39b5]" />
-              <span>
-                I consent to receive transactional messages, SMS notifications, Alerts &amp; Reminders from Solarfig at
-                the phone number provided. Message frequency varies. Message &amp; data rates may apply. Text HELP to
-                (213) 401-9723 for assistance. You can reply STOP to unsubscribe at any time.
-              </span>
-            </label>
-
-            <label className="mt-4 flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[#302845]/85">
-              <input type="checkbox" name="marketingConsent" className="mt-1 h-4 w-4 accent-[#6d39b5]" />
-              <span>
-                I consent to receive marketing and promotional messages from Solarfig at the phone number provided.
-                Message frequency varies. Message &amp; data rates may apply. Text HELP to (213) 401-9723 for
-                assistance. You can reply STOP to unsubscribe at any time.
-              </span>
-            </label>
           </div>
 
           <button

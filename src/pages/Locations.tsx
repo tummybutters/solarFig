@@ -29,13 +29,13 @@ const Locations = () => {
             className="h-full w-full object-cover object-[center_76%] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1280px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
-            <div className="max-w-3xl text-white">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
+            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">CALIFORNIA</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Solar &amp; Storage Built for California&apos;s New Energy Landscape
               </h1>
-              <p className="mt-5 max-w-3xl text-lg font-medium text-white/82">
+              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Custom systems designed for NEM 3.0, time-of-use rates, and long-term savings.
               </p>
             </div>

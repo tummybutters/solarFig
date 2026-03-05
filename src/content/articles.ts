@@ -160,7 +160,7 @@ export const solarArticles: SolarArticle[] = [
   {
     slug: "do-i-need-a-battery-with-solar-california",
     title: "Do I Need a Battery With Solar in California (or Can I Skip It)?",
-    category: "Battery Backup",
+    category: "Enegery storage",
     readTime: "9 min read",
     excerpt:
       "A clear framework for deciding when battery storage is optional, recommended, or essential for your home.",
