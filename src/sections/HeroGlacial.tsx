@@ -78,7 +78,7 @@ const HeroGlacial = () => {
     const loopedTrustBarItems = [...trustBarItems, ...trustBarItems];
 
     return (
-        <section className="relative h-[96svh] min-h-[560px] w-full overflow-hidden bg-slate-900 text-white sm:h-[98svh] sm:min-h-[620px]">
+        <section className="hero-glacial-shell relative w-full overflow-hidden bg-slate-900 text-white">
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}

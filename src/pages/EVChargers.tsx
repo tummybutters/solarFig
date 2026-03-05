@@ -203,7 +203,7 @@ const EVChargers = () => {
             </div>
 
             {/* Floating quote card */}
-            <div className="relative mx-4 -mt-20 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
+            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Customer Experience</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "The installation was seamless and professional. Now we’re charging our EV directly from our own roof."
