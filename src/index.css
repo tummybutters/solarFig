@@ -633,6 +633,13 @@ main.mobile-premium:not(.home-page) :is(h1, h2) {
   }
 }
 
+@media (min-width: 641px) and (max-width: 1023px) {
+  .mobile-premium .mobile-hero-media {
+    height: clamp(26rem, 68svh, 50rem) !important;
+    min-height: 0 !important;
+  }
+}
+
 @media (max-width: 640px) {
   .mobile-premium .mobile-hero-media {
     height: clamp(25rem, 66svh, 34rem) !important;
