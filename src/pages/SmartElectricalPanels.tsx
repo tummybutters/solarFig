@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Can it help during outages?",
-    a: "When paired with Enegery storage, a smart panel can help prioritize critical circuits and improve how backup power is allocated.",
+    a: "When paired with Energy storage, a smart panel can help prioritize critical circuits and improve how backup power is allocated.",
   },
   {
     q: "Can I add a smart panel later?",

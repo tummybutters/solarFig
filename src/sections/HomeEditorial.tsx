@@ -9,12 +9,12 @@ const solutionCards = [
     image: "/assets/home-editorial/home-solar-panels-2026.webp",
   },
   {
-    title: "Advanced Inverters",
+    title: "Inverters",
     href: "/microinverters",
     image: "/assets/home-editorial/home-inverters-2026.webp",
   },
   {
-    title: "Enegery storage",
+    title: "Energy storage",
     href: "/battery",
     image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
   },

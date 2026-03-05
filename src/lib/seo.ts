@@ -13,7 +13,7 @@ type SeoMeta = {
 };
 
 const HOME_META: SeoMeta = {
-  title: "California Solar Panels & Enegery storage | Solarfig",
+  title: "California Solar Panels & Energy storage | Solarfig",
   description:
     "California solar installation for solar panels and backup-ready batteries. Custom design, clean installs, and end-to-end project delivery.",
   canonicalPath: "/",
@@ -24,9 +24,9 @@ const HOME_META: SeoMeta = {
 const ROUTE_META: Record<string, SeoMeta> = {
   "/": HOME_META,
   "/battery": {
-    title: "Home Solar Enegery storage in California | Solarfig",
+    title: "Home Solar Energy storage in California | Solarfig",
     description:
-      "Install a home solar Enegery storage system for outage protection and better NEM 3.0 performance. Premium design, permitting, and installation by Solarfig.",
+      "Install a home solar Energy storage system for outage protection and better NEM 3.0 performance. Premium design, permitting, and installation by Solarfig.",
     canonicalPath: "/battery",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -42,7 +42,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/about": {
     title: "About Solarfig | California Solar Team",
     description:
-      "Meet the team behind Solarfig and how we deliver solar panels, Enegery storage, and EV charging projects from quote to PTO.",
+      "Meet the team behind Solarfig and how we deliver solar panels, Energy storage, and EV charging projects from quote to PTO.",
     canonicalPath: "/about",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -50,7 +50,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/articles": {
     title: "California Solar, Battery & EV Charging Guides | Solarfig",
     description:
-      "Simple, practical guides on California home solar, solar panel costs, Enegery storage, EV charging, NEM 3.0, and quote comparison.",
+      "Simple, practical guides on California home solar, solar panel costs, Energy storage, EV charging, NEM 3.0, and quote comparison.",
     canonicalPath: "/articles",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -58,7 +58,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/referrals": {
     title: "Solarfig Home Solar Referral Program",
     description:
-      "Refer homeowners for solar panels, Enegery storage, or EV charging projects and earn rewards after completed installation.",
+      "Refer homeowners for solar panels, Energy storage, or EV charging projects and earn rewards after completed installation.",
     canonicalPath: "/referrals",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -112,7 +112,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/solar-battery-incentives": {
     title: "California Solar Panel & Battery Incentives | Solarfig",
     description:
-      "Understand federal credits and California incentive pathways for solar panels and Enegery storage with clear, practical eligibility guidance.",
+      "Understand federal credits and California incentive pathways for solar panels and Energy storage with clear, practical eligibility guidance.",
     canonicalPath: "/solar-battery-incentives",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -120,7 +120,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/locations": {
     title: "California Service Areas for Home Solar | Solarfig",
     description:
-      "Check Solarfig service coverage for home solar, Enegery storage, and EV charging projects across California.",
+      "Check Solarfig service coverage for home solar, Energy storage, and EV charging projects across California.",
     canonicalPath: "/locations",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
@@ -128,7 +128,7 @@ const ROUTE_META: Record<string, SeoMeta> = {
   "/locations/oregon": {
     title: "Oregon Service Areas for Home Solar | Solarfig",
     description:
-      "Check Solarfig service coverage for home solar, Enegery storage, and EV charging projects across Oregon.",
+      "Check Solarfig service coverage for home solar, Energy storage, and EV charging projects across Oregon.",
     canonicalPath: "/locations/oregon",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,

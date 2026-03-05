@@ -6,7 +6,7 @@ import { ArrowRight, Battery, Car, Home, Zap } from "lucide-react";
 
 const systemComponents = [
   { title: "Solar Panels", description: "Premium modules", icon: Zap, image: "/assets/install-gallery/install-03.jpg" },
-  { title: "Enegery storage", description: "Store excess energy", icon: Battery, image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg" },
+  { title: "Energy storage", description: "Store excess energy", icon: Battery, image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg" },
   { title: "EV Charging", description: "Charge at home", icon: Car, image: "/assets/whole-home-solar/smart-panel-system.webp" },
   { title: "Smart Panels", description: "Control & monitor", icon: Home, image: "/assets/ev-chargers/ev-home-01.png" },
 ];

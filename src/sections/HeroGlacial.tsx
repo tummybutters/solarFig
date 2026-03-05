@@ -76,7 +76,7 @@ const HeroGlacial = () => {
     }, [currentIndex]);
 
     return (
-        <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-900 text-white sm:min-h-screen">
+        <section className="relative h-[88svh] min-h-[560px] w-full overflow-hidden bg-slate-900 text-white sm:h-[90svh] sm:min-h-[620px]">
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
@@ -106,7 +106,7 @@ const HeroGlacial = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-20 mx-auto grid min-h-[92vh] max-w-[1400px] grid-cols-1 items-start gap-8 px-5 pb-12 pt-28 sm:min-h-screen sm:items-end sm:gap-10 sm:px-8 sm:pb-20 sm:pt-28 lg:items-end lg:gap-10 lg:pb-24 lg:pt-28">
+            <div className="relative z-20 mx-auto grid h-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pb-24 pt-20 sm:gap-10 sm:px-8 sm:pb-28 sm:pt-24 lg:gap-10 lg:pb-32 lg:pt-24">
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
@@ -131,11 +131,11 @@ const HeroGlacial = () => {
 
             </div>
 
-            <div className="relative z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl">
+            <div className="absolute inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl">
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
                 <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 gap-3 px-5 py-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-5 lg:gap-4">
                     {trustBarItems.map((item) => (
-                        <div key={item} className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/82">
+                        <div key={item} className="inline-flex items-center gap-2 text-[12px] font-medium text-white/82">
                             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
                                 <Check className="h-3.5 w-3.5" />
                             </span>
