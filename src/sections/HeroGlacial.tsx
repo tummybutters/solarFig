@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 
 const heroVideos = [
-    "/assets/hero-main/elevenlabs-video-topaz-upscale-2026-03-04t18-49-47-h264.mp4",
-    "/assets/hero-main/hero-background-sequence-02.mp4",
-    "/assets/hero-main/hero-background-sequence-03.mp4",
-    "/assets/hero-main/hero-background-sequence-04.mp4",
-    "/assets/hero-main/sustainable-hillside-community-drone-shot-1080p.mp4",
+    "/assets/hero-main/balanced/hero-balanced-01.mp4",
+    "/assets/hero-main/balanced/hero-balanced-02.mp4",
+    "/assets/hero-main/balanced/hero-balanced-03.mp4",
+    "/assets/hero-main/balanced/hero-balanced-04.mp4",
+    "/assets/hero-main/balanced/hero-balanced-05.mp4",
 ];
 
 const trustBarItems = [
@@ -75,8 +75,10 @@ const HeroGlacial = () => {
         activeVideo.play().catch(() => { });
     }, [currentIndex]);
 
+    const loopedTrustBarItems = [...trustBarItems, ...trustBarItems];
+
     return (
-        <section className="relative h-[88svh] min-h-[560px] w-full overflow-hidden bg-slate-900 text-white sm:h-[90svh] sm:min-h-[620px]">
+        <section className="relative h-[96svh] min-h-[560px] w-full overflow-hidden bg-slate-900 text-white sm:h-[98svh] sm:min-h-[620px]">
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
@@ -133,13 +135,25 @@ const HeroGlacial = () => {
 
             <div className="absolute inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl">
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
-                <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-1 gap-3 px-5 py-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-5 lg:gap-4">
+                <div className="relative z-10 overflow-hidden lg:hidden">
+                    <div className="animate-ribbon-scroll mx-auto flex w-max items-center gap-4 px-4 py-3 sm:gap-6 sm:px-8" style={{ animationDuration: "34s" }}>
+                        {loopedTrustBarItems.map((item, index) => (
+                            <div key={`${item}-${index}`} className="inline-flex h-10 min-w-[220px] shrink-0 items-center gap-3 sm:min-w-[260px]">
+                                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
+                                    <Check className="h-3.5 w-3.5" />
+                                </span>
+                                <span className="whitespace-nowrap text-[12px] font-medium text-white/82 sm:text-[13px]">{item}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="relative z-10 mx-auto hidden max-w-[1400px] grid-cols-5 items-center gap-8 px-8 py-4 lg:grid">
                     {trustBarItems.map((item) => (
-                        <div key={item} className="inline-flex items-center gap-2 text-[12px] font-medium text-white/82">
-                            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
+                        <div key={item} className="inline-flex min-w-0 items-center gap-3">
+                            <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
                                 <Check className="h-3.5 w-3.5" />
                             </span>
-                            <span>{item}</span>
+                            <span className="whitespace-nowrap text-[13px] font-medium text-white/82">{item}</span>
                         </div>
                     ))}
                 </div>

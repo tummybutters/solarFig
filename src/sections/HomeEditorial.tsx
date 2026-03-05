@@ -48,8 +48,7 @@ const HomeEditorial = () => {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6d39b5]">Solutions</p>
-              <h2 className="mt-4 text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
+              <h2 className="text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
                 Energy solutions without the noise.
               </h2>
             </div>
