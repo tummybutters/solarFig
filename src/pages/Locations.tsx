@@ -77,9 +77,6 @@ const Locations = () => {
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_20px_60px_-20px_rgba(109,57,181,0.3)] sm:p-8">
-                <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
-                  California
-                </p>
                 <CaliforniaMap className="max-w-[280px]" />
               </div>
             </div>
