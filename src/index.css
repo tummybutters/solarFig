@@ -783,3 +783,26 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
     letter-spacing: 0.12em !important;
   }
 }
+
+/* Desktop-only non-home hero safety for shorter viewports (macOS Chrome scaling). */
+@media (min-width: 1024px) and (max-height: 920px) {
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto {
+    align-items: flex-start !important;
+    padding-top: 8.75rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+    font-size: clamp(2.4rem, 4.2vw, 4.65rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+    font-size: clamp(1rem, 1.35vw, 1.2rem) !important;
+    margin-top: 0.9rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p + a {
+    margin-top: 1.25rem !important;
+  }
+}

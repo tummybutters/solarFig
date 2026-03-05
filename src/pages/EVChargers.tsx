@@ -73,7 +73,7 @@ const EVChargers = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh] lg:h-[760px]">
           <img
             src="/assets/ev-chargers/ev-chargers-hero.jpg"
             alt="Modern home with rooftop solar, battery storage, and an EV parked in the driveway."

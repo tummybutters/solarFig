@@ -119,7 +119,7 @@ const HomeEditorial = () => {
       <section className="bg-white py-20 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#eadff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
           <div className="relative">
-            <div className="pointer-events-none absolute -right-8 -top-16 h-72 w-72 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px]" />
+            <div className="pointer-events-none absolute -right-3 -top-8 h-40 w-40 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px] sm:-right-8 sm:-top-16 sm:h-72 sm:w-72" />
             <p className="mb-5 flex gap-3 text-[#241d2f]">
               <Star className="h-6 w-6 fill-current" />
               <Star className="h-6 w-6 fill-current" />

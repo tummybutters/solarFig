@@ -93,7 +93,7 @@ const Battery = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh]">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh] lg:h-[760px]">
           <img
             src="/assets/battery/battery-header-image.jpg"
             alt="Wall-mounted home battery in a studio-style setting."

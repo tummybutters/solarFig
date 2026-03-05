@@ -67,7 +67,7 @@ const Microinverters = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[460px] w-full sm:h-[72vh]">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[460px] w-full sm:h-[72vh] lg:h-[760px]">
           <img src="/assets/microinverters/microinverters-header-image.jpg" alt="Microinverter system hero visual." className="h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
