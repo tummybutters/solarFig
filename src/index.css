@@ -634,10 +634,6 @@ main.mobile-premium:not(.home-page) :is(h1, h2) {
 }
 
 @media (max-width: 640px) {
-  .mobile-premium {
-    overflow-x: hidden;
-  }
-
   .mobile-premium .mobile-hero-media {
     height: clamp(22rem, 56vh, 29rem) !important;
     min-height: 0 !important;

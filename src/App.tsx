@@ -54,9 +54,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:slug" element={<ArticleDetail />} />
+        <Route path="/projects" element={<Navigate to="/about" replace />} />
         <Route path="/careers" element={<Navigate to="/about" replace />} />
         <Route path="/referrals" element={<Referrals />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/areas" element={<Navigate to="/locations" replace />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/whole-home-solar" element={<Navigate to="/pricing-costs" replace />} />
