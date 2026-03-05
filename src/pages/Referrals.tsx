@@ -20,46 +20,46 @@ const Referrals = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      {/* Hero — unchanged */}
-      <section className="pt-24 sm:pt-28">
-        <div className="bg-[linear-gradient(130deg,#5d4c82_0%,#75639f_55%,#8d7ab9_100%)]">
-          <div className="mx-auto max-w-[1400px] px-6 py-14 sm:px-8 sm:py-20">
-            <p className="text-xs font-semibold text-white/70">Home / Referrals</p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-7xl">
-              Share Solar. Earn Rewards.
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg text-white/80">
-              A structured referral program for homeowners and partners who trust Solarfig.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#6d39b5] px-9 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#5c2f9b]"
-              >
-                Refer a Homeowner
-              </a>
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center justify-center rounded-full border border-white/35 px-9 py-3.5 text-base font-medium text-white transition-colors hover:bg-white/10"
-              >
-                How it works
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative h-[300px] w-full sm:h-[450px] lg:h-[550px]">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh] lg:h-[760px]">
           <img
             src="/assets/referrals/referrals-header-image.webp"
             alt="Friends and family gathering outside a home at dusk."
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[center_58%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#f4eefb] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
+            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Referral Program</p>
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+                Share solar, earn rewards.
+              </h1>
+              <h2 className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+                Refer homeowners to Solarfig and earn up to $1,000 for every completed installation.
+              </h2>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                >
+                  Refer now
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="inline-flex items-center rounded-full border border-white/45 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white/10"
+                >
+                  How it works
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Reward Tiers — Large number cards */}
-      <section className="relative -mt-20 pb-16 sm:-mt-32 sm:pb-24">
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 max-w-2xl">
             <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">Referral rewards that scale</h2>
@@ -169,7 +169,7 @@ const Referrals = () => {
         </div>
       </section>
 
-      <GlobalQuoteSection />
+      <GlobalQuoteSection mode="referral" />
       <Footer />
     </main>
   );

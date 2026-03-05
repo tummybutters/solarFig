@@ -19,7 +19,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Solutions",
+    label: "Products",
     href: "/solar-panels",
     children: [
       { label: "Solar Panels", href: "/solar-panels" },
@@ -91,6 +91,7 @@ const navItems: NavItem[] = [
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
+      { label: "Projects Showcase", href: "/projects" },
       { label: "Educational Articles", href: "/articles" },
       { label: "Referral Program", href: "/referrals" },
     ],
@@ -204,9 +205,7 @@ const Navbar = () => {
                       {/* Left Column: Vertical Links */}
                       <div className="space-y-8 border-r border-white/5 pr-12">
                         <div>
-                          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.25em] text-white/30">
-                            {item.label}
-                          </p>
+
                           <ul className="flex flex-col space-y-3">
                             {item.children.map((child) => (
                               <li key={child.label}>
@@ -321,9 +320,7 @@ const Navbar = () => {
 
               <div className="grid gap-4 p-4">
                 <div>
-                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/35">
-                    {activeMobileNavItem.label}
-                  </p>
+
                   <div className="grid gap-1">
                     {activeMobileNavItem.children.map((child) => (
                       <a

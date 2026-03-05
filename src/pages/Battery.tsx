@@ -121,22 +121,6 @@ const Battery = () => {
         </div>
       </section>
 
-      {/* Sticky bar — unchanged */}
-      <section className="border-y border-stone-200 bg-white py-10">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-5 px-6 text-center sm:px-8 lg:flex-row lg:text-left">
-          <p className="max-w-4xl text-xl text-stone-700">
-            Energy storage that adapts.
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
-          >
-            Get a quote
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      </section>
-
       {/* Control Modes — Images dominant, minimal text badges below */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">

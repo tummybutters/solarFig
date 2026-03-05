@@ -39,24 +39,6 @@ const reviews = [
     author: "Morgan H. — California",
     image: "/assets/reviews/review-3.jpg",
   },
-  {
-    quote:
-      "From contract to installation, every step was explained clearly. No pressure, no confusion, and the timeline stayed exactly where they said it would be.",
-    author: "Rachel T. — Oregon",
-    image: "/assets/reviews/review-4.jpg",
-  },
-  {
-    quote:
-      "The proposal was easy to compare and the savings model made sense. The install team was respectful, clean, and finished ahead of schedule.",
-    author: "Daniel P. — California",
-    image: "/assets/reviews/review-5.jpg",
-  },
-  {
-    quote:
-      "We added Enegery storage with our system and the team walked us through every tradeoff. Communication stayed strong even after PTO.",
-    author: "Sofia L. — Oregon",
-    image: "/assets/reviews/review-1.png",
-  },
 ];
 
 const HomeEditorial = () => {

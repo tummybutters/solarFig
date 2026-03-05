@@ -28,50 +28,52 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#161319] py-16 text-white sm:py-20">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#161319] py-20 text-white sm:py-24">
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
         {/* Main Footer Grid */}
-        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
+        <div className="mb-14 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-12">
           {/* Brand Column */}
-          <div className="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-1">
+          <div className="space-y-5 pb-2 sm:col-span-2 lg:col-span-4">
             <a href="/" className="inline-flex items-center">
               <img
-                src="/assets/logo/white-logo-no-panel.png"
+                src="/assets/logo/footer-logo-white.svg"
                 alt="Solarfig"
                 className="h-10 w-auto object-contain"
               />
             </a>
+
+            <div className="h-px w-20 bg-gradient-to-r from-white/35 to-white/0" />
             
             {/* Contact Info */}
-            <div className="space-y-2 pt-2">
+            <div className="space-y-3 pt-1">
               <a 
                 href="tel:+12133064154"
-                className="flex items-center gap-2 text-sm text-white transition-colors hover:text-white/80"
+                className="flex items-center gap-2.5 text-sm text-white transition-colors hover:text-white/80"
               >
                 <Phone className="w-4 h-4 text-purple-400" />
                 <span>(213) 306-4154</span>
               </a>
               <a 
                 href="mailto:info@solarfig.com"
-                className="flex items-center gap-2 text-sm text-white transition-colors hover:text-white/80"
+                className="flex items-center gap-2.5 text-sm text-white transition-colors hover:text-white/80"
               >
                 <Mail className="w-4 h-4 text-purple-400" />
                 <span>info@solarfig.com</span>
               </a>
-              <div className="flex items-start gap-2 text-sm text-white">
-                <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-sm leading-relaxed text-white">
+                <MapPin className="w-4 h-4 text-purple-400" />
                 <span>4930 Campus Drive, Newport Beach, CA 92660</span>
               </div>
             </div>
           </div>
 
           {/* Solutions */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Solutions</h4>
-            <ul className="space-y-2.5">
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Solutions</h4>
+            <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
+                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
                     {link.label}
                   </a>
                 </li>
@@ -80,12 +82,12 @@ const Footer = () => {
           </div>
 
           {/* Plans and Services */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Plans &amp; Services</h4>
-            <ul className="space-y-2.5">
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Plans &amp; Services</h4>
+            <ul className="space-y-3">
               {footerLinks.plansAndServices.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
+                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
                     {link.label}
                   </a>
                 </li>
@@ -94,12 +96,12 @@ const Footer = () => {
           </div>
 
           {/* Locations */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Locations</h4>
-            <ul className="space-y-2.5">
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Locations</h4>
+            <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
+                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
                     {link.label}
                   </a>
                 </li>
@@ -108,12 +110,12 @@ const Footer = () => {
           </div>
 
           {/* Explore */}
-          <div>
-            <h4 className="font-semibold text-sm mb-4 text-white">Explore</h4>
-            <ul className="space-y-2.5">
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Explore</h4>
+            <ul className="space-y-3">
               {footerLinks.explore.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/80">
+                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
                     {link.label}
                   </a>
                 </li>
@@ -123,31 +125,31 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-6">
+        <div className="flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-7">
             <a href="/" className="text-sm text-white transition-colors hover:text-white/80">Home</a>
             <a href="/contact" className="text-sm text-white transition-colors hover:text-white/80">Contact Us</a>
           </div>
           
-          <div className="flex flex-wrap items-center gap-3 text-xs text-white sm:gap-4">
+          <div className="flex flex-wrap items-center gap-3 text-xs text-white/85 sm:gap-4">
             {footerLinks.legal.map((link, index) => (
               <span key={link.label} className="flex items-center gap-4">
                 <a href={link.href} className="transition-colors hover:text-white/80">
                   {link.label}
                 </a>
-                {index === 0 && <span className="hidden text-white/50 sm:inline">|</span>}
+                {index === 0 && <span className="hidden text-white/40 sm:inline">•</span>}
               </span>
             ))}
           </div>
           
-          <p className="text-xs text-white">
+          <p className="text-xs text-white/85">
             © {new Date().getFullYear()} Solarfig
           </p>
         </div>
 
         {/* Compliance Address */}
-        <div className="mt-6 border-t border-white/10 pt-6 text-center">
-          <p className="text-[10px] text-white">
+        <div className="mt-7 border-t border-white/10 pt-6 text-center">
+          <p className="mx-auto max-w-3xl text-[10px] leading-relaxed text-white/85">
             Mailing address for compliance: 2810 Jackson Ave PH3B, Long Island City, NY 11101
           </p>
         </div>

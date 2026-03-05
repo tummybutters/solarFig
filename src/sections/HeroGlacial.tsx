@@ -80,12 +80,7 @@ const HeroGlacial = () => {
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
-                <div
-                    className={`absolute inset-0 z-20 transition-colors duration-700 ${currentIndex === 1
-                            ? "bg-gradient-to-t from-black/80 via-black/52 to-black/20"
-                            : "bg-gradient-to-t from-black/68 via-black/40 to-black/12"
-                        }`}
-                />
+                <div className="pointer-events-none absolute inset-0 z-30 bg-gradient-to-t from-black/80 via-black/52 to-black/20" />
 
                 {heroVideos.map((src, index) => (
                     <video

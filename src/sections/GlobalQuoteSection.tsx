@@ -5,10 +5,49 @@ import { FloatingInput } from "@/components/ui/floating-input";
 const ghlWebhookUrl =
   import.meta.env.VITE_GHL_WEBHOOK_URL || import.meta.env.VITE_GHL_FORM_ENDPOINT || "";
 
-const GlobalQuoteSection = () => {
+type GlobalQuoteSectionMode = "quote" | "referral";
+
+type GlobalQuoteSectionProps = {
+  mode?: GlobalQuoteSectionMode;
+};
+
+const copyByMode: Record<
+  GlobalQuoteSectionMode,
+  {
+    heading: string;
+    description: string;
+    submitLabel: string;
+    successMessage: string;
+    source: string;
+    detailsLabel?: string;
+    detailsPlaceholder?: string;
+  }
+> = {
+  quote: {
+    heading: "Start your solar plan",
+    description:
+      "Fill out the form, and we'll prepare a customized solar proposal built around your energy usage, local incentives, and long-term savings goals.",
+    submitLabel: "Get a quote",
+    successMessage: "Thanks. Your quote request was submitted successfully.",
+    source: "solarfig.com",
+  },
+  referral: {
+    heading: "Submit a referral",
+    description:
+      "Share your details and the homeowner's project info. We'll reach out professionally, keep you updated, and confirm your reward after completion.",
+    submitLabel: "Submit referral",
+    successMessage: "Thanks. Your referral was submitted successfully.",
+    source: "solarfig.com/referrals",
+    detailsLabel: "Referral details (Required)",
+    detailsPlaceholder: "Include homeowner name, city, and best phone/email to reach them.",
+  },
+};
+
+const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitState, setSubmitState] = useState<"idle" | "success" | "error">("idle");
   const [submitMessage, setSubmitMessage] = useState("");
+  const copy = copyByMode[mode];
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,10 +69,12 @@ const GlobalQuoteSection = () => {
       email: String(data.get("email") ?? "").trim(),
       phone: String(data.get("phone") ?? "").trim(),
       zipCode: String(data.get("zipCode") ?? "").trim(),
+      intent: mode,
+      referralDetails: String(data.get("referralDetails") ?? "").trim(),
       consent: data.get("consent") === "on",
       transactionalConsent: data.get("transactionalConsent") === "on",
       marketingConsent: data.get("marketingConsent") === "on",
-      source: "solarfig.com",
+      source: copy.source,
       pageUrl: window.location.href,
       submittedAt: new Date().toISOString(),
     };
@@ -53,7 +94,7 @@ const GlobalQuoteSection = () => {
       }
 
       setSubmitState("success");
-      setSubmitMessage("Thanks. Your quote request was submitted successfully.");
+      setSubmitMessage(copy.successMessage);
       form.reset();
     } catch {
       setSubmitState("error");
@@ -68,10 +109,9 @@ const GlobalQuoteSection = () => {
       <div className="pointer-events-none absolute -bottom-36 -left-20 h-80 w-80 rounded-full bg-purple-200/50" />
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
         <div>
-          <h2 className="text-4xl tracking-tight text-[#201b25] sm:text-6xl">Start your solar plan</h2>
+          <h2 className="text-4xl tracking-tight text-[#201b25] sm:text-6xl">{copy.heading}</h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#2d2740]/80">
-            Fill out the form, and we&apos;ll prepare a customized solar proposal built around your energy usage, local
-            incentives, and long-term savings goals.
+            {copy.description}
           </p>
         </div>
 
@@ -93,6 +133,19 @@ const GlobalQuoteSection = () => {
             <FloatingInput label="Phone Number (Required)" name="phone" type="tel" autoComplete="tel" required />
             <FloatingInput label="Zip Code (Required)" name="zipCode" autoComplete="postal-code" required />
           </div>
+
+          {mode === "referral" ? (
+            <div>
+              <label className="mb-2 block text-sm font-medium text-[#231f2a]">{copy.detailsLabel}</label>
+              <textarea
+                name="referralDetails"
+                required
+                rows={4}
+                className="w-full rounded-xl border border-[#cdbde4] bg-white px-4 py-3 text-sm text-[#231f2a] outline-none transition-colors placeholder:text-[#6f6482]/70 focus:border-[#6d39b5]"
+                placeholder={copy.detailsPlaceholder}
+              />
+            </div>
+          ) : null}
 
           <div className="pt-1">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#231f2a]">
@@ -158,7 +211,7 @@ const GlobalQuoteSection = () => {
             disabled={isSubmitting}
             className="inline-flex h-12 items-center justify-center rounded-full bg-[#6d39b5] px-10 text-lg font-medium text-white transition-colors hover:bg-[#8553c2] disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {isSubmitting ? "Submitting..." : "Get a quote"}
+            {isSubmitting ? "Submitting..." : copy.submitLabel}
           </button>
 
           {submitState !== "idle" ? (
