@@ -26,6 +26,7 @@ import OregonLocations from "@/pages/OregonLocations";
 import Contact from "@/pages/Contact";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 const HomePage = () => {
@@ -69,6 +70,7 @@ function App() {
         <Route path="/locations/oregon" element={<OregonLocations />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Analytics />
     </>
   );
 }
