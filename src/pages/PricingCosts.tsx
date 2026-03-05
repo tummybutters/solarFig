@@ -140,7 +140,7 @@ const PricingCosts = () => {
             </div>
 
             {/* Floating included tags */}
-            <div className="relative z-10 mx-4 -mt-20 grid grid-cols-2 gap-3 sm:mx-8 sm:mt-0 sm:flex sm:gap-4 lg:absolute lg:bottom-8 lg:right-8">
+            <div className="relative z-10 mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:absolute lg:bottom-8 lg:right-8 lg:mt-0 lg:flex">
               {included.map((item) => (
                 <div
                   key={item}

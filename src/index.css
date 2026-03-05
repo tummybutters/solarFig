@@ -635,7 +635,7 @@ main.mobile-premium:not(.home-page) :is(h1, h2) {
 
 @media (max-width: 640px) {
   .mobile-premium .mobile-hero-media {
-    height: clamp(22rem, 56vh, 29rem) !important;
+    height: clamp(25rem, 66svh, 34rem) !important;
     min-height: 0 !important;
   }
 
@@ -743,7 +743,7 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
 
 @media (max-width: 639px) {
   main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto {
-    padding-top: max(6.25rem, calc(env(safe-area-inset-top) + 5.5rem)) !important;
+    padding-top: max(6.9rem, calc(env(safe-area-inset-top) + 6rem)) !important;
     padding-bottom: 2rem !important;
   }
 
@@ -752,9 +752,26 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
   }
 
   main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
-    font-size: clamp(0.98rem, 4.3vw, 1.12rem) !important;
-    line-height: 1.45 !important;
-    margin-top: 0.95rem !important;
+    font-size: clamp(0.92rem, 3.9vw, 1.02rem) !important;
+    line-height: 1.38 !important;
+    margin-top: 0.75rem !important;
     max-width: 34rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > p:first-of-type {
+    margin-bottom: 0.7rem !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+    max-width: 22ch !important;
+  }
+
+  main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p + a {
+    margin-top: 1rem !important;
+    min-height: 2.7rem;
+    padding-left: 1.15rem !important;
+    padding-right: 1.15rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.12em !important;
   }
 }

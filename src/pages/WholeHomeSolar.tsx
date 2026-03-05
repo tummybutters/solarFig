@@ -143,7 +143,7 @@ const WholeHomeSolar = () => {
             </div>
 
             {/* Floating stats */}
-            <div className="relative mx-4 -mt-16 grid grid-cols-2 gap-4 sm:mx-8 sm:mt-0 sm:flex sm:gap-6 lg:absolute lg:bottom-8 lg:right-8">
+            <div className="relative mt-6 grid grid-cols-2 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6 lg:absolute lg:bottom-8 lg:right-8 lg:mt-0 lg:flex">
               <div className="rounded-xl bg-white/95 p-5 text-center backdrop-blur-sm sm:min-w-[140px]">
                 <p className="text-2xl font-light text-purple-600">1 Day</p>
                 <p className="text-xs text-stone-500">Typical install</p>

@@ -96,7 +96,7 @@ const OregonLocations = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             </div>
 
-            <div className="relative mx-4 -mt-24 grid gap-4 sm:mx-8 sm:mt-0 sm:flex lg:absolute lg:bottom-8 lg:left-8 lg:right-8">
+            <div className="relative mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3 xl:absolute xl:bottom-8 xl:left-8 xl:right-8 xl:mt-0">
               {challenges.map((challenge) => {
                 const Icon = challenge.icon;
                 return (

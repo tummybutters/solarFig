@@ -54,7 +54,7 @@ const About = () => {
             </div>
 
             {/* Floating card */}
-            <div className="relative mx-4 -mt-24 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-md lg:rounded-2xl">
+            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">WHO WE ARE</p>
               <h2 className="mb-4  text-2xl text-stone-900 sm:text-3xl">Solar, done the right way</h2>
               <p className="text-stone-600 leading-relaxed">

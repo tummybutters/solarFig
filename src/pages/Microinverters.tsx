@@ -62,7 +62,7 @@ const faqs = [
 
 const Microinverters = () => {
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium page-microinverters min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
@@ -182,7 +182,7 @@ const Microinverters = () => {
             </div>
 
             {/* Floating card */}
-            <div className="relative mx-4 -mt-24 rounded-xl bg-white p-6 shadow-xl sm:mx-8 sm:p-8 lg:absolute lg:bottom-10 lg:left-10 lg:mt-0 lg:max-w-sm lg:rounded-2xl">
+            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:left-10 xl:mt-0 xl:max-w-sm xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#6D39B5]">Engineering First</p>
               <h3 className="mb-3  text-2xl text-stone-900">No one-size-fits-all</h3>
               <p className="text-stone-600 leading-relaxed">
