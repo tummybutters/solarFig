@@ -24,6 +24,7 @@
 - Large image/video heroes should be viewport-fit on first load.
 - If a hero has a bottom trust/info banner, the first viewport should fully show that banner without scroll.
 - Prefer measured navbar/banner height math over manual pixel nudging for hero sizing.
+- The navbar should size with clamp-based padding/logo/font values rather than a large fixed desktop height, so it stays tighter on Mac/Chrome while still reading cleanly on Windows.
 
 ## Already Imported in Repo
 - `public/assets/solarfig logo.svg`

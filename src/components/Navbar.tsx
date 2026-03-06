@@ -171,11 +171,11 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
     return (
-    <div data-site-navbar className="fixed inset-x-0 top-3 z-50 flex justify-center px-3 sm:top-6 sm:px-6">
+    <div data-site-navbar className="fixed inset-x-0 top-[clamp(0.75rem,1.8vw,1.5rem)] z-50 flex justify-center px-[clamp(0.75rem,2vw,1.5rem)]">
       <div
         ref={navShellRef}
         className={cn(
-          "relative flex min-h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[16px] border border-white/10 bg-[#161319]/90 px-3 py-2 backdrop-blur-2xl transition-all duration-300 sm:min-h-[84px] sm:px-8 sm:py-3",
+          "relative flex min-h-[62px] w-full max-w-[1400px] items-center justify-between rounded-[16px] border border-white/10 bg-[#161319]/90 px-[clamp(0.75rem,1.9vw,1.55rem)] py-[clamp(0.45rem,0.9vw,0.72rem)] backdrop-blur-2xl transition-all duration-300 sm:min-h-[72px]",
           isScrolled ? "shadow-[0_24px_64px_-12px_rgba(0,0,0,0.6)]" : "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.4)]"
         )}
       >
@@ -185,7 +185,7 @@ const Navbar = () => {
           <img
             src="/assets/logo/white-logo-no-panel.png"
             alt="Solarfig"
-            className="h-[2.5rem] w-auto object-contain sm:h-[3rem]"
+            className="h-[clamp(2.15rem,3vw,2.7rem)] w-auto object-contain"
           />
           <span className="sr-only">Solarfig</span>
         </a>
@@ -193,12 +193,12 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden flex-1 lg:block">
           <NavigationMenu viewport={true}>
-            <NavigationMenuList className="justify-center gap-2 lg:translate-x-4">
+            <NavigationMenuList className="justify-center gap-1.5 lg:translate-x-3">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuTrigger
                     className={cn(
-                      "group h-11 bg-transparent px-5 text-[14px] font-semibold tracking-wide text-white/80 transition-all hover:text-white focus:text-white data-[state=open]:text-white",
+                      "group h-10 bg-transparent px-4 text-[13px] font-semibold tracking-[0.02em] text-white/80 transition-all hover:text-white focus:text-white data-[state=open]:text-white xl:px-5",
                       "rounded-md"
                     )}
                   >
@@ -265,16 +265,16 @@ const Navbar = () => {
         </div>
 
         {/* Right Side Actions */}
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex xl:gap-7">
           <a
             href="tel:+12133064154"
-            className="text-[14px] font-semibold tracking-wide text-white transition-colors hover:text-purple-300"
+            className="text-[13px] font-semibold tracking-[0.02em] text-white transition-colors hover:text-purple-300"
           >
             (213) 306-4154
           </a>
           <a
             href="#contact"
-            className="inline-flex h-11 items-center justify-center rounded-[8px] bg-[#6D39B5] px-7 text-sm font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95"
+            className="inline-flex h-10 items-center justify-center rounded-[8px] bg-[#6D39B5] px-6 text-[13px] font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95 xl:px-7"
           >
             Get a quote
           </a>
