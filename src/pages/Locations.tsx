@@ -56,7 +56,7 @@ const Locations = () => {
               </div>
 
               <div className="space-y-4">
-                {regions.map((region, i) => (
+                {regions.map((region) => (
                   <div
                     key={region.code}
                     className="group flex items-center gap-5 rounded-2xl bg-white p-5 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_8px_30px_-10px_rgba(109,57,181,0.35)]"
@@ -68,7 +68,6 @@ const Locations = () => {
                       <p className="font-medium text-stone-900">{region.name}</p>
                       <p className="text-sm text-stone-500">{region.focus}</p>
                     </div>
-                    <span className="text-xs font-mono text-stone-300">0{i + 1}</span>
                   </div>
                 ))}
               </div>
