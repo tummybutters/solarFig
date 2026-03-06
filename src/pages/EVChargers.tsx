@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, CarFront, Clock, Home, Leaf, ShieldCheck } from "lucide-react";
 
 const chargerFeatures = [
@@ -67,21 +68,23 @@ const faqs = [
 ];
 
 const EVChargers = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useHeroViewportFit();
+
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh] lg:h-[760px]">
+        <div className="mobile-hero-media relative min-h-[420px] w-full" style={heroMediaStyle}>
           <img
             src="/assets/ev-chargers/ev-chargers-hero.jpg"
             alt="Modern home with rooftop solar, battery storage, and an EV parked in the driveway."
             className="h-full w-full scale-[1.12] object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
-            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV CHARGERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Integrated Home Charging. Designed for Modern Energy.

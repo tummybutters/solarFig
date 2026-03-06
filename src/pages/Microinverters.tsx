@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, Eye, ShieldCheck, Sun } from "lucide-react";
 
 const benefits = [
@@ -51,17 +52,19 @@ const faqs = [
 ];
 
 const Microinverters = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useHeroViewportFit();
+
   return (
     <main className="mobile-premium page-microinverters min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[460px] w-full sm:h-[72vh] lg:h-[760px]">
+        <div className="mobile-hero-media relative min-h-[460px] w-full" style={heroMediaStyle}>
           <img src="/assets/microinverters/microinverters-header-image.jpg" alt="Microinverter system hero visual." className="h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
-            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">INVERTERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Engineered for Performance. Built for Reliability.
@@ -124,7 +127,7 @@ const Microinverters = () => {
       </section>
 
       {/* Fit Scenarios — Staggered layout with large images */}
-      <section className="bg-[linear-gradient(145deg,#54288f_0%,#6D39B5_50%,#8553c2_100%)] py-16 text-white sm:py-24">
+      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">DESIGN CONSIDERATIONS</p>

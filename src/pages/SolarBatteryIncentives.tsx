@@ -49,7 +49,7 @@ const SolarBatteryIncentives = () => {
             alt="Solar installer carrying equipment near rooftop array."
             className="h-full w-full object-cover object-[center_70%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar & Battery Incentives</p>

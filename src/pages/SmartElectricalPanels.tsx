@@ -42,7 +42,7 @@ const SmartElectricalPanels = () => {
             alt="Smart electrical panel and backup hardware installation in garage."
             className="h-full w-full object-cover object-[center_68%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/75 via-[#17141b]/45 to-[#17141b]/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Smart Electrical Panels</p>

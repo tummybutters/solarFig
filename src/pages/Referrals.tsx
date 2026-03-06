@@ -28,7 +28,7 @@ const Referrals = () => {
             alt="Friends and family gathering outside a home at dusk."
             className="h-full w-full object-cover object-[center_58%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">REFERRAL PROGRAM</p>

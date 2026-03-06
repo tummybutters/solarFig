@@ -61,7 +61,7 @@ const WholeHomeSolar = () => {
             alt="Modern whole-home solar installation overlooking the coast at sunset."
             className="h-full w-full object-cover object-[center_74%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#17141b]/65 via-[#17141b]/24 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
             <div className="max-w-2xl">
               <p className="text-lg text-white/90">

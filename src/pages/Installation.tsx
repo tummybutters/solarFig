@@ -41,7 +41,7 @@ const Installation = () => {
       <section id="process" className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
           <img src="/assets/installation/installation-header-2026.webp" alt="Solar installation team working on a residential roof." className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OUR PROCESS</p>

@@ -20,6 +20,11 @@
 4. Keep descriptive alt text.
 5. Never edit or move the master files in Downloads.
 
+## Layout Preferences
+- Large image/video heroes should be viewport-fit on first load.
+- If a hero has a bottom trust/info banner, the first viewport should fully show that banner without scroll.
+- Prefer measured navbar/banner height math over manual pixel nudging for hero sizing.
+
 ## Already Imported in Repo
 - `public/assets/solarfig logo.svg`
 - `public/assets/install-gallery/*`

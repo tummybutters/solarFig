@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, SunMedium, Wrench, Zap } from "lucide-react";
 
 const panelTypes = [
@@ -56,21 +57,23 @@ const faqs = [
 ];
 
 const SolarPanels = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useHeroViewportFit();
+
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full sm:h-[72vh] lg:h-[760px]">
+        <div className="mobile-hero-media relative min-h-[420px] w-full" style={heroMediaStyle}>
           <img
             src="/assets/solar-panels/solar-panels-header-2026.webp"
             alt="Residential home with rooftop solar panels on a clear day."
             className="h-full w-full object-cover object-[center_72%] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
-            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">SOLAR PANELS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Performance-Driven Solar Panels. Built to Last.

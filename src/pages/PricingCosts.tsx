@@ -58,7 +58,7 @@ const PricingCosts = () => {
             alt="Modern solar-equipped home at sunset with integrated wall batteries."
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/70 via-[#17141b]/45 to-[#17141b]/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">PRICING &amp; COSTS</p>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 
 const heroVideos = [
@@ -24,6 +24,8 @@ const HeroGlacial = () => {
     const [incomingIndex, setIncomingIndex] = useState<number | null>(null);
     const [incomingVisible, setIncomingVisible] = useState(false);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+    const sectionRef = useRef<HTMLElement | null>(null);
+    const bannerRef = useRef<HTMLDivElement | null>(null);
 
     const handleCurrentTimeUpdate = () => {
         if (incomingIndex !== null) return;
@@ -75,10 +77,47 @@ const HeroGlacial = () => {
         activeVideo.play().catch(() => { });
     }, [currentIndex]);
 
+    useLayoutEffect(() => {
+        const section = sectionRef.current;
+        const banner = bannerRef.current;
+        const navbar = document.querySelector<HTMLElement>("[data-site-navbar]");
+
+        if (!section || !banner || !navbar) return;
+
+        const updateHeroViewportFit = () => {
+            const navbarRect = navbar.getBoundingClientRect();
+            const bannerRect = banner.getBoundingClientRect();
+
+            section.style.setProperty("--hero-navbar-offset", `${Math.round(navbarRect.bottom)}px`);
+            section.style.setProperty("--hero-banner-height", `${Math.round(bannerRect.height)}px`);
+        };
+
+        updateHeroViewportFit();
+
+        const resizeObserver = new ResizeObserver(() => {
+            updateHeroViewportFit();
+        });
+
+        resizeObserver.observe(navbar);
+        resizeObserver.observe(banner);
+        window.addEventListener("resize", updateHeroViewportFit);
+
+        return () => {
+            resizeObserver.disconnect();
+            window.removeEventListener("resize", updateHeroViewportFit);
+        };
+    }, []);
+
     const loopedTrustBarItems = [...trustBarItems, ...trustBarItems];
 
     return (
-        <section className="hero-glacial-shell relative w-full overflow-hidden bg-slate-900 text-white">
+        <section
+            ref={sectionRef}
+            className="hero-glacial-shell relative w-full overflow-hidden bg-slate-900 text-white"
+            style={{
+                minHeight: "100svh",
+            }}
+        >
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
@@ -108,7 +147,14 @@ const HeroGlacial = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-20 mx-auto grid h-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pb-24 pt-20 sm:gap-10 sm:px-8 sm:pb-28 sm:pt-24 lg:gap-10 lg:pb-32 lg:pt-24">
+            <div
+                className="relative z-20 mx-auto grid box-border max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pt-20 sm:gap-10 sm:px-8 sm:pt-24 lg:gap-10 lg:pt-24"
+                style={{
+                    minHeight: "100svh",
+                    paddingBottom: "calc(var(--hero-banner-height, 72px) + 32px)",
+                    paddingTop: "calc(var(--hero-navbar-offset, 96px) + 28px)",
+                }}
+            >
 
                 {/* Left Side: Main Text Content */}
                 <div className="max-w-xl">
@@ -133,7 +179,10 @@ const HeroGlacial = () => {
 
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl">
+            <div
+                ref={bannerRef}
+                className="absolute inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#161319]/90 backdrop-blur-2xl"
+            >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-transparent to-white/[0.04]" />
                 <div className="relative z-10 overflow-hidden lg:hidden">
                     <div className="animate-ribbon-scroll mx-auto flex w-max items-center gap-4 px-4 py-3 sm:gap-6 sm:px-8" style={{ animationDuration: "34s" }}>

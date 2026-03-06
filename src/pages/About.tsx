@@ -23,7 +23,7 @@ const About = () => {
             alt="Modern home exterior with rooftop solar panels."
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/55 to-[#17141b]/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ABOUT US</p>
@@ -78,7 +78,10 @@ const About = () => {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, i) => (
-              <div key={pillar.title} className="group relative overflow-hidden rounded-2xl bg-[#f4eefb] p-6 transition-colors hover:bg-purple-50">
+              <div
+                key={pillar.title}
+                className="group relative overflow-hidden rounded-2xl border border-[#ded2ef] bg-white p-6 shadow-[0_12px_34px_-18px_rgba(109,57,181,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-18px_rgba(109,57,181,0.36)]"
+              >
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
                 <h3 className="mb-2  text-xl text-stone-900">{pillar.title}</h3>
                 <p className="text-sm text-stone-600">{pillar.description}</p>

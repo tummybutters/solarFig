@@ -45,10 +45,9 @@ const Contact = () => {
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[#6a4fa1] pb-16 pt-28 text-white sm:pb-20 sm:pt-32 lg:pb-24 lg:pt-36">
+      <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17141b_0%,#2a2340_48%,#6f5b99_100%)] pb-16 pt-28 text-white sm:pb-20 sm:pt-32 lg:pb-24 lg:pt-36">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/14 via-[#5f448f]/24 to-[#4e3680]/34" />
-          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.28),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.26),transparent_40%)]" />
         </div>
         <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="max-w-4xl">
