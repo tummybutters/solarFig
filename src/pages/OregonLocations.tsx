@@ -24,7 +24,7 @@ const OregonLocations = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full sm:h-[62vh]">
           <img
-            src="/assets/locations/oregon-header-image-2026-03-04.png"
+            src="/assets/locations/oregon-header-image-2026-03-04.webp"
             alt="Oregon neighborhood with rooftop solar installations."
             className="h-full w-full object-cover object-[center_76%] sm:object-center"
           />

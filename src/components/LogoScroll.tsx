@@ -2,6 +2,7 @@ const lenderLogos = [
   { name: "GoodLeap", src: "/assets/lender-logos/goodleap.png", monochrome: true },
   { name: "LightReach", src: "/assets/lender-logos/partners/lightreach-bw.png", monochrome: false },
   { name: "EnFin", src: "/assets/lender-logos/partners/enfin-bw.png", monochrome: false },
+  { name: "Credit Human", src: "/assets/lender-logos/credit-human-bw.svg", monochrome: false },
   { name: "Dividend", src: "/assets/lender-logos/dividend.png", monochrome: true },
   { name: "Participate Energy", src: "/assets/lender-logos/participate-energy.png", monochrome: true },
   { name: "Propel", src: "/assets/lender-logos/propel.svg", monochrome: true },

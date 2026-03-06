@@ -19,6 +19,7 @@
 3. Reference assets with web paths like `/assets/install-gallery/install-01.jpg`.
 4. Keep descriptive alt text.
 5. Never edit or move the master files in Downloads.
+6. For oversized photographic assets, prefer high-quality WebP replacements over large PNGs whenever transparency is not required.
 
 ## Layout Preferences
 - Large image/video heroes should be viewport-fit on first load.
