@@ -48,7 +48,7 @@ const OregonLocations = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
             <div>
               <div className="mb-10 max-w-xl">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Home &amp; Climate Factors</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">HOME &amp; CLIMATE FACTORS</p>
                 <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for Oregon conditions</h2>
                 <p className="mt-4 text-stone-600">
                   From rainy winters to bright summer production, performance depends on weather, roof layout, and utility structure.
@@ -113,7 +113,7 @@ const OregonLocations = () => {
           </div>
 
           <div className="mt-10 max-w-2xl lg:mt-16">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Grid &amp; Rate Strategy</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">GRID &amp; RATE STRATEGY</p>
             <h2 className=" text-3xl leading-tight sm:text-4xl">Optimized for Oregon&apos;s utility structure</h2>
             <p className="mt-4 text-white/80">
               Oregon&apos;s net metering, seasonal output swings, and changing household loads require smarter system strategy.
@@ -129,7 +129,7 @@ const OregonLocations = () => {
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
                 <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  Get an Oregon Estimate
+                  Get an Oregon estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
                   Get a clear projection of production, savings, and battery impact - built for Oregon&apos;s utilities.
@@ -140,7 +140,7 @@ const OregonLocations = () => {
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Get Started
+                  Get an Oregon estimate
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>

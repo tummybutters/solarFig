@@ -82,9 +82,9 @@ const EVChargers = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV Chargers</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV CHARGERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Integrated Home Charging, Designed for Modern Energy.
+                Integrated Home Charging. Designed for Modern Energy.
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Home EV charging solutions professionally installed for safety, performance, and long-term reliability.
@@ -93,7 +93,7 @@ const EVChargers = () => {
                 href="#contact"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#201b29] transition-colors hover:bg-gray-200"
               >
-                Get a quote
+                GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -105,7 +105,7 @@ const EVChargers = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Home Charging</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">HOME CHARGING</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for fast, reliable charging</h2>
           </div>
 
@@ -154,7 +154,7 @@ const EVChargers = () => {
 
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Charging Advantages</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">CHARGING ADVANTAGES</p>
               <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Reliable charging, every day</h2>
 
               <div className="space-y-5">
@@ -178,7 +178,7 @@ const EVChargers = () => {
                 href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
-                Get a quote
+                GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -204,7 +204,7 @@ const EVChargers = () => {
 
             {/* Floating quote card */}
             <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Customer Experience</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">CUSTOMER EXPERIENCE</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "The installation was seamless and professional. Now we’re charging our EV directly from our own roof."
               </blockquote>
@@ -220,7 +220,7 @@ const EVChargers = () => {
           <div className="grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Solar + EV</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">SOLAR + EV</p>
               <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Drive on sunlight</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Power your vehicle with the energy your home produces. We design fully integrated solar + EV systems that maximize production and charging efficiency.
@@ -229,7 +229,7 @@ const EVChargers = () => {
                 href="#contact"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                Power Your Drive
+                POWER YOUR DRIVE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -271,7 +271,7 @@ const EVChargers = () => {
 
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Installation</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">INSTALLATION</p>
               <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Professionally installed. Seamlessly integrated.</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 Our licensed electricians install hardwired Level 2 chargers with clean routing and code-compliant execution. We manage permits, inspections, and utility coordination from start to finish.
@@ -290,7 +290,7 @@ const EVChargers = () => {
                 href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
-                Start Your Home Charging
+                START YOUR HOME CHARGING
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

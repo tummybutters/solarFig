@@ -149,7 +149,7 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
 
           <div className="pt-1">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#231f2a]">
-              Consent <span className="text-[#231f2a]/60">(Required)</span>
+              CONSENT <span className="text-[#231f2a]/60">(REQUIRED)</span>
             </p>
             <label className="solar-neon-checkbox mt-4 inline-flex cursor-pointer items-center gap-3 text-[#231f2a]">
               <input type="checkbox" name="consent" required aria-label="I Agree and Consent" />

@@ -14,7 +14,7 @@ const solutionCards = [
     image: "/assets/home-editorial/home-inverters-2026.webp",
   },
   {
-    title: "Energy storage",
+    title: "Energy Storage",
     href: "/battery",
     image: "/assets/battery/battery-tesla-powerwall-3-feature.jpg",
   },
@@ -37,7 +37,7 @@ const reviews = [
     quote:
       "Professional from consultation through PTO and follow-up. The crew treated our home carefully, communication was consistent, and every milestone had clear next steps. Even after activation, they stayed responsive for questions and optimization tips. It felt like a real long-term partner, not a company that disappears after install day.",
     author: "Morgan H. — California",
-    image: "/assets/reviews/review-3.jpg",
+    image: "/assets/reviews/review-1.png",
   },
 ];
 
@@ -86,7 +86,7 @@ const HomeEditorial = () => {
         <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
             <h2 className="max-w-3xl text-5xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-7xl">
-              The grid is unpredictable, your power shouldn&apos;t be.
+              The grid is unpredictable. Your power shouldn&apos;t be.
             </h2>
           </div>
 
@@ -102,13 +102,13 @@ const HomeEditorial = () => {
 
             <div>
               <h3 className="max-w-xl text-4xl leading-[1.08] tracking-tight text-[#2a2238] sm:text-5xl">
-                Power your home with Solarfig.
+                Power your home with Solarfig
               </h3>
               <a
                 href="/locations"
                 className="mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5] transition-colors hover:text-[#4d2880]"
               >
-                Explore Locations
+                EXPLORE LOCATIONS
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -131,7 +131,7 @@ const HomeEditorial = () => {
               500+ Installations
             </h2>
             <p className="mt-5 text-xl text-[#423751] sm:text-2xl">Hundreds of satisfied customers</p>
-            <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google · Trustpilot · Yelp</p>
+            <p className="mt-3 text-xl text-[#423751] sm:text-2xl">Google • Trustpilot • Yelp</p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -173,11 +173,11 @@ const HomeEditorial = () => {
             href="/solar-panels"
             className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Solutions</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PRODUCTS</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Find your ideal setup.</h3>
             <p className="mt-4 text-[#4b4261]">Compare panel, inverter, and energy storage options built for your home.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-              View Solutions
+              VIEW PRODUCTS
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>
@@ -186,11 +186,11 @@ const HomeEditorial = () => {
             href="/pricing-costs"
             className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Plans & Services</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PLANS & SERVICES</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">A plan for every home.</h3>
             <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Tailored to your home and goals.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-              View Plans
+              VIEW PLANS
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>
@@ -199,11 +199,11 @@ const HomeEditorial = () => {
             href="/installation"
             className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">Process</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PROCESS</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Transparency from start to finish.</h3>
             <p className="mt-4 text-[#4b4261]">From consultation to PTO, we make every step clear, structured, and predictable.</p>
             <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-              View Process
+              VIEW PROCESS
               <ArrowRight className="h-4 w-4" />
             </p>
           </a>

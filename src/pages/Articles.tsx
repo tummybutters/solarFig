@@ -21,7 +21,7 @@ const Articles = () => {
             Solar Buying Guides for Homeowners
           </h1>
           <p className="mt-5 max-w-2xl text-white/75">
-            Clear, market-aware insights into pricing, incentives, net metering, batteries, and long-term performance — built for real homeowners comparing options.
+            Clear, market-aware insights into pricing, incentives, net metering, batteries, and long-term performance - built for real homeowners comparing options.
           </p>
 
           <div className="mt-10 grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl lg:grid-cols-[1.1fr_1fr]">
@@ -38,7 +38,7 @@ const Articles = () => {
             <div className="flex flex-col justify-center">
               <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-white/85">
                 <Sparkles className="h-3.5 w-3.5" />
-                Featured
+                FEATURED
               </div>
               <a href={`/articles/${featuredArticle.slug}`} className="group">
                 <h2 className="text-3xl leading-tight text-white transition-colors group-hover:text-[#e2c5ff] sm:text-4xl">
@@ -57,7 +57,7 @@ const Articles = () => {
                 href={`/articles/${featuredArticle.slug}`}
                 className="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#d8b0ff] transition-colors hover:text-white"
               >
-                Read article
+                READ ARTICLE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -69,14 +69,14 @@ const Articles = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">Article Library</p>
-              <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Clear Answers on Solar</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">ARTICLE LIBRARY</p>
+              <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Clear answers on solar</h2>
             </div>
             <a
               href="#contact"
               className="hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.11em] text-[#6d39b5] transition-colors hover:text-[#4c2880] sm:inline-flex"
             >
-              Ask a Question
+              ASK A QUESTION
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -109,7 +109,7 @@ const Articles = () => {
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#4a4365]">{article.excerpt}</p>
                     <p className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
-                      Read article
+                      READ ARTICLE
                       <ArrowRight className="h-4 w-4" />
                     </p>
                   </div>

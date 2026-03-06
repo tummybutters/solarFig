@@ -38,7 +38,7 @@ const batteryBenefits = [
   },
   {
     title: "Time-of-Use Optimization",
-    description: "Store low-cost energy and discharge during peak rate periods",
+    description: "Store low-cost energy and discharge during peak rate period.",
     icon: Gauge,
   },
   {
@@ -102,7 +102,7 @@ const Battery = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Energy storage</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ENERGY STORAGE</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Intelligent Energy Storage. Built for Resilience.
               </h1>
@@ -113,7 +113,7 @@ const Battery = () => {
                 href="#contact"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
-                Get a quote
+                GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -125,7 +125,7 @@ const Battery = () => {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Energy Management</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">ENERGY MANAGEMENT</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Energy storage that adapts</h2>
           </div>
 
@@ -174,7 +174,7 @@ const Battery = () => {
 
             {/* Compact text content */}
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Why Energy Storage</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">WHY ENERGY STORAGE</p>
               <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Extending the value of solar</h2>
 
               <div className="space-y-5">
@@ -198,7 +198,7 @@ const Battery = () => {
                 href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
-                Explore Storage Options
+                EXPLORE STORAGE OPTIONS
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -224,7 +224,7 @@ const Battery = () => {
 
             {/* Floating quote card — minimal, connected */}
             <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">Real-World Performance</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">REAL-WORLD PERFORMANCE</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "We rely on stored solar energy through the night, and the system is typically recharged by midday - even during overcast days."
               </blockquote>
@@ -240,8 +240,8 @@ const Battery = () => {
           <div className="grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
-              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Designed for Long-Term Performance</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">OUR APPROACH</p>
+              <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Designed for long-term performance</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 From system design through installation and ongoing support, we prioritize precision, durability, and clear communication.
               </p>
@@ -249,7 +249,7 @@ const Battery = () => {
                 href="/about"
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-purple-700 hover:text-purple-900"
               >
-                About Solarfig
+                ABOUT SOLARFIG
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -291,7 +291,7 @@ const Battery = () => {
 
             {/* Compact text */}
             <div className="order-1 flex flex-col justify-center lg:order-2">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">System Expansion</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">SYSTEM EXPANSION</p>
               <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Add storage on your timeline</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
                 If you already have solar, energy storage can often be integrated with minimal disruption. We evaluate compatibility and design a seamless expansion.
@@ -300,7 +300,7 @@ const Battery = () => {
                 href="#contact"
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
-                Explore Energy Storage
+                EXPLORE ENERGY STORAGE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

@@ -5,10 +5,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Check } from "lucide-react";
 
 const planCards = [
-  { id: "ppa", title: "Power Purchase Agreement", subtitle: "25-Year Lease", price: "$0", unit: "down", bullets: ["Lowest monthly payment", "Immediate utility savings", "Predictable, worry-free terms"] },
+  { id: "ppa", title: "Power Purchase Agreement", subtitle: "25-year lease", price: "$0", unit: "down", bullets: ["Lowest monthly payment", "Immediate utility savings", "Predictable, worry-free terms"] },
   { id: "finance", title: "Finance", subtitle: "Own your system", price: "$0", unit: "down", bullets: ["Build long-term equity", "Fixed monthly payments", "5-25 year loan terms"] },
   { id: "purchase", title: "Outright Purchase", subtitle: "One-time payment", price: "Custom", unit: "quote", bullets: ["Maximum lifetime savings", "No monthly payments", "Eligible for all available incentives"] },
-  { id: "prepaid", title: "Prepaid Plan", subtitle: "Hybrid Ownership - NEW", price: "30%", unit: "off", bullets: ["Financing + Cash Options", "Immediate upfront tax credit", "Option to transfer full ownership", "Comprehensive warranty coverage"] },
+  { id: "prepaid", title: "Prepaid Plan", subtitle: "Hybrid ownership - NEW", price: "30%", unit: "off", bullets: ["Financing + cash options", "Immediate upfront tax credit", "Option to transfer full ownership", "Comprehensive warranty coverage"] },
 ];
 
 const included = [
@@ -61,7 +61,7 @@ const PricingCosts = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/70 via-[#17141b]/45 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Pricing &amp; Costs</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">PRICING &amp; COSTS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">A Solar Plan That Fits Your Goals</h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Compare ownership options, understand your savings, and choose what makes sense for your home.
@@ -70,7 +70,7 @@ const PricingCosts = () => {
                 href="#contact"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
-                Get a quote
+                GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -82,8 +82,8 @@ const PricingCosts = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Solar Plans</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Flexible Ways to Power Your Home</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">SOLAR PLANS</p>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Flexible ways to power your home</h2>
             <p className="mt-4 text-stone-600">
               Solar costs depend on your home, energy usage, and goals. Most homeowners qualify for $0 down options. We design around savings first - not sales quotas.
             </p>
@@ -154,7 +154,7 @@ const PricingCosts = () => {
           </div>
 
           <div className="mt-10 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#695783]">Everything Included</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#695783]">EVERYTHING INCLUDED</p>
             <h2 className=" text-3xl leading-tight text-[#241d2f] sm:text-4xl">Designed to be complete</h2>
             <p className="mt-4 text-[#514469]">
               Premium equipment, licensed installation, real monitoring, and manufacturer-backed warranties — structured clearly from day one.
@@ -168,10 +168,10 @@ const PricingCosts = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Our Approach</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">OUR APPROACH</p>
               <h2 className="mb-4  text-3xl text-stone-900 sm:text-4xl">Fair pricing, long-term thinking</h2>
               <p className="mb-6 text-stone-600 leading-relaxed">
-                We&apos;re not here for the quickest sale. We&apos;re here to do it right, and stand behind it for decades. Every project is structured for lasting savings and real accountability.
+                We&apos;re not here for the quickest sale. We&apos;re here to do it right — and stand behind it for decades. Every project is structured for lasting savings and real accountability.
               </p>
               <div className="space-y-3">
                 {["No pressure consultations", "Clear, straightforward quotes", "Decades of experience"].map((point) => (

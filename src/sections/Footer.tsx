@@ -62,7 +62,11 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2.5 text-sm leading-relaxed text-white">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>4930 Campus Drive, Newport Beach, CA 92660</span>
+                <span>
+                  <span className="block">4930 Campus Drive</span>
+                  <span className="block">Newport Beach, CA</span>
+                  <span className="block">92660</span>
+                </span>
               </div>
             </div>
           </div>

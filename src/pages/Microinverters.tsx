@@ -21,16 +21,6 @@ const fitScenarios = [
     description: "Partial or shifting shade can influence system architecture and monitoring strategy",
     image: "/assets/microinverters/variable-shading-conditions.webp",
   },
-  {
-    title: "Future Expansion",
-    description: "Battery integration or system upgrades are factored into inverter selection from the start",
-    image: "/assets/microinverters/microinverters-gemini-3qn747.png",
-  },
-  {
-    title: "Electrical Infrastructure",
-    description: "Service panel capacity and utility interconnection requirements help guide configuration decisions",
-    image: "/assets/microinverters/microinverters-gemini-o1ws48.png",
-  },
 ];
 
 const faqs = [
@@ -72,7 +62,7 @@ const Microinverters = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Inverters</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">INVERTERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Engineered for Performance. Built for Reliability.
               </h1>
@@ -83,7 +73,7 @@ const Microinverters = () => {
                 href="#contact"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
-                Get a quote
+                GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -95,8 +85,8 @@ const Microinverters = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Power Conversion</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Intelligent Energy Control</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">POWER CONVERSION</p>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Intelligent energy control</h2>
           </div>
 
           {/* Icon strip */}
@@ -137,8 +127,8 @@ const Microinverters = () => {
       <section className="bg-[linear-gradient(145deg,#54288f_0%,#6D39B5_50%,#8553c2_100%)] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Design Considerations</p>
-            <h2 className=" text-4xl leading-tight sm:text-5xl">Choosing the Right Configuration</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">DESIGN CONSIDERATIONS</p>
+            <h2 className=" text-4xl leading-tight sm:text-5xl">Choosing the right configuration</h2>
           </div>
 
           <div className="space-y-16">
@@ -183,10 +173,10 @@ const Microinverters = () => {
 
             {/* Floating card */}
             <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:left-10 xl:mt-0 xl:max-w-sm xl:rounded-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#6D39B5]">Engineering First</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#6D39B5]">ENGINEERING FIRST</p>
               <h3 className="mb-3  text-2xl text-stone-900">No one-size-fits-all</h3>
               <p className="text-stone-600 leading-relaxed">
-                We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans — then walk you through the performance and scalability tradeoffs.
+                We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans - then walk you through the performance and scalability tradeoffs.
               </p>
               <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
                 Design My System

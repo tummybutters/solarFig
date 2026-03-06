@@ -8,7 +8,7 @@ const panelTypes = [
   {
     title: "Premium Efficiency",
     description: "Maximum energy output with fewer panels and a clean, streamlined look.",
-    image: "/assets/solar-panels/solar-panels-premium-efficiency-2026.webp",
+    image: "/assets/solar-panels/solar-panels-premium-efficiency-2026.jpg",
   },
   {
     title: "All-Climate Performance",
@@ -17,7 +17,7 @@ const panelTypes = [
   },
   {
     title: "25-Year Warranty Protection",
-    description: "Long-term performance and equipment coverage for lasting peace of mind.",
+    description: "Long-term performance and product coverage for lasting peace of mind.",
     image: "/assets/solar-panels/solar-panels-25-year-warranty-protection-2026.webp",
   },
 ];
@@ -71,12 +71,12 @@ const SolarPanels = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar Panels</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">SOLAR PANELS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Performance-Driven Solar Panels. Built to Last.
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
-                Industry leading panel options engineered for efficiency, durability, and long-term energy savings — tailored to your home’s unique roof, climate, and usage profile.
+                Industry leading panel options engineered for efficiency, durability, and long-term energy savings - tailored to your home's unique roof, climate, and usage profile.
               </p>
               <a
                 href="#contact"
@@ -94,8 +94,8 @@ const SolarPanels = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Panel Options</p>
-            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for Long-Term Performance</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">PANEL OPTIONS</p>
+            <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for long-term performance</h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -144,8 +144,8 @@ const SolarPanels = () => {
 
             {/* Compact content with horizontal icons */}
             <div className="flex flex-col justify-center">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Custom Layout</p>
-              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Built for Performance. Designed for Aesthetics.</h2>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">CUSTOM LAYOUT</p>
+              <h2 className="mb-8  text-3xl leading-tight sm:text-4xl">Built for performance. Designed for aesthetics.</h2>
 
               <div className="space-y-6">
                 {designFactors.map((factor) => {
@@ -168,7 +168,7 @@ const SolarPanels = () => {
                 href="#contact"
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
-                Start your design
+                START YOUR DESIGN
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -190,16 +190,16 @@ const SolarPanels = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-end p-8 sm:p-12 lg:max-w-xl">
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">Future Ready</p>
-                <h2 className="mb-4  text-3xl text-white sm:text-4xl">Designed for What’s Next</h2>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">FUTURE READY</p>
+                <h2 className="mb-4  text-3xl text-white sm:text-4xl">Designed for what's next</h2>
                 <p className="mb-6 text-white/80 leading-relaxed">
-                  We design your system with battery storage, EV charging, and future upgrades in mind — so expanding later doesn’t mean starting over.
+                  We design your system with battery storage, EV charging, and future upgrades in mind - so expanding later doesn't mean starting over.
                 </p>
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Plan my system
+                  PLAN MY SYSTEM
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>

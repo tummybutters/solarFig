@@ -17,7 +17,7 @@ const steps = [
     description: "On-site verification to confirm roof, electrical, and layout details.",
   },
   {
-    title: "Permitting & Engineering",
+    title: "Permitting and Engineering",
     description: "We handle plans, permits, and utility coordination for approval.",
   },
   {
@@ -44,7 +44,7 @@ const Installation = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/78 via-[#17141b]/46 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Our Process</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OUR PROCESS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">Your Solar Journey, Simplified</h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
             </div>
@@ -77,7 +77,7 @@ const Installation = () => {
           </div>
 
           <aside className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="text-xl tracking-tight text-[#231f2a]">What You Can Expect</h3>
+            <h3 className="text-xl tracking-tight text-[#231f2a]">What you can expect</h3>
             <ul className="mt-5 space-y-3">
               {[
                 "Clear timeline with defined milestones",
@@ -93,7 +93,7 @@ const Installation = () => {
               ))}
             </ul>
             <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
-              Start Your Project
+              Start your project
               <ArrowRight className="h-4 w-4" />
             </a>
           </aside>

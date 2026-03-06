@@ -17,7 +17,7 @@ const LogoScroll = () => {
     <section className="w-full overflow-hidden bg-[#efe7f8] py-8">
       <div className="mx-auto mb-4 max-w-[1400px] px-6 sm:px-8">
         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gray-500">
-          Trusted Partners
+          TRUSTED PARTNERS
         </p>
       </div>
       <div className="overflow-hidden">

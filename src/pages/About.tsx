@@ -28,7 +28,7 @@ const About = () => {
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ABOUT US</p>
               <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
-                Solar done with integrity. Designed with intention.
+                Solar Done with Integrity. Designed with Intention.
               </h1>
               <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
                 We help homeowners transition to solar with clear strategy, honest pricing, and systems built to perform for decades.
@@ -136,7 +136,7 @@ const About = () => {
                 href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
-                Start Your Plan
+                START YOUR PLAN
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

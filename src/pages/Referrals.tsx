@@ -31,19 +31,19 @@ const Referrals = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/72 via-[#17141b]/44 to-[#17141b]/18" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Referral Program</p>
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">REFERRAL PROGRAM</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Share solar, earn rewards.
+                Share solar. Earn rewards.
               </h1>
               <h2 className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
-                Refer homeowners to Solarfig and earn up to $1,000 for every completed installation.
+                A structured referral program for homeowners and partners who trust Solarfig.
               </h2>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Refer now
+                  Refer a Homeowner
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
@@ -62,22 +62,19 @@ const Referrals = () => {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 max-w-2xl">
-            <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">Referral rewards that scale</h2>
-            <p className="mt-3 text-stone-600">
-              Earn cash for every completed solar installation you refer. The more you share, the more you earn.
-            </p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">Refer a Homeowner</p>
+            <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">How it works</h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-3">
             {tiers.map((tier, i) => (
               <div key={tier.title} className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.3)] transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.45)] sm:p-8">
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-200">0{i + 1}</span>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title} Tier</p>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title}</p>
                 <p className="text-5xl font-light text-stone-900 sm:text-6xl">{tier.reward}</p>
                 <p className="mt-2 text-stone-500">{tier.count}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-stone-600">No limit on referrals. Paid after installation is complete.</p>
         </div>
       </section>
 
@@ -87,7 +84,7 @@ const Referrals = () => {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="mb-10 max-w-md">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">The Process</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">THE PROCESS</p>
                 <h2 className=" text-4xl text-stone-900 sm:text-5xl">How it works</h2>
               </div>
 
@@ -161,7 +158,7 @@ const Referrals = () => {
                 href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
-                Submit A Referral
+                SUBMIT A REFERRAL
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -169,7 +166,7 @@ const Referrals = () => {
         </div>
       </section>
 
-      <GlobalQuoteSection mode="referral" />
+      <GlobalQuoteSection />
       <Footer />
     </main>
   );
