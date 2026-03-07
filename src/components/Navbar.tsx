@@ -29,14 +29,14 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Designed for Maximum Efficiency",
-        title: "Solar",
+        label: "Solar",
+        title: "Designed for Maximum Efficiency",
         href: "/solar-panels",
         image: "/assets/navbar/nav-products-designed-for-maximum-efficiency.webp",
       },
       {
-        label: "Batteries & Energy Storage: Stay Powered Up!",
-        title: "Energy Storage",
+        label: "Energy Storage",
+        title: "Batteries & Energy Storage: Stay Powered Up!",
         href: "/battery",
         image: "/assets/navbar/nav-products-batteries-energy-storage-stay-powered-up.webp",
       },
@@ -73,14 +73,14 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Why California Remains the Best State for Solar",
-        title: "California",
+        label: "California",
+        title: "Why California Remains the Best State for Solar",
         href: "/locations",
         image: "/assets/navbar/nav-locations-why-california-remains-best-state-for-solar.webp",
       },
       {
-        label: "Solar In Oregon: Net Metering and Local Incentives",
-        title: "Oregon",
+        label: "Oregon",
+        title: "Solar In Oregon: Net Metering and Local Incentives",
         href: "/locations/oregon",
         image: "/assets/navbar/nav-locations-solar-in-oregon-net-metering-local-incentives.webp",
       },
@@ -96,14 +96,14 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Why Choose Solarfig? Who We Are",
-        title: "About Us",
+        label: "About Us",
+        title: "Why Choose Solarfig? Who We Are",
         href: "/about",
         image: "/assets/navbar/nav-explore-why-choose-solarfig-who-we-are.webp",
       },
       {
-        label: "Refer a Friend and Earn Rewards!",
-        title: "Referral Program",
+        label: "Referral Program",
+        title: "Refer a Friend and Earn Rewards!",
         href: "/referrals",
         image: "/assets/navbar/nav-explore-refer-a-friend-and-earn-rewards.webp",
       },
