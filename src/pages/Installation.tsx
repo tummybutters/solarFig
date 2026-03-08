@@ -76,7 +76,7 @@ const Installation = () => {
             </div>
           </div>
 
-          <aside className="rounded-2xl border border-gray-200 bg-white p-6">
+          <aside className="self-start rounded-2xl border border-gray-200 bg-white p-6">
             <h3 className="text-xl tracking-tight text-[#231f2a]">What you can expect</h3>
             <ul className="mt-5 space-y-3">
               {[
