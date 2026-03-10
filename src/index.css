@@ -262,6 +262,21 @@ html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb:active {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+@keyframes scrollCueDrift {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.72;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+.scroll-cue {
+  animation: scrollCueDrift 2.8s ease-in-out infinite;
+}
+
 /* Backdrop blur utilities */
 .backdrop-blur-xl {
   backdrop-filter: blur(24px);
@@ -307,6 +322,7 @@ html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .scroll-cue,
   .tx-enter,
   .tx-exit {
     animation: none;

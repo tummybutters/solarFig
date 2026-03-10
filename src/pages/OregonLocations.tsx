@@ -5,15 +5,15 @@ import OregonMap from "@/components/OregonMap";
 import { ArrowRight, BadgeAlert, Home, PlugZap, ShieldCheck, SunMedium } from "lucide-react";
 
 const regions = [
-  { name: "Sun & Seasonal Production", focus: "Sized for winter lows and summer peaks", icon: SunMedium },
-  { name: "Roof Layout & Shade", focus: "Engineered for real roof geometry and tree cover", icon: Home },
-  { name: "Utility & Net Metering Rules", focus: "Built around Oregon rate and credit structure", icon: BadgeAlert },
+  { name: "Year-Round Performance", focus: "Balanced for winter clouds and summer sun.", icon: SunMedium },
+  { name: "Full Net Metering Benefits", focus: "Maximized for Oregon’s 1:1 credits.", icon: BadgeAlert },
+  { name: "Expansion-Ready Design", focus: "Future-load ready.", icon: Home },
 ];
 
 const challenges = [
-  { title: "Seasonal Variability", description: "Production planning for cloudy months", icon: BadgeAlert },
-  { title: "Grid Reliability", description: "Backup strategy for outages", icon: ShieldCheck },
-  { title: "Future Growth", description: "Expansion-ready from day one", icon: PlugZap },
+  { title: "1:1 Net Metering", description: "Maximized under Oregon’s full net metering.", icon: BadgeAlert },
+  { title: "Seasonal Yield Planning", description: "Sized for winter clouds and summer sun.", icon: ShieldCheck },
+  { title: "Optional Storage Strategy", description: "Added for resilience, not regulation.", icon: PlugZap },
 ];
 
 const OregonLocations = () => {
@@ -33,10 +33,10 @@ const OregonLocations = () => {
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OREGON</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Solar &amp; Storage Built for Oregon&apos;s Energy Landscape
+                Solar That Performs in Oregon&apos;s Climate
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
-                Custom systems designed for net metering, seasonal production, and long-term savings.
+                High-efficiency solar systems designed for net metering and year-round performance.
               </p>
             </div>
           </div>
@@ -55,10 +55,10 @@ const OregonLocations = () => {
 
             <div>
               <div className="mb-10 max-w-xl">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">HOME &amp; CLIMATE FACTORS</p>
-                <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for Oregon conditions</h2>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">LOCAL ENERGY DESIGN</p>
+                <h2 className=" text-4xl text-stone-900 sm:text-5xl">Solar that fits Oregon</h2>
                 <p className="mt-4 text-stone-600">
-                  From rainy winters to bright summer production, performance depends on weather, roof layout, and utility structure.
+                  Engineered for cloudy winters, strong summer production, and full net metering value.
                 </p>
               </div>
 
@@ -116,10 +116,10 @@ const OregonLocations = () => {
           </div>
 
           <div className="mt-10 max-w-2xl lg:mt-16">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">GRID &amp; RATE STRATEGY</p>
-            <h2 className=" text-3xl leading-tight sm:text-4xl">Optimized for Oregon&apos;s utility structure</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">BUILT FOR OREGON</p>
+            <h2 className=" text-3xl leading-tight sm:text-4xl">Optimized for Oregon&apos;s energy structure</h2>
             <p className="mt-4 text-white/80">
-              Oregon&apos;s net metering, seasonal output swings, and changing household loads require smarter system strategy.
+              Designed to capture full retail net metering credits while preparing your home for long-term electrification.
             </p>
           </div>
         </div>
@@ -132,10 +132,10 @@ const OregonLocations = () => {
             <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
                 <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  Get an Oregon estimate
+                  Get your Oregon solar plan
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
-                  Get a clear projection of production, savings, and battery impact — built for Oregon&apos;s utilities.
+                  Get a transparent breakdown of production, savings, and optional storage — built for Oregon utilities.
                 </p>
               </div>
               <div className="lg:text-right">
@@ -143,7 +143,7 @@ const OregonLocations = () => {
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Get an Oregon estimate
+                  Get Started
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>

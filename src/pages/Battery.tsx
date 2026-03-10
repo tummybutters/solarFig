@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, CloudLightning, DollarSign, Gauge, HousePlug, ShieldCheck } from "lucide-react";
 
@@ -39,7 +40,7 @@ const batteryBenefits = [
   },
   {
     title: "Time-of-Use Optimization",
-    description: "Store low-cost energy and discharge during peak rate period.",
+    description: "Store low-cost energy and discharge during peak rate period",
     icon: Gauge,
   },
   {
@@ -123,6 +124,7 @@ const Battery = () => {
             </div>
           </div>
         </div>
+        <ScrollCue />
       </section>
 
       {/* Control Modes — Images dominant, minimal text badges below */}

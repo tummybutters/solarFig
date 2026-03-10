@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, SunMedium, Wrench, Zap } from "lucide-react";
 
@@ -92,6 +93,7 @@ const SolarPanels = () => {
             </div>
           </div>
         </div>
+        <ScrollCue />
       </section>
 
       {/* Panel Types — Horizontal scroll on mobile, grid on desktop */}

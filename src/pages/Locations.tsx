@@ -33,7 +33,8 @@ const Locations = () => {
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">CALIFORNIA</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Solar &amp; Storage Built for California&apos;s New Energy Landscape
+                <span className="block">Built for California&apos;s</span>
+                <span className="block">New Energy Landscape</span>
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Custom systems designed for NEM 3.0, time-of-use rates, and long-term savings.

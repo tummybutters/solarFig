@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, Eye, ShieldCheck, Sun } from "lucide-react";
 
@@ -83,6 +84,7 @@ const Microinverters = () => {
             </div>
           </div>
         </div>
+        <ScrollCue />
       </section>
 
       {/* Benefits — Icon strip with large image below */}
