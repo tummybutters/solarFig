@@ -9,7 +9,7 @@ const benefits = [
   {
     icon: <Receipt className="w-6 h-6" />,
     title: "30% federal tax credit",
-    description: "The government pays 30% of your system cost. That's $7,500-15,000 back on your taxes.",
+    description: "The government pays 30% of your system cost. That's $7,500–15,000 back on your taxes.",
   },
   {
     icon: <Battery className="w-6 h-6" />,
@@ -18,8 +18,8 @@ const benefits = [
   },
   {
     icon: <Zap className="w-6 h-6" />,
-    title: "7-9 year payback",
-    description: "Not 15-20 years like other companies quote. NEM 3.0-optimized systems with battery pay for themselves fast.",
+    title: "7–9 year payback",
+    description: "Not 15–20 years like other companies quote. NEM 3.0-optimized systems with battery pay for themselves fast.",
   },
 ];
 
@@ -28,7 +28,7 @@ const bonuses = [
     icon: <Gift className="w-5 h-5" />,
     title: "Expedited Permitting",
     value: "$1,500",
-    description: "Our city relationships get permits approved in 7-14 days, not 60-90.",
+    description: "Our city relationships get permits approved in 7–14 days, not 60–90.",
   },
   {
     icon: <Zap className="w-5 h-5" />,

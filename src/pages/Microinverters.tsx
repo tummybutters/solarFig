@@ -67,7 +67,8 @@ const Microinverters = () => {
             <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">INVERTERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Engineered for Performance. Built for Reliability.
+                <span className="block lg:whitespace-nowrap">Engineered for Performance.</span>
+                <span className="block lg:whitespace-nowrap">Built for Reliability.</span>
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 The control center of your solar system. We select the right architecture to maximize efficiency, monitoring, safety, and scalability.
@@ -131,7 +132,11 @@ const Microinverters = () => {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">DESIGN CONSIDERATIONS</p>
-            <h2 className=" text-4xl leading-tight sm:text-5xl">Choosing the right configuration</h2>
+            <h2 className=" text-4xl leading-tight sm:text-5xl">
+              Choosing the right
+              <br />
+              configuration
+            </h2>
           </div>
 
           <div className="space-y-16">
@@ -149,7 +154,7 @@ const Microinverters = () => {
                   </div>
                 </div>
                 <div className={i % 2 === 1 ? 'lg:order-1 lg:pr-12' : 'lg:pl-12'}>
-                  <span className="text-xs font-mono text-[#8553c2]">0{i + 1}</span>
+                  <span className="text-xs font-mono text-white/70">0{i + 1}</span>
                   <h3 className="mt-2  text-3xl text-white sm:text-4xl">{scenario.title}</h3>
                   <p className="mt-3 text-lg text-white/60">{scenario.description}</p>
                 </div>
@@ -179,7 +184,7 @@ const Microinverters = () => {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#6D39B5]">ENGINEERING FIRST</p>
               <h3 className="mb-3  text-2xl text-stone-900">No one-size-fits-all</h3>
               <p className="text-stone-600 leading-relaxed">
-                We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans - then walk you through the performance and scalability tradeoffs.
+                We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans — then walk you through the performance and scalability tradeoffs.
               </p>
               <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
                 Design My System

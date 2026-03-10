@@ -27,6 +27,7 @@ import Contact from "@/pages/Contact";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
 import { Analytics } from "@vercel/analytics/react";
+import { useEffect } from "react";
 import "./App.css";
 
 const HomePage = () => {
@@ -43,6 +44,61 @@ const HomePage = () => {
 };
 
 function App() {
+  useEffect(() => {
+    const root = document.documentElement;
+    const isApplePlatform = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent) || navigator.platform === "MacIntel";
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    if (!isApplePlatform || !canHover) return;
+
+    let hideTimer: number | undefined;
+
+    const showScrollbar = () => {
+      root.classList.add("platform-apple", "scrollbar-peek");
+    };
+
+    const hideScrollbar = () => {
+      root.classList.remove("scrollbar-peek");
+    };
+
+    const handlePointerMove = (event: PointerEvent) => {
+      if (event.pointerType && event.pointerType !== "mouse") return;
+
+      root.classList.add("platform-apple");
+
+      if (window.innerWidth - event.clientX <= 18) {
+        showScrollbar();
+      } else {
+        hideScrollbar();
+      }
+    };
+
+    const handlePointerLeave = () => {
+      hideScrollbar();
+    };
+
+    const handleScroll = () => {
+      showScrollbar();
+      window.clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => {
+        hideScrollbar();
+      }, 600);
+    };
+
+    root.classList.add("platform-apple");
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerleave", handlePointerLeave);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.clearTimeout(hideTimer);
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerleave", handlePointerLeave);
+      window.removeEventListener("scroll", handleScroll);
+      root.classList.remove("platform-apple", "scrollbar-peek");
+    };
+  }, []);
+
   return (
     <>
       <SeoHead />

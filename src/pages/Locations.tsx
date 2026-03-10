@@ -2,12 +2,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import CaliforniaMap from "@/components/CaliforniaMap";
-import { ArrowRight, BadgeAlert, PlugZap, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeAlert, Home, PlugZap, ShieldCheck, SunMedium } from "lucide-react";
 
 const regions = [
-  { code: "01", name: "Sun & Heat Exposure", focus: "Optimized for extreme sun" },
-  { code: "02", name: "Roof Type & Layout", focus: "Precision fit for any roof" },
-  { code: "03", name: "Coastal & Inland Conditions", focus: "Materials matched to the environment" },
+  { name: "Sun & Heat Exposure", focus: "Optimized for extreme sun", icon: SunMedium },
+  { name: "Roof Type & Layout", focus: "Precision fit for any roof", icon: Home },
+  { name: "Coastal & Inland Conditions", focus: "Materials matched to the environment", icon: ShieldCheck },
 ];
 
 const challenges = [
@@ -56,20 +56,24 @@ const Locations = () => {
               </div>
 
               <div className="space-y-4">
-                {regions.map((region) => (
+                {regions.map((region) => {
+                  const Icon = region.icon;
+
+                  return (
                   <div
-                    key={region.code}
+                    key={region.name}
                     className="group flex items-center gap-5 rounded-2xl bg-white p-5 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_8px_30px_-10px_rgba(109,57,181,0.35)]"
                   >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-sm font-bold text-purple-600">
-                      {region.code}
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
+                      <Icon className="h-5 w-5" />
                     </span>
                     <div className="flex-1">
                       <p className="font-medium text-stone-900">{region.name}</p>
                       <p className="text-sm text-stone-500">{region.focus}</p>
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
@@ -131,7 +135,7 @@ const Locations = () => {
                   Get a California estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
-                  Get a clear projection of production, savings, and battery impact - built for California&apos;s grid.
+                  Get a clear projection of production, savings, and battery impact — built for California&apos;s grid.
                 </p>
               </div>
               <div className="lg:text-right">
@@ -139,7 +143,7 @@ const Locations = () => {
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
-                  Get a California estimate
+                  Get Started
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>

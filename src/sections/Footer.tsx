@@ -31,9 +31,9 @@ const Footer = () => {
     <footer className="bg-[#161319] py-20 text-white sm:py-24">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
         {/* Main Footer Grid */}
-        <div className="mb-14 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-12">
+        <div className="mb-14 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-12 xl:gap-x-10">
           {/* Brand Column */}
-          <div className="space-y-5 pb-2 sm:col-span-2 lg:col-span-4">
+          <div className="space-y-5 pb-2 sm:col-span-2 lg:col-span-3">
             <a href="/" className="inline-flex items-center">
               <img
                 src="/assets/logo/footer-logo-white.svg"
@@ -64,7 +64,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 text-purple-400" />
                 <span>
                   <span className="block">4930 Campus Drive</span>
-                  <span className="block">Newport Beach, CA</span>
+                  <span className="block whitespace-nowrap">Newport Beach, CA</span>
                   <span className="block">92660</span>
                 </span>
               </div>

@@ -26,6 +26,8 @@
 - If a hero has a bottom trust/info banner, the first viewport should fully show that banner without scroll.
 - Prefer measured navbar/banner height math over manual pixel nudging for hero sizing.
 - The navbar should size with clamp-based padding/logo/font values rather than a large fixed desktop height, so it stays tighter on Mac/Chrome while still reading cleanly on Windows.
+- Never allow hyphenated headline words to break at the hyphen; keep the full hyphenated phrase together and, when forcing a wrap, break after the second word in that hyphenated phrase.
+- In body copy, use a long dash (`—`) for parenthetical clause breaks and keep the standard hyphen (`-`) only for true hyphenated words such as `long-term`.
 
 ## Already Imported in Repo
 - `public/assets/solarfig logo.svg`

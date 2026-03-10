@@ -54,7 +54,7 @@ export const solarArticles: SolarArticle[] = [
           "Very low-usage homes, heavily shaded roofs, or homes with major roof repairs pending can have weaker near-term economics.",
           "In those cases, it can still make sense to plan for solar, but timing and scope need to be right. Sometimes a phased approach is better than rushing into a full install.",
         ],
-        tip: "If roof replacement is likely within 3-7 years, compare install-now vs wait-with-re-roof side by side before committing.",
+        tip: "If roof replacement is likely within 3–7 years, compare install-now vs wait-with-re-roof side by side before committing.",
       },
       {
         heading: "Bottom line for 2026 buyers",

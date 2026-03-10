@@ -9,7 +9,7 @@ const plans = [
         icon: <Zap className="h-5 w-5 text-purple-400" />,
         features: [
             "No upfront payment",
-            "Immediate savings - pay for power at a cheaper rate than your utility",
+            "Immediate savings — pay for power at a cheaper rate than your utility",
             "Predictable monthly payments",
             "Full warranty, maintenance, and production guarantee",
         ],
@@ -24,7 +24,7 @@ const plans = [
         features: [
             "Own your system with no upfront cost",
             "Fixed monthly payments",
-            "5-25 year terms available",
+            "5–25 year terms available",
             "Full warranty and maintenance included",
         ],
     },
@@ -38,7 +38,7 @@ const plans = [
             "Own your system from day one",
             "Zero monthly payments or loan terms",
             "Full system cost due upfront",
-            "Quickest return on investment (often 5-8 years)",
+            "Quickest return on investment (often 5–8 years)",
         ],
     },
     {

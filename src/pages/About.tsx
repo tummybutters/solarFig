@@ -4,10 +4,10 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { ArrowRight } from "lucide-react";
 
 const pillars = [
-  { title: "Clear by Design", description: "Straightforward proposals. No inflated production claims." },
-  { title: "Market-Smart", description: "Designed around utility structure and policy realities." },
-  { title: "Standards Matter", description: "Vetted installation partners and manufacturer-backed warranties." },
-  { title: "Built to Last", description: "Support that extends beyond PTO and activation." },
+  { title: "Clear by Design", description: "Straightforward proposals, no inflated production claims" },
+  { title: "Market-Smart", description: "Designed around utility structure and policy realities" },
+  { title: "Standards Matter", description: "Vetted installation partners and manufacturer-backed warranties" },
+  { title: "Built to Last", description: "Support that extends beyond PTO and activation" },
 ];
 
 const About = () => {

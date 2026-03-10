@@ -158,6 +158,21 @@
   background: hsl(var(--muted-foreground) / 0.5);
 }
 
+html.platform-apple::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb,
+html.platform-apple::-webkit-scrollbar-thumb:hover,
+html.platform-apple::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--muted-foreground) / 0.3);
+}
+
+html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb:hover,
+html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
 /* Card stack animations */
 @keyframes slideOutLeft {
   0% {
@@ -584,6 +599,10 @@ main.mobile-premium:not(.home-page) :is(h1, h2) {
   text-wrap: balance;
 }
 
+main.mobile-premium :is(.article-title-natural-wrap) {
+  text-wrap: initial;
+}
+
 @media (max-width: 1023px) {
   main.mobile-premium:not(.home-page) :is(h1, h2)[class*="text-4xl"] {
     font-size: clamp(1.6rem, 6.2vw, 2.05rem) !important;
@@ -798,5 +817,48 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
 
   main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p + a {
     margin-top: 1.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.mobile-premium:not(.home-page):not(.page-battery) .mobile-hero-media > .absolute.inset-0.mx-auto > div {
+    max-width: 58rem !important;
+  }
+
+  main.mobile-premium:not(.home-page):not(.page-battery) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+    max-width: 52rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.page-microinverters .mobile-hero-media > .absolute.inset-0.mx-auto > div {
+    max-width: 64rem !important;
+  }
+
+  main.page-microinverters .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+    max-width: none !important;
+    font-size: clamp(3.9rem, 5.7vw, 5.2rem) !important;
+    line-height: 0.96 !important;
+    text-wrap: initial;
+  }
+
+  main.page-microinverters .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+    max-width: 56rem !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 920px) {
+  main.page-microinverters .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+    font-size: clamp(3.35rem, 4.7vw, 4.5rem) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.page-battery .mobile-hero-media > .absolute.inset-0.mx-auto > div {
+    max-width: 48rem !important;
+  }
+
+  main.page-battery .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+    max-width: 42rem !important;
   }
 }

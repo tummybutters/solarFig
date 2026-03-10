@@ -21,7 +21,7 @@ const planCards = [
     points: [
       "Own your system with low/no upfront options",
       "Fixed payments",
-      "5-25 year term options",
+      "5–25 year term options",
       "Comprehensive warranty and maintenance support",
     ],
   },

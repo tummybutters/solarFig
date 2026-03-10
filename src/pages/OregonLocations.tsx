@@ -2,12 +2,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import OregonMap from "@/components/OregonMap";
-import { ArrowRight, BadgeAlert, PlugZap, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeAlert, Home, PlugZap, ShieldCheck, SunMedium } from "lucide-react";
 
 const regions = [
-  { code: "01", name: "Sun & Seasonal Production", focus: "Sized for winter lows and summer peaks" },
-  { code: "02", name: "Roof Layout & Shade", focus: "Engineered for real roof geometry and tree cover" },
-  { code: "03", name: "Utility & Net Metering Rules", focus: "Built around Oregon rate and credit structure" },
+  { name: "Sun & Seasonal Production", focus: "Sized for winter lows and summer peaks", icon: SunMedium },
+  { name: "Roof Layout & Shade", focus: "Engineered for real roof geometry and tree cover", icon: Home },
+  { name: "Utility & Net Metering Rules", focus: "Built around Oregon rate and credit structure", icon: BadgeAlert },
 ];
 
 const challenges = [
@@ -45,7 +45,14 @@ const OregonLocations = () => {
 
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start lg:gap-12">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
+              <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_20px_60px_-20px_rgba(109,57,181,0.3)] sm:p-8">
+                <OregonMap className="max-w-[280px]" />
+              </div>
+            </div>
+
             <div>
               <div className="mb-10 max-w-xl">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">HOME &amp; CLIMATE FACTORS</p>
@@ -56,27 +63,24 @@ const OregonLocations = () => {
               </div>
 
               <div className="space-y-4">
-                {regions.map((region) => (
+                {regions.map((region) => {
+                  const Icon = region.icon;
+
+                  return (
                   <div
-                    key={region.code}
+                    key={region.name}
                     className="group flex items-center gap-5 rounded-2xl bg-white p-5 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_8px_30px_-10px_rgba(109,57,181,0.35)]"
                   >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-sm font-bold text-purple-600">
-                      {region.code}
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
+                      <Icon className="h-5 w-5" />
                     </span>
                     <div className="flex-1">
                       <p className="font-medium text-stone-900">{region.name}</p>
                       <p className="text-sm text-stone-500">{region.focus}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_20px_60px_-20px_rgba(109,57,181,0.3)] sm:p-8">
-                <OregonMap className="max-w-[280px]" />
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -131,7 +135,7 @@ const OregonLocations = () => {
                   Get an Oregon estimate
                 </h2>
                 <p className="mt-4 max-w-lg text-white/70">
-                  Get a clear projection of production, savings, and battery impact - built for Oregon&apos;s utilities.
+                  Get a clear projection of production, savings, and battery impact — built for Oregon&apos;s utilities.
                 </p>
               </div>
               <div className="lg:text-right">

@@ -58,22 +58,48 @@ const Referrals = () => {
         </div>
       </section>
 
-      {/* Reward Tiers — Large number cards */}
+      {/* Reward Tiers */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="mb-8 max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">Refer a Homeowner</p>
-            <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">How it works</h2>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {tiers.map((tier, i) => (
-              <div key={tier.title} className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.3)] transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.45)] sm:p-8">
-                <span className="absolute right-4 top-4 text-xs font-mono text-stone-200">0{i + 1}</span>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title}</p>
-                <p className="text-5xl font-light text-stone-900 sm:text-6xl">{tier.reward}</p>
-                <p className="mt-2 text-stone-500">{tier.count}</p>
+          <div className="relative overflow-hidden rounded-3xl border border-[#d8ccea] bg-[#ede7f5]">
+            <img
+              src="/assets/referrals/referrals-header-image.webp"
+              alt="Friends and family gathering outside a home at dusk."
+              className="h-[520px] w-full object-cover object-center sm:h-[560px]"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#120e18]/88 via-[#120e18]/44 to-[#120e18]/16" />
+            <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-[#ede7f5] via-[#ede7f5]/94 to-transparent" />
+
+            <div className="absolute inset-0 p-6 sm:p-8 lg:p-10">
+              <div className="max-w-md">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/78">Refer a Homeowner</p>
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl">Referral rewards that scale</h2>
+                <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/78 sm:text-base">
+                  Earn cash for every completed solar installation you refer. The more you share, the more you earn.
+                </p>
               </div>
-            ))}
+            </div>
+
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+              <div className="grid gap-6 lg:grid-cols-[minmax(0,280px)_1fr] lg:items-end">
+                <p className="max-w-sm text-sm text-[#5f5571]">
+                  No limit on referrals. Paid after installation is complete.
+                </p>
+
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {tiers.map((tier, i) => (
+                    <div key={tier.title} className="group relative overflow-hidden rounded-2xl bg-white/96 p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.3)] backdrop-blur-sm transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.45)] sm:p-8">
+                      <span className="absolute right-4 top-4 text-xs font-mono text-stone-200">0{i + 1}</span>
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title}</p>
+                      <p className="text-5xl font-light text-stone-900 sm:text-6xl">{tier.reward}</p>
+                      <p className="mt-2 text-stone-500">{tier.count}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

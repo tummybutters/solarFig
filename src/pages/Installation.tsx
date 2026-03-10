@@ -6,37 +6,37 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 const steps = [
   {
     title: "Consultation",
-    description: "Personalized review of your energy usage, goals, and home details.",
+    description: "Personalized review of your energy usage, goals, and home details",
   },
   {
     title: "Design & Proposal",
-    description: "Custom system design with transparent pricing and savings breakdown.",
+    description: "Custom system design with transparent pricing and savings breakdown",
   },
   {
     title: "Site Inspection",
-    description: "On-site verification to confirm roof, electrical, and layout details.",
+    description: "On-site verification to confirm roof, electrical, and layout details",
   },
   {
     title: "Permitting and Engineering",
-    description: "We handle plans, permits, and utility coordination for approval.",
+    description: "We handle plans, permits, and utility coordination for approval",
   },
   {
     title: "Installation",
-    description: "Professional install by licensed, vetted partners.",
+    description: "Professional install by licensed, vetted partners",
   },
   {
     title: "Inspections",
-    description: "Local authority review to ensure compliance and safety.",
+    description: "Local authority review to ensure compliance and safety",
   },
   {
     title: "Permission to Operate (PTO)",
-    description: "Utility approval to activate your system and start producing power.",
+    description: "Utility approval to activate your system and start producing power",
   },
 ];
 
 const Installation = () => {
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium page-installation min-h-screen bg-[#f4eefb]">
       <Navbar />
       <section id="process" className="relative overflow-hidden">
         <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
@@ -45,7 +45,10 @@ const Installation = () => {
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
             <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OUR PROCESS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">Your Solar Journey, Simplified</h1>
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+                <span className="block lg:whitespace-nowrap">Your Solar Journey,</span>
+                <span className="block lg:whitespace-nowrap">Simplified</span>
+              </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
             </div>
           </div>

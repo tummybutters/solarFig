@@ -19,7 +19,7 @@ const Contact = () => {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
       details: ["+1 (213) 306-4154"],
-      description: "Mon-Fri 8am-6pm PST",
+      description: "Mon-Fri 9AM - 7PM PST",
     },
     {
       icon: <Mail className="h-5 w-5" />,
@@ -30,13 +30,13 @@ const Contact = () => {
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Office",
-      details: ["2810 Jackson Ave PH3B", "Long Island City, NY 11101"],
+      details: ["4930 Campus Drive", "Newport Beach, CA 92660"],
       description: "By appointment only",
     },
     {
       icon: <Clock className="h-5 w-5" />,
       title: "Hours",
-      details: ["Mon-Fri: 8am - 6pm", "Sat: 9am - 2pm"],
+      details: ["Mon-Fri 9AM - 7PM PST", "Sat 11AM - 5PM PST"],
       description: "Closed Sundays",
     },
   ];
@@ -53,7 +53,7 @@ const Contact = () => {
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Contact</p>
             <h1 className="mb-5 text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_20px_rgba(0,0,0,0.25)] sm:text-5xl lg:text-6xl">
-              Get in touch with Solarfig
+              Get In Touch With Solarfig
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
               Ready to go solar or compare options? Tell us about your home and goals. A real

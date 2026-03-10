@@ -91,7 +91,7 @@ const Battery = () => {
   const { heroMediaStyle, heroOverlayStyle } = useHeroViewportFit();
 
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium page-battery min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
@@ -106,8 +106,9 @@ const Battery = () => {
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
             <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ENERGY STORAGE</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Intelligent Energy Storage. Built for Resilience.
+              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.94] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[72px] xl:text-[78px]">
+                <span className="block">Intelligent Energy Storage.</span>
+                <span className="block">Built for Resilience.</span>
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Energy storage that extends solar value beyond daylight. Maintain essential power during grid interruptions.
@@ -229,9 +230,9 @@ const Battery = () => {
             <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">REAL-WORLD PERFORMANCE</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
-                "We rely on stored solar energy through the night, and the system is typically recharged by midday - even during overcast days."
+                "We rely on stored solar energy through the night, and the system is typically recharged by midday — even during overcast days."
               </blockquote>
-              <p className="text-sm font-medium text-stone-900">- Shanta M., Solarfig customer</p>
+              <p className="text-sm font-medium text-stone-900">— Shanta M., Solarfig customer</p>
             </div>
           </div>
         </div>

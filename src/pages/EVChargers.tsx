@@ -71,7 +71,7 @@ const EVChargers = () => {
   const { heroMediaStyle, heroOverlayStyle } = useHeroViewportFit();
 
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium page-ev-chargers min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero */}
@@ -87,7 +87,8 @@ const EVChargers = () => {
             <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV CHARGERS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
-                Integrated Home Charging. Designed for Modern Energy.
+                <span className="block lg:whitespace-nowrap">Integrated Home Charging.</span>
+                <span className="block lg:whitespace-nowrap">Designed for Modern Energy.</span>
               </h1>
               <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Home EV charging solutions professionally installed for safety, performance, and long-term reliability.
@@ -211,7 +212,7 @@ const EVChargers = () => {
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "The installation was seamless and professional. Now we’re charging our EV directly from our own roof."
               </blockquote>
-              <p className="text-sm font-medium text-stone-900">- Robert D., Tesla owner & Solarfig customer</p>
+              <p className="text-sm font-medium text-stone-900">— Robert D., Tesla owner & Solarfig customer</p>
             </div>
           </div>
         </div>

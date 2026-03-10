@@ -9,7 +9,7 @@ const Articles = () => {
   const articleList = solarArticles.slice(1);
 
   return (
-    <main className="mobile-premium min-h-screen bg-[#f4eefb]">
+    <main className="mobile-premium page-articles min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17141b_0%,#2a2340_48%,#6f5b99_100%)] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">
@@ -21,7 +21,7 @@ const Articles = () => {
             Solar Buying Guides for Homeowners
           </h1>
           <p className="mt-5 max-w-2xl text-white/75">
-            Clear, market-aware insights into pricing, incentives, net metering, batteries, and long-term performance - built for real homeowners comparing options.
+            Clear, market-aware insights into pricing, incentives, net metering, batteries, and long-term performance — built for real homeowners comparing options.
           </p>
 
           <div className="mt-10 grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl lg:grid-cols-[1.1fr_1fr]">
@@ -41,7 +41,7 @@ const Articles = () => {
                 FEATURED
               </div>
               <a href={`/articles/${featuredArticle.slug}`} className="group">
-                <h2 className="text-3xl leading-tight text-white transition-colors group-hover:text-[#e2c5ff] sm:text-4xl">
+                <h2 className="article-title-natural-wrap text-3xl leading-tight text-white transition-colors group-hover:text-[#e2c5ff] sm:text-4xl">
                   {featuredArticle.title}
                 </h2>
               </a>
