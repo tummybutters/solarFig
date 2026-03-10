@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, BadgeCheck, CalendarClock, FileText, Landmark } from "lucide-react";
 
 const incentives = [
@@ -37,20 +38,22 @@ const faqs = [
 ];
 
 const SolarBatteryIncentives = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useStandardPageHeroFit();
+
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero — unchanged */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full">
+        <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img
             src="/assets/hero-main/seedream-preserve.webp"
             alt="Solar installer carrying equipment near rooftop array."
-            className="h-full w-full object-cover object-[center_70%] sm:object-center"
+            className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-end px-6 pb-10 sm:px-8 sm:pb-14">
+          <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar & Battery Incentives</p>
               <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">Solar & battery incentives</h1>

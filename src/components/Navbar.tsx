@@ -29,7 +29,7 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Solar",
+        label: "Solar Panels",
         title: "Designed for Maximum Efficiency",
         href: "/solar-panels",
         image: "/assets/navbar/nav-products-designed-for-maximum-efficiency.webp",
@@ -51,13 +51,13 @@ const navItems: NavItem[] = [
     ],
     featured: [
       {
-        label: "Planning",
+        label: "Pricing & Costs",
         title: "Understand Solar Pricing & Costs",
         href: "/pricing-costs",
         image: "/assets/navbar/nav-plans-understand-solar-pricing-costs.webp",
       },
       {
-        label: "Process",
+        label: "Installation",
         title: "How Solar Installation Works",
         href: "/installation",
         image: "/assets/navbar/nav-plans-how-solar-installation-works.webp",

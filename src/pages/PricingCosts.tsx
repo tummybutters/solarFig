@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, Check } from "lucide-react";
 
 const planCards = [
@@ -46,21 +47,23 @@ const faqs = [
 ];
 
 const PricingCosts = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useStandardPageHeroFit({ bottomGap: 46 });
+
   return (
     <main className="mobile-premium page-pricing-costs min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero — unchanged */}
-      <section className="relative">
-        <div className="mobile-hero-media relative h-[64vh] min-h-[420px] w-full">
+      <section className="relative overflow-hidden">
+        <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img
             src="/assets/pricing-costs/pricing-costs-header-image.webp"
             alt="Modern solar-equipped home at sunset with integrated wall batteries."
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
-            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">PRICING &amp; COSTS</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">A Solar Plan That</span>

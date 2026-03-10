@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import OregonMap from "@/components/OregonMap";
+import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, BadgeAlert, Home, PlugZap, ShieldCheck, SunMedium } from "lucide-react";
 
 const regions = [
@@ -17,20 +18,22 @@ const challenges = [
 ];
 
 const OregonLocations = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useStandardPageHeroFit();
+
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[52vh] min-h-[340px] w-full sm:h-[62vh]">
+        <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img
             src="/assets/locations/oregon-header-image-2026-03-04.webp"
             alt="Oregon neighborhood with rooftop solar installations."
-            className="h-full w-full object-cover object-[center_76%] sm:object-center"
+            className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8">
-            <div className="max-w-4xl pt-12 text-white sm:pt-16 lg:pt-20">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="max-w-4xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OREGON</p>
               <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Solar That Performs in Oregon&apos;s Climate

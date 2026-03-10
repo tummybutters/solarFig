@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
+import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight } from "lucide-react";
 
 const pillars = [
@@ -11,20 +12,22 @@ const pillars = [
 ];
 
 const About = () => {
+  const { heroMediaStyle, heroOverlayStyle } = useStandardPageHeroFit();
+
   return (
     <main className="mobile-premium min-h-screen bg-[#f4eefb]">
       <Navbar />
 
       {/* Hero — unchanged */}
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative h-[60vh] min-h-[420px] w-full">
+        <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img
             src="/assets/about-us/about-us-hero-header.webp"
             alt="Modern home exterior with rooftop solar panels."
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-end px-6 pb-12 sm:px-8 sm:pb-16">
+          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
             <div className="max-w-3xl text-white">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ABOUT US</p>
               <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">

@@ -1,30 +1,45 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
-const footerLinks = {
-  products: [
-    { label: "Solar Panels", href: "/solar-panels" },
-    { label: "Inverters", href: "/microinverters" },
-    { label: "Energy Storage", href: "/battery" },
-    { label: "EV Chargers", href: "/ev-chargers" },
-  ],
-  plansAndServices: [
-    { label: "Pricing & Costs", href: "/pricing-costs" },
-    { label: "Installation Process", href: "/installation" },
-  ],
-  locations: [
-    { label: "California", href: "/locations" },
-    { label: "Oregon", href: "/locations/oregon" },
-  ],
-  explore: [
-    { label: "About Us", href: "/about" },
-    { label: "Educational Articles", href: "/articles" },
-    { label: "Referral Program", href: "/referrals" },
-  ],
-  legal: [
-    { label: "Terms of Use", href: "/terms-of-use" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-  ],
-};
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const footerSections = [
+  {
+    title: "Solutions",
+    links: [
+      { label: "Solar Panels", href: "/solar-panels" },
+      { label: "Inverters", href: "/microinverters" },
+      { label: "Energy Storage", href: "/battery" },
+      { label: "EV Chargers", href: "/ev-chargers" },
+    ],
+  },
+  {
+    title: "Plans & Services",
+    links: [
+      { label: "Pricing & Costs", href: "/pricing-costs" },
+      { label: "Installation Process", href: "/installation" },
+    ],
+  },
+  {
+    title: "Locations",
+    links: [
+      { label: "California", href: "/locations" },
+      { label: "Oregon", href: "/locations/oregon" },
+    ],
+  },
+  {
+    title: "Explore",
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Educational Articles", href: "/articles" },
+      { label: "Referral Program", href: "/referrals" },
+    ],
+  },
+];
+
+const legalLinks = [
+  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+];
 
 const Footer = () => {
   return (
@@ -71,61 +86,43 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Solutions */}
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Solutions</h4>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
-                    {link.label}
-                  </a>
-                </li>
+          <div className="sm:col-span-2 lg:hidden">
+            <Accordion type="multiple" className="border-y border-white/10">
+              {footerSections.map((section) => (
+                <AccordionItem key={section.title} value={section.title} className="border-white/10">
+                  <AccordionTrigger className="py-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80 hover:no-underline">
+                    {section.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-5">
+                    <ul className="space-y-3 pl-1">
+                      {section.links.map((link) => (
+                        <li key={link.label}>
+                          <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </ul>
+            </Accordion>
           </div>
 
-          {/* Plans and Services */}
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Plans &amp; Services</h4>
-            <ul className="space-y-3">
-              {footerLinks.plansAndServices.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Locations */}
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Locations</h4>
-            <ul className="space-y-3">
-              {footerLinks.locations.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Explore */}
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">Explore</h4>
-            <ul className="space-y-3">
-              {footerLinks.explore.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {footerSections.map((section) => (
+            <div key={section.title} className="hidden lg:col-span-2 lg:block">
+              <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80">{section.title}</h4>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-sm text-white transition-colors hover:text-white/75">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Bar */}
@@ -136,7 +133,7 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-wrap items-center gap-3 text-xs text-white/85 sm:gap-4">
-            {footerLinks.legal.map((link, index) => (
+            {legalLinks.map((link, index) => (
               <span key={link.label} className="flex items-center gap-4">
                 <a href={link.href} className="transition-colors hover:text-white/80">
                   {link.label}
