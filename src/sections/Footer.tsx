@@ -79,8 +79,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 text-purple-400" />
                 <span>
                   <span className="block">4930 Campus Drive</span>
-                  <span className="block whitespace-nowrap">Newport Beach, CA</span>
-                  <span className="block">92660</span>
+                  <span className="block whitespace-nowrap">Newport Beach, CA 92660</span>
                 </span>
               </div>
             </div>

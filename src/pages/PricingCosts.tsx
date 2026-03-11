@@ -59,7 +59,7 @@ const PricingCosts = () => {
           <img
             src="/assets/pricing-costs/pricing-costs-header-image.webp"
             alt="Modern solar-equipped home at sunset with integrated wall batteries."
-            className="h-full w-full object-cover object-bottom"
+            className="h-full w-full object-cover object-[center_28%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
@@ -125,7 +125,7 @@ const PricingCosts = () => {
             <p className="text-sm text-stone-600">
               Not sure which option makes sense? We&apos;ll walk you through side-by-side comparisons so you can see the numbers clearly before deciding.
             </p>
-            <p className="mt-3 text-xs text-stone-600 sm:text-[13px]">
+            <p className="mt-3 text-[11px] text-stone-600 sm:text-xs">
               Transparent terms. No hidden fees. No surprise escalators. Every Solarfig proposal includes detailed production modeling and real savings projections.
             </p>
           </div>

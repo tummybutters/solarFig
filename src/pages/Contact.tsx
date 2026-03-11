@@ -171,10 +171,10 @@ const Contact = () => {
               </div>
 
               <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
-                <h3 className="mb-3 font-semibold text-stone-900">We serve all of California</h3>
+                <h3 className="mb-3 font-semibold text-stone-900">We serve California and Oregon</h3>
                 <p className="mb-4 text-sm leading-relaxed text-stone-600">
-                  Including: Los Angeles, Orange County, San Diego, Riverside, San Bernardino,
-                  Ventura, and the Bay Area.
+                  Including major service areas across California and Oregon, from Los Angeles and
+                  Orange County to Portland, Eugene, and surrounding communities.
                 </p>
                 <a
                   href="/locations"

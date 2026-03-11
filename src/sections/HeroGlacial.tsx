@@ -196,13 +196,15 @@ const HeroGlacial = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative z-10 mx-auto hidden max-w-[1400px] grid-cols-5 items-center gap-8 px-10 py-4 lg:grid">
+                <div className="relative z-10 mx-auto hidden max-w-[1400px] grid-cols-5 items-center gap-6 px-12 py-4 lg:grid">
                     {trustBarItems.map((item) => (
-                        <div key={item} className="inline-flex min-w-0 items-center gap-3">
+                        <div key={item} className="flex min-w-0 justify-center">
+                            <div className="inline-flex min-w-0 items-center gap-3">
                             <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#6D39B5]/30 text-[#cfa8ff]">
                                 <Check className="h-3.5 w-3.5" />
                             </span>
                             <span className="whitespace-nowrap text-[13px] font-medium text-white/82">{item}</span>
+                            </div>
                         </div>
                     ))}
                 </div>

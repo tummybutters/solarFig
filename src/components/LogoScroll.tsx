@@ -2,7 +2,7 @@ const lenderLogos = [
   { name: "GoodLeap", src: "/assets/lender-logos/goodleap.png", monochrome: true },
   { name: "LightReach", src: "/assets/lender-logos/partners/lightreach-bw.png", monochrome: false },
   { name: "EnFin", src: "/assets/lender-logos/partners/enfin-bw.png", monochrome: false },
-  { name: "Credit Human", src: "/assets/lender-logos/credit-human-bw.svg", monochrome: false },
+  { name: "Credit Human", src: "/assets/lender-logos/credit-human-bw.svg", monochrome: false, className: "h-[2.8125rem]" },
   { name: "Dividend", src: "/assets/lender-logos/dividend.png", monochrome: true },
   { name: "Participate Energy", src: "/assets/lender-logos/participate-energy.png", monochrome: true },
   { name: "Propel", src: "/assets/lender-logos/propel.svg", monochrome: true },
@@ -35,7 +35,7 @@ const LogoScroll = () => {
               <img
                 src={logo.src}
                 alt={`${logo.name} logo`}
-                className={`h-9 w-auto max-w-[170px] object-contain ${logo.monochrome ? "brightness-0 grayscale" : ""}`}
+                className={`${logo.className ?? "h-9"} w-auto max-w-[170px] object-contain ${logo.monochrome ? "brightness-0 grayscale" : ""}`}
                 loading="lazy"
                 decoding="async"
               />

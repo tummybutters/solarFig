@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
         image: "/assets/navbar/nav-plans-understand-solar-pricing-costs.webp",
       },
       {
-        label: "Installation",
+        label: "Installation Process",
         title: "How Solar Installation Works",
         href: "/installation",
         image: "/assets/navbar/nav-plans-how-solar-installation-works.webp",
