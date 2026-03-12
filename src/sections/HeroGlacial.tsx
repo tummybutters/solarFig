@@ -1,13 +1,7 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Check } from "lucide-react";
 
-const heroVideos = [
-    "/assets/hero-main/balanced/hero-balanced-01.mp4",
-    "/assets/hero-main/balanced/hero-balanced-02.mp4",
-    "/assets/hero-main/balanced/hero-balanced-03.mp4",
-    "/assets/hero-main/balanced/hero-balanced-04.mp4",
-    "/assets/hero-main/balanced/hero-balanced-05.mp4",
-];
+const heroVideo = "/assets/hero-video/solarfig-home-hero.mp4";
 
 const trustBarItems = [
     "30+ Years of Experience",
@@ -17,65 +11,9 @@ const trustBarItems = [
     "Dedicated Support",
 ];
 
-const TRANSITION_LEAD_SECONDS = 1.1;
-
 const HeroGlacial = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [incomingIndex, setIncomingIndex] = useState<number | null>(null);
-    const [incomingVisible, setIncomingVisible] = useState(false);
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
     const sectionRef = useRef<HTMLElement | null>(null);
     const bannerRef = useRef<HTMLDivElement | null>(null);
-
-    const handleCurrentTimeUpdate = () => {
-        if (incomingIndex !== null) return;
-
-        const currentVideo = videoRefs.current[currentIndex];
-        if (!currentVideo || !Number.isFinite(currentVideo.duration) || currentVideo.duration <= 0) return;
-
-        const timeRemaining = currentVideo.duration - currentVideo.currentTime;
-        if (timeRemaining > TRANSITION_LEAD_SECONDS) return;
-
-        const nextIndex = (currentIndex + 1) % heroVideos.length;
-        const nextVideo = videoRefs.current[nextIndex];
-        if (!nextVideo) return;
-
-        nextVideo.pause();
-        try {
-            nextVideo.currentTime = 0;
-        } catch {
-            // Ignore seek failures while metadata is not ready.
-        }
-
-        nextVideo.play().catch(() => { });
-        setIncomingIndex(nextIndex);
-        requestAnimationFrame(() => {
-            setIncomingVisible(true);
-        });
-    };
-
-    const handleCurrentVideoEnd = () => {
-        if (incomingIndex === null) {
-            setCurrentIndex((prev) => (prev + 1) % heroVideos.length);
-            return;
-        }
-
-        const endedVideo = videoRefs.current[currentIndex];
-        if (endedVideo) {
-            endedVideo.pause();
-            endedVideo.currentTime = 0;
-        }
-
-        setCurrentIndex(incomingIndex);
-        setIncomingIndex(null);
-        setIncomingVisible(false);
-    };
-
-    useEffect(() => {
-        const activeVideo = videoRefs.current[currentIndex];
-        if (!activeVideo) return;
-        activeVideo.play().catch(() => { });
-    }, [currentIndex]);
 
     useLayoutEffect(() => {
         const section = sectionRef.current;
@@ -122,28 +60,17 @@ const HeroGlacial = () => {
             <div className="absolute inset-0 z-0 bg-slate-900">
                 {/* Neutral overlay for text readability */}
                 <div className="pointer-events-none absolute inset-0 z-30 bg-gradient-to-t from-black/80 via-black/52 to-black/20" />
-
-                {heroVideos.map((src, index) => (
-                    <video
-                        key={src}
-                        ref={(el) => {
-                            videoRefs.current[index] = el;
-                        }}
-                        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${index === incomingIndex
-                            ? `${incomingVisible ? "opacity-100" : "opacity-0"} z-20`
-                            : index === currentIndex
-                                ? "opacity-100 z-10"
-                                : "opacity-0 z-0"
-                            }`}
-                        muted
-                        playsInline
-                        preload={index === currentIndex || index === (currentIndex + 1) % heroVideos.length ? "auto" : "metadata"}
-                        onTimeUpdate={index === currentIndex ? handleCurrentTimeUpdate : undefined}
-                        onEnded={index === currentIndex ? handleCurrentVideoEnd : undefined}
-                    >
-                        <source src={src} type="video/mp4" />
-                    </video>
-                ))}
+                <video
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    aria-hidden="true"
+                >
+                    <source src={heroVideo} type="video/mp4" />
+                </video>
             </div>
 
             {/* Content Container */}
