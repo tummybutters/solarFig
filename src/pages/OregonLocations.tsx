@@ -27,7 +27,7 @@ const OregonLocations = () => {
       <section className="relative overflow-hidden">
         <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img
-            src="/assets/locations/oregon-header-image-2026-03-04.webp"
+            src="/assets/locations/oregon-header-image.webp"
             alt="Oregon neighborhood with rooftop solar installations."
             className="h-full w-full object-cover object-bottom"
           />
@@ -95,8 +95,8 @@ const OregonLocations = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
               <img
-                src="/assets/install-gallery/install-09.jpg"
-                alt="Oregon homes with rooftop solar installations."
+                src="/assets/locations/oregon-solar-that-fits-oregon.webp"
+                alt="Oregon home with rooftop solar panels and a Solarfig installation van."
                 className="h-[400px] w-full object-cover sm:h-[500px] lg:h-[550px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

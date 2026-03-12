@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import LogoScroll from "@/components/LogoScroll";
 import Hero from "@/sections/HeroGlacial"; // Options: Hero, HeroCinematic, HeroSplit, HeroHorizon, HeroGlacial
-// import Hero from "@/sections/Hero";
 // import HeroSplit from "@/sections/HeroSplit";
 // import HeroHorizon from "@/sections/HeroHorizon";
 // import HeroCinematic from "@/sections/HeroCinematic";
@@ -17,7 +16,6 @@ import Referrals from "@/pages/Referrals";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfUse from "@/pages/TermsOfUse";
 import Installation from "@/pages/Installation";
-import Home from "@/pages/Home";
 import PricingCosts from "@/pages/PricingCosts";
 import SolarPanels from "@/pages/SolarPanels";
 import Microinverters from "@/pages/Microinverters";
@@ -105,7 +103,6 @@ function App() {
       <SeoHead />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/home-alt" element={<Home />} />
         <Route path="/battery" element={<Battery />} />
         <Route path="/ev-chargers" element={<EVChargers />} />
         <Route path="/transactions" element={<Navigate to="/" replace />} />
