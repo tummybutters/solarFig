@@ -6,15 +6,15 @@ import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import { ArrowRight, BadgeAlert, Home, PlugZap, ShieldCheck, SunMedium } from "lucide-react";
 
 const regions = [
-  { name: "Year-Round Performance", focus: "Balanced for winter clouds and summer sun.", icon: SunMedium },
-  { name: "Full Net Metering Benefits", focus: "Maximized for Oregon’s 1:1 credits.", icon: BadgeAlert },
-  { name: "Expansion-Ready Design", focus: "Future-load ready.", icon: Home },
+  { name: "Year-Round Performance", focus: "Balanced for winter clouds and summer sun", icon: SunMedium },
+  { name: "Full Net Metering Benefits", focus: "Maximized for Oregon’s 1:1 credits", icon: BadgeAlert },
+  { name: "Expansion-Ready Design", focus: "Future-load ready", icon: Home },
 ];
 
 const challenges = [
-  { title: "1:1 Net Metering", description: "Maximized under Oregon’s full net metering.", icon: BadgeAlert },
-  { title: "Seasonal Yield Planning", description: "Sized for winter clouds and summer sun.", icon: ShieldCheck },
-  { title: "Optional Storage Strategy", description: "Added for resilience, not regulation.", icon: PlugZap },
+  { title: "1:1 Net Metering", description: "Maximized under Oregon’s full net metering", icon: BadgeAlert },
+  { title: "Seasonal Yield Planning", description: "Sized for winter clouds and summer sun", icon: ShieldCheck },
+  { title: "Optional Storage Strategy", description: "Added for resilience, not regulation", icon: PlugZap },
 ];
 
 const OregonLocations = () => {
