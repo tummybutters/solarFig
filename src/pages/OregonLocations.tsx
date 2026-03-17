@@ -29,7 +29,7 @@ const OregonLocations = () => {
           <img
             src="/assets/locations/oregon-header-image.webp"
             alt="Oregon neighborhood with rooftop solar installations."
-            className="h-full w-full object-cover object-bottom"
+            className="h-full w-full object-cover object-[center_22%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
