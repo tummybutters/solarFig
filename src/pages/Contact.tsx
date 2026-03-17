@@ -5,13 +5,43 @@ import Footer from "@/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { FloatingInput } from "@/components/ui/floating-input";
 import { Textarea } from "@/components/ui/textarea";
+import { submitLeadForm } from "@/lib/lead-form";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitError("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const payload = {
+      firstName: String(data.get("firstName") ?? "").trim(),
+      lastName: String(data.get("lastName") ?? "").trim(),
+      email: String(data.get("email") ?? "").trim(),
+      phone: String(data.get("phone") ?? "").trim(),
+      serviceInterest: String(data.get("serviceInterest") ?? "").trim(),
+      message: String(data.get("message") ?? "").trim(),
+      intent: "contact",
+      source: "solarfig.com/contact",
+      pageUrl: window.location.href,
+      submittedAt: new Date().toISOString(),
+    };
+
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm(payload);
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setSubmitError("We couldn't send your message right now. Please call (213) 306-4154.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -120,7 +150,10 @@ const Contact = () => {
                     />
                     <div>
                       <label className="mb-2 block text-sm font-medium text-stone-700">Service Interest</label>
-                      <select className="h-11 w-full rounded-md border border-gray-200 bg-white px-3 text-sm text-stone-700">
+                      <select
+                        name="serviceInterest"
+                        className="h-11 w-full rounded-md border border-gray-200 bg-white px-3 text-sm text-stone-700"
+                      >
                         <option>Residential Solar</option>
                         <option>Battery Storage</option>
                         <option>EV Charging</option>
@@ -129,15 +162,23 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="mb-2 block text-sm font-medium text-stone-700">Message</label>
-                      <Textarea placeholder="Tell us about your project or questions..." rows={4} />
+                      <Textarea
+                        name="message"
+                        placeholder="Tell us about your project or questions..."
+                        rows={4}
+                      />
                     </div>
                     <Button
                       type="submit"
+                      disabled={isSubmitting}
                       className="h-11 w-full bg-[#6D39B5] text-sm font-semibold uppercase tracking-[0.08em] hover:bg-[#8553c2]"
                     >
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
+                    {submitError ? (
+                      <p className="text-sm text-red-700">{submitError}</p>
+                    ) : null}
                   </form>
                 </>
               )}

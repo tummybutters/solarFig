@@ -1,9 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { FloatingInput } from "@/components/ui/floating-input";
-
-const ghlWebhookUrl =
-  import.meta.env.VITE_GHL_WEBHOOK_URL || import.meta.env.VITE_GHL_FORM_ENDPOINT || "";
+import { submitLeadForm } from "@/lib/lead-form";
 
 type GlobalQuoteSectionMode = "quote" | "referral";
 
@@ -54,12 +52,6 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
     setSubmitState("idle");
     setSubmitMessage("");
 
-    if (!ghlWebhookUrl) {
-      setSubmitState("error");
-      setSubmitMessage("Lead form endpoint is not configured yet.");
-      return;
-    }
-
     const form = event.currentTarget;
     const data = new FormData(form);
 
@@ -81,18 +73,7 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(ghlWebhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Request failed with ${response.status}`);
-      }
-
+      await submitLeadForm(payload);
       setSubmitState("success");
       setSubmitMessage(copy.successMessage);
       form.reset();
