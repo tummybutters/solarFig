@@ -884,30 +884,6 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
 }
 
 @media (min-width: 1024px) {
-  html.platform-windows .hero-glacial-shell .hero-glacial-content {
-    align-items: flex-end !important;
-    padding-top: calc(var(--hero-navbar-offset, 96px) + 18px) !important;
-    padding-bottom: calc(var(--hero-banner-height, 72px) + clamp(2.75rem, 4vw, 4.5rem)) !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .max-w-xl > h1 {
-    font-size: clamp(4.85rem, 5.3vw, 5.35rem) !important;
-    line-height: 0.99 !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .max-w-xl > h2 {
-    font-size: clamp(1.2rem, 1.45vw, 1.34rem) !important;
-    line-height: 1.42 !important;
-    max-width: 24rem !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .mobile-inline-actions > a {
-    height: 3rem !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-    font-size: 0.95rem !important;
-  }
-
   html.platform-windows main:is(.page-solar-panels, .page-microinverters, .page-battery, .page-ev-chargers) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
     font-size: clamp(4.4rem, 5.8vw, 5.5rem) !important;
     line-height: 0.97 !important;
@@ -927,29 +903,4 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
 }
 
 @media (min-width: 1024px) and (max-height: 820px) {
-  html.platform-windows .hero-glacial-shell .hero-glacial-content {
-    align-items: flex-end !important;
-    padding-top: calc(var(--hero-navbar-offset, 96px) + 20px) !important;
-    padding-bottom: calc(var(--hero-banner-height, 72px) + 20px) !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .hero-glacial-copy > h1 {
-    margin-bottom: 1rem !important;
-    font-size: clamp(3.7rem, 4.6vw, 4.85rem) !important;
-    line-height: 0.97 !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .hero-glacial-copy > h2 {
-    margin-bottom: 1.4rem !important;
-    font-size: clamp(1rem, 1.18vw, 1.15rem) !important;
-    line-height: 1.32 !important;
-    max-width: 22rem !important;
-  }
-
-  html.platform-windows .hero-glacial-shell .mobile-inline-actions > a {
-    height: 2.8rem !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    font-size: 0.88rem !important;
-  }
 }

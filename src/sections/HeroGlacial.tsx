@@ -75,7 +75,7 @@ const HeroGlacial = () => {
 
             {/* Content Container */}
             <div
-                className="hero-glacial-content relative z-20 mx-auto grid box-border max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pt-20 sm:gap-10 sm:px-8 sm:pt-24 lg:gap-10 lg:pt-24"
+                className="relative z-20 mx-auto grid box-border max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pt-20 sm:gap-10 sm:px-8 sm:pt-24 lg:gap-10 lg:pt-24"
                 style={{
                     minHeight: "100svh",
                     paddingBottom: "calc(var(--hero-banner-height, 72px) + 32px)",
@@ -84,7 +84,7 @@ const HeroGlacial = () => {
             >
 
                 {/* Left Side: Main Text Content */}
-                <div className="hero-glacial-copy max-w-xl">
+                <div className="max-w-xl">
                     <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)] sm:mb-6 sm:text-6xl lg:text-7xl">
                         Smarter Solar Starts with Solarfig.
                     </h1>
