@@ -173,6 +173,10 @@ html.platform-apple.scrollbar-peek::-webkit-scrollbar-thumb:active {
   background: hsl(var(--muted-foreground) / 0.5);
 }
 
+html.platform-windows {
+  --windows-hero-density: 1;
+}
+
 /* Card stack animations */
 @keyframes slideOutLeft {
   0% {
@@ -876,5 +880,42 @@ main.mobile-premium:not(.home-page) .mobile-hero-media > .absolute.inset-0.mx-au
 
   main.page-battery .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
     max-width: 42rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html.platform-windows .hero-glacial-shell .max-w-xl > h1 {
+    font-size: clamp(4.85rem, 5.3vw, 5.35rem) !important;
+    line-height: 0.99 !important;
+  }
+
+  html.platform-windows .hero-glacial-shell .max-w-xl > h2 {
+    font-size: clamp(1.2rem, 1.45vw, 1.34rem) !important;
+    line-height: 1.42 !important;
+    max-width: 24rem !important;
+  }
+
+  html.platform-windows .hero-glacial-shell .mobile-inline-actions > a {
+    height: 3rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  html.platform-windows main:is(.page-solar-panels, .page-microinverters, .page-battery, .page-ev-chargers) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 {
+    font-size: clamp(4.4rem, 5.8vw, 5.5rem) !important;
+    line-height: 0.97 !important;
+  }
+
+  html.platform-windows main:is(.page-solar-panels, .page-microinverters, .page-battery, .page-ev-chargers) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p {
+    font-size: clamp(1.45rem, 1.7vw, 1.6rem) !important;
+    line-height: 1.34 !important;
+    margin-top: 1.4rem !important;
+  }
+
+  html.platform-windows main:is(.page-solar-panels, .page-microinverters, .page-battery, .page-ev-chargers) .mobile-hero-media > .absolute.inset-0.mx-auto > div > h1 + p + a {
+    font-size: 0.95rem !important;
+    padding: 0.9rem 2rem !important;
+    margin-top: 2.15rem !important;
   }
 }

@@ -46,9 +46,17 @@ function App() {
   useEffect(() => {
     const root = document.documentElement;
     const isApplePlatform = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent) || navigator.platform === "MacIntel";
+    const isWindowsPlatform = /Win/.test(navigator.userAgent) || navigator.platform.startsWith("Win");
     const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-    if (!isApplePlatform || !canHover) return;
+    root.classList.toggle("platform-windows", isWindowsPlatform && canHover);
+
+    if (!isApplePlatform || !canHover) {
+      root.classList.remove("platform-apple", "scrollbar-peek");
+      return () => {
+        root.classList.remove("platform-windows");
+      };
+    }
 
     let hideTimer: number | undefined;
 
@@ -94,7 +102,7 @@ function App() {
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerleave", handlePointerLeave);
       window.removeEventListener("scroll", handleScroll);
-      root.classList.remove("platform-apple", "scrollbar-peek");
+      root.classList.remove("platform-apple", "scrollbar-peek", "platform-windows");
     };
   }, []);
 
