@@ -79,7 +79,7 @@ const Contact = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.28),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.26),transparent_40%)]" />
         </div>
-        <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
+        <div className="site-shell relative mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Contact</p>
             <h1 className="mb-5 text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_20px_rgba(0,0,0,0.25)] sm:text-5xl lg:text-6xl">
@@ -93,10 +93,10 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-14 sm:py-16 lg:py-20">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_12px_40px_-20px_rgba(109,57,181,0.3)] sm:p-8 lg:p-10">
+            <div className="surface-card rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_12px_40px_-20px_rgba(109,57,181,0.3)] sm:p-8 lg:p-10">
               {submitted ? (
                 <div className="py-12 text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600">
@@ -194,7 +194,7 @@ const Contact = () => {
 
               <div className="grid gap-6 sm:grid-cols-2">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex gap-4 rounded-xl border border-purple-100/80 bg-white/70 p-4">
+                  <div key={index} className="surface-card flex gap-4 rounded-xl border border-purple-100/80 bg-white/70 p-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#6D39B5]/10 text-[#6D39B5]">
                       {info.icon}
                     </div>
@@ -211,7 +211,7 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
+              <div className="surface-card rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
                 <h3 className="mb-3 font-semibold text-stone-900">We serve California and Oregon</h3>
                 <p className="mb-4 text-sm leading-relaxed text-stone-600">
                   Including major service areas across California and Oregon, from Los Angeles and
@@ -229,8 +229,8 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="pb-20 pt-4 sm:pb-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space-tight pb-20 pt-4 sm:pb-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#4a267a_0%,#6D39B5_48%,#8553c2_100%)] px-8 py-12 text-center text-white shadow-[0_24px_70px_-28px_rgba(74,38,122,0.72)] sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
             <div className="absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-[#cfa8ff]/20 blur-3xl" />
@@ -246,7 +246,7 @@ const Contact = () => {
               </p>
               <a
                 href="/"
-                className="mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold uppercase tracking-[0.08em] text-[#6D39B5] shadow-[0_18px_45px_-22px_rgba(255,255,255,0.8)] transition-all hover:bg-gray-100 hover:shadow-[0_22px_55px_-24px_rgba(255,255,255,0.9)]"
+                className="action-pill mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold uppercase tracking-[0.08em] text-[#6D39B5] shadow-[0_18px_45px_-22px_rgba(255,255,255,0.8)] transition-all hover:bg-gray-100 hover:shadow-[0_22px_55px_-24px_rgba(255,255,255,0.9)]"
               >
                 Get Free Solar Report
                 <ArrowRight className="h-5 w-5" />

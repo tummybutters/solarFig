@@ -26,8 +26,11 @@ const HeroGlacial = () => {
             const navbarRect = navbar.getBoundingClientRect();
             const bannerRect = banner.getBoundingClientRect();
 
-            section.style.setProperty("--hero-navbar-offset", `${Math.round(navbarRect.bottom)}px`);
-            section.style.setProperty("--hero-banner-height", `${Math.round(bannerRect.height)}px`);
+            const navbarOffset = `${Math.round(navbarRect.bottom)}px`;
+            const bannerHeight = `${Math.round(bannerRect.height)}px`;
+
+            section.style.setProperty("--home-hero-navbar-offset", navbarOffset);
+            section.style.setProperty("--home-hero-banner-height", bannerHeight);
         };
 
         updateHeroViewportFit();
@@ -52,9 +55,6 @@ const HeroGlacial = () => {
         <section
             ref={sectionRef}
             className="hero-glacial-shell relative w-full overflow-hidden bg-slate-900 text-white"
-            style={{
-                minHeight: "100svh",
-            }}
         >
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
@@ -75,28 +75,23 @@ const HeroGlacial = () => {
 
             {/* Content Container */}
             <div
-                className="relative z-20 mx-auto grid box-border max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pt-20 sm:gap-10 sm:px-8 sm:pt-24 lg:gap-10 lg:pt-24"
-                style={{
-                    minHeight: "100svh",
-                    paddingBottom: "calc(var(--hero-banner-height, 72px) + 32px)",
-                    paddingTop: "calc(var(--hero-navbar-offset, 96px) + 28px)",
-                }}
+                className="hero-overlay-shell relative z-20 grid grid-cols-1 items-center gap-8 sm:gap-10 lg:gap-10"
             >
 
                 {/* Left Side: Main Text Content */}
-                <div className="max-w-xl">
-                    <h1 className="mb-5 text-[2.2rem] font-medium leading-[1.03] tracking-tight text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)] sm:mb-6 sm:text-6xl lg:text-7xl">
+                <div className="hero-copy">
+                    <h1 className="hero-title text-white drop-shadow-[0_6px_28px_rgba(0,0,0,0.65)]">
                         Smarter Solar Starts with Solarfig.
                     </h1>
 
-                    <h2 className="mb-8 max-w-md text-[15px] leading-relaxed text-blue-100/90 drop-shadow-[0_3px_20px_rgba(0,0,0,0.45)] sm:mb-10 sm:text-lg">
+                    <h2 className="hero-subtitle text-blue-100/90 drop-shadow-[0_3px_20px_rgba(0,0,0,0.45)]">
                         Transparent pricing. Expert installation. Energy independence made simple. Figure out if solar makes sense for your home.
                     </h2>
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a
                             href="#contact"
-                            className="inline-flex h-11 items-center justify-center rounded-[8px] bg-[#6D39B5] px-7 text-sm font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95"
+                            className="action-pill action-pill--dark hero-cta shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95"
                         >
                             Get a quote
                         </a>
@@ -123,7 +118,7 @@ const HeroGlacial = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative z-10 mx-auto hidden max-w-[1400px] grid-cols-5 items-center gap-6 px-12 py-4 lg:grid">
+                <div className="site-shell relative z-10 mx-auto hidden grid-cols-5 items-center gap-6 px-6 py-4 sm:px-8 lg:grid lg:px-12">
                     {trustBarItems.map((item) => (
                         <div key={item} className="flex min-w-0 justify-center">
                             <div className="inline-flex min-w-0 items-center gap-3">

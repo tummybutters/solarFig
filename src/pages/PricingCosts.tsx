@@ -62,19 +62,19 @@ const PricingCosts = () => {
             className="h-full w-full object-cover object-[center_28%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">PRICING &amp; COSTS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">PRICING &amp; COSTS</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">A Solar Plan That</span>
                 <span className="block lg:whitespace-nowrap">Fits Your Goals</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Compare ownership options, understand your savings, and choose what makes sense for your home.
               </p>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -85,8 +85,8 @@ const PricingCosts = () => {
       </section>
 
       {/* Pricing Cards — Large price display */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">SOLAR PLANS</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Flexible ways to power your home</h2>
@@ -100,7 +100,7 @@ const PricingCosts = () => {
               <div
                 id={plan.id}
                 key={plan.id}
-                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]"
+                className="surface-card group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]"
               >
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
                 <p className="mb-1 text-sm text-stone-500">{plan.subtitle}</p>
@@ -133,8 +133,8 @@ const PricingCosts = () => {
       </section>
 
       {/* What's Included — Image with floating tags */}
-      <section className="bg-[radial-gradient(120%_120%_at_15%_10%,#fbf9ff_0%,#f4eefb_52%,#eee6f9_100%)] py-16 text-[#241d2f] sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[radial-gradient(120%_120%_at_15%_10%,#fbf9ff_0%,#f4eefb_52%,#eee6f9_100%)] py-16 text-[#241d2f] sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_28px_70px_-26px_rgba(65,44,95,0.28)] lg:rounded-3xl">
               <img
@@ -148,11 +148,11 @@ const PricingCosts = () => {
             </div>
 
             {/* Floating included tags */}
-            <div className="relative z-10 mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:absolute lg:bottom-8 lg:right-8 lg:mt-0 lg:flex">
+            <div className="surface-card surface-card-floating relative z-10 mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:absolute lg:bottom-8 lg:right-8 lg:mt-0 lg:flex">
               {included.map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-2 rounded-lg border border-white bg-white px-4 py-3 shadow-[0_18px_30px_-22px_rgba(43,29,67,0.36)]"
+                  className="surface-card flex items-start gap-2 rounded-lg border border-white bg-white px-4 py-3 shadow-[0_18px_30px_-22px_rgba(43,29,67,0.36)]"
                 >
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
                   <span className="text-[13px] font-semibold leading-4 text-[#2f2440]">{item}</span>
@@ -172,8 +172,8 @@ const PricingCosts = () => {
       </section>
 
       {/* Fair Pricing — Split layout */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">OUR APPROACH</p>
@@ -193,7 +193,7 @@ const PricingCosts = () => {
 
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/10 blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-[0_25px_70px_-20px_rgba(109,57,181,0.3)]">
+              <div className="surface-card surface-card-floating relative overflow-hidden rounded-2xl bg-white p-8 shadow-[0_25px_70px_-20px_rgba(109,57,181,0.3)]">
                 <p className="mb-4 text-sm text-stone-500">Verified Customer</p>
                 <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                   "[Solarfig] was extremely informative and helpful. They reviewed leasing and financing options with me, and helped me choose the best fit for my situation."
@@ -206,8 +206,8 @@ const PricingCosts = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[980px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow mx-auto max-w-[980px] px-6 sm:px-8">
           <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (

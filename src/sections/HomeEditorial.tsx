@@ -44,8 +44,8 @@ const reviews = [
 const HomeEditorial = () => {
   return (
     <>
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+      <section className="section-space bg-white py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-3xl">
               <h2 className="text-4xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-6xl">
@@ -60,7 +60,7 @@ const HomeEditorial = () => {
               <a
                 key={card.title}
                 href={card.href}
-                className="group relative block h-[390px] overflow-hidden rounded-2xl border border-black/5 sm:h-[480px] sm:rounded-3xl"
+                className="surface-card group relative block h-[390px] overflow-hidden rounded-2xl border border-black/5 sm:h-[480px] sm:rounded-3xl"
               >
                 <img
                   src={card.image}
@@ -82,8 +82,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
+      <section className="section-space bg-white py-16 sm:py-24">
+        <div className="site-shell mx-auto grid max-w-[1400px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
             <h2 className="max-w-3xl text-5xl leading-[1.02] tracking-tight text-[#241d2f] sm:text-7xl">
               The grid is unpredictable. Your power shouldn&apos;t be.
@@ -106,7 +106,7 @@ const HomeEditorial = () => {
               </h3>
               <a
                 href="/locations"
-                className="mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5] transition-colors hover:text-[#4d2880]"
+                className="action-link mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5] transition-colors hover:text-[#4d2880]"
               >
                 EXPLORE LOCATIONS
                 <ArrowRight className="h-4 w-4" />
@@ -116,8 +116,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-28 lg:py-32">
-        <div className="mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#eadff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
+      <section className="section-space bg-white py-20 sm:py-28 lg:py-32">
+        <div className="site-shell-wide mx-auto max-w-[1680px] rounded-[30px] border border-[#d8cce8] bg-[#eadff7] px-6 py-12 sm:rounded-[40px] sm:px-12 sm:py-16 lg:px-14 lg:py-20">
           <div className="relative">
             <div className="pointer-events-none absolute -right-3 -top-8 h-40 w-40 rounded-full bg-[repeating-radial-gradient(circle,_rgba(109,57,181,0.16),_rgba(109,57,181,0.16)_2px,_transparent_2px,_transparent_10px)] blur-[1px] sm:-right-8 sm:-top-16 sm:h-72 sm:w-72" />
             <p className="mb-5 flex gap-3 text-[#241d2f]">
@@ -138,7 +138,7 @@ const HomeEditorial = () => {
             {reviews.map((review, index) => (
               <article
                 key={review.author}
-                className={`flex min-h-[220px] flex-col justify-between rounded-[24px] border px-7 py-8 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[260px] sm:px-8 sm:py-9 lg:min-h-[290px] ${index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
+                className={`surface-card flex min-h-[220px] flex-col justify-between rounded-[24px] border px-7 py-8 shadow-[0_26px_48px_-34px_rgba(36,29,47,0.45)] sm:min-h-[260px] sm:px-8 sm:py-9 lg:min-h-[290px] ${index % 2 === 0 ? "border-[#e7dfef] bg-white" : "border-[#e1d1f5] bg-[#f5effd]"
                   }`}
               >
                 <img
@@ -154,8 +154,8 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f4eefb] pb-8 pt-10 sm:pb-10 sm:pt-14">
-        <div className="mx-auto max-w-[1680px] px-4 sm:px-6 lg:px-8">
+      <section className="section-space-tight bg-[#f4eefb] pb-8 pt-10 sm:pb-10 sm:pt-14">
+        <div className="site-shell-wide mx-auto max-w-[1680px] px-4 sm:px-6 lg:px-8">
           <div className="relative h-[300px] w-full overflow-hidden rounded-[26px] shadow-[0_24px_70px_-34px_rgba(36,29,47,0.4)] sm:h-[420px] lg:h-[520px]">
             <img
               src="/assets/home-editorial/home-products-plans-services-process-2026.webp"
@@ -167,16 +167,16 @@ const HomeEditorial = () => {
         </div>
       </section>
 
-      <section className="bg-[#f4eefb] pb-16 pt-8 sm:pb-24 sm:pt-10">
-        <div className="mx-auto grid max-w-[1320px] gap-5 px-4 sm:gap-6 sm:px-6 lg:grid-cols-3">
+      <section className="section-space bg-[#f4eefb] pb-16 pt-8 sm:pb-24 sm:pt-10">
+        <div className="site-shell mx-auto grid max-w-[1320px] gap-5 px-4 sm:gap-6 sm:px-6 lg:grid-cols-3">
           <a
             href="/solar-panels"
-            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+            className="surface-card flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PRODUCTS</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Find your ideal setup.</h3>
             <p className="mt-4 text-[#4b4261]">Compare panel, inverter, and energy storage options built for your home.</p>
-            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
+            <p className="action-link mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               VIEW PRODUCTS
               <ArrowRight className="h-4 w-4" />
             </p>
@@ -184,12 +184,12 @@ const HomeEditorial = () => {
 
           <a
             href="/pricing-costs"
-            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+            className="surface-card flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PLANS & SERVICES</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">A plan for every home.</h3>
             <p className="mt-4 text-[#4b4261]">Simple options. Clear pricing. Tailored to your home and goals.</p>
-            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
+            <p className="action-link mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               VIEW PLANS
               <ArrowRight className="h-4 w-4" />
             </p>
@@ -197,12 +197,12 @@ const HomeEditorial = () => {
 
           <a
             href="/installation"
-            className="flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
+            className="surface-card flex h-full flex-col rounded-2xl border border-[#ded2ef] bg-white p-6 transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6d39b5]">PROCESS</p>
             <h3 className="mt-4 text-4xl leading-tight text-[#241d2f]">Transparency from start to finish.</h3>
             <p className="mt-4 text-[#4b4261]">From consultation to PTO, we make every step clear, structured, and predictable.</p>
-            <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
+            <p className="action-link mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#6d39b5]">
               VIEW PROCESS
               <ArrowRight className="h-4 w-4" />
             </p>

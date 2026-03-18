@@ -53,16 +53,16 @@ const SolarBatteryIncentives = () => {
             className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1200px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-3xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar & Battery Incentives</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">Solar & battery incentives</h1>
-              <p className="mt-5 max-w-3xl text-lg font-medium text-white/82">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1200px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-3xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Solar & Battery Incentives</p>
+              <h1 className="hero-title text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">Solar & battery incentives</h1>
+              <p className="hero-subtitle mt-5 max-w-3xl text-lg font-medium text-white/82">
                 Incentives can materially improve project economics, but eligibility and timelines vary by utility territory and current program rules.
               </p>
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
                 <ArrowRight className="h-4 w-4" />
@@ -73,8 +73,8 @@ const SolarBatteryIncentives = () => {
       </section>
 
       {/* Incentive Cards — Big numbers, minimal text */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">Available Programs</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Incentive snapshot</h2>
@@ -84,7 +84,7 @@ const SolarBatteryIncentives = () => {
             {incentives.map((incentive, i) => {
               const Icon = incentive.icon;
               return (
-                <div key={incentive.title} className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]">
+                <div key={incentive.title} className="surface-card group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(109,57,181,0.2)] transition-shadow hover:shadow-[0_20px_60px_-15px_rgba(109,57,181,0.35)]">
                   <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50">
                     <Icon className="h-5 w-5 text-purple-600" />
@@ -100,8 +100,8 @@ const SolarBatteryIncentives = () => {
       </section>
 
       {/* Planning — Image with floating checklist */}
-      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             {/* Large image */}
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.4)] lg:rounded-3xl">
@@ -116,9 +116,9 @@ const SolarBatteryIncentives = () => {
             </div>
 
             {/* Floating checklist */}
-            <div className="relative mt-6 space-y-3 sm:mt-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:w-80">
+            <div className="surface-card surface-card-floating relative mt-6 space-y-3 sm:mt-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:w-80">
               {checklist.map((item) => (
-                <div key={item.title} className="flex items-center gap-4 rounded-xl bg-white/95 p-4 backdrop-blur-sm">
+                  <div key={item.title} className="surface-card flex items-center gap-4 rounded-xl bg-white/95 p-4 backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-100">
                     <BadgeCheck className="h-5 w-5 text-purple-600" />
                   </div>
@@ -139,8 +139,8 @@ const SolarBatteryIncentives = () => {
       </section>
 
       {/* Policy Note — Split with image */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">Important</p>
@@ -150,7 +150,7 @@ const SolarBatteryIncentives = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
+                className="action-link inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Check my eligibility
                 <ArrowRight className="h-4 w-4" />
@@ -174,8 +174,8 @@ const SolarBatteryIncentives = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[980px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow mx-auto max-w-[980px] px-6 sm:px-8">
           <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (

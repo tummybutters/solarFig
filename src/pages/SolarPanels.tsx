@@ -73,19 +73,19 @@ const SolarPanels = () => {
             className="h-full w-full object-cover object-[center_72%] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">SOLAR PANELS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">SOLAR PANELS</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">Performance&#8209;Driven</span>
                 <span className="block lg:whitespace-nowrap">Solar Panels. Built to Last.</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Industry leading panel options engineered for efficiency, durability, and long-term energy savings — tailored to your home's unique roof, climate, and usage profile.
               </p>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -97,8 +97,8 @@ const SolarPanels = () => {
       </section>
 
       {/* Panel Types — Horizontal scroll on mobile, grid on desktop */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">PANEL OPTIONS</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">
@@ -111,7 +111,7 @@ const SolarPanels = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {panelTypes.map((panel, i) => (
               <div key={panel.title} className="group">
-                <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
+                <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
                   <img
                     src={panel.image}
                     alt={panel.title}
@@ -135,13 +135,13 @@ const SolarPanels = () => {
       </section>
 
       {/* Design Factors — Large image left, horizontal icon row right */}
-      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             {/* Large image with purple glow */}
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
+              <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
                 <img
                   src="https://assets.cdn.filesafe.space/Ox7ZW3hQNuMhAdjVc5tB/media/9910e19f-2f86-4683-a477-2e99c4e8f8e2.gif"
                   alt="Solar installation animation"
@@ -187,9 +187,9 @@ const SolarPanels = () => {
       </section>
 
       {/* Future Ready — Full-bleed image with overlay text */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
+          <div className="surface-card surface-card-floating relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
             <img
               src="/assets/solar-panels/solar-panels-designed-for-whats-next-2026.webp"
               alt="Solar home prepared for future energy upgrades"
@@ -207,7 +207,7 @@ const SolarPanels = () => {
                 </p>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                  className="action-pill hero-cta inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   PLAN MY SYSTEM
                   <ArrowRight className="h-4 w-4" />
@@ -219,8 +219,8 @@ const SolarPanels = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[980px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow mx-auto max-w-[980px] px-6 sm:px-8">
           <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (

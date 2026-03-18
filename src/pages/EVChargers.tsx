@@ -84,19 +84,19 @@ const EVChargers = () => {
             className="h-full w-full scale-[1.12] object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV CHARGERS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">EV CHARGERS</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">Integrated Home Charging.</span>
                 <span className="block lg:whitespace-nowrap">Designed for Modern Energy.</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Home EV charging solutions professionally installed for safety, performance, and long-term reliability.
               </p>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#201b29] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#201b29] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -108,8 +108,8 @@ const EVChargers = () => {
       </section>
 
       {/* Features — Three tall image cards with purple shadow */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">HOME CHARGING</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Engineered for fast, reliable charging</h2>
@@ -118,7 +118,7 @@ const EVChargers = () => {
           <div className="grid gap-8 lg:grid-cols-3">
             {chargerFeatures.map((feature, i) => (
               <div key={feature.title} className="group">
-                <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
+                <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
                   <img
                     src={feature.image}
                     alt={feature.alt}
@@ -141,13 +141,13 @@ const EVChargers = () => {
       </section>
 
       {/* Benefits — Large image left, compact icon list right */}
-      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
             {/* Large image with purple glow */}
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
+              <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
                 <img
                   src="/assets/ev-chargers/ev-charger-reliable-daily.webp"
                   alt="Close-up of a home EV charging station connected to an electric vehicle."
@@ -182,7 +182,7 @@ const EVChargers = () => {
 
               <a
                 href="#contact"
-                className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
+                className="action-pill hero-cta mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -193,11 +193,11 @@ const EVChargers = () => {
       </section>
 
       {/* Customer Story — Full-bleed image with floating quote */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             {/* Large image with purple shadow */}
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
+            <div className="surface-card surface-card-floating relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
               <img
                 src="/assets/ev-chargers/ev-charger-customer-experience.webp"
                 alt="Family at a suburban home with rooftop solar and an EV in the driveway."
@@ -209,7 +209,7 @@ const EVChargers = () => {
             </div>
 
             {/* Floating quote card */}
-            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
+            <div className="surface-card surface-card-floating relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">CUSTOMER EXPERIENCE</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "The installation was seamless and professional. Now we’re charging our EV directly from our own roof."
@@ -221,8 +221,8 @@ const EVChargers = () => {
       </section>
 
       {/* Solar Integration — Asymmetric, image heavy */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
@@ -294,7 +294,7 @@ const EVChargers = () => {
               </div>
               <a
                 href="#contact"
-                className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
+                className="action-link inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 START YOUR HOME CHARGING
                 <ArrowRight className="h-4 w-4" />
@@ -305,8 +305,8 @@ const EVChargers = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[1000px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow site-shell-narrow-wide mx-auto max-w-[1000px] px-6 sm:px-8">
           <h2 className="mb-8  text-4xl text-stone-900">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="rounded-2xl border border-stone-200 bg-white px-6">
             {faqs.map((item, index) => (

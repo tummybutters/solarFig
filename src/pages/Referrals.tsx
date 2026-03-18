@@ -32,19 +32,19 @@ const Referrals = () => {
             className="h-full w-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">REFERRAL PROGRAM</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">REFERRAL PROGRAM</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 Share solar. Earn rewards.
               </h1>
-              <h2 className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <h2 className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 A structured referral program for homeowners and partners who trust Solarfig.
               </h2>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                  className="action-pill hero-cta inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   Refer a Homeowner
                   <ArrowRight className="h-4 w-4" />
@@ -62,8 +62,8 @@ const Referrals = () => {
       </section>
 
       {/* Reward Tiers */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 max-w-2xl">
             <h2 className="text-3xl tracking-tight text-[#231f2a] sm:text-4xl">Referral rewards that scale</h2>
             <p className="mt-4 text-base leading-relaxed text-[#5f5571] sm:text-lg">
@@ -75,7 +75,7 @@ const Referrals = () => {
             {tiers.map((tier) => (
               <div
                 key={tier.title}
-                className="group relative overflow-hidden rounded-2xl border border-[#ded4eb] bg-white p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.18)] transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.28)] sm:p-8"
+                className="surface-card group relative overflow-hidden rounded-2xl border border-[#ded4eb] bg-white p-6 shadow-[0_15px_50px_-15px_rgba(109,57,181,0.18)] transition-shadow hover:shadow-[0_25px_70px_-15px_rgba(109,57,181,0.28)] sm:p-8"
               >
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-purple-600">{tier.title}</p>
                 <p className="text-5xl font-light text-stone-900 sm:text-6xl">{tier.reward}</p>
@@ -91,8 +91,8 @@ const Referrals = () => {
       </section>
 
       {/* How It Works — Steps with image */}
-      <section id="how-it-works" className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section id="how-it-works" className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="mb-10 max-w-md">
@@ -114,7 +114,7 @@ const Referrals = () => {
                 ))}
               </div>
 
-              <div className="mt-10 rounded-xl bg-white p-6 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)]">
+              <div className="surface-card surface-card-floating mt-10 rounded-xl bg-white p-6 shadow-[0_4px_20px_-10px_rgba(109,57,181,0.2)]">
                 <h3 className="mb-3 font-medium text-stone-900">Program Details</h3>
                 <ul className="space-y-2 text-sm text-stone-600">
                   <li className="flex items-start gap-2">
@@ -154,9 +154,9 @@ const Referrals = () => {
       </section>
 
       {/* CTA — Simple */}
-      <section className="pb-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-center text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+      <section className="section-space pb-20">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
+          <div className="surface-card surface-card-dark relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-center text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative">
@@ -168,7 +168,7 @@ const Referrals = () => {
               </p>
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 SUBMIT A REFERRAL
                 <ArrowRight className="h-4 w-4" />

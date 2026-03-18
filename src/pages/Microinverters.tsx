@@ -64,19 +64,19 @@ const Microinverters = () => {
         <div className="mobile-hero-media relative min-h-[460px] w-full" style={heroMediaStyle}>
           <img src="/assets/microinverters/microinverters-header-image.jpg" alt="Microinverter system hero visual." className="h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">INVERTERS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy hero--wide-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">INVERTERS</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">Engineered for Performance.</span>
                 <span className="block lg:whitespace-nowrap">Built for Reliability.</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 The control center of your solar system. We select the right architecture to maximize efficiency, monitoring, safety, and scalability.
               </p>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -88,8 +88,8 @@ const Microinverters = () => {
       </section>
 
       {/* Benefits — Icon strip with large image below */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">POWER CONVERSION</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Intelligent energy control</h2>
@@ -130,8 +130,8 @@ const Microinverters = () => {
       </section>
 
       {/* Fit Scenarios — Staggered layout with large images */}
-      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">DESIGN CONSIDERATIONS</p>
             <h2 className=" text-4xl leading-tight sm:text-5xl">
@@ -144,8 +144,8 @@ const Microinverters = () => {
           <div className="space-y-16">
             {fitScenarios.map((scenario, i) => (
               <div key={scenario.title} className={`grid gap-8 items-center lg:grid-cols-2 ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_-20px_rgba(109,57,181,0.4)]">
+                  <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
+                  <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_25px_60px_-20px_rgba(109,57,181,0.4)]">
                     <img
                       src={scenario.image}
                       alt={scenario.title}
@@ -182,13 +182,13 @@ const Microinverters = () => {
             </div>
 
             {/* Floating card */}
-            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:left-10 xl:mt-0 xl:max-w-sm xl:rounded-2xl">
+            <div className="surface-card surface-card-floating relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:left-10 xl:mt-0 xl:max-w-sm xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#6D39B5]">ENGINEERING FIRST</p>
               <h3 className="mb-3  text-2xl text-stone-900">No one-size-fits-all</h3>
               <p className="text-stone-600 leading-relaxed">
                 We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans — then walk you through the performance and scalability tradeoffs.
               </p>
-              <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
+              <a href="#contact" className="action-link mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
                 Design My System
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -198,8 +198,8 @@ const Microinverters = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[980px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow mx-auto max-w-[980px] px-6 sm:px-8">
           <h2 className=" text-4xl text-stone-900 sm:text-5xl">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="mt-8 rounded-2xl border border-gray-200 bg-white px-6">
             {faqs.map((faq, index) => (

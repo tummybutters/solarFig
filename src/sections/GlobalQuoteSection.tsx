@@ -86,9 +86,9 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#eadff7] py-16 sm:py-20">
+    <section id="contact" className="section-space relative overflow-hidden bg-[#eadff7] py-16 sm:py-20">
       <div className="pointer-events-none absolute -bottom-36 -left-20 hidden h-80 w-80 rounded-full bg-purple-200/50 sm:block" />
-      <div className="mx-auto grid max-w-[1400px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
+      <div className="site-shell mx-auto grid max-w-[1400px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
         <div>
           <h2 className="text-4xl tracking-tight text-[#201b25] sm:text-6xl">{copy.heading}</h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#2d2740]/80">
@@ -190,7 +190,7 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex h-12 items-center justify-center rounded-full bg-[#6d39b5] px-10 text-lg font-medium text-white transition-colors hover:bg-[#8553c2] disabled:cursor-not-allowed disabled:opacity-70"
+            className="action-pill inline-flex h-12 items-center justify-center rounded-full bg-[#6d39b5] px-10 text-lg font-medium text-white transition-colors hover:bg-[#8553c2] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? "Submitting..." : copy.submitLabel}
           </button>

@@ -45,21 +45,21 @@ const Installation = () => {
         <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
           <img src="/assets/installation/installation-header-2026.webp" alt="Solar installation team working on a residential roof." className="h-full w-full object-cover object-bottom" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OUR PROCESS</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">OUR PROCESS</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.98] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[82px]">
                 <span className="block lg:whitespace-nowrap">Your Solar Journey,</span>
                 <span className="block lg:whitespace-nowrap">Simplified</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">End-to-end project management from design through activation, backed by vetted installation partners.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto grid max-w-[1200px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_380px]">
+      <section className="section-space py-16 sm:py-20">
+        <div className="site-shell-narrow site-shell-narrow-process mx-auto grid max-w-[1200px] gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_380px]">
           <div>
             <h2 className="text-4xl tracking-tight text-[#231f2a] sm:text-5xl">A clear, step-by-step process</h2>
             <p className="mt-4 max-w-3xl text-gray-600">
@@ -67,7 +67,7 @@ const Installation = () => {
             </p>
             <div className="mt-8 space-y-4">
               {steps.map((step, idx) => (
-                <div key={step.title} className="rounded-xl border border-gray-200 bg-white p-4">
+                <div key={step.title} className="surface-card rounded-xl border border-gray-200 bg-white p-4">
                   <div className="flex items-start gap-3">
                   <div className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#6d39b5] text-xs font-semibold text-white">
                     {idx + 1}
@@ -82,7 +82,7 @@ const Installation = () => {
             </div>
           </div>
 
-          <aside className="self-start rounded-2xl border border-gray-200 bg-white p-6">
+          <aside className="surface-card self-start rounded-2xl border border-gray-200 bg-white p-6">
             <h3 className="text-xl tracking-tight text-[#231f2a]">What you can expect</h3>
             <ul className="mt-5 space-y-3">
               {[
@@ -98,7 +98,7 @@ const Installation = () => {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
+            <a href="#contact" className="action-link mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
               Start your project
               <ArrowRight className="h-4 w-4" />
             </a>

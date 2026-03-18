@@ -104,19 +104,19 @@ const Battery = () => {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-4xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ENERGY STORAGE</p>
-              <h1 className="max-w-[980px] text-5xl font-medium leading-[0.94] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[72px] xl:text-[78px]">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy hero--narrow-copy max-w-4xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ENERGY STORAGE</p>
+              <h1 className="hero-title max-w-[980px] text-5xl font-medium leading-[0.94] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-[72px] xl:text-[78px]">
                 <span className="block">Intelligent Energy Storage.</span>
                 <span className="block">Built for Resilience.</span>
               </h1>
-              <p className="mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
+              <p className="hero-subtitle mt-7 max-w-[980px] text-[23px] font-medium leading-[1.34] text-white/82">
                 Energy storage that extends solar value beyond daylight. Maintain essential power during grid interruptions.
               </p>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
                 <ArrowRight className="h-4 w-4" />
@@ -128,8 +128,8 @@ const Battery = () => {
       </section>
 
       {/* Control Modes — Images dominant, minimal text badges below */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-20">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">ENERGY MANAGEMENT</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">Energy storage that adapts</h2>
@@ -138,7 +138,7 @@ const Battery = () => {
           <div className="grid gap-8 lg:grid-cols-3">
             {controlModes.map((mode, i) => (
               <div key={mode.title} className="group">
-                <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
+                <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(109,57,181,0.35)] transition-shadow duration-500 group-hover:shadow-[0_30px_80px_-20px_rgba(109,57,181,0.5)]">
                   <img
                     src={mode.image}
                     alt={mode.alt}
@@ -161,13 +161,13 @@ const Battery = () => {
       </section>
 
       {/* Benefits — Large image left, compact text right */}
-      <section className="bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-[linear-gradient(145deg,#6d5a96_0%,#836fb0_52%,#9a86c2_100%)] py-16 text-white sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
             {/* Large image with purple glow */}
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-purple-600/20 blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
+              <div className="surface-card relative overflow-hidden rounded-2xl shadow-[0_25px_80px_-20px_rgba(109,57,181,0.4)]">
                 <img
                   src="/assets/battery/battery-extending-the-value-of-solar.jpg"
                   alt="Stacked home energy storage units installed in a garage."
@@ -202,7 +202,7 @@ const Battery = () => {
 
               <a
                 href="#contact"
-                className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
+                className="action-pill hero-cta mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 EXPLORE STORAGE OPTIONS
                 <ArrowRight className="h-4 w-4" />
@@ -213,11 +213,11 @@ const Battery = () => {
       </section>
 
       {/* Customer Story — Image dominant, quote floats */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             {/* Large image with purple shadow */}
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
+            <div className="surface-card surface-card-floating relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.3)] lg:rounded-3xl">
               <img
                 src="/assets/battery/battery-real-world-performance.jpg"
                 alt="Residential battery installation beside a modern home patio."
@@ -229,7 +229,7 @@ const Battery = () => {
             </div>
 
             {/* Floating quote card — minimal, connected */}
-            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
+            <div className="surface-card surface-card-floating relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">REAL-WORLD PERFORMANCE</p>
               <blockquote className="mb-4 text-lg leading-relaxed text-stone-700">
                 "We rely on stored solar energy through the night, and the system is typically recharged by midday — even during overcast days."
@@ -241,8 +241,8 @@ const Battery = () => {
       </section>
 
       {/* Why Solarfig — Asymmetric, image heavy */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
             {/* Text — compact, left aligned */}
             <div className="flex flex-col justify-center lg:pr-8">
@@ -304,7 +304,7 @@ const Battery = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
+                className="action-link inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 EXPLORE ENERGY STORAGE
                 <ArrowRight className="h-4 w-4" />
@@ -315,8 +315,8 @@ const Battery = () => {
       </section>
 
       {/* FAQ — unchanged */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[1000px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-20">
+        <div className="site-shell-narrow site-shell-narrow-wide mx-auto max-w-[1000px] px-6 sm:px-8">
           <h2 className="mb-8  text-4xl text-stone-900">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="rounded-2xl border border-stone-200 bg-white px-6">
             {faqs.map((item, index) => (

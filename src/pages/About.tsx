@@ -27,13 +27,13 @@ const About = () => {
             className="h-full w-full object-cover object-[center_28%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
-          <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
-            <div className="max-w-3xl text-white">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ABOUT US</p>
-              <h1 className="text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+          <div className="hero-overlay-shell absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
+            <div className="hero-copy max-w-3xl text-white">
+              <p className="hero-kicker mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">ABOUT US</p>
+              <h1 className="hero-title text-4xl font-medium leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
                 Solar Done with Integrity. Designed with Intention.
               </h1>
-              <p className="mt-5 max-w-2xl text-lg font-medium text-white/82">
+              <p className="hero-subtitle mt-5 max-w-2xl text-lg font-medium text-white/82">
                 We help homeowners transition to solar with clear strategy, honest pricing, and systems built to perform for decades.
               </p>
             </div>
@@ -42,8 +42,8 @@ const About = () => {
       </section>
 
       {/* Who We Are — Large image with floating text card */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-25px_rgba(109,57,181,0.35)] lg:rounded-3xl">
               <img
@@ -57,7 +57,7 @@ const About = () => {
             </div>
 
             {/* Floating card */}
-            <div className="relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
+            <div className="surface-card surface-card-floating relative mt-6 rounded-xl bg-white p-6 shadow-xl sm:mt-8 sm:p-8 xl:absolute xl:bottom-10 xl:right-10 xl:mt-0 xl:max-w-md xl:rounded-2xl">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-purple-600">WHO WE ARE</p>
               <h2 className="mb-4  text-2xl text-stone-900 sm:text-3xl">Solar, done the right way</h2>
               <p className="text-stone-600 leading-relaxed">
@@ -69,8 +69,8 @@ const About = () => {
       </section>
 
       {/* Pillars — Icon strip */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space bg-white py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-purple-600">WHY SOLARFIG</p>
             <h2 className=" text-4xl text-stone-900 sm:text-5xl">What makes Solarfig different</h2>
@@ -83,7 +83,7 @@ const About = () => {
             {pillars.map((pillar, i) => (
               <div
                 key={pillar.title}
-                className="group relative overflow-hidden rounded-2xl border border-[#ded2ef] bg-white p-6 shadow-[0_12px_34px_-18px_rgba(109,57,181,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-18px_rgba(109,57,181,0.36)]"
+                className="surface-card group relative overflow-hidden rounded-2xl border border-[#ded2ef] bg-white p-6 shadow-[0_12px_34px_-18px_rgba(109,57,181,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-18px_rgba(109,57,181,0.36)]"
               >
                 <span className="absolute right-4 top-4 text-xs font-mono text-stone-300">0{i + 1}</span>
                 <h3 className="mb-2  text-xl text-stone-900">{pillar.title}</h3>
@@ -95,8 +95,8 @@ const About = () => {
       </section>
 
       {/* Gallery — Two images with purple shadows */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-24">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="grid gap-6 md:grid-cols-2">
             <div className="relative">
               <div className="absolute -inset-3 rounded-3xl bg-purple-600/10 blur-2xl" />
@@ -127,9 +127,9 @@ const About = () => {
       </section>
 
       {/* CTA — Dark card */}
-      <section className="pb-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
+      <section className="section-space pb-20">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
+          <div className="surface-card surface-card-dark relative overflow-hidden rounded-2xl bg-[#6f5a9b] px-8 py-12 text-white sm:px-12 sm:py-16 lg:rounded-3xl">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
             <div className="relative max-w-2xl">
               <h2 className=" text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -140,7 +140,7 @@ const About = () => {
               </p>
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
+                className="action-pill hero-cta mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 START YOUR PLAN
                 <ArrowRight className="h-4 w-4" />

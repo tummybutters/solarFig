@@ -15,7 +15,7 @@ const Articles = () => {
       <section className="relative overflow-hidden bg-[linear-gradient(130deg,#17141b_0%,#2a2340_48%,#6f5b99_100%)] pb-20 pt-32 text-white sm:pb-24 sm:pt-36">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(160,115,226,0.28),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(187,154,223,0.26),transparent_40%)]" />
 
-        <div className="relative mx-auto max-w-[1400px] px-6 sm:px-8">
+        <div className="site-shell relative mx-auto max-w-[1400px] px-6 sm:px-8">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/70">ARTICLES</p>
           <h1 className="max-w-5xl text-4xl font-medium leading-[1.02] tracking-tight sm:text-6xl">
             Solar Buying Guides for Homeowners
@@ -65,8 +65,8 @@ const Articles = () => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
+      <section className="section-space py-16 sm:py-20">
+        <div className="site-shell mx-auto max-w-[1400px] px-6 sm:px-8">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5b4873]">ARTICLE LIBRARY</p>
@@ -85,7 +85,7 @@ const Articles = () => {
             {articleList.map((article) => (
               <article
                 key={article.title}
-                className="group overflow-hidden rounded-2xl border border-[#cfbfe5] bg-[#f7f1ff] shadow-[0_10px_28px_rgba(26,22,34,0.06)] transition-transform duration-300 hover:-translate-y-1"
+                className="surface-card group overflow-hidden rounded-2xl border border-[#cfbfe5] bg-[#f7f1ff] shadow-[0_10px_28px_rgba(26,22,34,0.06)] transition-transform duration-300 hover:-translate-y-1"
               >
                 <a href={`/articles/${article.slug}`} className="block">
                   <div className="overflow-hidden border-b border-[#cfbfe5]">
