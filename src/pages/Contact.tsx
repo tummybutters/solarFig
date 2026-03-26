@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { FloatingInput } from "@/components/ui/floating-input";
 import { Textarea } from "@/components/ui/textarea";
 import { submitLeadForm } from "@/lib/lead-form";
+import SmsConsentFields from "@/components/SmsConsentFields";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -26,6 +27,8 @@ const Contact = () => {
       phone: String(data.get("phone") ?? "").trim(),
       serviceInterest: String(data.get("serviceInterest") ?? "").trim(),
       message: String(data.get("message") ?? "").trim(),
+      transactionalConsent: data.get("transactionalConsent") === "on",
+      marketingConsent: data.get("marketingConsent") === "on",
       intent: "contact",
       source: "solarfig.com/contact",
       pageUrl: window.location.href,
@@ -167,6 +170,12 @@ const Contact = () => {
                         placeholder="Tell us about your project or questions..."
                         rows={4}
                       />
+                    </div>
+                    <div className="space-y-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-700">
+                        Text Message Preferences <span className="text-stone-500">(Optional)</span>
+                      </p>
+                      <SmsConsentFields idPrefix="contact-form" />
                     </div>
                     <Button
                       type="submit"

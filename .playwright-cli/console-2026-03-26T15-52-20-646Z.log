@@ -1,0 +1,28 @@
+[   50192ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-plans-understand-solar-pricing-costs.webp:0
+[   50192ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-plans-how-solar-installation-works.webp:0
+[ 3478193ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-products-designed-for-maximum-efficiency.webp:0
+[ 3478193ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-products-batteries-energy-storage-stay-powered-up.webp:0
+[ 3480644ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:4173/?token=r5rOe24YqUSm' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/@vite/client:744
+[ 3480653ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:4173/?token=r5rOe24YqUSm' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/@vite/client:754
+[ 3480653ms] [ERROR] [vite] failed to connect to websocket.
+your current setup:
+  (browser) 127.0.0.1:4173/ <--[HTTP]--> 127.0.0.1:4173/ (server)
+  (browser) 127.0.0.1:4173/ <--[WebSocket (failing)]--> 127.0.0.1:4173/ (server)
+Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr . @ http://127.0.0.1:4173/@vite/client:764
+[ 3480908ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon.ico:0
+[ 3480910ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon.ico:0
+[ 3480920ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon-32x32.png:0
+[ 3480921ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon-16x16.png:0
+[ 3482059ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-products-designed-for-maximum-efficiency.webp:0
+[ 3482059ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/navbar/nav-products-batteries-energy-storage-stay-powered-up.webp:0
+[ 3485292ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:4173/?token=r5rOe24YqUSm' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/@vite/client:744
+[ 3485298ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:4173/?token=r5rOe24YqUSm' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/@vite/client:754
+[ 3485299ms] [ERROR] [vite] failed to connect to websocket.
+your current setup:
+  (browser) 127.0.0.1:4173/ <--[HTTP]--> 127.0.0.1:4173/ (server)
+  (browser) 127.0.0.1:4173/ <--[WebSocket (failing)]--> 127.0.0.1:4173/ (server)
+Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr . @ http://127.0.0.1:4173/@vite/client:764
+[ 3485498ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon.ico:0
+[ 3485498ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon.ico:0
+[ 3485499ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon-32x32.png:0
+[ 3485499ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/favicon-16x16.png:0

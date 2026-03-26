@@ -18,11 +18,11 @@ const TermsOfUse = () => {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-[1100px] space-y-8 px-6 text-gray-800 sm:px-8">
           <p>
-            These Terms and Conditions (the "Terms") constitute a legally binding agreement between you and Horizon
-            Solar Group (dba Solarfig) ("Solarfig," "we," "us," or "our") governing your access to and use of our
-            websites, pages, forms, services, communications, and related content or features (collectively, the
-            "Services"). By accessing or using the Services, you acknowledge that you have read, understood, and agree
-            to be bound by these Terms. If you do not agree, you may not use the Services.
+            These Terms of Use (the "Terms") constitute a legally binding agreement between you and Horizon Solar Group
+            LLC (dba Solarfig) ("Solarfig," "we," "us," or "our") governing your access to and use of our websites,
+            pages, forms, services, communications, and related content or features (collectively, the "Services"). By
+            accessing or using the Services, you acknowledge that you have read, understood, and agree to be bound by
+            these Terms. If you do not agree, you may not use the Services.
           </p>
 
           <div>
@@ -62,40 +62,30 @@ const TermsOfUse = () => {
           <div>
             <h2 className="mb-3 text-2xl tracking-tight">Communications Consent; Telephone, SMS, and Email</h2>
             <p>
-              By providing contact information or interacting with the Services, you expressly consent to communications
-              from Solarfig and its agents, service providers, and business partners regarding the Services, including
-              telephone calls, SMS/MMS messages, email, and other electronic means. Communications may be delivered
-              using automatic telephone dialing systems, prerecorded/artificial voice, or similar technology as
-              permitted by law. Consent is not a condition of purchasing goods or services.
+              By submitting your information through the Services, you authorize Solarfig to respond to your inquiry or
+              provide information about services you requested using the contact details you provide. If you separately
+              opt in to SMS/MMS communications by selecting one or both optional consent checkboxes on our forms, you
+              consent to receive the categories of messages you selected from Horizon Solar Group LLC dba Solarfig at
+              the number you provide. Consent is not a condition of purchasing goods or services.
             </p>
           </div>
 
           <div>
             <h2 className="mb-3 text-2xl tracking-tight">Mobile Messaging Terms</h2>
             <p>
-              If you opt in to SMS/MMS messages, you consent to recurring text messages at the number you provide.
-              Message frequency may vary. Message and data rates may apply. You may opt out at any time by replying
-              "STOP" to any message. After opting out, you may receive one confirmation message unless you opt in
-              again.
+              If you opt in to SMS/MMS messages through our forms, you consent to text messages at the number you
+              provide in accordance with the selections you make. Message frequency may vary. Message and data rates
+              may apply. Reply HELP for help or STOP to opt out. After opting out, you may receive one confirmation
+              message unless you opt in again.
             </p>
           </div>
 
           <div>
             <h2 className="mb-3 text-2xl tracking-tight">Do-Not-Call; Consent Regardless of Registry Status</h2>
             <p>
-              To the extent permitted by law, your consent to contact may apply even if your number appears on federal,
-              state, or internal do-not-call lists. Where required by law, Solarfig honors applicable opt-out requests
-              and revocations of consent.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-3 text-2xl tracking-tight">Third-Party Providers; Sharing of Information</h2>
-            <p>
-              Solarfig may use third-party service providers to operate, support, or deliver aspects of the Services.
-              Solarfig may share your information with third parties, including installers, dealers, lenders, and
-              marketing partners, as reasonably necessary to provide or promote Services, subject to applicable law and
-              the Privacy Policy. Solarfig does not control third-party practices and is not responsible for them.
+              To the extent permitted by law, any consent you provide through our forms may apply even if your number
+              appears on federal, state, or internal do-not-call lists. Where required by law, Solarfig honors
+              applicable opt-out requests and revocations of consent.
             </p>
           </div>
 

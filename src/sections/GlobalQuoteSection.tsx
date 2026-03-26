@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { FloatingInput } from "@/components/ui/floating-input";
 import { submitLeadForm } from "@/lib/lead-form";
+import SmsConsentFields from "@/components/SmsConsentFields";
 
 type GlobalQuoteSectionMode = "quote" | "referral";
 
@@ -63,7 +64,6 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
       zipCode: String(data.get("zipCode") ?? "").trim(),
       intent: mode,
       referralDetails: String(data.get("referralDetails") ?? "").trim(),
-      consent: data.get("consent") === "on",
       transactionalConsent: data.get("transactionalConsent") === "on",
       marketingConsent: data.get("marketingConsent") === "on",
       source: copy.source,
@@ -111,7 +111,7 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
           />
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <FloatingInput label="Phone Number (Required)" name="phone" type="tel" autoComplete="tel" required />
+            <FloatingInput label="Phone Number" name="phone" type="tel" autoComplete="tel" />
             <FloatingInput label="Zip Code (Required)" name="zipCode" autoComplete="postal-code" required />
           </div>
 
@@ -130,61 +130,15 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
 
           <div className="pt-1">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#231f2a]">
-              CONSENT <span className="text-[#231f2a]/60">(REQUIRED)</span>
+              TEXT MESSAGE PREFERENCES <span className="text-[#231f2a]/60">(OPTIONAL)</span>
             </p>
-            <label className="solar-neon-checkbox mt-4 inline-flex cursor-pointer items-center gap-3 text-[#231f2a]">
-              <input type="checkbox" name="consent" required aria-label="I Agree and Consent" />
-              <div className="solar-neon-checkbox__frame" aria-hidden="true">
-                <div className="solar-neon-checkbox__box">
-                  <div className="solar-neon-checkbox__check-container">
-                    <svg viewBox="0 0 24 24" className="solar-neon-checkbox__check">
-                      <path d="M3,12.5l7,7L21,5"></path>
-                    </svg>
-                  </div>
-                  <div className="solar-neon-checkbox__glow"></div>
-                  <div className="solar-neon-checkbox__borders">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-                <div className="solar-neon-checkbox__effects">
-                  <div className="solar-neon-checkbox__particles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div className="solar-neon-checkbox__rings">
-                    <div className="ring"></div>
-                    <div className="ring"></div>
-                    <div className="ring"></div>
-                  </div>
-                  <div className="solar-neon-checkbox__sparks">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-              <span>I Agree and Consent</span>
-            </label>
-            <p className="mt-4 text-sm leading-relaxed text-[#302845]/80">
-              By checking this box, you consent to receive calls, texts, and emails from Solarfig regarding your quote.
-              Consent is not a condition of purchase. Message and data rates may apply. You can opt out at any time.
-              Review our <a href="/terms-of-use" className="underline hover:text-[#6d39b5]">Terms of Service</a> and <a href="/privacy-policy" className="underline hover:text-[#6d39b5]">Privacy Policy</a>.
-            </p>
-
+            <SmsConsentFields
+              idPrefix={`global-quote-${mode}`}
+              className="mt-4"
+              textClassName="text-[#302845]/80"
+              legalClassName="text-[#302845]/80"
+              linkClassName="hover:text-[#6d39b5]"
+            />
           </div>
 
           <button

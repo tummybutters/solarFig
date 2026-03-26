@@ -1,0 +1,210 @@
+- main [ref=e3]:
+  - generic [ref=e5]:
+    - link "Solarfig Solarfig" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "Solarfig" [ref=e7]
+      - generic [ref=e8]: Solarfig
+    - navigation "Main" [ref=e10]:
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - button "Products" [ref=e14] [cursor=pointer]:
+            - text: Products
+            - img [ref=e15]
+        - listitem [ref=e17]:
+          - button "Plans & Services" [ref=e18] [cursor=pointer]:
+            - text: Plans & Services
+            - img [ref=e19]
+        - listitem [ref=e21]:
+          - button "Locations" [ref=e22] [cursor=pointer]:
+            - text: Locations
+            - img [ref=e23]
+        - listitem [ref=e25]:
+          - button "Explore" [ref=e26] [cursor=pointer]:
+            - text: Explore
+            - img [ref=e27]
+    - generic [ref=e29]:
+      - link "(213) 306-4154" [ref=e30] [cursor=pointer]:
+        - /url: tel:+12133064154
+      - link "Get a quote" [ref=e31] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e36]:
+    - paragraph [ref=e37]: Contact
+    - heading "Get In Touch With Solarfig" [level=1] [ref=e38]
+    - paragraph [ref=e39]: Ready to go solar or compare options? Tell us about your home and goals. A real person from our team will follow up within 24 hours.
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - heading "Send us a message" [level=2] [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - textbox "First Name" [ref=e48]:
+              - /placeholder: " "
+            - generic: First Name
+          - generic [ref=e49]:
+            - textbox "Last Name" [ref=e50]:
+              - /placeholder: " "
+            - generic: Last Name
+        - generic [ref=e51]:
+          - textbox "Email" [ref=e52]:
+            - /placeholder: " "
+          - generic: Email
+        - generic [ref=e53]:
+          - textbox "Phone" [ref=e54]:
+            - /placeholder: " "
+          - generic: Phone
+        - generic [ref=e55]:
+          - generic [ref=e56]: Service Interest
+          - combobox [ref=e57]:
+            - option "Residential Solar" [selected]
+            - option "Battery Storage"
+            - option "EV Charging"
+            - option "General Inquiry"
+        - generic [ref=e58]:
+          - generic [ref=e59]: Message
+          - textbox "Tell us about your project or questions..." [ref=e60]
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: Text Message Preferences (Optional)
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - checkbox "By checking this box, I consent to receive transactional messages related to my account, orders, or services I have requested from Horizon Solar Group LLC dba Solarfig. These messages may include reminders, order confirmations, and account notifications among others. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out." [ref=e65]
+              - generic [ref=e66]: By checking this box, I consent to receive transactional messages related to my account, orders, or services I have requested from Horizon Solar Group LLC dba Solarfig. These messages may include reminders, order confirmations, and account notifications among others. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out.
+            - generic [ref=e67]:
+              - checkbox "By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, and new product updates, among others, from Horizon Solar Group LLC dba Solarfig. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out." [ref=e68]
+              - generic [ref=e69]: By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, and new product updates, among others, from Horizon Solar Group LLC dba Solarfig. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out.
+            - paragraph [ref=e70]:
+              - text: Review our
+              - link "Terms of Use" [ref=e71] [cursor=pointer]:
+                - /url: /terms-of-use
+              - text: and
+              - link "Privacy Policy" [ref=e72] [cursor=pointer]:
+                - /url: /privacy-policy
+              - text: .
+        - button "Send Message" [ref=e73] [cursor=pointer]:
+          - text: Send Message
+          - img
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - heading "Contact information" [level=2] [ref=e76]
+        - paragraph [ref=e77]: Prefer to reach out directly? Here's how to find us.
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - generic [ref=e83]:
+            - heading "Phone" [level=3] [ref=e84]
+            - paragraph [ref=e85]: +1 (213) 306-4154
+            - paragraph [ref=e86]: Call us anytime
+        - generic [ref=e87]:
+          - img [ref=e89]
+          - generic [ref=e92]:
+            - heading "Email" [level=3] [ref=e93]
+            - paragraph [ref=e94]: info@solarfig.com
+            - paragraph [ref=e95]: We reply within 24 hours
+        - generic [ref=e96]:
+          - img [ref=e98]
+          - generic [ref=e101]:
+            - heading "Office" [level=3] [ref=e102]
+            - paragraph [ref=e103]: 4930 Campus Drive
+            - paragraph [ref=e104]: Newport Beach, CA 92660
+            - paragraph [ref=e105]: By appointment only
+        - generic [ref=e106]:
+          - img [ref=e108]
+          - generic [ref=e111]:
+            - heading "Hours" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Mon-Fri 9AM - 7PM PST
+            - paragraph [ref=e114]: Sat 11AM - 5PM PST
+            - paragraph [ref=e115]: Closed Sundays
+      - generic [ref=e116]:
+        - heading "We serve California and Oregon" [level=3] [ref=e117]
+        - paragraph [ref=e118]: Including major service areas across California and Oregon, from Los Angeles and Orange County to Portland, Eugene, and surrounding communities.
+        - link "View all service areas" [ref=e119] [cursor=pointer]:
+          - /url: /locations
+          - text: View all service areas
+          - img [ref=e120]
+  - generic [ref=e127]:
+    - paragraph [ref=e128]: Quick Start
+    - heading "Want a faster response?" [level=2] [ref=e129]
+    - paragraph [ref=e130]: Get your free solar report in 2 minutes with no phone call required.
+    - link "Get Free Solar Report" [ref=e131] [cursor=pointer]:
+      - /url: /
+      - text: Get Free Solar Report
+      - img [ref=e132]
+  - generic [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - link "Solarfig" [ref=e138] [cursor=pointer]:
+          - /url: /
+          - img "Solarfig" [ref=e139]
+        - generic [ref=e141]:
+          - link "(213) 306-4154" [ref=e142] [cursor=pointer]:
+            - /url: tel:+12133064154
+            - img [ref=e143]
+            - generic [ref=e145]: (213) 306-4154
+          - link "info@solarfig.com" [ref=e146] [cursor=pointer]:
+            - /url: mailto:info@solarfig.com
+            - img [ref=e147]
+            - generic [ref=e150]: info@solarfig.com
+          - generic [ref=e151]:
+            - img [ref=e152]
+            - generic [ref=e155]:
+              - generic [ref=e156]: 4930 Campus Drive
+              - generic [ref=e157]: Newport Beach, CA 92660
+      - generic [ref=e158]:
+        - heading "Solutions" [level=4] [ref=e159]
+        - list [ref=e160]:
+          - listitem [ref=e161]:
+            - link "Solar Panels" [ref=e162] [cursor=pointer]:
+              - /url: /solar-panels
+          - listitem [ref=e163]:
+            - link "Inverters" [ref=e164] [cursor=pointer]:
+              - /url: /microinverters
+          - listitem [ref=e165]:
+            - link "Energy Storage" [ref=e166] [cursor=pointer]:
+              - /url: /battery
+          - listitem [ref=e167]:
+            - link "EV Chargers" [ref=e168] [cursor=pointer]:
+              - /url: /ev-chargers
+      - generic [ref=e169]:
+        - heading "Plans & Services" [level=4] [ref=e170]
+        - list [ref=e171]:
+          - listitem [ref=e172]:
+            - link "Pricing & Costs" [ref=e173] [cursor=pointer]:
+              - /url: /pricing-costs
+          - listitem [ref=e174]:
+            - link "Installation Process" [ref=e175] [cursor=pointer]:
+              - /url: /installation
+      - generic [ref=e176]:
+        - heading "Locations" [level=4] [ref=e177]
+        - list [ref=e178]:
+          - listitem [ref=e179]:
+            - link "California" [ref=e180] [cursor=pointer]:
+              - /url: /locations
+          - listitem [ref=e181]:
+            - link "Oregon" [ref=e182] [cursor=pointer]:
+              - /url: /locations/oregon
+      - generic [ref=e183]:
+        - heading "Explore" [level=4] [ref=e184]
+        - list [ref=e185]:
+          - listitem [ref=e186]:
+            - link "About Us" [ref=e187] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e188]:
+            - link "Educational Articles" [ref=e189] [cursor=pointer]:
+              - /url: /articles
+          - listitem [ref=e190]:
+            - link "Referral Program" [ref=e191] [cursor=pointer]:
+              - /url: /referrals
+    - generic [ref=e192]:
+      - generic [ref=e193]:
+        - link "Home" [ref=e194] [cursor=pointer]:
+          - /url: /
+        - link "Contact Us" [ref=e195] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - link "Terms of Use" [ref=e198] [cursor=pointer]:
+            - /url: /terms-of-use
+          - generic [ref=e199]: •
+        - link "Privacy Policy" [ref=e201] [cursor=pointer]:
+          - /url: /privacy-policy
+      - paragraph [ref=e202]: © 2026 Solarfig
+    - paragraph [ref=e204]: "Mailing address for compliance: 2810 Jackson Ave PH3B, Long Island City, NY 11101"

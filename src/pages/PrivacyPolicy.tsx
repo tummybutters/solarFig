@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
               <strong>Personal Information.</strong> We collect Personal Information when you provide it, including via
               sign-up forms, account registrations, solution or service registrations, promotions, and contests.
               Personal Information may also be collected through communications (including text messages, faxes,
-              telephone calls, and regular mail), and from third-party sources including database vendors.
+              telephone calls, and regular mail).
             </p>
             <p className="mt-3">
               <strong>Your Communications With Us.</strong> We collect Personal Information we receive from your
@@ -100,10 +100,6 @@ const PrivacyPolicy = () => {
               described below and to disclose Usage Data without restriction.
             </p>
             <p className="mt-3">
-              <strong>Affiliated Entities.</strong> We may provide your Personal Information and Usage Data to
-              affiliated entities, including subsidiaries.
-            </p>
-            <p className="mt-3">
               <strong>Service Providers.</strong> We may provide access to Personal Information and Usage Data to
               trusted service providers assisting with operations and maintenance, such as payment processing, hosting,
               security, production, fulfillment, optimization, analytics, and reporting.
@@ -119,20 +115,20 @@ const PrivacyPolicy = () => {
               illegal activity, or investigate/respond to violations affecting rights or site security.
             </p>
             <p className="mt-3">
-              <strong>Joint Venture Marketing Partners.</strong> We may disclose Personal Information to joint venture
-              partners for compensation, transaction processing, fulfillment, support, and offering related solutions,
-              services, promotions, and contests.
-            </p>
-            <p className="mt-3">
               <strong>Disclosures in Our Discretion.</strong> If we believe disclosure is reasonable, we reserve the
               unqualified right to disclose Personal Information and information regarding your use of this site and
               related websites and offerings.
             </p>
             <p className="mt-3">
-              You have the right to receive, once per year, information about third parties with whom we shared
-              marketing information about you or your family during the previous calendar year, plus categories of
-              information shared. To request this, email us with subject line "California Privacy Request" and include
-              the domain name, your name, address, and email address. We will respond within thirty days.
+              No mobile information will be shared with third parties or affiliates for marketing/promotional purposes
+            </p>
+            <p className="mt-3">
+              Text messaging originator opt-in data and consent will not be shared with any third parties, except for
+              aggregators and providers of the Text Message services
+            </p>
+            <p className="mt-3">
+              All the above categories exclude text messaging originator opt-in data and consent; this information will
+              not be shared with any third parties, excluding aggregators and providers of the text message services.
             </p>
           </div>
 
@@ -217,15 +213,6 @@ const PrivacyPolicy = () => {
               Upon request, we may allow changes or updates to Personal Information for legitimate purposes. We may
               request identification before approving requests and may decline requests that are unreasonably
               repetitive, burdensome, or harmful to others' privacy rights.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-3 text-2xl tracking-tight">Links to Joint Venture Marketing Partner Sites</h2>
-            <p>
-              This site may link to websites operated by joint venture marketing partners. If you click through or
-              register/purchase on those sites, information may be transferred to them. We are not responsible for
-              their policies or practices.
             </p>
           </div>
 
