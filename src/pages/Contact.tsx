@@ -19,17 +19,27 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    const serviceInterest = String(data.get("serviceInterest") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+    const contactDetails = [
+      "Contact form inquiry",
+      `Service interest: ${serviceInterest || "Not provided"}`,
+      `Message: ${message || "Not provided"}`,
+    ].join(" | ");
 
     const payload = {
       firstName: String(data.get("firstName") ?? "").trim(),
       lastName: String(data.get("lastName") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
       phone: String(data.get("phone") ?? "").trim(),
-      serviceInterest: String(data.get("serviceInterest") ?? "").trim(),
-      message: String(data.get("message") ?? "").trim(),
+      zipCode: "",
+      referralDetails: contactDetails,
+      serviceInterest,
+      message,
       transactionalConsent: data.get("transactionalConsent") === "on",
       marketingConsent: data.get("marketingConsent") === "on",
       intent: "contact",
+      formType: "contact",
       source: "solarfig.com/contact",
       pageUrl: window.location.href,
       submittedAt: new Date().toISOString(),
