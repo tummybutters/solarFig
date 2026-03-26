@@ -10,8 +10,6 @@ type SmsConsentFieldsProps = {
   idPrefix: string;
   className?: string;
   textClassName?: string;
-  legalClassName?: string;
-  linkClassName?: string;
 };
 
 const consentFields = [
@@ -23,8 +21,6 @@ const SmsConsentFields = ({
   idPrefix,
   className,
   textClassName,
-  legalClassName,
-  linkClassName,
 }: SmsConsentFieldsProps) => {
   return (
     <div className={cn("space-y-4", className)}>
@@ -32,7 +28,7 @@ const SmsConsentFields = ({
         <label
           key={field.key}
           htmlFor={`${idPrefix}-${field.key}`}
-          className={cn("flex items-start gap-3 text-sm leading-relaxed text-stone-700", textClassName)}
+          className={cn("flex items-start gap-3 text-[13px] leading-[1.55] text-stone-700", textClassName)}
         >
           <input
             id={`${idPrefix}-${field.key}`}
@@ -43,18 +39,6 @@ const SmsConsentFields = ({
           <span>{field.copy}</span>
         </label>
       ))}
-
-      <p className={cn("text-sm leading-relaxed text-stone-600", legalClassName)}>
-        Review our{" "}
-        <a href="/terms-of-use" className={cn("underline underline-offset-2 hover:text-[#6D39B5]", linkClassName)}>
-          Terms of Use
-        </a>{" "}
-        and{" "}
-        <a href="/privacy-policy" className={cn("underline underline-offset-2 hover:text-[#6D39B5]", linkClassName)}>
-          Privacy Policy
-        </a>
-        .
-      </p>
     </div>
   );
 };

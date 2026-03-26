@@ -171,12 +171,7 @@ const Contact = () => {
                         rows={4}
                       />
                     </div>
-                    <div className="space-y-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-700">
-                        Text Message Preferences <span className="text-stone-500">(Optional)</span>
-                      </p>
-                      <SmsConsentFields idPrefix="contact-form" />
-                    </div>
+                    <SmsConsentFields idPrefix="contact-form" />
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -185,6 +180,15 @@ const Contact = () => {
                       {isSubmitting ? "Sending..." : "Send Message"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
+                    <p className="text-center text-xs leading-relaxed text-stone-600">
+                      <a href="/terms-of-use" className="underline underline-offset-2 hover:text-[#6D39B5]">
+                        Terms of Use
+                      </a>{" "}
+                      <span className="text-stone-400">|</span>{" "}
+                      <a href="/privacy-policy" className="underline underline-offset-2 hover:text-[#6D39B5]">
+                        Privacy Policy
+                      </a>
+                    </p>
                     {submitError ? (
                       <p className="text-sm text-red-700">{submitError}</p>
                     ) : null}
@@ -233,33 +237,6 @@ const Contact = () => {
                   View all service areas <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20 pt-4 sm:pb-24">
-        <div className="mx-auto max-w-[1400px] px-6 sm:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#4a267a_0%,#6D39B5_48%,#8553c2_100%)] px-8 py-12 text-center text-white shadow-[0_24px_70px_-28px_rgba(74,38,122,0.72)] sm:px-12 sm:py-16 lg:rounded-3xl">
-            <div className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-            <div className="absolute -bottom-20 -right-10 h-64 w-64 rounded-full bg-[#cfa8ff]/20 blur-3xl" />
-            <div className="relative mx-auto max-w-3xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/72">
-                Quick Start
-              </p>
-              <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Want a faster response?
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/84 sm:text-lg">
-                Get your free solar report in 2 minutes with no phone call required.
-              </p>
-              <a
-                href="/"
-                className="mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold uppercase tracking-[0.08em] text-[#6D39B5] shadow-[0_18px_45px_-22px_rgba(255,255,255,0.8)] transition-all hover:bg-gray-100 hover:shadow-[0_22px_55px_-24px_rgba(255,255,255,0.9)]"
-              >
-                Get Free Solar Report
-                <ArrowRight className="h-5 w-5" />
-              </a>
             </div>
           </div>
         </div>

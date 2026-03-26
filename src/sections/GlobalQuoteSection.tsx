@@ -128,18 +128,11 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
             </div>
           ) : null}
 
-          <div className="pt-1">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#231f2a]">
-              TEXT MESSAGE PREFERENCES <span className="text-[#231f2a]/60">(OPTIONAL)</span>
-            </p>
-            <SmsConsentFields
-              idPrefix={`global-quote-${mode}`}
-              className="mt-4"
-              textClassName="text-[#302845]/80"
-              legalClassName="text-[#302845]/80"
-              linkClassName="hover:text-[#6d39b5]"
-            />
-          </div>
+          <SmsConsentFields
+            idPrefix={`global-quote-${mode}`}
+            className="pt-1"
+            textClassName="text-[#302845]/80"
+          />
 
           <button
             type="submit"
@@ -148,6 +141,15 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
           >
             {isSubmitting ? "Submitting..." : copy.submitLabel}
           </button>
+          <p className="text-center text-xs leading-relaxed text-[#302845]/80">
+            <a href="/terms-of-use" className="underline underline-offset-2 hover:text-[#6d39b5]">
+              Terms of Use
+            </a>{" "}
+            <span className="text-[#302845]/45">|</span>{" "}
+            <a href="/privacy-policy" className="underline underline-offset-2 hover:text-[#6d39b5]">
+              Privacy Policy
+            </a>
+          </p>
 
           {submitState !== "idle" ? (
             <p
