@@ -134,6 +134,18 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
             textClassName="text-[#302845]/80"
           />
 
+          <p className="text-center text-xs leading-relaxed text-[#302845]/80">
+            Review our{" "}
+            <a href="/terms-of-use" className="underline underline-offset-2 hover:text-[#6d39b5]">
+              Terms of Use
+            </a>{" "}
+            and{" "}
+            <a href="/privacy-policy" className="underline underline-offset-2 hover:text-[#6d39b5]">
+              Privacy Policy
+            </a>
+            .
+          </p>
+
           <button
             type="submit"
             disabled={isSubmitting}
@@ -141,15 +153,6 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
           >
             {isSubmitting ? "Submitting..." : copy.submitLabel}
           </button>
-          <p className="text-center text-xs leading-relaxed text-[#302845]/80">
-            <a href="/terms-of-use" className="underline underline-offset-2 hover:text-[#6d39b5]">
-              Terms of Use
-            </a>{" "}
-            <span className="text-[#302845]/45">|</span>{" "}
-            <a href="/privacy-policy" className="underline underline-offset-2 hover:text-[#6d39b5]">
-              Privacy Policy
-            </a>
-          </p>
 
           {submitState !== "idle" ? (
             <p
