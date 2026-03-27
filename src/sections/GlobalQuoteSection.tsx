@@ -134,7 +134,7 @@ const GlobalQuoteSection = ({ mode = "quote" }: GlobalQuoteSectionProps) => {
             textClassName="text-[#302845]/80"
           />
 
-          <p className="text-center text-xs leading-relaxed text-[#302845]/80">
+          <p className="pl-7 text-left text-xs leading-relaxed text-[#302845]/80">
             Review our{" "}
             <a href="/terms-of-use" className="underline underline-offset-2 hover:text-[#6d39b5]">
               Terms of Use
