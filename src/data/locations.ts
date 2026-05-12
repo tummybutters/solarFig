@@ -296,6 +296,48 @@ export const serviceLocations: ServiceLocation[] = [
     ],
   },
   {
+    slug: "connecticut",
+    name: "Connecticut",
+    abbreviation: "CT",
+    href: "/locations/connecticut",
+    navTitle: "Solar in Connecticut: Incentives, Net Metering, and Home Design",
+    navImage: "/assets/hero-main/locations-h1-2026-02-18.jpg",
+    heroImage: "/assets/hero-main/solar-neighborhood-h1-2026-02-17.jpg",
+    heroAlt: "Residential neighborhood with rooftop solar panels.",
+    strategyImage: "/assets/install-gallery/install-02.jpg",
+    strategyImageAlt: "Residential solar installation on a pitched roof.",
+    heroEyebrow: "Connecticut",
+    heroTitle: "Solar designed for Connecticut homes and utilities",
+    heroSubtitle: "Practical solar and storage planning for local incentives, utility credits, seasonal production, and long-term home energy goals.",
+    introEyebrow: "Local Energy Design",
+    introTitle: "Engineered for Connecticut conditions",
+    introBody:
+      "Connecticut projects need careful shade review, winter production modeling, roof-fit planning, and clear utility-credit assumptions.",
+    strategyEyebrow: "Incentive & Utility Strategy",
+    strategyTitle: "Built around Connecticut's solar economics",
+    strategyBody:
+      "We shape proposals around available incentive pathways, utility interconnection, battery options, and realistic long-term savings.",
+    ctaTitle: "Get a Connecticut solar plan",
+    ctaBody: "See a solar and storage proposal tailored to your Connecticut roof, utility, and energy goals.",
+    mapSeed: 7849,
+    map: {
+      viewBox: "0 0 100 52",
+      paths: [
+        "M 7.50 8.50 L 93.00 8.50 L 91.80 28.70 L 83.90 29.60 L 80.30 33.80 L 70.80 32.70 L 62.90 36.90 L 53.30 35.20 L 46.10 39.90 L 37.80 37.20 L 30.50 40.60 L 20.70 38.20 L 9.20 34.10 L 7.50 8.50 Z",
+      ],
+    },
+    highlights: [
+      { title: "Seasonal Production", description: "Modeled around New England weather", icon: "sun" },
+      { title: "Utility Credit Review", description: "Savings tied to local billing rules", icon: "badge" },
+      { title: "Battery-Ready Planning", description: "Prepared for outage and evening-use goals", icon: "plug" },
+    ],
+    strategyCards: [
+      { title: "Shade Review", description: "Layouts tuned for trees, pitch, and roof shape", icon: "home" },
+      { title: "Incentive Fit", description: "Program value reviewed before proposal", icon: "badge" },
+      { title: "Resilience Options", description: "Storage planned when it improves control", icon: "shield" },
+    ],
+  },
+  {
     slug: "virginia",
     name: "Virginia",
     abbreviation: "VA",
