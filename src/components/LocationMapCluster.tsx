@@ -15,7 +15,7 @@ const mapClasses: Partial<Record<(typeof serviceLocations)[number]["slug"], stri
   california:
     "max-h-[76px] max-w-[116px] -translate-y-1 sm:max-h-[94px] sm:max-w-[136px]",
   "new-jersey":
-    "max-h-[58px] max-w-[88px] -translate-y-4 sm:max-h-[70px] sm:max-w-[100px]",
+    "!max-h-[38px] !max-w-[64px] -translate-y-8 sm:!max-h-[48px] sm:!max-w-[74px] sm:-translate-y-10",
 };
 
 const LocationCard = ({ location }: { location: (typeof serviceLocations)[number] }) => (
