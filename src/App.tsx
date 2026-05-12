@@ -20,8 +20,7 @@ import PricingCosts from "@/pages/PricingCosts";
 import SolarPanels from "@/pages/SolarPanels";
 import Microinverters from "@/pages/Microinverters";
 import SolarBatteryIncentives from "@/pages/SolarBatteryIncentives";
-import Locations from "@/pages/Locations";
-import OregonLocations from "@/pages/OregonLocations";
+import LocationDetail from "@/pages/LocationDetail";
 import Contact from "@/pages/Contact";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
@@ -131,8 +130,8 @@ function App() {
         <Route path="/microinverters" element={<Microinverters />} />
         <Route path="/smart-electrical-panels" element={<Navigate to="/pricing-costs" replace />} />
         <Route path="/solar-battery-incentives" element={<SolarBatteryIncentives />} />
-        <Route path="/locations" element={<Locations />} />
-        <Route path="/locations/oregon" element={<OregonLocations />} />
+        <Route path="/locations" element={<LocationDetail />} />
+        <Route path="/locations/:locationSlug" element={<LocationDetail />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Analytics />

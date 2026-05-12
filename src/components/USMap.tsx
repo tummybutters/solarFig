@@ -7,36 +7,20 @@ interface State {
   y: number;
 }
 
-// 22 active states with approximate coordinates on US map
+// Active Solarfig service states with approximate coordinates on US map
 const activeStates: State[] = [
-  { id: "AZ", name: "Arizona", x: 20, y: 62 },
   { id: "CA", name: "California", x: 10, y: 50 },
-  { id: "CO", name: "Colorado", x: 30, y: 48 },
-  { id: "CT", name: "Connecticut", x: 88, y: 30 },
-  { id: "DE", name: "Delaware", x: 84, y: 42 },
   { id: "FL", name: "Florida", x: 78, y: 78 },
-  { id: "IL", name: "Illinois", x: 65, y: 40 },
-  { id: "MD", name: "Maryland", x: 82, y: 44 },
-  { id: "MA", name: "Massachusetts", x: 90, y: 28 },
-  { id: "NV", name: "Nevada", x: 16, y: 42 },
-  { id: "NH", name: "New Hampshire", x: 87, y: 24 },
+  { id: "MI", name: "Michigan", x: 70, y: 30 },
   { id: "NJ", name: "New Jersey", x: 86, y: 38 },
-  { id: "NM", name: "New Mexico", x: 28, y: 62 },
   { id: "NY", name: "New York", x: 82, y: 30 },
-  { id: "OH", name: "Ohio", x: 72, y: 38 },
-  { id: "PA", name: "Pennsylvania", x: 78, y: 36 },
-  { id: "RI", name: "Rhode Island", x: 92, y: 30 },
-  { id: "SC", name: "South Carolina", x: 82, y: 60 },
-  { id: "TX", name: "Texas", x: 48, y: 70 },
-  { id: "UT", name: "Utah", x: 24, y: 44 },
-  { id: "VT", name: "Vermont", x: 85, y: 22 },
+  { id: "NC", name: "North Carolina", x: 84, y: 54 },
   { id: "VA", name: "Virginia", x: 80, y: 48 },
 ];
 
 // Inactive states for visual context
 const inactiveStates: State[] = [
   { id: "WA", name: "Washington", x: 12, y: 12 },
-  { id: "OR", name: "Oregon", x: 10, y: 26 },
   { id: "ID", name: "Idaho", x: 20, y: 20 },
   { id: "MT", name: "Montana", x: 28, y: 14 },
   { id: "WY", name: "Wyoming", x: 30, y: 32 },
@@ -51,11 +35,9 @@ const inactiveStates: State[] = [
   { id: "AR", name: "Arkansas", x: 60, y: 56 },
   { id: "LA", name: "Louisiana", x: 62, y: 68 },
   { id: "WI", name: "Wisconsin", x: 62, y: 28 },
-  { id: "MI", name: "Michigan", x: 70, y: 30 },
   { id: "IN", name: "Indiana", x: 68, y: 40 },
   { id: "KY", name: "Kentucky", x: 72, y: 48 },
   { id: "TN", name: "Tennessee", x: 72, y: 55 },
-  { id: "NC", name: "North Carolina", x: 84, y: 54 },
   { id: "GA", name: "Georgia", x: 78, y: 64 },
   { id: "AL", name: "Alabama", x: 72, y: 64 },
   { id: "MS", name: "Mississippi", x: 65, y: 66 },
@@ -69,12 +51,11 @@ const USMap = () => {
 
   // Group active states by region for stats
   const regions = {
-    "West": activeStates.filter(s => ["CA", "NV", "AZ", "UT", "CO", "NM"].includes(s.id)),
-    "Southwest": activeStates.filter(s => ["TX"].includes(s.id)),
-    "Northeast": activeStates.filter(s => ["NY", "NJ", "PA", "CT", "MA", "RI", "VT", "NH", "ME"].includes(s.id)),
-    "Mid-Atlantic": activeStates.filter(s => ["MD", "DE", "VA"].includes(s.id)),
-    "Southeast": activeStates.filter(s => ["FL", "SC"].includes(s.id)),
-    "Midwest": activeStates.filter(s => ["IL", "OH"].includes(s.id)),
+    "West": activeStates.filter(s => ["CA"].includes(s.id)),
+    "Northeast": activeStates.filter(s => ["NY", "NJ"].includes(s.id)),
+    "Mid-Atlantic": activeStates.filter(s => ["VA"].includes(s.id)),
+    "Southeast": activeStates.filter(s => ["FL", "NC"].includes(s.id)),
+    "Midwest": activeStates.filter(s => ["MI"].includes(s.id)),
   };
 
   return (

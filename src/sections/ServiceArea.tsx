@@ -1,5 +1,4 @@
-import CaliforniaMap from "@/components/CaliforniaMap";
-import OregonMap from "@/components/OregonMap";
+import LocationMapCluster from "@/components/LocationMapCluster";
 import { ArrowRight, Zap } from "lucide-react";
 
 const ServiceArea = () => {
@@ -29,17 +28,16 @@ const ServiceArea = () => {
             <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
               Serving all of
               <br />
-              <span className="text-purple-300">California</span>
+              <span className="text-purple-300">our key markets</span>
             </h2>
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-              From San Diego to the Bay Area, we specialize in NEM 3.0 solar installation 
-              for California's three major utilities. We know the local rules, the rate structures, 
-              and how to maximize your savings under the new policy.
+              We design solar and storage plans around local utility rules, rate structures, roof conditions,
+              and incentive timing in every active service area.
             </p>
 
             {/* Utility Pills */}
             <div className="flex flex-wrap gap-3">
-              {["SCE", "PG&E", "SDG&E"].map((utility) => (
+              {["CA", "NY", "NJ", "FL", "NC", "MI", "VA"].map((utility) => (
                 <div 
                   key={utility}
                   className="px-4 py-2 rounded-none bg-white/5 border border-white/10 text-white/80 text-sm font-medium"
@@ -68,14 +66,7 @@ const ServiceArea = () => {
 
           {/* Right Column - Map */}
           <div className="lg:col-span-3">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div>
-                <CaliforniaMap className="max-w-[240px]" />
-              </div>
-              <div>
-                <OregonMap className="max-w-[240px]" />
-              </div>
-            </div>
+            <LocationMapCluster />
           </div>
         </div>
       </div>

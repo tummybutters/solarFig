@@ -79,7 +79,7 @@ Scope: Client ideation PDF implementation + typography/readability consistency a
   - `src/pages/PricingCosts.tsx:47`
   - `src/pages/About.tsx:30`
   - `src/pages/Locations.tsx:35`
-  - `src/pages/OregonLocations.tsx:35`
+  - `src/pages/LocationDetail.tsx:114`
 
 3) White H1 text over photography is not uniformly protected.
 - Some pages use strong overlays but no text shadow, which can reduce glyph clarity in bright image areas.
@@ -89,7 +89,7 @@ Scope: Client ideation PDF implementation + typography/readability consistency a
   - `src/pages/EVChargers.tsx:62-74`
   - `src/pages/About.tsx:19-30`
   - `src/pages/Locations.tsx:24-35`
-  - `src/pages/OregonLocations.tsx:24-35`
+  - `src/pages/LocationDetail.tsx:105-116`
 
 4) Tight H1 line-height (`leading-[0.95]`) appears repeatedly and may reduce readability on long H1s.
 - Affected:
@@ -120,7 +120,7 @@ Scope: Client ideation PDF implementation + typography/readability consistency a
 - [x] `/installation` (`src/pages/Installation.tsx:48`)
 - [x] `/about` (`src/pages/About.tsx:30`)
 - [x] `/locations` (`src/pages/Locations.tsx:35`)
-- [x] `/locations/oregon` (`src/pages/OregonLocations.tsx:35`)
+- [x] `/locations/new-jersey` (`src/pages/LocationDetail.tsx:114`)
 - [x] `/articles` (`src/pages/Articles.tsx:20`)
 - [x] `/referrals` (`src/pages/Referrals.tsx:28`)
 - [x] `/contact` (`src/pages/Contact.tsx:51`)

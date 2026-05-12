@@ -56,7 +56,32 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://solarfig.com/locations/oregon</loc>
+    <loc>https://solarfig.com/locations/new-york</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/new-jersey</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/florida</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/north-carolina</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/michigan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solarfig.com/locations/virginia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

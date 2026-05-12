@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { serviceLocations } from "@/data/locations";
 
 const footerSections = [
   {
@@ -21,10 +22,7 @@ const footerSections = [
   },
   {
     title: "Locations",
-    links: [
-      { label: "California", href: "/locations" },
-      { label: "Oregon", href: "/locations/oregon" },
-    ],
+    links: serviceLocations.map((location) => ({ label: location.name, href: location.href })),
   },
   {
     title: "Explore",

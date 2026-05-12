@@ -1,4 +1,5 @@
 import { solarArticlesBySlug } from "@/content/articles";
+import { defaultLocation, locationsBySlug } from "@/data/locations";
 
 export const SITE_URL = "https://solarfig.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/og-image.jpg`;
@@ -120,13 +121,6 @@ const ROUTE_META: Record<string, SeoMeta> = {
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
-  "/locations/oregon": {
-    title: "Oregon Solar Service Areas | Solarfig",
-    description: "See where Solarfig supports solar, battery storage, and EV charging projects across Oregon service areas.",
-    canonicalPath: "/locations/oregon",
-    ogType: "website",
-    image: DEFAULT_OG_IMAGE,
-  },
 };
 
 const ARTICLE_META_OVERRIDES: Record<string, Pick<SeoMeta, "title" | "description">> = {
@@ -161,6 +155,24 @@ const ARTICLE_META_OVERRIDES: Record<string, Pick<SeoMeta, "title" | "descriptio
 };
 
 export const getSeoMetaForPath = (pathname: string): SeoMeta => {
+  const locationSlugMatch = pathname.match(/^\/locations\/([^/]+)$/);
+  if (locationSlugMatch) {
+    const location = locationsBySlug[locationSlugMatch[1]];
+    if (location) {
+      return {
+        title: `${location.name} Solar Service Areas | Solarfig`,
+        description: `See where Solarfig supports solar panels, battery storage, and EV charging projects across ${location.name} service areas.`,
+        canonicalPath: location.href,
+        ogType: "website",
+        image: DEFAULT_OG_IMAGE,
+      };
+    }
+  }
+
+  if (pathname === defaultLocation.href) {
+    return ROUTE_META["/locations"];
+  }
+
   const articleSlugMatch = pathname.match(/^\/articles\/([^/]+)$/);
   if (articleSlugMatch) {
     const article = solarArticlesBySlug[articleSlugMatch[1]];

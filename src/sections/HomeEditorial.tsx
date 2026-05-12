@@ -1,6 +1,5 @@
 import { ArrowRight, Star } from "lucide-react";
-import CaliforniaMap from "@/components/CaliforniaMap";
-import OregonMap from "@/components/OregonMap";
+import LocationMapCluster from "@/components/LocationMapCluster";
 
 const solutionCards = [
   {
@@ -30,7 +29,7 @@ const reviews = [
   {
     quote:
       "They did not try to oversell us. The design team sized the system around how we actually use power, including EV charging and summer AC load, then explained why a battery made sense for evening rates. Everything has performed exactly like they said it would, and the monitoring visibility has been excellent since PTO.",
-    author: "Elizabeth M. — Oregon",
+    author: "Elizabeth M. — New Jersey",
     image: "/assets/reviews/review-2.jpg",
   },
   {
@@ -91,14 +90,7 @@ const HomeEditorial = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="grid items-start gap-5 sm:grid-cols-2">
-              <div>
-                <CaliforniaMap className="max-w-[300px] sm:max-w-[360px]" />
-              </div>
-              <div>
-                <OregonMap className="max-w-[300px] sm:max-w-[360px]" />
-              </div>
-            </div>
+            <LocationMapCluster />
 
             <div>
               <h3 className="max-w-xl text-4xl leading-[1.08] tracking-tight text-[#2a2238] sm:text-5xl">

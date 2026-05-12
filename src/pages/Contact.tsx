@@ -235,10 +235,10 @@ const Contact = () => {
               </div>
 
               <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
-                <h3 className="mb-3 font-semibold text-stone-900">We serve California and Oregon</h3>
+                <h3 className="mb-3 font-semibold text-stone-900">We serve growing solar markets nationwide</h3>
                 <p className="mb-4 text-sm leading-relaxed text-stone-600">
-                  Including major service areas across California and Oregon, from Los Angeles and
-                  Orange County to Portland, Eugene, and surrounding communities.
+                  Including California, New York, New Jersey, Florida, North Carolina, Michigan, Virginia,
+                  and surrounding communities.
                 </p>
                 <a
                   href="/locations"

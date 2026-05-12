@@ -52,9 +52,6 @@ const HeroGlacial = () => {
         <section
             ref={sectionRef}
             className="hero-glacial-shell relative w-full overflow-hidden bg-slate-900 text-white"
-            style={{
-                minHeight: "100svh",
-            }}
         >
             {/* Background Image / Video Layer */}
             <div className="absolute inset-0 z-0 bg-slate-900">
@@ -77,7 +74,7 @@ const HeroGlacial = () => {
             <div
                 className="relative z-20 mx-auto grid box-border max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pt-20 sm:gap-10 sm:px-8 sm:pt-24 lg:gap-10 lg:pt-24"
                 style={{
-                    minHeight: "100svh",
+                    minHeight: "var(--hero-shell-min-height, 100svh)",
                     paddingBottom: "calc(var(--hero-banner-height, 72px) + 32px)",
                     paddingTop: "calc(var(--hero-navbar-offset, 96px) + 28px)",
                 }}

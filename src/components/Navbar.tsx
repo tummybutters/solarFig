@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { featuredNavLocations, serviceLocations } from "@/data/locations";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -67,24 +68,13 @@ const navItems: NavItem[] = [
   {
     label: "Locations",
     href: "/locations",
-    children: [
-      { label: "California", href: "/locations" },
-      { label: "Oregon", href: "/locations/oregon" },
-    ],
-    featured: [
-      {
-        label: "California",
-        title: "Why California Remains the Best State for Solar",
-        href: "/locations",
-        image: "/assets/navbar/nav-locations-why-california-remains-best-state-for-solar.webp",
-      },
-      {
-        label: "Oregon",
-        title: "Solar In Oregon: Net Metering and Local Incentives",
-        href: "/locations/oregon",
-        image: "/assets/navbar/nav-locations-solar-in-oregon-net-metering-local-incentives.webp",
-      },
-    ],
+    children: serviceLocations.map((location) => ({ label: location.name, href: location.href })),
+    featured: featuredNavLocations.map((location) => ({
+      label: location.name,
+      title: location.navTitle,
+      href: location.href,
+      image: location.navImage,
+    })),
   },
   {
     label: "Explore",

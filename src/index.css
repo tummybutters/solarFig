@@ -422,20 +422,20 @@ main.mobile-premium :is(.article-title-natural-wrap) {
 
 /* Home hero: use stable viewport sizing to prevent mobile scroll whiplash. */
 .hero-glacial-shell {
-  min-height: 560px;
-  height: 96svh;
+  --hero-shell-min-height: max(560px, 100svh);
+  min-height: var(--hero-shell-min-height);
+  height: auto;
 }
 
 @media (min-width: 640px) {
   .hero-glacial-shell {
-    min-height: 620px;
-    height: 98svh;
+    --hero-shell-min-height: max(620px, 100svh);
   }
 }
 
 @media (max-width: 640px) {
   .hero-glacial-shell {
-    height: max(560px, 100svh);
+    --hero-shell-min-height: max(560px, 100svh);
   }
 }
 
