@@ -37,7 +37,7 @@ const ServiceArea = () => {
 
             {/* Utility Pills */}
             <div className="flex flex-wrap gap-3">
-              {["CA", "NY", "NJ", "FL", "NC", "MI", "VA"].map((utility) => (
+              {["CA", "NY", "NJ", "FL", "NC", "MI", "CT", "VA"].map((utility) => (
                 <div 
                   key={utility}
                   className="px-4 py-2 rounded-none bg-white/5 border border-white/10 text-white/80 text-sm font-medium"
