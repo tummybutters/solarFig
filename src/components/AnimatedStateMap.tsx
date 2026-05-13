@@ -40,6 +40,7 @@ const AnimatedStateMap = ({ className, dotCount = 185, geometry, label, seed }: 
   const clipId = `state-map-${useId().replaceAll(":", "")}`;
   const { minX, minY, width, height } = useMemo(() => parseViewBox(geometry.viewBox), [geometry.viewBox]);
   const strokeWidth = Math.max(width, height) * 0.014;
+  const aspectRatio = `${width} / ${height}`;
 
   useEffect(() => {
     const node = mapRef.current;
@@ -90,8 +91,14 @@ const AnimatedStateMap = ({ className, dotCount = 185, geometry, label, seed }: 
 
   return (
     <div className="w-full">
-      <div ref={mapRef} className={cn("relative mx-auto w-full", className)}>
-        <svg viewBox={geometry.viewBox} className="w-full" role="img" aria-label={`${label} service map`}>
+      <div ref={mapRef} className={cn("relative mx-auto w-full", className)} style={{ aspectRatio }}>
+        <svg
+          viewBox={geometry.viewBox}
+          preserveAspectRatio="xMidYMid meet"
+          className="block h-full w-full"
+          role="img"
+          aria-label={`${label} service map`}
+        >
           {geometry.paths.map((path, index) => (
             <path
               key={`shadow-${index}`}
@@ -122,7 +129,12 @@ const AnimatedStateMap = ({ className, dotCount = 185, geometry, label, seed }: 
           ))}
         </svg>
 
-        <svg viewBox={geometry.viewBox} className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
+        <svg
+          viewBox={geometry.viewBox}
+          preserveAspectRatio="xMidYMid meet"
+          className="pointer-events-none absolute inset-0 h-full w-full"
+          aria-hidden
+        >
           <defs>
             <clipPath id={clipId}>
               {geometry.paths.map((path, index) => (

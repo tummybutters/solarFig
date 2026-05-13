@@ -13,7 +13,7 @@ const LocationMapCluster = ({ className }: LocationMapClusterProps) => (
     <img
       src="/assets/maps/service-area-map.svg"
       alt="Solarfig service area map showing active and coming soon states"
-      className="mx-auto h-auto w-full max-w-[760px] transition-transform duration-500 group-hover:scale-[1.01]"
+      className="mx-auto block aspect-[10/7] w-full max-w-[760px] object-contain transition-transform duration-500 group-hover:scale-[1.01]"
     />
   </a>
 );
