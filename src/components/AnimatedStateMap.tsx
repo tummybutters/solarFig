@@ -1,6 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import type { MapGeometry } from "@/data/locations";
+import type { MapGeometry } from "@/data/state-map-geometries";
 
 interface AnimatedStateMapProps {
   className?: string;

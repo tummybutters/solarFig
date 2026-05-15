@@ -62,6 +62,16 @@ const LocationDetail = () => {
 
   const locationIndex = serviceLocations.findIndex((item) => item.slug === location.slug);
   const mapFirst = locationIndex % 2 === 1;
+  const shouldZoomOutHero = location.slug !== "virginia";
+  const locationHeroMediaStyle = shouldZoomOutHero
+    ? { ...heroMediaStyle, height: "clamp(540px, 72svh, 760px)" }
+    : heroMediaStyle;
+  const locationHeroImageClassName = shouldZoomOutHero
+    ? "h-full w-full object-cover"
+    : "h-full w-full object-cover object-bottom";
+  const locationHeroImageStyle = shouldZoomOutHero
+    ? { objectPosition: location.heroObjectPosition ?? "center 32%" }
+    : undefined;
 
   const mapPanel = (
     <div className="relative">
@@ -100,8 +110,13 @@ const LocationDetail = () => {
       <Navbar />
 
       <section className="relative overflow-hidden">
-        <div className="mobile-hero-media relative w-full" style={heroMediaStyle}>
-          <img src={location.heroImage} alt={location.heroAlt} className="h-full w-full object-cover object-bottom" />
+        <div className="mobile-hero-media relative w-full" style={locationHeroMediaStyle}>
+          <img
+            src={location.heroImage}
+            alt={location.heroAlt}
+            className={locationHeroImageClassName}
+            style={locationHeroImageStyle}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-[#17141b]/80 via-[#17141b]/46 to-[#17141b]/20" />
           <div className="absolute inset-0 mx-auto flex max-w-[1400px] items-center px-6 sm:px-8" style={heroOverlayStyle}>
             <div className="max-w-4xl text-white">
