@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const steps = [
@@ -98,7 +99,7 @@ const Installation = () => {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
+            <a href={ESTIMATE_URL} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#6d39b5]">
               Start your project
               <ArrowRight className="h-4 w-4" />
             </a>

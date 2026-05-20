@@ -1,4 +1,5 @@
 import { Play } from "lucide-react";
+import { ESTIMATE_URL } from "@/lib/links";
 
 const HeroHorizon = () => {
     return (
@@ -39,9 +40,12 @@ const HeroHorizon = () => {
                     <p className="mr-6 hidden text-sm font-light text-purple-100/70 sm:block">
                         Start your journey to independence.
                     </p>
-                    <button className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-bold uppercase tracking-widest text-purple-950 transition-transform hover:scale-105">
+                    <a
+                        href={ESTIMATE_URL}
+                        className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-bold uppercase tracking-widest text-purple-950 transition-transform hover:scale-105"
+                    >
                         Get a Quote
-                    </button>
+                    </a>
                 </div>
 
                 {/* Right: Video Control / Secondary */}

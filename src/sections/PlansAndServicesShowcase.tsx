@@ -1,3 +1,4 @@
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, Check, Zap, Wallet, Banknote, ShieldCheck } from "lucide-react";
 
 const plans = [
@@ -144,7 +145,7 @@ const PlansAndServicesShowcase = () => {
                             Not sure which plan is right for you? Our solar advisors can model all scenarios based on your specific usage and utility rates.
                         </p>
                         <a
-                            href="#contact"
+                            href={ESTIMATE_URL}
                             className="group inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-purple-950 transition-colors hover:text-purple-600"
                         >
                             Get a custom comparison

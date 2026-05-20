@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { Check } from "lucide-react";
+import { ESTIMATE_URL } from "@/lib/links";
 
 const heroVideo = "/assets/hero-video/solarfig-home-hero.mp4";
 
@@ -92,7 +93,7 @@ const HeroGlacial = () => {
 
                     <div className="mobile-inline-actions flex flex-wrap gap-3 sm:gap-4">
                         <a
-                            href="#contact"
+                            href={ESTIMATE_URL}
                             className="inline-flex h-11 items-center justify-center rounded-[8px] bg-[#6D39B5] px-7 text-sm font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95"
                         >
                             Get a quote

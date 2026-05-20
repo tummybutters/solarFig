@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, Clock3, Sparkles } from "lucide-react";
 import { solarArticles } from "@/content/articles";
 
@@ -73,7 +74,7 @@ const Articles = () => {
               <h2 className="mt-2 text-3xl tracking-tight text-[#261f33] sm:text-4xl">Clear answers on solar</h2>
             </div>
             <a
-              href="#contact"
+              href={ESTIMATE_URL}
               className="hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.11em] text-[#6d39b5] transition-colors hover:text-[#4c2880] sm:inline-flex"
             >
               ASK A QUESTION

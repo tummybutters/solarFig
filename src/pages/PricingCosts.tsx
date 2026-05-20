@@ -3,6 +3,7 @@ import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, Check } from "lucide-react";
 
 const planCards = [
@@ -73,7 +74,7 @@ const PricingCosts = () => {
                 Compare ownership options, understand your savings, and choose what makes sense for your home.
               </p>
               <a
-                href="#contact"
+                href={ESTIMATE_URL}
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE

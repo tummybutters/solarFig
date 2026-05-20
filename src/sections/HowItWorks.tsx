@@ -1,4 +1,5 @@
 import ProcessCarousel from "@/components/ProcessCarousel";
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, Sparkles, Shield, Clock } from "lucide-react";
 
 const HowItWorks = () => {
@@ -66,7 +67,7 @@ const HowItWorks = () => {
         {/* CTA Section - Sharp Square Button */}
         <div className="mt-12 sm:mt-16 text-center">
           <a
-            href="#contact"
+            href={ESTIMATE_URL}
             className="group inline-flex items-center gap-2 px-8 py-3.5 bg-purple-600 text-white text-sm font-semibold uppercase tracking-wider transition-all duration-200 hover:bg-purple-700"
           >
             <span>Get Your Free Solar Report</span>

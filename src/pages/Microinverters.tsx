@@ -4,6 +4,7 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
+import { ESTIMATE_URL } from "@/lib/links";
 import { ArrowRight, Eye, ShieldCheck, Sun } from "lucide-react";
 
 const benefits = [
@@ -75,7 +76,7 @@ const Microinverters = () => {
                 The control center of your solar system. We select the right architecture to maximize efficiency, monitoring, safety, and scalability.
               </p>
               <a
-                href="#contact"
+                href={ESTIMATE_URL}
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
@@ -188,7 +189,7 @@ const Microinverters = () => {
               <p className="text-stone-600 leading-relaxed">
                 We evaluate multiple inverter configurations against your roof layout, shading conditions, electrical infrastructure, and long-term plans — then walk you through the performance and scalability tradeoffs.
               </p>
-              <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
+              <a href={ESTIMATE_URL} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6D39B5]">
                 Design My System
                 <ArrowRight className="h-4 w-4" />
               </a>
