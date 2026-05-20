@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight } from "lucide-react";
 
 const pillars = [
@@ -140,7 +140,7 @@ const About = () => {
                 Designed for homeowners who value structure, transparency, and long-term performance.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 START YOUR PLAN

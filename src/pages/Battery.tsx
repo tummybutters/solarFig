@@ -4,7 +4,7 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, CloudLightning, DollarSign, Gauge, HousePlug, ShieldCheck } from "lucide-react";
 
 const controlModes = [
@@ -116,7 +116,7 @@ const Battery = () => {
                 Energy storage that extends solar value beyond daylight. Maintain essential power during grid interruptions.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
@@ -202,7 +202,7 @@ const Battery = () => {
               </div>
 
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 EXPLORE STORAGE OPTIONS
@@ -304,7 +304,7 @@ const Battery = () => {
                 If you already have solar, energy storage can often be integrated with minimal disruption. We evaluate compatibility and design a seamless expansion.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 EXPLORE ENERGY STORAGE

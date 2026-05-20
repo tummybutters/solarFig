@@ -1,4 +1,4 @@
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowUpRight, BookOpenText, UserRound, Gift } from "lucide-react";
 
 const articleCards = [
@@ -40,7 +40,7 @@ const Explore = () => {
               California-focused advisory approach built around fit, transparency, and project quality.
               We match homeowners with vetted installation partners and right-sized equipment.
             </p>
-            <a href={ESTIMATE_URL} className="inline-flex items-center gap-2 text-sm font-medium text-[#6d39b5]">
+            <a {...ESTIMATE_LINK_PROPS} className="inline-flex items-center gap-2 text-sm font-medium text-[#6d39b5]">
               Talk with our team
               <ArrowUpRight className="w-4 h-4" />
             </a>
@@ -70,7 +70,7 @@ const Explore = () => {
               Know someone in California considering solar? Send them our way and earn referral rewards
               when they install.
             </p>
-            <a href={ESTIMATE_URL} className="inline-flex items-center gap-2 text-sm font-medium text-[#6d39b5]">
+            <a {...ESTIMATE_LINK_PROPS} className="inline-flex items-center gap-2 text-sm font-medium text-[#6d39b5]">
               Ask about referral details
               <ArrowUpRight className="w-4 h-4" />
             </a>

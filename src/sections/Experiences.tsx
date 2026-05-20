@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowUpRight } from "lucide-react";
 
 interface Experience {
@@ -191,7 +191,7 @@ const Experiences = () => {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
           <span className="text-gray-400 text-xs">Not sure which fits you?</span>
           <a
-            href={ESTIMATE_URL}
+            {...ESTIMATE_LINK_PROPS}
             className="group inline-flex items-center gap-2 text-gray-900 text-sm font-medium hover:text-gray-600 transition-colors"
           >
             Let's talk it through

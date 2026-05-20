@@ -9,7 +9,7 @@ import {
   type LocationCard,
   type LocationIcon,
 } from "@/data/locations";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
 import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
@@ -191,7 +191,7 @@ const LocationDetail = () => {
               </div>
               <div className="lg:text-right">
                 <a
-                  href={ESTIMATE_URL}
+                  {...ESTIMATE_LINK_PROPS}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   Get Started

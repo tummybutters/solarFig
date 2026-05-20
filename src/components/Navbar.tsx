@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { featuredNavLocations, serviceLocations } from "@/data/locations";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -264,7 +264,7 @@ const Navbar = () => {
             (213) 306-4154
           </a>
           <a
-            href={ESTIMATE_URL}
+            {...ESTIMATE_LINK_PROPS}
             className="inline-flex h-10 items-center justify-center rounded-[8px] bg-[#6D39B5] px-6 text-[13px] font-bold tracking-tight text-white transition-all hover:bg-[#8553c2] hover:shadow-[0_0_25px_rgba(109,57,181,0.4)] hover:scale-105 active:scale-95 xl:px-7"
           >
             Get a quote
@@ -358,7 +358,7 @@ const Navbar = () => {
 
               <div className="grid grid-cols-2 gap-2 border-t border-white/10 p-3">
                 <a
-                  href={ESTIMATE_URL}
+                  {...ESTIMATE_LINK_PROPS}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-[#6D39B5] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#8553c2]"
                 >

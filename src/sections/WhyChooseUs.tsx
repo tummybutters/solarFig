@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowUpRight, Zap, Shield, Clock, Wallet } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -259,7 +259,7 @@ const WhyChooseUs = () => {
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-3">
           <span className="text-gray-400 text-sm">Questions about NEM 3.0 or battery storage?</span>
           <a
-            href={ESTIMATE_URL}
+            {...ESTIMATE_LINK_PROPS}
             className="group inline-flex items-center gap-2 text-purple-700 text-sm font-medium hover:text-purple-900 transition-colors"
           >
             Talk to a solar advisor

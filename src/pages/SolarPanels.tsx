@@ -4,7 +4,7 @@ import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollCue from "@/components/ScrollCue";
 import { useHeroViewportFit } from "@/hooks/use-hero-viewport-fit";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, SunMedium, Wrench, Zap } from "lucide-react";
 
 const panelTypes = [
@@ -85,7 +85,7 @@ const SolarPanels = () => {
                 Industry leading panel options engineered for efficiency, durability, and long-term energy savings — tailored to your home's unique roof, climate, and usage profile.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 GET A QUOTE
@@ -176,7 +176,7 @@ const SolarPanels = () => {
               </div>
 
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-lime-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#1c1723] transition-colors hover:bg-lime-100"
               >
                 START YOUR DESIGN
@@ -207,7 +207,7 @@ const SolarPanels = () => {
                   We design your system with battery storage, EV charging, and future upgrades in mind — so expanding later doesn't mean starting over.
                 </p>
                 <a
-                  href={ESTIMATE_URL}
+                  {...ESTIMATE_LINK_PROPS}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
                 >
                   PLAN MY SYSTEM

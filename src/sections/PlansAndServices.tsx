@@ -1,4 +1,4 @@
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, HandCoins, Banknote, Wallet, BadgeDollarSign } from "lucide-react";
 
 const planCards = [
@@ -147,7 +147,7 @@ const PlansAndServices = () => {
           <p className="text-sm text-gray-600">
             Incentives and payment structures vary by utility territory, home profile, and qualification factors.
           </p>
-          <a href={ESTIMATE_URL} className="inline-flex items-center gap-2 text-[#6d39b5] font-medium text-sm">
+          <a {...ESTIMATE_LINK_PROPS} className="inline-flex items-center gap-2 text-[#6d39b5] font-medium text-sm">
             Compare my options
             <ArrowRight className="w-4 h-4" />
           </a>

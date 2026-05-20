@@ -1,4 +1,4 @@
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, Battery, Receipt, TrendingDown, Zap, Gift } from "lucide-react";
 
 const benefits = [
@@ -81,7 +81,7 @@ const Savings = () => {
             {/* CTA */}
             <div className="pt-4">
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="group inline-flex items-center gap-3 text-purple-700 font-medium hover:text-purple-900 transition-colors"
               >
                 Get your personalized estimate

@@ -1,5 +1,5 @@
 import LocationMapCluster from "@/components/LocationMapCluster";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, Zap } from "lucide-react";
 
 const ServiceArea = () => {
@@ -51,7 +51,7 @@ const ServiceArea = () => {
             {/* CTA */}
             <div className="pt-4">
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="group inline-flex items-center gap-3 px-6 py-3 rounded-none bg-purple-600 text-white font-medium transition-all duration-300 hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-500/25"
               >
                 Check your zip code

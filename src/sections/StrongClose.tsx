@@ -1,4 +1,4 @@
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, Phone, Clock } from "lucide-react";
 
 const StrongClose = () => {
@@ -48,7 +48,7 @@ const StrongClose = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href={ESTIMATE_URL}
+              {...ESTIMATE_LINK_PROPS}
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-none bg-white text-purple-900 font-semibold transition-all duration-300 hover:bg-purple-50 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-105"
             >
               Get Your Free Solar Report

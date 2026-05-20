@@ -1,5 +1,5 @@
 import { ArrowRight, Sun, Battery, Wrench, FileCheck, Zap, Shield } from "lucide-react";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 
 const Services = () => {
   const mainServices = [
@@ -87,7 +87,7 @@ const Services = () => {
                 <div className="pt-6 border-t border-gray-100">
                   <div className="text-sm text-gray-500 mb-4">{service.price}</div>
                   <a
-                    href={ESTIMATE_URL}
+                    {...ESTIMATE_LINK_PROPS}
                     className="inline-flex items-center gap-2 text-purple-600 font-medium hover:gap-3 transition-all"
                   >
                     Get a quote <ArrowRight className="w-4 h-4" />
@@ -171,7 +171,7 @@ const Services = () => {
             Get a free consultation. We'll analyze your energy needs and recommend the best solution.
           </p>
           <a
-            href={ESTIMATE_URL}
+            {...ESTIMATE_LINK_PROPS}
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-purple-600 font-semibold hover:bg-gray-100 transition-colors"
           >
             Schedule Free Consultation

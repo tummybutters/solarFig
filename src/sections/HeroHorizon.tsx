@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 
 const HeroHorizon = () => {
     return (
@@ -41,7 +41,7 @@ const HeroHorizon = () => {
                         Start your journey to independence.
                     </p>
                     <a
-                        href={ESTIMATE_URL}
+                        {...ESTIMATE_LINK_PROPS}
                         className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-bold uppercase tracking-widest text-purple-950 transition-transform hover:scale-105"
                     >
                         Get a Quote

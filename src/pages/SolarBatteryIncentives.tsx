@@ -3,7 +3,7 @@ import Footer from "@/sections/Footer";
 import GlobalQuoteSection from "@/sections/GlobalQuoteSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useStandardPageHeroFit } from "@/hooks/use-hero-viewport-fit";
-import { ESTIMATE_URL } from "@/lib/links";
+import { ESTIMATE_LINK_PROPS } from "@/lib/links";
 import { ArrowRight, BadgeCheck, CalendarClock, FileText, Landmark } from "lucide-react";
 
 const incentives = [
@@ -62,7 +62,7 @@ const SolarBatteryIncentives = () => {
                 Incentives can materially improve project economics, but eligibility and timelines vary by utility territory and current program rules.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#231f2a] transition-colors hover:bg-gray-200"
               >
                 Get a quote
@@ -150,7 +150,7 @@ const SolarBatteryIncentives = () => {
                 Incentives are policy-driven and can shift with legislation, utility filings, and funding exhaustion. We provide guidance using currently published rules, but final tax treatment should always be confirmed with your tax advisor.
               </p>
               <a
-                href={ESTIMATE_URL}
+                {...ESTIMATE_LINK_PROPS}
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-stone-700 transition-colors hover:bg-stone-100"
               >
                 Check my eligibility
